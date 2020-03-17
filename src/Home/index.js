@@ -2,6 +2,7 @@ import React from 'react'
 import s from './index.module.scss'
 import { Link } from 'react-router-dom'
 import { RightArrow } from '../components/Icons'
+import ContentWithSidebar from '../components/ContentWithSidebar'
 
 export default () => (
   <div>
@@ -43,5 +44,18 @@ export default () => (
         </div>
       </div>
     </div>
+    <ContentWithSidebar>
+      <div>
+        <h2>Find a group</h2>
+      </div>
+      <div>
+        <div>
+          <h3>Add</h3>
+        </div>
+        <div>
+          <h3>How to</h3>
+        </div>
+      </div>
+    </ContentWithSidebar>
   </div>
 )

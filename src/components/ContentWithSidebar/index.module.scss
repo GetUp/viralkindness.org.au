@@ -1,0 +1,17 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+
+  @media screen and (max-width: 900px) {
+    padding: 8px;
+    grid-template-columns: 5fr 2fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
