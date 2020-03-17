@@ -1,0 +1,17 @@
+.messageContainer {
+  background: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  margin: 0;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.link {
+  color: white;
+}
