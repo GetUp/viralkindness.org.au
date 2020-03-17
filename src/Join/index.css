@@ -2,3 +2,10 @@
   color: #333;
   margin-bottom: 1em;
 }
+
+.Join form {
+  margin-bottom: 2em;
+}
+.Join input {
+  width: 60vw;
+}

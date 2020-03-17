@@ -4,6 +4,7 @@ import './index.css'
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
 const allDocsUrl = `${apiHost}/viral-kindness-public/_all_docs?include_docs=true`
+const helpText = 'Search by your postcode or suburb'
 
 const GroupLink = ({ href, text }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
@@ -37,6 +38,16 @@ export default () => {
   return (
     <div className="Join">
       <h1>Join page</h1>
+      <form>
+        <input
+          type="search"
+          name="q"
+          aria-label={helpText}
+          placeholder={helpText}
+        />
+        <button>Search</button>
+      </form>
+
       {groups && groups.map(Group)}
     </div>
   )
