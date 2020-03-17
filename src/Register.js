@@ -1,114 +1,144 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import "./Register.css";
+import React from 'react'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { v4 as uuidv4 } from 'uuid'
+import { omit } from 'lodash'
+import { useHistory } from 'react-router-dom'
+import postJson from './postJson'
+import './Register.css'
+
+const apiHost =
+  'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
 
 const initialValues = {
-  email: "me@example.com",
-  phone: "",
-  groupName: "example group",
-  location: "dummy location",
-  facebook: "https://example.com/groups",
-  messenger: "",
-  whatsapp: "",
-  links: ""
-};
+  email: 'me@example.com',
+  phone: '',
+  groupName: 'example group',
+  location: 'dummy location',
+  facebook: 'https://example.com/groups',
+  messenger: '',
+  whatsapp: '',
+  links: '',
+  general: ''
+}
 
 const validate = values => {
-  const errors = {};
+  const errors = {}
 
   if (!values.email) {
-    errors.email = "Required";
+    errors.email = 'Required'
   } else if (!/^.+@.+$/i.test(values.email)) {
-    errors.email = "The email format doesn't look right";
+    errors.email = "The email format doesn't look right"
   }
 
   if (!values.groupName) {
-    errors.groupName = "Required";
+    errors.groupName = 'Required'
   }
 
   if (!values.facebook && !values.messenger && !values.whatsapp) {
-    errors.links = "At least one of the link fields are required";
+    errors.links = 'At least one of the link fields are required'
   }
 
-  return errors;
-};
+  return errors
+}
 
-const onSubmit = (values, { setSubmitting }) => {
-  setTimeout(() => {
-    console.log(JSON.stringify(values, null, 2));
-    setSubmitting(false);
-  }, 400);
-};
+export default () => {
+  const history = useHistory()
 
-export default () => (
-  <div className="Register">
-    <h1>Register your local group</h1>
-    <Formik
-      initialValues={initialValues}
-      validate={validate}
-      onSubmit={onSubmit}
-    >
-      {({ isSubmitting }) => (
-        <Form>
-          <fieldset>
-            <legend>This information will not be shown on the site</legend>
-            <label>
-              Contact email:
-              <Field type="email" name="email" required />
-            </label>
-            <ErrorMessage name="email" component="div" />
-            <label>
-              Contact phone:
-              <Field type="tel" name="phone" />
-            </label>
-            <ErrorMessage name="phone" component="div" />
-          </fieldset>
+  const onSubmit = (values, { setSubmitting, setFieldError }) => {
+    const payload = { _id: uuidv4(), ...values }
+    const privateSubmission = postJson(`${apiHost}/viral-kindness/`, payload)
+    const publicSubmission = postJson(
+      `${apiHost}/viral-kindness-public/`,
+      omit(payload, ['email', 'phone'])
+    )
+    Promise.all([privateSubmission, publicSubmission])
+      .then(data => {
+        setSubmitting(false)
+        history.push('/thanks')
+      })
+      .catch(error => {
+        setFieldError(
+          'general',
+          `An error occurred: "${error.message}".  Please try again shortly.`
+        )
+        postJson(
+          'https://api.getup.org.au/blackhole?campaign=viralkindness&source=client-error',
+          payload
+        )
+      })
+  }
 
-          <fieldset>
-            <legend>This will be shown on the site</legend>
-            <label>
-              Group Name:
-              <Field type="text" name="groupName" required />
-            </label>
-            <ErrorMessage name="groupName" component="div" />
-            <label>
-              Location:
-              <Field type="text" name="location" required />
-            </label>
-            <ErrorMessage name="location" component="div" />
+  return (
+    <div className="Register">
+      <h1>Register your local group</h1>
+      <Formik
+        initialValues={initialValues}
+        validate={validate}
+        onSubmit={onSubmit}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <fieldset>
+              <legend>This information will not be shown on the site</legend>
+              <label>
+                Contact email:
+                <Field type="email" name="email" required />
+              </label>
+              <ErrorMessage name="email" component="div" />
+              <label>
+                Contact phone:
+                <Field type="tel" name="phone" />
+              </label>
+              <ErrorMessage name="phone" component="div" />
+            </fieldset>
 
-            <ErrorMessage name="links" component="div" />
-            <label>
-              Facebook Group link:
-              <Field
-                type="url"
-                name="facebook"
-                placeholder="https://www.facebook.com/groups/123..."
-              />
-            </label>
-            <label>
-              Messenger group chat link:
-              <Field
-                type="url"
-                name="messenger"
-                placeholder="https://m.me/abc..."
-              />
-            </label>
-            <label>
-              Whatsapp group chat link:
-              <Field
-                type="url"
-                name="whatsapp"
-                placeholder="https://chat.whatsapp.com/abc..."
-              />
-            </label>
-          </fieldset>
+            <fieldset>
+              <legend>This will be shown on the site</legend>
+              <label>
+                Group Name:
+                <Field type="text" name="groupName" required />
+              </label>
+              <ErrorMessage name="groupName" component="div" />
+              <label>
+                Location:
+                <Field type="text" name="location" required />
+              </label>
+              <ErrorMessage name="location" component="div" />
 
-          <button type="submit" disabled={isSubmitting}>
-            Register your group
-          </button>
-        </Form>
-      )}
-    </Formik>
-  </div>
-);
+              <ErrorMessage name="links" component="div" />
+              <label>
+                Facebook Group link:
+                <Field
+                  type="url"
+                  name="facebook"
+                  placeholder="https://www.facebook.com/groups/123..."
+                />
+              </label>
+              <label>
+                Messenger group chat link:
+                <Field
+                  type="url"
+                  name="messenger"
+                  placeholder="https://m.me/abc..."
+                />
+              </label>
+              <label>
+                Whatsapp group chat link:
+                <Field
+                  type="url"
+                  name="whatsapp"
+                  placeholder="https://chat.whatsapp.com/abc..."
+                />
+              </label>
+            </fieldset>
+
+            <ErrorMessage name="general" component="div" />
+            <button type="submit" disabled={isSubmitting}>
+              Register your group
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  )
+}
