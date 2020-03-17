@@ -3,8 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { v4 as uuidv4 } from 'uuid'
 import { omit } from 'lodash'
 import { useHistory } from 'react-router-dom'
-import postJson from './postJson'
-import './Register.css'
+import postJson from '../postJson'
+import './index.css'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
