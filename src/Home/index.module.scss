@@ -1,29 +1,63 @@
+$primary: #ff671f;
 .headerContainer {
   display: grid;
-  grid-template-columns: 1fr minmax(400px, 800px) minmax(40%, 200px) 1fr;
+  grid-template-columns: 1fr minmax(400px, 900px) minmax(100px, 300px) 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background: #ff671f;
-  padding: 32px 0;
+  background: $primary;
+  padding: 48px 16px;
 
   .header {
     grid-column: 2/3;
+
+    h1 {
+      font-size: 2.8rem;
+      color: white;
+      margin-bottom: 8px;
+      margin-top: 0px;
+    }
   }
 
   .links {
     display: flex;
     font-size: 1.2rem;
+    margin-top: 1.5em;
 
     .link {
-      padding: 8px;
-      a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      padding: 16px;
+
+      &:nth-child(1) {
+        margin-left: -16px;
+      }
+
+      &:hover {
+        background: darken($primary, 10);
+        border-radius: 0.2rem;
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 8px;
+      }
+
+      .linkText {
         color: white;
-        font-weight: 600;
-        span {
-          font-size: 1rem;
-          text-decoration: none;
-        }
+        font-weight: 700;
+        text-decoration: underline;
+        margin-bottom: 8px;
+        letter-spacing: -0.01em;
+      }
+      .linkSubtext {
+        font-size: 0.9rem;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        opacity: 0.75;
+        line-height: 1.5;
       }
     }
   }
