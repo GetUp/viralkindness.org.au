@@ -16,14 +16,14 @@ export default () => (
           Tenetur, voluptate!
         </p>
         <div className={s.links}>
-          <Link to='/register' className={s.link}>
+          <Link to="/register" className={s.link}>
             <RightArrow />
             <div>
               <div className={s.linkText}>Add</div>
               <div className={s.linkSubtext}>Add your local group</div>
             </div>
           </Link>
-          <Link to='/join' className={s.link}>
+          <Link to="/join" className={s.link}>
             <RightArrow />
             <div>
               <div className={s.linkText}>Find a group</div>
@@ -32,7 +32,7 @@ export default () => (
               </div>
             </div>
           </Link>
-          <Link to='/faq' className={s.link}>
+          <Link to="/faq" className={s.link}>
             <RightArrow />
             <div>
               <div className={s.linkText}>How to</div>
