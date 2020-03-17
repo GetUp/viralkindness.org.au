@@ -1,35 +1,35 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import './app.scss'
-import Header from './Header'
-import Home from './Home'
-import Register from './Register'
-import Join from './Join'
-import Faq from './Faq'
+import "./App.css";
+import Header from "./Header";
+import Home from "./Home";
+import Register from "./Register";
+import Join from "./Join";
+import Faq from "./Faq";
 
-function App () {
+function App() {
   return (
     <div>
       <Header />
       <Router>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path='/register'>
+          <Route path="/register">
             <Register />
           </Route>
-          <Route path='/join'>
+          <Route path="/join">
             <Join />
           </Route>
-          <Route path='/faq'>
+          <Route path="/faq">
             <Faq />
           </Route>
         </Switch>
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
