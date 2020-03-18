@@ -20,6 +20,7 @@ import InputWithIcon from '../components/InputWithIcon'
 import '../geosuggest.css'
 import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
+import FaqNav from '../components/FaqNav'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -263,16 +264,7 @@ export default () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
           </Link>
-          <br />
-          <Link to='/howto' className={s.sidebarLink}>
-            <div className={s.sidebarLinkHeader}>
-              <Search />
-              FAQs
-            </div>
-            <div className={s.sidebarLinkSubtitle}>
-              Lorem ipsum dolor sit amet consect etur adipisicing elit.
-            </div>
-          </Link>
+          <FaqNav />
         </div>
       </ContentWithSidebar>
       <Footer />

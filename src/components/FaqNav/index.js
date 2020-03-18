@@ -4,11 +4,11 @@ import faq from '../../data/faq'
 import s from './index.module.scss'
 
 export default ({ style }) => {
-  const homePage = () => window.location.pathname === '/'
+  const faqPage = () => window.location.pathname !== '/faq'
 
   return (
     <div className={s.howToModule} style={style}>
-      {homePage() && (
+      {faqPage() && (
         <h3>
           <Link to='/faq'>{faq.title}</Link>
         </h3>
@@ -22,7 +22,7 @@ export default ({ style }) => {
           </li>
         ))}
       </ul>
-      {homePage() && (
+      {faqPage() && (
         <Link to='/faq' className={s.moreButton}>
           MORE
         </Link>
