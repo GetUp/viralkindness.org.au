@@ -9,6 +9,9 @@ export default () => (
         <li>
           <Link to='/about'>About</Link>
         </li>
+        <li>
+          <Link to='/contact'>Contact Us</Link>
+        </li>
       </ul>
       <p>
         Our team acknowledges that we meet and work on the land of the Gadigal
