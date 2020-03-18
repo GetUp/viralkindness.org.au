@@ -6,7 +6,7 @@ import '../../geosuggest.css'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
-const helpText = 'Search by suburb'
+const helpText = 'Search by street or suburb'
 
 const groupSearchUrl = ({ lng, lat }) =>
   `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?g=point(${lng}%20${lat})&limit=20&nearest=true&include_docs=true`
