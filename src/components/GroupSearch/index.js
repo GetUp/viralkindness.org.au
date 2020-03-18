@@ -67,6 +67,20 @@ export default () => {
 
   return (
     <div className={s.mainContent}>
+      <p style={{ backgroundColor: '#ff00f7' }}>
+        Looking for help? Or keen to lend a hand? Enter your postcode or suburb
+        below to find a community care group near you.
+      </p>
+      <p style={{ backgroundColor: '#ff00f7' }}>
+        Every group is a little different. Read each group’s instructions about
+        how to join or get involved.
+      </p>
+      <p style={{ backgroundColor: '#ff00f7' }}>
+        Important: These are community groups established to help people with
+        everyday needs, such as shopping or a check-in call. If you need urgent
+        help or medical assistance, head here.
+      </p>
+
       <h2>Find a group</h2>
       <label>
         <div className={s.inputContainer}>
