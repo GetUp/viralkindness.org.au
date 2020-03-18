@@ -18,12 +18,14 @@ export default () => (
   <>
     <div className={s.headerContainer}>
       <div className={s.header}>
-        <h1>Viral Kindness heading</h1>
+        <h1>#ViralKindness</h1>
+        <h2>We can do this together</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi,
-          explicabo id quis fugit architecto eius assumenda dolores odio laborum
-          voluptates quisquam illo, provident ex quam sequi dicta laboriosam.
-          Tenetur, voluptate!
+          #ViralKindness is a hub for the community care groups springing up
+          across the country offering to help others through coronavirus
+          (COVID-19). Whether it’s shopping for food, picking up medicine or a
+          regular check in call – there are lots of ways we can all work
+          together, even when we’re apart!
         </p>
         <div className={s.links}>
           <Link to='/register' className={s.link}>
