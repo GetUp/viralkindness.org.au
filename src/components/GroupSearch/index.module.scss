@@ -138,6 +138,56 @@ $secondary: #2098f5;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .groupsTable,
+  .groupRow {
+    display: none;
+  }
+}
+
+.groupsTableSml {
+  width: 100%;
+  tbody tr:nth-of-type(even) {
+    background: #f4f4f4;
+    border-radius: 4px;
+  }
+}
+
+.groupRowSml {
+  td {
+    padding: 16px 8px;
+  }
+  .groupNameSml {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .groupAddSml {
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+  .groupBtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    svg {
+      margin-right: 8px;
+      height: 16px;
+      width: 16px;
+    }
+    a > svg {
+      display: none;
+    }
+  }
+}
+
+.groupRowSml,
+.groupsTableSml {
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
 .joinGroupBtn {
   text-decoration: none;
   font-weight: 600;

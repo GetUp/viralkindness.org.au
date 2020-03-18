@@ -5,6 +5,6 @@ import Warning from './components/Warning'
 export default () => (
   <header>
     <Nav />
-    <Warning href="https://getup.org.au">Covid-19: What you need to do</Warning>
+    <Warning href='https://getup.org.au'>COVID-19: What you need to do</Warning>
   </header>
 )

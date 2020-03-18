@@ -30,7 +30,7 @@ const GroupIcon = ({ url }) => {
 }
 
 const Group = ({ doc }, i) => (
-  <tr key={i}>
+  <tr key={i} className={s.groupRow}>
     <td className={s.groupIconWrapper}>
       <GroupIcon url={doc.groupLink} />
     </td>
@@ -38,6 +38,19 @@ const Group = ({ doc }, i) => (
     <td>{doc.properties.label}</td>
     <td>
       <GroupLink href={doc.groupLink} text='Join group' />
+    </td>
+  </tr>
+)
+
+const GroupSml = ({ doc }, i) => (
+  <tr key={i} className={s.groupRowSml}>
+    <td>
+      <div className={s.groupNameSml}>{doc.groupName}</div>
+      <div className={s.groupAddSml}>{doc.properties.label}</div>
+      <div className={`${s.groupBtn}`}>
+        <GroupIcon url={doc.groupLink} />
+        <GroupLink href={doc.groupLink} text='Join group' />
+      </div>
     </td>
   </tr>
 )
@@ -50,6 +63,17 @@ const GroupTable = ({ children }) => (
         <th width='30%'>Name</th>
         <th>Location</th>
         <th width='108'></th>
+      </tr>
+    </thead>
+    <tbody>{children}</tbody>
+  </table>
+)
+
+const GroupTableSml = ({ children }) => (
+  <table className={s.groupsTableSml}>
+    <thead>
+      <tr>
+        <th></th>
       </tr>
     </thead>
     <tbody>{children}</tbody>
@@ -120,6 +144,7 @@ export default () => {
           />
         </div>
       </label>
+      <GroupTableSml>{groups.map(GroupSml)}</GroupTableSml>
       <GroupTable>{groups.map(Group)}</GroupTable>
     </div>
   )
