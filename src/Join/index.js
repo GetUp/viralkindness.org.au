@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import Geosuggest from 'react-geosuggest'
 import s from './index.module.scss'
+import '../geosuggest.css'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
-const allDocsUrl = `${apiHost}/viral-kindness-public/_all_docs?include_docs=true`
-const helpText = 'Search by your postcode or suburb'
+const helpText = 'Search by postcode or suburb'
+
+const groupSearchUrl = ({ lng, lat }) =>
+  `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?g=point(${lng}%20${lat})&limit=20&nearest=true&include_docs=true`
 
 const GroupLink = ({ href, text }) => (
   <a href={href} target='_blank' rel='noopener noreferrer'>
@@ -12,24 +16,14 @@ const GroupLink = ({ href, text }) => (
   </a>
 )
 
-const Group = group => (
-  <>
-    <tr>
-      <td>{group.doc.groupName}</td>
-      <td>{group.doc.location}</td>
-      <td>
-        {group.doc.facebook && (
-          <GroupLink href={group.doc.facebook} text='Facebook' />
-        )}
-        {group.doc.messenger && (
-          <GroupLink href={group.doc.messenger} text='Messenger' />
-        )}
-        {group.doc.whatsapp && (
-          <GroupLink href={group.doc.whatsapp} text='Whatsapp' />
-        )}
-      </td>
-    </tr>
-  </>
+const Group = (group, i) => (
+  <tr key={i}>
+    <td>{group.doc.groupName}</td>
+    <td>{group.doc.properties.label}</td>
+    <td>
+      <GroupLink href={group.doc.groupLink} text='Join group' />
+    </td>
+  </tr>
 )
 
 const GroupTable = ({ children }) => (
@@ -46,21 +40,32 @@ const GroupTable = ({ children }) => (
 )
 
 export default () => {
+  const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
+
   useEffect(() => {
-    fetch(allDocsUrl)
-      .then(r => r.json())
-      .then(json => setGroups(json.rows))
-  })
+    if (location && location.location) {
+      fetch(groupSearchUrl(location.location))
+        .then(r => r.json())
+        .then(json => {
+          console.log('cloudant response:', json)
+          return json
+        })
+        .then(json => setGroups(json.rows))
+    }
+  }, [location])
+
   return (
     <div>
       <h1>Join page</h1>
       <form>
-        <input
-          type='search'
-          name='q'
+        <Geosuggest
           aria-label={helpText}
           placeholder={helpText}
+          country='AU'
+          placeDetailFields={[]}
+          minLength={3}
+          onSuggestSelect={setLocation}
         />
         <button>Search</button>
       </form>
