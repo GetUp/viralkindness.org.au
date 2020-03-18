@@ -125,6 +125,9 @@ $secondary: #2098f5;
         height: 1.5rem;
         width: 1.5rem;
         margin-right: 8px;
+        * {
+          fill: white;
+        }
       }
 
       .linkText {
@@ -189,6 +192,8 @@ $secondary: #2098f5;
       font-weight: 500;
       svg {
         margin-right: 8px;
+        height: 16px;
+        width: 16px;
         * {
           fill: #777;
         }

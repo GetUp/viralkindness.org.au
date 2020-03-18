@@ -3,15 +3,16 @@ import React from 'react'
 export const RightArrow = () => (
   <svg
     width='21'
-    height='21'
-    viewBox='0 0 21 21'
+    height='22'
+    viewBox='0 0 21 22'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      d='M12.8956 3.72347L19.3442 10.172M19.3442 10.172L12.8956 16.6206M19.3442 10.172L0.999905 10.1721'
-      stroke='white'
-      strokeWidth='1.5'
+      fill-rule='evenodd'
+      clip-rule='evenodd'
+      d='M16.9299 10.1721L12.1885 5.43058L13.6027 4.01637L20.7584 11.1721L13.6027 18.3277L12.1885 16.9135L16.9299 12.1721L0.999891 12.1721L0.999884 10.1721L16.9299 10.1721Z'
+      fill='#323232'
     />
   </svg>
 )
