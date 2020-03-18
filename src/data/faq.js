@@ -19,15 +19,13 @@ export default {
       body: `
         <p>If you are helping others in the community by delivering supplies like groceries or medication -- here’s how to do it safely.</p>
 
-        <p>
-          To deliver food and supplies:
-          <ul>
-            <li>Leave all deliveries in an agreed location, ie. at the front door, in the driveway, under an awning out of the weather</li>
-            <li>Maintain a safe distance <em>at all times</em> (minimum 2 metres)</li>
-            <li>No physical contact</li>
-            <li>Practice good hygiene, including wash your hands before and after dropping off supplies</li>
-          </ul>
-        </p>
+        <p>To deliver food and supplies:</p>
+        <ul>
+          <li>Leave all deliveries in an agreed location, ie. at the front door, in the driveway, under an awning out of the weather</li>
+          <li>Maintain a safe distance <em>at all times</em> (minimum 2 metres)</li>
+          <li>No physical contact</li>
+          <li>Practice good hygiene, including wash your hands before and after dropping off supplies</li>
+        </ul>
       `
     },
     {
@@ -44,12 +42,11 @@ export default {
       hash: 'talk-to-children',
       title: 'How to have conversations with kids?',
       body: `
-        <p>Here are some helpful resources on how to have a conversation with kids about coronavirus:
-          <ul>
-            <li><a href="https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19">How to talk to your child about coronavirus disease</a></li>
-            <li><a href="https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus">Stop a worry becoming catastrophic: how to talk to your kids about the coronavirus</a></li>
-          </ul>
-        </p>
+        <p>Here are some helpful resources on how to have a conversation with kids about coronavirus:</p>
+        <ul>
+          <li><a href="https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19">How to talk to your child about coronavirus disease</a></li>
+          <li><a href="https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus">Stop a worry becoming catastrophic: how to talk to your kids about the coronavirus</a></li>
+        </ul>
       `
     },
     {

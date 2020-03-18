@@ -120,19 +120,16 @@ export default () => {
           Many groups are using Facebook as a digital space to come together and
           communicate.
         </p>
-        <p>
-          If you’re using a Facebook group, make sure you:
-          <ul>
-            <li>
-              Add a clear group description to the ‘About’ section of your page.
-            </li>
-            <li>
-              Make the group ‘private’ <strong>not</strong> ‘secret’ or
-              ‘public’. That way you can make sure only members of your
-              community join.
-            </li>
-          </ul>
-        </p>
+        <p>If you’re using a Facebook group, make sure you:</p>
+        <ul>
+          <li>
+            Add a clear group description to the ‘About’ section of your page.
+          </li>
+          <li>
+            Make the group ‘private’ <strong>not</strong> ‘secret’ or ‘public’.
+            That way you can make sure only members of your community join.
+          </li>
+        </ul>
         <p>
           <Link to='/resources'>
             More information about starting a group is available here.

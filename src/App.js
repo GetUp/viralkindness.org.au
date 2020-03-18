@@ -7,6 +7,8 @@ import Home from './Home'
 import Register from './Register'
 import Thanks from './Thanks'
 import Faq from './Faq'
+import About from './About'
+import Contact from './Contact'
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path='/faq'>
             <Faq />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+          <Route path='/contact'>
+            <Contact />
           </Route>
         </Switch>
       </Router>
