@@ -89,10 +89,6 @@ export default () => {
     if (location && location.location) {
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
-        .then(json => {
-          console.log('cloudant response:', json)
-          return json
-        })
         .then(json => setGroups(json.rows))
     }
   }, [location])
