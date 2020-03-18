@@ -6,10 +6,9 @@ import Header from './Header'
 import Home from './Home'
 import Register from './Register'
 import Thanks from './Thanks'
-import Join from './Join'
 import Faq from './Faq'
 
-function App () {
+function App() {
   return (
     <div>
       <Router>
@@ -23,9 +22,6 @@ function App () {
           </Route>
           <Route path='/thanks'>
             <Thanks />
-          </Route>
-          <Route path='/join'>
-            <Join />
           </Route>
           <Route path='/faq'>
             <Faq />

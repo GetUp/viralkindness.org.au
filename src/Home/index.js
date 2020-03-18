@@ -3,6 +3,7 @@ import s from './index.module.scss'
 import { Link } from 'react-router-dom'
 import { RightArrow, Search } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
+import GroupSearch from '../components/GroupSearch'
 import { howto } from '../data/howto'
 import illustration from '../assets/images/vk-illustration.svg'
 
@@ -25,7 +26,7 @@ export default () => (
               <div className={s.linkSubtext}>Add your local group</div>
             </div>
           </Link>
-          <Link to='/join' className={s.link}>
+          <Link to='#groupSearch' className={s.link}>
             <Search color='white' />
             <div>
               <div className={s.linkText}>Find a group</div>
@@ -49,16 +50,7 @@ export default () => (
       <div className={s.backgroundOverlap} />
     </div>
     <ContentWithSidebar>
-      <div className={s.mainContent}>
-        <h2>Find a group</h2>
-        <label>
-          <div className={s.inputContainer}>
-            <Search />
-            <input type='text' placeholder='Postcode or suburb' />
-          </div>
-        </label>
-        <div className={s.searchStatus}>Type your postcode or suburb </div>
-      </div>
+      <GroupSearch />
       <div>
         <div>
           <h3>Add</h3>
