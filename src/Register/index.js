@@ -18,6 +18,7 @@ import {
 } from '../components/Icons'
 import InputWithIcon from '../components/InputWithIcon'
 import '../geosuggest.css'
+import PageHeader from '../components/PageHeader'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -103,16 +104,14 @@ export default () => {
 
   return (
     <div>
-      <div className={s.headerContainer}>
-        <div className={s.contentWrapper}>
-          <h1>Register your local group</h1>
-          <p className={s.subtitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            optio mollitia, quaerat, obcaecati velit atque explicabo qui odio
-            nam modi ipsum eos. Necessitatibus laboriosam asperiores odio.
-          </p>
-        </div>
-      </div>
+      <PageHeader>
+        <h1>Register your local group</h1>
+        <p className={s.subtitle}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio
+          mollitia, quaerat, obcaecati velit atque explicabo qui odio nam modi
+          ipsum eos. Necessitatibus laboriosam asperiores odio.
+        </p>
+      </PageHeader>
       <ContentWithSidebar>
         <Formik
           initialValues={initialValues}
@@ -234,7 +233,7 @@ export default () => {
           <Link to='/' className={s.sidebarLink}>
             <div className={s.sidebarLinkHeader}>
               <Search />
-              Find a group{' '}
+              Find a group
             </div>
             <span className={s.sidebarLinkSubtitle}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

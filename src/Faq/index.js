@@ -3,18 +3,24 @@ import React from 'react'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
+import PageHeader from '../components/PageHeader'
+import s from './index.module.scss'
 
 const Item = i => (
-  <div key={i.title}>
-    <h3 id={i.hash}>{i.title}</h3>
-    <div dangerouslySetInnerHTML={{ __html: i.body }} />
+  <div key={i.title} className={s.question}>
+    <h3 id={i.hash} className={s.header}>
+      {i.title}
+    </h3>
+    <div dangerouslySetInnerHTML={{ __html: i.body }} className={s.body} />
   </div>
 )
 
 export default () => (
   <div>
-    <h1>{faq.title}</h1>
-    <ContentWithSidebar>
+    <PageHeader>
+      <h1>{faq.title}</h1>
+    </PageHeader>
+    <ContentWithSidebar reverse style={{ marginTop: '24px' }}>
       <FaqNav />
       <div>{faq.data.map(Item)}</div>
     </ContentWithSidebar>

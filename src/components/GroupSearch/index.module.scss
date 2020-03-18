@@ -51,6 +51,10 @@ $secondary: #2098f5;
 
   thead {
     text-align: left;
+    color: #999;
+    th {
+      border-bottom: 1px solid #ddd;
+    }
   }
 
   tr {
@@ -58,8 +62,13 @@ $secondary: #2098f5;
     margin-bottom: 4px;
   }
 
-  tbody tr:nth-of-type(odd) {
-    background: pink;
+  tbody tr:nth-of-type(even) {
+    background: #f4f4f4;
+    border-radius: 4px;
+  }
+
+  tbody tr:hover {
+    background: #eee;
   }
 
   th,
@@ -67,5 +76,37 @@ $secondary: #2098f5;
     vertical-align: middle;
     padding: 0;
     padding-left: 8px;
+  }
+
+  .groupIconWrapper {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.joinGroupBtn {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1777f2;
+  display: flex;
+  align-items: center;
+
+  svg {
+    height: 18px;
+    width: 18px;
+    margin-left: 4px;
+    * {
+      fill: #1777f2;
+    }
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }

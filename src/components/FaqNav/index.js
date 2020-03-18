@@ -3,11 +3,11 @@ import { HashLink as Link } from 'react-router-hash-link'
 import faq from '../../data/faq'
 import s from './index.module.scss'
 
-export default () => {
+export default ({ style }) => {
   const homePage = () => window.location.pathname === '/'
 
   return (
-    <div className={s.howToModule}>
+    <div className={s.howToModule} style={style}>
       {homePage() && (
         <h3>
           <Link to='/faq'>{faq.title}</Link>

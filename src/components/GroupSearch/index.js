@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Geosuggest from 'react-geosuggest'
-import { Search } from '../Icons'
+import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
 import s from './index.module.scss'
 import '../../geosuggest.css'
 
@@ -12,13 +12,21 @@ const groupSearchUrl = ({ lng, lat }) =>
   `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?g=point(${lng}%20${lat})&limit=20&nearest=true&include_docs=true`
 
 const GroupLink = ({ href, text }) => (
-  <a href={href} target='_blank' rel='noopener noreferrer'>
-    {text}
+  <a
+    href={href}
+    target='_blank'
+    rel='noopener noreferrer'
+    className={s.joinGroupBtn}
+  >
+    {text} <ExternalLink />
   </a>
 )
 
 const Group = (group, i) => (
   <tr key={i}>
+    <td className={s.groupIconWrapper}>
+      <Facebook />
+    </td>
     <td>{group.doc.groupName}</td>
     <td>{group.doc.properties.label}</td>
     <td>
@@ -31,9 +39,10 @@ const GroupTable = ({ children }) => (
   <table className={s.groupsTable}>
     <thead>
       <tr>
-        <th>Name</th>
+        <th width='32'></th>
+        <th width='40%'>Name</th>
         <th>Location</th>
-        <th>Platform</th>
+        <th width='128'></th>
       </tr>
     </thead>
     <tbody>{children}</tbody>
@@ -73,7 +82,39 @@ export default () => {
           />
         </div>
       </label>
-      <GroupTable>{groups && groups.map(Group)}</GroupTable>
+      <GroupTable>
+        <tr>
+          <td className={s.groupIconWrapper}>
+            <Facebook />
+          </td>
+          <td>Group name</td>
+          <td>Group label</td>
+          <td>
+            <GroupLink href='getup.org.au' text='Join group' />
+          </td>
+        </tr>
+        <tr>
+          <td className={s.groupIconWrapper}>
+            <WhatsApp />
+          </td>
+          <td>Group name</td>
+          <td>Group label</td>
+          <td>
+            <GroupLink href='getup.org.au' text='Join group' />
+          </td>
+        </tr>
+        <tr>
+          <td className={s.groupIconWrapper}>
+            <Messenger />
+          </td>
+          <td>Group name</td>
+          <td>Group label</td>
+          <td>
+            <GroupLink href='getup.org.au' text='Join group' />
+          </td>
+        </tr>
+        {groups && groups.map(Group)}
+      </GroupTable>
     </div>
   )
 }
