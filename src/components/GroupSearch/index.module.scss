@@ -5,8 +5,37 @@ $secondary: #2098f5;
   h2 {
     color: $secondary;
     padding-left: 8px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
 
+  p {
+    color: #333;
+    padding-left: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .importantWrapper {
+    padding-left: 8px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    div {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #777;
+    }
+    p {
+      color: #777;
+      padding-left: 0px;
+    }
+    a {
+      color: #2098f5;
+      text-decoration: underline;
+    }
+  }
   .searchStatus {
     font-size: 0.9rem;
     color: #555;

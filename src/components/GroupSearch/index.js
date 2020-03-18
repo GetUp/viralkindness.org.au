@@ -67,21 +67,18 @@ export default () => {
 
   return (
     <div className={s.mainContent}>
-      <p style={{ backgroundColor: '#ff00f7' }}>
-        Looking for help? Or keen to lend a hand? Enter your postcode or suburb
-        below to find a community care group near you.
+      <h2>Find a group</h2>
+      <p>
+        <b>
+          Looking for help? Or keen to lend a hand? Enter your postcode or
+          suburb below to find a community care group near you.
+        </b>
       </p>
-      <p style={{ backgroundColor: '#ff00f7' }}>
+      <p>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
       </p>
-      <p style={{ backgroundColor: '#ff00f7' }}>
-        Important: These are community groups established to help people with
-        everyday needs, such as shopping or a check-in call. If you need urgent
-        help or medical assistance, head here.
-      </p>
-
-      <h2>Find a group</h2>
+      <br />
       <label>
         <div className={s.inputContainer}>
           <Search />
@@ -96,39 +93,51 @@ export default () => {
           />
         </div>
       </label>
-      <GroupTable>
-        <tr>
-          <td className={s.groupIconWrapper}>
-            <Facebook />
-          </td>
-          <td>Group name</td>
-          <td>201 Whitehorse Road, Balwyn VIC, Australia</td>
-          <td>
-            <GroupLink href='getup.org.au' text='Join group' />
-          </td>
-        </tr>
-        <tr>
-          <td className={s.groupIconWrapper}>
-            <WhatsApp />
-          </td>
-          <td>Group name</td>
-          <td>Group label</td>
-          <td>
-            <GroupLink href='getup.org.au' text='Join group' />
-          </td>
-        </tr>
-        <tr>
-          <td className={s.groupIconWrapper}>
-            <Messenger />
-          </td>
-          <td>Group name</td>
-          <td>Group label</td>
-          <td>
-            <GroupLink href='getup.org.au' text='Join group' />
-          </td>
-        </tr>
-        {groups && groups.map(Group)}
-      </GroupTable>
+      {groups.length === 0 && (
+        <div className={s.importantWrapper}>
+          <div>Important</div>
+          <p>
+            These are community groups established to help people with everyday
+            needs, such as shopping or a check-in call. If you need urgent help
+            or medical assistance, <a href='/'>head here</a>.
+          </p>
+        </div>
+      )}
+      {groups.length > 0 && (
+        <GroupTable>
+          {/* <tr>
+            <td className={s.groupIconWrapper}>
+              <Facebook />
+            </td>
+            <td>Group name</td>
+            <td>201 Whitehorse Road, Balwyn VIC, Australia</td>
+            <td>
+              <GroupLink href='getup.org.au' text='Join group' />
+            </td>
+          </tr>
+          <tr>
+            <td className={s.groupIconWrapper}>
+              <WhatsApp />
+            </td>
+            <td>Group name</td>
+            <td>Group label</td>
+            <td>
+              <GroupLink href='getup.org.au' text='Join group' />
+            </td>
+          </tr>
+          <tr>
+            <td className={s.groupIconWrapper}>
+              <Messenger />
+            </td>
+            <td>Group name</td>
+            <td>Group label</td>
+            <td>
+              <GroupLink href='getup.org.au' text='Join group' />
+            </td>
+          </tr> */}
+          {groups.map(Group)}
+        </GroupTable>
+      )}
     </div>
   )
 }
