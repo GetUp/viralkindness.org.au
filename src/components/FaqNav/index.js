@@ -16,7 +16,7 @@ export default ({ className, style }) => {
           <Link to='/faq'>{faq.title}</Link>
         </h3>
       )}
-      <ul>
+      <ul className={!faqPage() ? s.sticky : ''}>
         {faq.data.map(i => (
           <li key={i.title}>
             <Link smooth to={`/faq#${i.hash}`}>
