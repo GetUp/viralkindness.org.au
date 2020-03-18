@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
 import s from './index.module.scss'
@@ -77,8 +78,10 @@ export default () => {
       </p>
       <p style={{ backgroundColor: '#ff00f7' }}>
         Important: These are community groups established to help people with
-        everyday needs, such as shopping or a check-in call. If you need urgent
-        help or medical assistance, head here.
+        everyday needs, such as shopping or a check-in call.{' '}
+        <Link to='/faq#help'>
+          If you need urgent help or medical assistance, head here.
+        </Link>
       </p>
 
       <h2>Find a group</h2>
