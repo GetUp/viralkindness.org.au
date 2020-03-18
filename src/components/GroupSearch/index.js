@@ -57,12 +57,13 @@ export default () => {
   }, [location])
 
   return (
-    <div id='groupSearch' className={s.mainContent}>
+    <div className={s.mainContent}>
       <h2>Find a group</h2>
       <label>
         <div className={s.inputContainer}>
           <Search />
           <Geosuggest
+            id='groupSearch'
             aria-label={helpText}
             placeholder={helpText}
             country='AU'

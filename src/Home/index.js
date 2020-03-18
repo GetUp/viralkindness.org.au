@@ -1,11 +1,17 @@
 import React from 'react'
 import s from './index.module.scss'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 import { RightArrow, Search } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import GroupSearch from '../components/GroupSearch'
-import { howto } from '../data/howto'
+import FaqNav from '../components/FaqNav'
+import faq from '../data/faq'
 import illustration from '../assets/images/vk-illustration.svg'
+
+const scrollFocus = el => {
+  el.focus({ preventScroll: true })
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
 
 export default () => (
   <div>
@@ -26,7 +32,7 @@ export default () => (
               <div className={s.linkSubtext}>Add your local group</div>
             </div>
           </Link>
-          <Link to='#groupSearch' className={s.link}>
+          <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
             <Search color='white' />
             <div>
               <div className={s.linkText}>Find a group</div>
@@ -38,8 +44,8 @@ export default () => (
           <Link to='/faq' className={s.link}>
             <RightArrow />
             <div>
-              <div className={s.linkText}>{howto.title}</div>
-              <div className={s.linkSubtext}>{howto.subtitle}</div>
+              <div className={s.linkText}>{faq.title}</div>
+              <div className={s.linkSubtext}>{faq.subtitle}</div>
             </div>
           </Link>
         </div>
@@ -60,19 +66,7 @@ export default () => (
             <Link to='/register'>Add</Link>
           </h3>
         </div>
-        <div className={s.howToModule}>
-          <h3>
-            <Link to='/faq'>{howto.title}</Link>
-          </h3>
-          <ul>
-            {howto.data.map(i => (
-              <li key={i.title}>
-                <Link to={`/faq#${i.hash}`}>{i.title}</Link>
-              </li>
-            ))}
-          </ul>
-          <Link to='/faq'>More</Link>
-        </div>
+        <FaqNav />
       </div>
     </ContentWithSidebar>
   </div>
