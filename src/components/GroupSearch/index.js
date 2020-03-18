@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { HashLink as Link } from 'react-router-hash-link'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
 import s from './index.module.scss'
@@ -23,15 +22,22 @@ const GroupLink = ({ href, text }) => (
   </a>
 )
 
-const Group = (group, i) => (
+const GroupIcon = ({ url }) => {
+  if (/facebook.com|fb.com/i.test(url)) return <Facebook />
+  if (/messenger.com|m.me/i.test(url)) return <Messenger />
+  if (/whatsapp.com/i.test(url)) return <WhatsApp />
+  return null
+}
+
+const Group = ({ doc }, i) => (
   <tr key={i}>
     <td className={s.groupIconWrapper}>
-      <Facebook />
+      <GroupIcon url={doc.groupLink} />
     </td>
-    <td>{group.doc.groupName}</td>
-    <td>{group.doc.properties.label}</td>
+    <td>{doc.groupName}</td>
+    <td>{doc.properties.label}</td>
     <td>
-      <GroupLink href={group.doc.groupLink} text='Join group' />
+      <GroupLink href={doc.groupLink} text='Join group' />
     </td>
   </tr>
 )
@@ -82,10 +88,6 @@ export default () => {
     if (location && location.location) {
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
-        .then(json => {
-          console.log('cloudant response:', json)
-          return json
-        })
         .then(json => setGroups(json.rows))
     }
   }, [location])

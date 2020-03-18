@@ -20,6 +20,10 @@ export default () => (
   <>
     <PageHeader>
       <h1>{faq.title}</h1>
+      <p>
+        As more groups offer advice on what has worked well for them, we will
+        update this FAQ page.
+      </p>
     </PageHeader>
     <ContentWithSidebar reverse className={s.contentWrapper}>
       <FaqNav className={s.faqWrapper} />

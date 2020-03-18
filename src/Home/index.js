@@ -31,7 +31,7 @@ export default () => (
           <Link to='/register' className={s.link}>
             <RightArrow />
             <div>
-              <div className={s.linkText}>Add</div>
+              <div className={s.linkText}>Add a group</div>
               <div className={s.linkSubtext}>Add your local group</div>
             </div>
           </Link>
@@ -39,9 +39,7 @@ export default () => (
             <Search color='white' />
             <div>
               <div className={s.linkText}>Find a group</div>
-              <div className={s.linkSubtext}>
-                Search a group by your location
-              </div>
+              <div className={s.linkSubtext}>Search by your location</div>
             </div>
           </Link>
           <Link to='/faq' className={s.link}>

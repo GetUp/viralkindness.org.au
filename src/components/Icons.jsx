@@ -194,8 +194,8 @@ export const WhatsApp = () => (
         y2='2.28882e-05'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#25CF43' />
-        <stop offset='1' stop-color='#61FD7D' />
+        <stop stopColor='#25CF43' />
+        <stop offset='1' stopColor='#61FD7D' />
       </linearGradient>
     </defs>
   </svg>
@@ -230,8 +230,8 @@ export const Messenger = () => (
         y2='11.7832'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#00B2FF' />
-        <stop offset='1' stop-color='#006AFF' />
+        <stop stopColor='#00B2FF' />
+        <stop offset='1' stopColor='#006AFF' />
       </linearGradient>
     </defs>
   </svg>

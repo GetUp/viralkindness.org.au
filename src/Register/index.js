@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 import { v4 as uuidv4 } from 'uuid'
 import { omit } from 'lodash'
 import { useHistory } from 'react-router-dom'
@@ -133,8 +133,10 @@ export default () => {
             </li>
           </ul>
         </p>
-        <p style={{ backgroundColor: '#ff00f7' }}>
-          To read more about starting a group, head here!
+        <p>
+          <Link to='/resources'>
+            More information about starting a group is available here.
+          </Link>
         </p>
       </PageHeader>
       <ContentWithSidebar>
