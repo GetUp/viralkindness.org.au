@@ -31,6 +31,7 @@ const initialValues = {
   phone: '',
   groupName: '',
   groupLink: '',
+  groupBlurb: '',
   location: '',
   links: '',
   general: ''
@@ -241,6 +242,20 @@ export default () => {
                   />
                 </label>
               </fieldset>
+
+              <label>
+                Short introduction or instructions
+                <InputWithIcon className={s.inputWrapper}>
+                  <Public />
+                  <Field
+                    as='textarea'
+                    rows={4}
+                    maxlength={280}
+                    name='groupBlurb'
+                    placeholder='Any special instructions'
+                  />
+                </InputWithIcon>
+              </label>
 
               <ErrorMessage name='general' component='div' />
               <button
