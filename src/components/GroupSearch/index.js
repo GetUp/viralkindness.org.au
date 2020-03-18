@@ -50,9 +50,33 @@ const GroupTable = ({ children }) => (
   </table>
 )
 
+const defaultGroups = [
+  {
+    doc: {
+      groupName: 'default group 1',
+      groupLink: 'fb.com/groups/12345',
+      properties: { label: 'default address 1' }
+    }
+  },
+  {
+    doc: {
+      groupName: 'default group 2',
+      groupLink: 'https://m.me/viralkindnessgroup',
+      properties: { label: 'default location 2' }
+    }
+  },
+  {
+    doc: {
+      groupName: 'default group 3',
+      groupLink: 'http://chat.whatsapp.com/qwe123',
+      properties: { label: 'default area 3' }
+    }
+  }
+]
+
 export default () => {
   const [location, setLocation] = useState([])
-  const [groups, setGroups] = useState([])
+  const [groups, setGroups] = useState(defaultGroups)
 
   useEffect(() => {
     if (location && location.location) {
@@ -94,51 +118,7 @@ export default () => {
           />
         </div>
       </label>
-      {groups.length === 0 && (
-        <div className={s.importantWrapper}>
-          <div>Important</div>
-          <p>
-            These are community groups established to help people with everyday
-            needs, such as shopping or a check-in call. If you need urgent help
-            or medical assistance, <Link to='/faq#help'>head here</Link>.
-          </p>
-        </div>
-      )}
-      {groups.length > 0 && (
-        <GroupTable>
-          {/* <tr>
-            <td className={s.groupIconWrapper}>
-              <Facebook />
-            </td>
-            <td>Group name</td>
-            <td>201 Whitehorse Road, Balwyn VIC, Australia</td>
-            <td>
-              <GroupLink href='getup.org.au' text='Join group' />
-            </td>
-          </tr>
-          <tr>
-            <td className={s.groupIconWrapper}>
-              <WhatsApp />
-            </td>
-            <td>Group name</td>
-            <td>Group label</td>
-            <td>
-              <GroupLink href='getup.org.au' text='Join group' />
-            </td>
-          </tr>
-          <tr>
-            <td className={s.groupIconWrapper}>
-              <Messenger />
-            </td>
-            <td>Group name</td>
-            <td>Group label</td>
-            <td>
-              <GroupLink href='getup.org.au' text='Join group' />
-            </td>
-          </tr> */}
-          {groups.map(Group)}
-        </GroupTable>
-      )}
+      <GroupTable>{groups.map(Group)}</GroupTable>
     </div>
   )
 }
