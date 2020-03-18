@@ -9,7 +9,7 @@ import s from './index.module.scss'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import { Private, Public } from '../components/Icons'
 import InputWithIcon from '../components/InputWithIcon'
-import './geosuggest.css'
+import '../geosuggest.css'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
