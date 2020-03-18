@@ -6,6 +6,34 @@
   margin: 0 auto;
   padding: 16px 8px;
 
+  p {
+    color: black;
+  }
+
+  ol,
+  ul {
+    line-height: 1.5;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    color: #2098f5;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    color: #2098f5;
+    line-height: 1.2;
+  }
+
   @media screen and (max-width: 900px) {
     padding: 8px;
     grid-template-columns: 5fr 2fr;
