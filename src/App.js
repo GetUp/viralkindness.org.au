@@ -9,6 +9,7 @@ import Thanks from './Thanks'
 import Faq from './Faq'
 import About from './About'
 import Contact from './Contact'
+import Resources from './Resources'
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/resources'>
+            <Resources />
           </Route>
         </Switch>
       </Router>

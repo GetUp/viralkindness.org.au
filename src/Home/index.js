@@ -71,6 +71,15 @@ export default () => (
               Adding a community care group in your local area is easy!
             </div>
           </Link>
+          <Link to='/resources' className={s.sidebarLink}>
+            <div className={s.sidebarLinkHeader}>
+              <RightArrow />
+              Resources
+            </div>
+            <div className={s.sidebarLinkSubtitle}>
+              Lorem ipsum dolor sit amet consect etur adipisicing elit.
+            </div>
+          </Link>
         </div>
         <FaqNav />
       </div>
