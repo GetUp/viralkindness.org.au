@@ -5,6 +5,7 @@ import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
 import PageHeader from '../components/PageHeader'
 import s from './index.module.scss'
+import Footer from '../components/Footer'
 
 const Item = i => (
   <div key={i.title} className={s.question}>
@@ -16,7 +17,7 @@ const Item = i => (
 )
 
 export default () => (
-  <div>
+  <>
     <PageHeader>
       <h1>{faq.title}</h1>
     </PageHeader>
@@ -24,5 +25,6 @@ export default () => (
       <FaqNav />
       <div>{faq.data.map(Item)}</div>
     </ContentWithSidebar>
-  </div>
+    <Footer />
+  </>
 )

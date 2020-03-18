@@ -5,7 +5,7 @@
     // background: #f3f3f3;
     padding: 16px 0;
     border-radius: 4px;
-    max-width: 600px;
+    max-width: 700px;
 
     legend {
       margin-bottom: 32px;
@@ -67,7 +67,6 @@
 
   .sidebarLink {
     text-decoration: none;
-    margin-bottom: 16px;
     display: block;
     padding: 16px;
     border-radius: 4px;
@@ -92,6 +91,7 @@
       line-height: 1.5;
       opacity: 0.9;
       font-size: 0.9rem;
+      margin-left: 24px;
     }
 
     &:hover {

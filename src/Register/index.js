@@ -19,6 +19,7 @@ import {
 import InputWithIcon from '../components/InputWithIcon'
 import '../geosuggest.css'
 import PageHeader from '../components/PageHeader'
+import Footer from '../components/Footer'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -235,17 +236,23 @@ export default () => {
               <Search />
               Find a group
             </div>
-            <span className={s.sidebarLinkSubtitle}>
+            <div className={s.sidebarLinkSubtitle}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            </div>
           </Link>
           <br />
           <Link to='/howto' className={s.sidebarLink}>
-            <Search color='#999' />
-            How to
+            <div className={s.sidebarLinkHeader}>
+              <Search />
+              FAQs
+            </div>
+            <div className={s.sidebarLinkSubtitle}>
+              Lorem ipsum dolor sit amet consect etur adipisicing elit.
+            </div>
           </Link>
         </div>
       </ContentWithSidebar>
+      <Footer />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import GroupSearch from '../components/GroupSearch'
 import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
 import illustration from '../assets/images/vk-illustration.svg'
+import Footer from '../components/Footer'
 
 const scrollFocus = el => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -14,7 +15,7 @@ const scrollFocus = el => {
 }
 
 export default () => (
-  <div>
+  <>
     <div className={s.headerContainer}>
       <div className={s.header}>
         <h1>Viral Kindness heading</h1>
@@ -69,5 +70,6 @@ export default () => (
         <FaqNav />
       </div>
     </ContentWithSidebar>
-  </div>
+    <Footer />
+  </>
 )
