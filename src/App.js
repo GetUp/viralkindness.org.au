@@ -7,6 +7,7 @@ import Home from './Home'
 import Register from './Register'
 import Thanks from './Thanks'
 import Faq from './Faq'
+import About from './About'
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path='/faq'>
             <Faq />
+          </Route>
+          <Route path='/about'>
+            <About />
           </Route>
         </Switch>
       </Router>
