@@ -9,25 +9,25 @@ import Thanks from './Thanks'
 import Join from './Join'
 import Faq from './Faq'
 
-function App() {
+function App () {
   return (
     <div>
-      <Header />
       <Router>
+        <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Home />
           </Route>
-          <Route path="/register">
+          <Route path='/register'>
             <Register />
           </Route>
-          <Route path="/thanks">
+          <Route path='/thanks'>
             <Thanks />
           </Route>
-          <Route path="/join">
+          <Route path='/join'>
             <Join />
           </Route>
-          <Route path="/faq">
+          <Route path='/faq'>
             <Faq />
           </Route>
         </Switch>
