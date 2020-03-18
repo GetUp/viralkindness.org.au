@@ -132,6 +132,9 @@ export default () => {
             </li>
           </ul>
         </p>
+        <p style={{ backgroundColor: '#ff00f7' }}>
+          To read more about starting a group, head here!
+        </p>
       </PageHeader>
       <ContentWithSidebar>
         <Formik
