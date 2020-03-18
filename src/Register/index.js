@@ -263,7 +263,7 @@ export default () => {
               Find a group
             </div>
             <div className={s.sidebarLinkSubtitle}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Search by suburb to find a community care group near you.
             </div>
           </Link>
           <FaqNav />

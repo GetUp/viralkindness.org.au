@@ -68,7 +68,7 @@ export default () => (
               Add
             </div>
             <div className={s.sidebarLinkSubtitle}>
-              Lorem ipsum dolor sit amet consect etur adipisicing elit.
+              Adding a community care group in your local area is easy!
             </div>
           </Link>
         </div>

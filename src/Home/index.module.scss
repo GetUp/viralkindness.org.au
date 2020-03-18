@@ -10,15 +10,17 @@ $secondary: #2098f5;
   background: $primary;
   grid-gap: 16px;
   position: relative;
+  padding-top: 32px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
+    padding-top: 0;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 6px;
 
     .illustrationWrapper {
       grid-row: 1;
-      width: 70%;
+      width: 50%;
       margin: 0 auto;
       img {
         margin-top: 8px;
@@ -26,9 +28,15 @@ $secondary: #2098f5;
     }
   }
 
+  @media screen and (max-width: 600px) {
+    .illustrationWrapper {
+      width: 70%;
+    }
+  }
+
   .header {
     align-self: center;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 900px) {
       grid-column: 2/3;
     }
 
@@ -46,7 +54,7 @@ $secondary: #2098f5;
       margin-bottom: 30px;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
       h1 {
         font-size: 2.4rem;
         padding: 0 8px;
@@ -96,6 +104,9 @@ $secondary: #2098f5;
       text-decoration: none;
       display: flex;
       padding: 16px;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
 
       @media screen and (max-width: 600px) {
         padding: 8px 0 12px 0;
