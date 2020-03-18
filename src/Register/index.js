@@ -15,10 +15,10 @@ const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
 
 const initialValues = {
-  email: 'me@example.com',
+  email: '',
   phone: '',
-  groupName: 'example group',
-  groupLink: 'https://m.me/groups',
+  groupName: '',
+  groupLink: '',
   location: '',
   links: '',
   general: ''
