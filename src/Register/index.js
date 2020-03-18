@@ -250,7 +250,7 @@ export default () => {
                   <Field
                     as='textarea'
                     rows={4}
-                    maxlength={280}
+                    maxLength={280}
                     name='groupBlurb'
                     placeholder='Any special instructions'
                   />
