@@ -21,6 +21,7 @@ import '../geosuggest.css'
 import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
 import FaqNav from '../components/FaqNav'
+import ResourcesLink from '../components/ResourcesLink'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -263,6 +264,7 @@ export default () => {
               Search by suburb to find a community care group near you.
             </div>
           </Link>
+          <ResourcesLink s={s} />
           <FaqNav />
         </div>
       </ContentWithSidebar>

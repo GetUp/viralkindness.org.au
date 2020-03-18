@@ -8,6 +8,7 @@ import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
 import illustration from '../assets/images/vk-illustration.svg'
 import Footer from '../components/Footer'
+import ResourcesLink from '../components/ResourcesLink'
 
 const scrollFocus = el => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -71,15 +72,7 @@ export default () => (
               Adding a community care group in your local area is easy!
             </div>
           </Link>
-          <Link to='/resources' className={s.sidebarLink}>
-            <div className={s.sidebarLinkHeader}>
-              <RightArrow />
-              Resources
-            </div>
-            <div className={s.sidebarLinkSubtitle}>
-              Lorem ipsum dolor sit amet consect etur adipisicing elit.
-            </div>
-          </Link>
+          <ResourcesLink s={s} />
         </div>
         <FaqNav />
       </div>
