@@ -20,13 +20,13 @@ export default () => (
     <div className={s.headerContainer}>
       <div className={s.header}>
         <h1>#ViralKindness</h1>
-        <h2>We can do this together</h2>
+        <h2>We’re all in this together</h2>
         <p>
           #ViralKindness is a hub for the community care groups springing up
-          across the country offering to help others through coronavirus
-          (COVID-19). Whether it’s shopping for food, picking up medicine or a
-          regular check in call – there are lots of ways we can all work
-          together, even when we’re apart!
+          across the country to support people in self-isolation during the
+          coronavirus (COVID-19) crisis. Whether it’s shopping for food, picking
+          up medicine or a regular check in call – there are lots of ways we can
+          all work together, even when we’re apart!
         </p>
         <div className={s.links}>
           <Link to='/register' className={s.link}>
