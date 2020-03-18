@@ -6,6 +6,8 @@ import { useHistory } from 'react-router-dom'
 import postJson from '../postJson'
 import s from './index.module.scss'
 import ContentWithSidebar from '../components/ContentWithSidebar'
+import { Private, Public } from '../components/Icons'
+import InputWithIcon from '../components/InputWithIcon'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -94,12 +96,18 @@ export default () => {
                 </span>
                 <label>
                   Email
-                  <Field type='email' name='email' required />
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Private />
+                    <Field type='email' name='email' required />
+                  </InputWithIcon>
                 </label>
                 <ErrorMessage name='email' component='div' />
                 <label>
                   Phone
-                  <Field type='tel' name='phone' />
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Private />
+                    <Field type='tel' name='phone' />
+                  </InputWithIcon>
                 </label>
                 <ErrorMessage name='phone' component='div' />
               </fieldset>
@@ -110,24 +118,33 @@ export default () => {
                 </span>
 
                 <label>
-                  Group Name:
-                  <Field type='text' name='groupName' required />
+                  Group Name
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Public />
+                    <Field type='text' name='groupName' required />
+                  </InputWithIcon>
                 </label>
                 <ErrorMessage name='groupName' component='div' />
 
                 <label>
-                  Location:
-                  <Field type='text' name='location' required />
+                  Location
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Public />
+                    <Field type='text' name='location' required />
+                  </InputWithIcon>
                 </label>
                 <ErrorMessage name='location' component='div' />
 
                 <label>
-                  Group link (Facebook, Messenger, WhatsApp):
-                  <Field
-                    type='url'
-                    name='groupLink'
-                    placeholder='https://www.facebook.com/groups/123...'
-                  />
+                  Group link (Facebook, Messenger, WhatsApp)
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Public />
+                    <Field
+                      type='url'
+                      name='groupLink'
+                      placeholder='https://www.facebook.com/groups/123...'
+                    />
+                  </InputWithIcon>
                 </label>
                 <ErrorMessage name='groupLink' component='div' />
               </fieldset>

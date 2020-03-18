@@ -1,0 +1,35 @@
+.inputContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    height: 1rem;
+    width: 1rem;
+    * {
+      fill: rgba(black, 0.3);
+    }
+  }
+
+  input {
+    height: 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: #f4f4f4;
+    border: 1px solid rgba(white, 0);
+    width: calc(100% - 8px);
+    padding-left: 32px;
+    outline: none;
+    margin: 0 !important;
+
+    &:focus {
+      background: none;
+      border: 1px solid #2098f5;
+      box-shadow: 0 0 0 3px rgba(#2098f5, 0.2);
+    }
+  }
+}
