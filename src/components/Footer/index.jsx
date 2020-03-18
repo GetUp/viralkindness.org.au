@@ -13,6 +13,19 @@ export default () => (
           <Link to='/contact'>Contact Us</Link>
         </li>
       </ul>
+      <p id='disclaimer'>
+        * Information supplied on this website is crowd sourced. Whilst we
+        attempt to ensure all groups are genuinely engaged to help spread
+        #ViralKindness, we would like you to be safe so please take reasonable
+        steps like: not sharing personal information you don’t feel comfortable
+        sharing, not putting yourself in financial difficulty and keeping
+        yourself physically safe. If you have any concerns, please{' '}
+        <a href='mailto:viralkindness@getup.org.au'>
+          send them to viralkindness@getup.org.au
+        </a>
+        .
+      </p>
+
       <p>
         Our team acknowledges that we meet and work on the land of the Gadigal
         people of the Eora Nation. We wish to pay respect to their Elders —

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
 import s from './index.module.scss'
@@ -128,6 +129,9 @@ export default () => {
       <p>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
+        <Link smooth to='#disclaimer'>
+          *
+        </Link>
       </p>
       <br />
       <label>
