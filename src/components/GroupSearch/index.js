@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Geosuggest from 'react-geosuggest'
+import { Search } from '../Icons'
 import s from './index.module.scss'
-import '../geosuggest.css'
+import '../../geosuggest.css'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -56,19 +57,21 @@ export default () => {
   }, [location])
 
   return (
-    <div>
-      <h1>Join page</h1>
-      <form>
-        <Geosuggest
-          aria-label={helpText}
-          placeholder={helpText}
-          country='AU'
-          placeDetailFields={[]}
-          minLength={3}
-          onSuggestSelect={setLocation}
-        />
-        <button>Search</button>
-      </form>
+    <div id='groupSearch' className={s.mainContent}>
+      <h2>Find a group</h2>
+      <label>
+        <div className={s.inputContainer}>
+          <Search />
+          <Geosuggest
+            aria-label={helpText}
+            placeholder={helpText}
+            country='AU'
+            placeDetailFields={[]}
+            minLength={3}
+            onSuggestSelect={setLocation}
+          />
+        </div>
+      </label>
       <GroupTable>{groups && groups.map(Group)}</GroupTable>
     </div>
   )
