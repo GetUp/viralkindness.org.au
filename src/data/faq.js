@@ -62,7 +62,7 @@ export default {
     },
     {
       hash: 'group-issue',
-      title: 'Start a local group',
+      title: 'Why is my group listed / not listed on the site?',
       body: `
         <p>We tried to include as many of the existing community care groups as possible, but we may have missed some! <a href="/register">If you’d like to add your group, please do so here!</a></p>
         <p>If your group is listed on the hub and you’d like it removed, please contact <a href="mailto:viralkindness@getup.org.au">viralkindness@getup.org.au</a> and we will remove it immediately.</p>
