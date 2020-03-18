@@ -40,9 +40,9 @@ const GroupTable = ({ children }) => (
     <thead>
       <tr>
         <th width='32'></th>
-        <th width='40%'>Name</th>
+        <th width='30%'>Name</th>
         <th>Location</th>
-        <th width='128'></th>
+        <th width='108'></th>
       </tr>
     </thead>
     <tbody>{children}</tbody>
@@ -88,7 +88,7 @@ export default () => {
             <Facebook />
           </td>
           <td>Group name</td>
-          <td>Group label</td>
+          <td>201 Whitehorse Road, Balwyn VIC, Australia</td>
           <td>
             <GroupLink href='getup.org.au' text='Join group' />
           </td>

@@ -22,7 +22,11 @@ export default ({ style }) => {
           </li>
         ))}
       </ul>
-      {homePage() && <Link to='/faq'>More</Link>}
+      {homePage() && (
+        <Link to='/faq' className={s.moreButton}>
+          MORE
+        </Link>
+      )}
     </div>
   )
 }

@@ -62,10 +62,16 @@ export default () => (
     <ContentWithSidebar>
       <GroupSearch />
       <div>
-        <div>
-          <h3>
-            <Link to='/register'>Add</Link>
-          </h3>
+        <div className={s.sidebarContainer}>
+          <Link to='/register' className={s.sidebarLink}>
+            <div className={s.sidebarLinkHeader}>
+              <Search />
+              Add
+            </div>
+            <div className={s.sidebarLinkSubtitle}>
+              Lorem ipsum dolor sit amet consect etur adipisicing elit.
+            </div>
+          </Link>
         </div>
         <FaqNav />
       </div>

@@ -1,7 +1,7 @@
 $secondary: #2098f5;
 
 .mainContent {
-  max-width: 800px;
+  max-width: 700px;
   h2 {
     color: $secondary;
     padding-left: 8px;
@@ -59,8 +59,13 @@ $secondary: #2098f5;
   }
 
   tr {
-    height: 40px;
+    min-height: 40px;
     margin-bottom: 4px;
+  }
+
+  td {
+    padding: 8px 0;
+    line-height: 1.5;
   }
 
   tbody tr:nth-of-type(even) {
@@ -74,16 +79,16 @@ $secondary: #2098f5;
 
   th,
   td {
-    vertical-align: middle;
+    vertical-align: top;
     padding: 0;
-    padding-left: 8px;
+    padding: 8px 0;
+    font-size: 0.9rem;
   }
 
   .groupIconWrapper {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    vertical-align: top;
+    padding-top: 10px;
     svg {
       height: 16px;
       width: 16px;

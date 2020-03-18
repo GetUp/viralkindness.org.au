@@ -86,3 +86,45 @@ $secondary: #2098f5;
     grid-column: 3/5;
   }
 }
+
+.sidebarContainer {
+  padding-top: 16px;
+
+  .sidebarLink {
+    text-decoration: none;
+    display: block;
+    padding: 12px 8px;
+    border-radius: 4px;
+    color: #555;
+
+    .sidebarLinkHeader {
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      svg {
+        margin-right: 8px;
+        * {
+          fill: #777;
+        }
+      }
+    }
+
+    .sidebarLinkSubtitle {
+      line-height: 1.5;
+      opacity: 0.9;
+      font-size: 0.9rem;
+      margin-left: 24px;
+    }
+
+    &:hover {
+      background: #2098f5;
+      color: white;
+      svg * {
+        fill: white;
+      }
+    }
+  }
+}
