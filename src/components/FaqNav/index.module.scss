@@ -20,11 +20,11 @@
   }
   li {
     line-height: 1.5;
-
     border-radius: 2px;
+
     a {
       display: block;
-      width: 100%;
+      width: calc(100% - 16px);
       color: #2098f5;
       padding: 8px;
       text-decoration: none;
@@ -48,5 +48,14 @@
     margin-top: 20px;
     padding-left: 8px;
     display: block;
+  }
+
+  @media screen and (max-width: 600px) {
+    h3 {
+      padding-left: 0px;
+    }
+    .moreButton {
+      padding-left: 0px;
+    }
   }
 }

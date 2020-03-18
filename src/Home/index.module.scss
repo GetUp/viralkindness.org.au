@@ -9,12 +9,28 @@ $secondary: #2098f5;
   grid-row-gap: 0px;
   background: $primary;
   grid-gap: 16px;
-  // padding: 48px 16px;
   position: relative;
 
+  @media screen and (max-width: 600px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+
+    .illustrationWrapper {
+      grid-row: 1;
+      width: 70%;
+      margin: 0 auto;
+      img {
+        margin-top: 8px;
+      }
+    }
+  }
+
   .header {
-    grid-column: 2/3;
     align-self: center;
+    @media screen and (min-width: 600px) {
+      grid-column: 2/3;
+    }
 
     h1 {
       font-size: 2.8rem;
@@ -28,6 +44,22 @@ $secondary: #2098f5;
       font-weight: 400;
       margin-top: 0px;
       margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+        padding: 0 8px;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+        padding: 0 8px;
+      }
+
+      p {
+        padding: 0 8px;
+      }
     }
   }
 
@@ -50,12 +82,24 @@ $secondary: #2098f5;
     display: flex;
     font-size: 1.2rem;
     margin-top: 1.5em;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 600px) {
+      flex-wrap: wrap;
+      margin-top: 0;
+      padding: 8px;
+      background: darken(#ff671f, 10);
+    }
 
     .link {
       color: white;
       text-decoration: none;
       display: flex;
       padding: 16px;
+
+      @media screen and (max-width: 600px) {
+        padding: 8px 0 12px 0;
+      }
 
       &:nth-child(1) {
         margin-left: -16px;
@@ -86,6 +130,23 @@ $secondary: #2098f5;
         opacity: 0.75;
         line-height: 1.5;
       }
+
+      @media screen and (max-width: 600px) {
+        &:nth-child(1) {
+          margin-left: 0px;
+        }
+
+        svg {
+          height: 1rem;
+          width: 1rem;
+        }
+
+        .linkText {
+          font-size: 1rem;
+          margin-bottom: 4px;
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -96,6 +157,10 @@ $secondary: #2098f5;
 
 .sidebarContainer {
   padding-top: 16px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 32px;
+  }
 
   .sidebarLink {
     text-decoration: none;

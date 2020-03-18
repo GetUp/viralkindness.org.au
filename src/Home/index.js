@@ -59,7 +59,6 @@ export default () => (
           alt='Raised hands holding objects, offering help'
         />
       </div>
-      <div className={s.backgroundOverlap} />
     </div>
     <ContentWithSidebar>
       <GroupSearch />

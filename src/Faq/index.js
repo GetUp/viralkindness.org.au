@@ -21,9 +21,12 @@ export default () => (
     <PageHeader>
       <h1>{faq.title}</h1>
     </PageHeader>
-    <ContentWithSidebar reverse style={{ marginTop: '24px' }}>
-      <FaqNav />
-      <div style={{ maxWidth: '750px', marginLeft: 'auto' }}>
+    <ContentWithSidebar reverse className={s.contentWrapper}>
+      <FaqNav className={s.faqWrapper} />
+      <div
+        style={{ maxWidth: '750px', marginLeft: 'auto' }}
+        className={s.content}
+      >
         {faq.data.map(Item)}
       </div>
     </ContentWithSidebar>

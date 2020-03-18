@@ -19,3 +19,22 @@
     color: #2098f5;
   }
 }
+
+.contentWrapper {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin-top: 32px;
+  }
+
+  .contentWrapper {
+    margin-top: 0px;
+  }
+
+  .faqWrapper {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+}

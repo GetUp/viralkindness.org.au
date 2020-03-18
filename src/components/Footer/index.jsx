@@ -24,8 +24,8 @@ export default () => (
       </p>
 
       <p>
-        © 2020 GetUp! All rights reserved. Authorised by Paul Oosting, GetUp
-        Limited, Level 14, 338 Pitt Street, Sydney NSW 2000.
+        © {new Date().getFullYear()} GetUp! All rights reserved. Authorised by
+        Paul Oosting, GetUp Limited, Level 14, 338 Pitt Street, Sydney NSW 2000.
       </p>
     </div>
   </footer>

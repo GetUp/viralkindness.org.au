@@ -1,8 +1,11 @@
 import React from 'react'
 import s from './index.module.scss'
 
-export default ({ reverse, children, ...props }) => (
-  <div className={`${s.gridContainer} ${reverse && s.reverse}`} {...props}>
+export default ({ reverse, className, children, ...props }) => (
+  <div
+    className={`${s.gridContainer} ${className} ${reverse && s.reverse}`}
+    {...props}
+  >
     {children}
   </div>
 )

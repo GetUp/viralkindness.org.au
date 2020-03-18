@@ -3,11 +3,14 @@ import { HashLink as Link } from 'react-router-hash-link'
 import faq from '../../data/faq'
 import s from './index.module.scss'
 
-export default ({ style }) => {
+export default ({ className, style }) => {
   const faqPage = () => window.location.pathname !== '/faq'
 
   return (
-    <div className={s.howToModule} style={style}>
+    <div
+      className={`${s.howToModule} ${className ? className : ''}`}
+      style={style}
+    >
       {faqPage() && (
         <h3>
           <Link to='/faq'>{faq.title}</Link>

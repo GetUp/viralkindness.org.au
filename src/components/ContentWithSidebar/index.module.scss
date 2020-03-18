@@ -17,9 +17,14 @@
 
   &.reverse {
     grid-template-columns: 1fr 3fr;
+
     @media screen and (max-width: 900px) {
       padding: 8px;
       grid-template-columns: 2fr 5fr;
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -74,6 +74,19 @@ $secondary: #2098f5;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .mainContent {
+    h2 {
+      margin-top: 16px;
+      font-size: 1.8rem;
+    }
+    h2,
+    p {
+      padding-left: 0;
+    }
+  }
+}
+
 .groupsTable {
   width: 100%;
   border-spacing: 0px;

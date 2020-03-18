@@ -60,6 +60,12 @@
       margin-left: 16px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    fieldset label:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .sidebarContainer {
@@ -99,6 +105,18 @@
       color: white;
       svg * {
         fill: white;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 32px;
+    .sidebarLink {
+      padding: 16px 8px;
+      border: 1px solid #ccc;
+      background: #f3f3f3;
+      .sidebarLinkSubtitle {
+        margin-left: 0;
       }
     }
   }
