@@ -6,6 +6,7 @@ $textColor: white;
 .messageContainer {
   background: $background;
   height: 40px;
+  padding: 0 8px;
 
   &:hover {
     background: lighten($background, 8);

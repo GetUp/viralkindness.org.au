@@ -15,10 +15,10 @@ const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
 
 const initialValues = {
-  email: 'me@example.com',
+  email: '',
   phone: '',
-  groupName: 'example group',
-  groupLink: 'https://m.me/groups',
+  groupName: '',
+  groupLink: '',
   location: '',
   links: '',
   general: ''
@@ -94,8 +94,17 @@ export default () => {
   }
 
   return (
-    <div className='Register'>
-      <h1>Register your local group</h1>
+    <div>
+      <div className={s.headerContainer}>
+        <div className={s.contentWrapper}>
+          <h1>Register your local group</h1>
+          <p className={s.subtitle}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            optio mollitia, quaerat, obcaecati velit atque explicabo qui odio
+            nam modi ipsum eos. Necessitatibus laboriosam asperiores odio.
+          </p>
+        </div>
+      </div>
       <ContentWithSidebar>
         <Formik
           initialValues={initialValues}
@@ -105,42 +114,60 @@ export default () => {
           {({ isSubmitting }) => (
             <Form className={s.addForm}>
               <fieldset>
-                <span>
-                  <legend>
-                    This information will not be shown on the site
-                  </legend>
-                </span>
                 <label>
                   Email
                   <InputWithIcon className={s.inputWrapper}>
                     <Private />
-                    <Field type='email' name='email' required />
+                    <Field
+                      type='email'
+                      name='email'
+                      placeholder='Email'
+                      required
+                    />
                   </InputWithIcon>
+                  <ErrorMessage
+                    name='email'
+                    component='div'
+                    className={s.errorMessage}
+                  />
+                  <span className={s.inputMessage}>
+                    Your email won't be publicly visible.
+                  </span>
                 </label>
-                <ErrorMessage name='email' component='div' />
                 <label>
                   Phone
                   <InputWithIcon className={s.inputWrapper}>
                     <Private />
-                    <Field type='tel' name='phone' />
+                    <Field type='tel' name='phone' placeholder='Phone' />
                   </InputWithIcon>
+                  <span className={s.inputMessage}>
+                    Your phone number won't be publicly visible.
+                  </span>
                 </label>
-                <ErrorMessage name='phone' component='div' />
               </fieldset>
 
               <fieldset>
-                <span>
+                {/* <span>
                   <legend>This will be shown on the site</legend>
-                </span>
+                </span> */}
 
                 <label>
                   Group Name
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
-                    <Field type='text' name='groupName' required />
+                    <Field
+                      type='text'
+                      name='groupName'
+                      placeholder='Group name'
+                      required
+                    />
                   </InputWithIcon>
+                  <ErrorMessage
+                    name='groupName'
+                    component='div'
+                    className={s.errorMessage}
+                  />
                 </label>
-                <ErrorMessage name='groupName' component='div' />
 
                 <label>
                   Location
@@ -153,10 +180,18 @@ export default () => {
                       minLength={4}
                       onSuggestSelect={setLocation}
                     />
-                    <ErrorMessage name='location' component='div' />
+                    <ErrorMessage
+                      name='location'
+                      component='div'
+                      className={s.errorMessage}
+                    />
                   </InputWithIcon>
                 </label>
-                <ErrorMessage name='location' component='div' />
+                <ErrorMessage
+                  name='location'
+                  component='div'
+                  className={s.errorMessage}
+                />
 
                 <label>
                   Group link (Facebook, Messenger, WhatsApp)
@@ -168,12 +203,21 @@ export default () => {
                       placeholder='https://www.facebook.com/groups/123...'
                     />
                   </InputWithIcon>
+                  <ErrorMessage
+                    name='groupLink'
+                    component='div'
+                    className={s.errorMessage}
+                  />
                 </label>
-                <ErrorMessage name='groupLink' component='div' />
               </fieldset>
 
               <ErrorMessage name='general' component='div' />
-              <button type='submit' disabled={isSubmitting}>
+              <button
+                type='submit'
+                disabled={isSubmitting}
+                className='btn btn-large btn-secondary'
+                style={{ border: 'none' }}
+              >
                 Register your group
               </button>
             </Form>
