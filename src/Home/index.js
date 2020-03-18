@@ -10,7 +10,7 @@ import illustration from '../assets/images/vk-illustration.svg'
 
 const scrollFocus = el => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  setTimeout(() => el.focus(), 300)
+  el.focus({ preventScroll: true })
 }
 
 export default () => (
