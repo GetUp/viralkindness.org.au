@@ -45,7 +45,10 @@ export default () => (
         </div>
       </div>
       <div className={s.illustrationWrapper}>
-        <img src={illustration} />
+        <img
+          src={illustration}
+          alt='Raised hands holding objects, offering help'
+        />
       </div>
       <div className={s.backgroundOverlap} />
     </div>
