@@ -9,8 +9,8 @@ import faq from '../data/faq'
 import illustration from '../assets/images/vk-illustration.svg'
 
 const scrollFocus = el => {
+  el.focus({ preventScroll: true })
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  setTimeout(() => el.focus(), 300)
 }
 
 export default () => (
