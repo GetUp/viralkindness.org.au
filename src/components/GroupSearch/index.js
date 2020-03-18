@@ -71,8 +71,8 @@ export default () => {
       <h2>Find a group</h2>
       <p>
         <b>
-          Looking for help? Or keen to lend a hand? Enter your postcode or
-          suburb below to find a community care group near you.
+          Looking for help? Or keen to lend a hand? Enter your suburb below to
+          find a community care group near you.
         </b>
       </p>
       <p>
