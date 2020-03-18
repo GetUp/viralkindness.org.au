@@ -9,10 +9,27 @@ export const RightArrow = () => (
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M16.9299 10.1721L12.1885 5.43058L13.6027 4.01637L20.7584 11.1721L13.6027 18.3277L12.1885 16.9135L16.9299 12.1721L0.999891 12.1721L0.999884 10.1721L16.9299 10.1721Z'
       fill='#323232'
+    />
+  </svg>
+)
+
+export const Add = () => (
+  <svg
+    width='20'
+    height='20'
+    viewBox='0 0 20 20'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      fillRule='evenodd'
+      clipRule='evenodd'
+      d='M9 11V20H11V11H20V9H11V0H9V9H0V11H9Z'
+      fill='black'
     />
   </svg>
 )
