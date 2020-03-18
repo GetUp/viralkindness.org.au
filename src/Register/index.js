@@ -135,7 +135,7 @@ export default () => {
         </p>
         <p>
           <Link to='/resources'>
-            To read more about starting a group, head here!
+            More information about starting a group is available here.
           </Link>
         </p>
       </PageHeader>
