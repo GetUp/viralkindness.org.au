@@ -199,4 +199,16 @@ $secondary: #2098f5;
       }
     }
   }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 32px;
+    .sidebarLink {
+      padding: 16px 8px;
+      border: 1px solid #ccc;
+      background: #f3f3f3;
+      .sidebarLinkSubtitle {
+        margin-left: 0;
+      }
+    }
+  }
 }
