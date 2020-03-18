@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 import s from './index.module.scss'
 
 export default () => (
@@ -6,7 +7,7 @@ export default () => (
     <div className={s.content}>
       <ul className={s.linkContainer}>
         <li>
-          <a href='/about'>About</a>
+          <Link to='/about'>About</Link>
         </li>
       </ul>
       <p>

@@ -100,7 +100,7 @@ export default () => {
           <p>
             These are community groups established to help people with everyday
             needs, such as shopping or a check-in call. If you need urgent help
-            or medical assistance, <a href='/'>head here</a>.
+            or medical assistance, <Link to='/faq#help'>head here</Link>.
           </p>
         </div>
       )}
