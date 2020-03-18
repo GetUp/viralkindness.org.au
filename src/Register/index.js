@@ -4,7 +4,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { omit } from 'lodash'
 import { useHistory } from 'react-router-dom'
 import postJson from '../postJson'
-import './index.css'
+import s from './index.module.scss'
+import ContentWithSidebar from '../components/ContentWithSidebar'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -69,76 +70,87 @@ export default () => {
   }
 
   return (
-    <div className="Register">
+    <div className='Register'>
       <h1>Register your local group</h1>
-      <Formik
-        initialValues={initialValues}
-        validate={validate}
-        onSubmit={onSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <fieldset>
-              <legend>This information will not be shown on the site</legend>
-              <label>
-                Contact email:
-                <Field type="email" name="email" required />
-              </label>
-              <ErrorMessage name="email" component="div" />
-              <label>
-                Contact phone:
-                <Field type="tel" name="phone" />
-              </label>
-              <ErrorMessage name="phone" component="div" />
-            </fieldset>
+      <ContentWithSidebar>
+        <Formik
+          initialValues={initialValues}
+          validate={validate}
+          onSubmit={onSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form className={s.addForm}>
+              <fieldset>
+                <span>
+                  <legend>
+                    This information will not be shown on the site
+                  </legend>
+                </span>
+                <label>
+                  Email
+                  <Field type='email' name='email' required />
+                </label>
+                <ErrorMessage name='email' component='div' />
+                <label>
+                  Phone
+                  <Field type='tel' name='phone' />
+                </label>
+                <ErrorMessage name='phone' component='div' />
+              </fieldset>
 
-            <fieldset>
-              <legend>This will be shown on the site</legend>
-              <label>
-                Group Name:
-                <Field type="text" name="groupName" required />
-              </label>
-              <ErrorMessage name="groupName" component="div" />
-              <label>
-                Location:
-                <Field type="text" name="location" required />
-              </label>
-              <ErrorMessage name="location" component="div" />
+              <fieldset>
+                <span>
+                  <legend>This will be shown on the site</legend>
+                </span>
+                <label>
+                  Group Name:
+                  <Field type='text' name='groupName' required />
+                </label>
+                <ErrorMessage name='groupName' component='div' />
+                <label>
+                  Location:
+                  <Field type='text' name='location' required />
+                </label>
+                <ErrorMessage name='location' component='div' />
 
-              <ErrorMessage name="links" component="div" />
-              <label>
-                Facebook Group link:
-                <Field
-                  type="url"
-                  name="facebook"
-                  placeholder="https://www.facebook.com/groups/123..."
-                />
-              </label>
-              <label>
-                Messenger group chat link:
-                <Field
-                  type="url"
-                  name="messenger"
-                  placeholder="https://m.me/abc..."
-                />
-              </label>
-              <label>
-                Whatsapp group chat link:
-                <Field
-                  type="url"
-                  name="whatsapp"
-                  placeholder="https://chat.whatsapp.com/abc..."
-                />
-              </label>
-            </fieldset>
+                <ErrorMessage name='links' component='div' />
+                <label>
+                  Facebook Group link:
+                  <Field
+                    type='url'
+                    name='facebook'
+                    placeholder='https://www.facebook.com/groups/123...'
+                  />
+                </label>
+                <label>
+                  Messenger group chat link:
+                  <Field
+                    type='url'
+                    name='messenger'
+                    placeholder='https://m.me/abc...'
+                  />
+                </label>
+                <label>
+                  Whatsapp group chat link:
+                  <Field
+                    type='url'
+                    name='whatsapp'
+                    placeholder='https://chat.whatsapp.com/abc...'
+                  />
+                </label>
+              </fieldset>
 
-            <ErrorMessage name="general" component="div" />
-            <button type="submit" disabled={isSubmitting}>
-              Register your group
-            </button>
-          </Form>
-        )}
-      </Formik>
+              <ErrorMessage name='general' component='div' />
+              <button type='submit' disabled={isSubmitting}>
+                Register your group
+              </button>
+            </Form>
+          )}
+        </Formik>
+        <div>
+          <h1>hello</h1>
+        </div>
+      </ContentWithSidebar>
     </div>
   )
 }
