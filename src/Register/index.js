@@ -13,29 +13,35 @@ const initialValues = {
   email: 'me@example.com',
   phone: '',
   groupName: 'example group',
+  groupLink: 'https://m.me/groups',
   location: 'dummy location',
-  facebook: 'https://example.com/groups',
-  messenger: '',
-  whatsapp: '',
   links: '',
   general: ''
 }
+
+const groupLinkPattern = new RegExp(
+  '^https://(www.facebook.com|m.me|www.messenger.com|chat.whatsapp.com)/',
+  'i'
+)
 
 const validate = values => {
   const errors = {}
 
   if (!values.email) {
-    errors.email = 'Required'
+    errors.email = 'This field is required'
   } else if (!/^.+@.+$/i.test(values.email)) {
-    errors.email = "The email format doesn't look right"
+    errors.email = "The email address format doesn't look right"
   }
 
   if (!values.groupName) {
-    errors.groupName = 'Required'
+    errors.groupName = 'This field is required'
   }
 
-  if (!values.facebook && !values.messenger && !values.whatsapp) {
-    errors.links = 'At least one of the link fields are required'
+  if (!values.groupLink) {
+    errors.groupLink = 'This field is required'
+  } else if (!groupLinkPattern.test(values.groupLink)) {
+    errors.groupLink =
+      'The link should be to a Facebook group or group chat on FB Messenger or WhatsApp'
   }
 
   return errors
@@ -94,42 +100,28 @@ export default () => {
 
             <fieldset>
               <legend>This will be shown on the site</legend>
+
               <label>
                 Group Name:
                 <Field type="text" name="groupName" required />
               </label>
               <ErrorMessage name="groupName" component="div" />
+
               <label>
                 Location:
                 <Field type="text" name="location" required />
               </label>
               <ErrorMessage name="location" component="div" />
 
-              <ErrorMessage name="links" component="div" />
               <label>
-                Facebook Group link:
+                Group link (Facebook, Messenger, WhatsApp):
                 <Field
                   type="url"
-                  name="facebook"
+                  name="groupLink"
                   placeholder="https://www.facebook.com/groups/123..."
                 />
               </label>
-              <label>
-                Messenger group chat link:
-                <Field
-                  type="url"
-                  name="messenger"
-                  placeholder="https://m.me/abc..."
-                />
-              </label>
-              <label>
-                Whatsapp group chat link:
-                <Field
-                  type="url"
-                  name="whatsapp"
-                  placeholder="https://chat.whatsapp.com/abc..."
-                />
-              </label>
+              <ErrorMessage name="groupLink" component="div" />
             </fieldset>
 
             <ErrorMessage name="general" component="div" />
