@@ -11,7 +11,7 @@ export const RightArrow = () => (
     <path
       d='M12.8956 3.72347L19.3442 10.172M19.3442 10.172L12.8956 16.6206M19.3442 10.172L0.999905 10.1721'
       stroke='white'
-      stroke-width='1.5'
+      strokeWidth='1.5'
     />
   </svg>
 )
