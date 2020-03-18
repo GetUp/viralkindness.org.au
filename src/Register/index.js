@@ -205,7 +205,7 @@ export default () => {
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
-                      type='url'
+                      type='text'
                       name='groupLink'
                       placeholder='https://www.facebook.com/groups/123...'
                     />

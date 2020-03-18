@@ -45,7 +45,10 @@ export default () => (
         </div>
       </div>
       <div className={s.illustrationWrapper}>
-        <img src={illustration} />
+        <img
+          src={illustration}
+          alt='Raised hands holding objects, offering help'
+        />
       </div>
       <div className={s.backgroundOverlap} />
     </div>
@@ -53,16 +56,22 @@ export default () => (
       <GroupSearch />
       <div>
         <div>
-          <h3>Add</h3>
+          <h3>
+            <Link to='/register'>Add</Link>
+          </h3>
         </div>
         <div className={s.howToModule}>
-          <h3>{howto.title}</h3>
+          <h3>
+            <Link to='/faq'>{howto.title}</Link>
+          </h3>
           <ul>
             {howto.data.map(i => (
-              <li key={i.title}>{i.title}</li>
+              <li key={i.title}>
+                <Link to={`/faq#${i.hash}`}>{i.title}</Link>
+              </li>
             ))}
           </ul>
-          <a href='#'>More</a>
+          <Link to='/faq'>More</Link>
         </div>
       </div>
     </ContentWithSidebar>
