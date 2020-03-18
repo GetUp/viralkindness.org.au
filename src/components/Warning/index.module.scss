@@ -1,17 +1,29 @@
 .messageContainer {
-  background: black;
+  background: #ffdd50;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  &:hover {
+    background: lighten(#ffdd50, 8);
+    .link {
+      text-decoration: underline;
+    }
+  }
 }
 
 .message {
   margin: 0;
   max-width: 1200px;
   width: 100%;
+  height: 100%;
 }
 
 .link {
-  color: white;
+  color: darken(#ff671f, 20);
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
 }

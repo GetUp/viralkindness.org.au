@@ -1,8 +1,9 @@
 import React from 'react'
 import s from './index.module.scss'
 import { Link } from 'react-router-dom'
-import { RightArrow } from '../components/Icons'
+import { RightArrow, Search } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
+import { howto } from '../data/howto'
 
 export default () => (
   <div>
@@ -16,14 +17,14 @@ export default () => (
           Tenetur, voluptate!
         </p>
         <div className={s.links}>
-          <Link to="/register" className={s.link}>
+          <Link to='/register' className={s.link}>
             <RightArrow />
             <div>
               <div className={s.linkText}>Add</div>
               <div className={s.linkSubtext}>Add your local group</div>
             </div>
           </Link>
-          <Link to="/join" className={s.link}>
+          <Link to='/join' className={s.link}>
             <RightArrow />
             <div>
               <div className={s.linkText}>Find a group</div>
@@ -32,28 +33,39 @@ export default () => (
               </div>
             </div>
           </Link>
-          <Link to="/faq" className={s.link}>
+          <Link to='/faq' className={s.link}>
             <RightArrow />
             <div>
-              <div className={s.linkText}>How to</div>
-              <div className={s.linkSubtext}>
-                How can you spread #ViralKindness
-              </div>
+              <div className={s.linkText}>{howto.title}</div>
+              <div className={s.linkSubtext}>{howto.subtitle}</div>
             </div>
           </Link>
         </div>
       </div>
     </div>
     <ContentWithSidebar>
-      <div>
+      <div className={s.mainContent}>
         <h2>Find a group</h2>
+        <label>
+          <div className={s.inputContainer}>
+            <Search />
+            <input type='text' placeholder='Postcode or suburb' />
+          </div>
+        </label>
+        <div className={s.searchStatus}>Type your postcode or suburb </div>
       </div>
       <div>
         <div>
           <h3>Add</h3>
         </div>
-        <div>
-          <h3>How to</h3>
+        <div className={s.howToModule}>
+          <h3>{howto.title}</h3>
+          <ul>
+            {howto.data.map(i => (
+              <li key={i.title}>{i.title}</li>
+            ))}
+          </ul>
+          <a href='#'>More</a>
         </div>
       </div>
     </ContentWithSidebar>

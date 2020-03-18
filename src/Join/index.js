@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './index.css'
+import s from './index.module.scss'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -7,25 +7,42 @@ const allDocsUrl = `${apiHost}/viral-kindness-public/_all_docs?include_docs=true
 const helpText = 'Search by your postcode or suburb'
 
 const GroupLink = ({ href, text }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
+  <a href={href} target='_blank' rel='noopener noreferrer'>
     {text}
   </a>
 )
 
 const Group = group => (
-  <div>
-    <p>Name: {group.doc.groupName}</p>
-    <p>Location: {group.doc.location}</p>
-    {group.doc.facebook && (
-      <GroupLink href={group.doc.facebook} text="Facebook" />
-    )}
-    {group.doc.messenger && (
-      <GroupLink href={group.doc.messenger} text="Messenger" />
-    )}
-    {group.doc.whatsapp && (
-      <GroupLink href={group.doc.whatsapp} text="Whatsapp" />
-    )}
-  </div>
+  <>
+    <tr>
+      <td>{group.doc.groupName}</td>
+      <td>{group.doc.location}</td>
+      <td>
+        {group.doc.facebook && (
+          <GroupLink href={group.doc.facebook} text='Facebook' />
+        )}
+        {group.doc.messenger && (
+          <GroupLink href={group.doc.messenger} text='Messenger' />
+        )}
+        {group.doc.whatsapp && (
+          <GroupLink href={group.doc.whatsapp} text='Whatsapp' />
+        )}
+      </td>
+    </tr>
+  </>
+)
+
+const GroupTable = ({ children }) => (
+  <table className={s.groupsTable}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Platform</th>
+      </tr>
+    </thead>
+    <tbody>{children}</tbody>
+  </table>
 )
 
 export default () => {
@@ -36,19 +53,18 @@ export default () => {
       .then(json => setGroups(json.rows))
   })
   return (
-    <div className="Join">
+    <div>
       <h1>Join page</h1>
       <form>
         <input
-          type="search"
-          name="q"
+          type='search'
+          name='q'
           aria-label={helpText}
           placeholder={helpText}
         />
         <button>Search</button>
       </form>
-
-      {groups && groups.map(Group)}
+      <GroupTable>{groups && groups.map(Group)}</GroupTable>
     </div>
   )
 }
