@@ -16,13 +16,13 @@ export const RightArrow = () => (
   </svg>
 )
 
-export const Search = () => (
+export const Search = ({ color = 'black' }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='16'
     height='16'
     viewBox='0 0 16 16'
-    fill='black'
+    fill={color}
     role='img'
   >
     <path

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { RightArrow, Search } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import { howto } from '../data/howto'
+import illustration from '../assets/images/vk-illustration.svg'
 
 export default () => (
   <div>
@@ -25,7 +26,7 @@ export default () => (
             </div>
           </Link>
           <Link to='/join' className={s.link}>
-            <RightArrow />
+            <Search color='white' />
             <div>
               <div className={s.linkText}>Find a group</div>
               <div className={s.linkSubtext}>
@@ -42,6 +43,10 @@ export default () => (
           </Link>
         </div>
       </div>
+      <div className={s.illustrationWrapper}>
+        <img src={illustration} />
+      </div>
+      <div className={s.backgroundOverlap} />
     </div>
     <ContentWithSidebar>
       <div className={s.mainContent}>

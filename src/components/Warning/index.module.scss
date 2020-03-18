@@ -1,9 +1,14 @@
+$background: #333;
+$textColor: white;
+// $background: #ffdd50;
+// textColor: darken(#ff671f, 20);
+
 .messageContainer {
-  background: #ffdd50;
+  background: $background;
   height: 40px;
 
   &:hover {
-    background: lighten(#ffdd50, 8);
+    background: lighten($background, 8);
     .link {
       text-decoration: underline;
     }
@@ -18,7 +23,7 @@
 }
 
 .link {
-  color: darken(#ff671f, 20);
+  color: $textColor;
   font-weight: 700;
   text-decoration: none;
   width: 100%;
@@ -26,4 +31,5 @@
   justify-content: flex-start;
   display: flex;
   height: 100%;
+  font-size: 0.85rem;
 }

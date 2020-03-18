@@ -3,15 +3,18 @@ $secondary: #2098f5;
 
 .headerContainer {
   display: grid;
-  grid-template-columns: 1fr minmax(400px, 900px) minmax(100px, 300px) 1fr;
+  grid-template-columns: 1fr minmax(400px, 800px) minmax(100px, 400px) 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background: $primary;
-  padding: 48px 16px;
+  grid-gap: 16px;
+  // padding: 48px 16px;
+  position: relative;
 
   .header {
     grid-column: 2/3;
+    align-self: center;
 
     h1 {
       font-size: 2.8rem;
@@ -19,6 +22,21 @@ $secondary: #2098f5;
       margin-bottom: 8px;
       margin-top: 0px;
     }
+  }
+
+  .illustrationWrapper {
+    align-self: flex-end;
+    img {
+      display: flex;
+    }
+  }
+
+  .backgroundOverlap {
+    // background: blue;
+    grid-column: 3/5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 
   .links {
