@@ -40,6 +40,10 @@ $secondary: #2098f5;
       grid-column: 2/3;
     }
 
+    @media screen and (min-width: 600px) {
+      padding-bottom: 32px;
+    }
+
     h1 {
       font-size: 2.8rem;
       color: white;
@@ -145,7 +149,7 @@ $secondary: #2098f5;
         line-height: 1.5;
       }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 900px) {
         &:nth-child(1) {
           margin-left: 0px;
         }
