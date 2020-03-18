@@ -276,7 +276,7 @@ export default () => {
               Find a group
             </div>
             <div className={s.sidebarLinkSubtitle}>
-              Search by suburb to find a community care group near you.
+              Find a community care group near you.
             </div>
           </Link>
           <ResourcesLink s={s} />
