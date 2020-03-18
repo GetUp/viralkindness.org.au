@@ -106,11 +106,31 @@ export default () => {
   return (
     <div>
       <PageHeader>
-        <h1>Register your local group</h1>
+        <h1>Add a group</h1>
         <p className={s.subtitle}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio
-          mollitia, quaerat, obcaecati velit atque explicabo qui odio nam modi
-          ipsum eos. Necessitatibus laboriosam asperiores odio.
+          Adding a community care group in your local area is easy!
+        </p>
+
+        <p>
+          Fill in the information below - including how the group will organise
+          eg. Facebook group, FB Messenger, WhatsApp group.
+        </p>
+        <p>
+          Many groups are using Facebook as a digital space to come together and
+          communicate.
+        </p>
+        <p>
+          If you’re using a Facebook group, make sure you:
+          <ul>
+            <li>
+              Add a clear group description to the ‘About’ section of your page.
+            </li>
+            <li>
+              Make the group ‘private’ <strong>not</strong> ‘secret’ or
+              ‘public’. That way you can make sure only members of your
+              community join.
+            </li>
+          </ul>
         </p>
       </PageHeader>
       <ContentWithSidebar>
