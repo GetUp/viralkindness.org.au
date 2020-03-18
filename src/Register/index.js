@@ -25,7 +25,7 @@ const initialValues = {
 }
 
 const groupLinkPattern = new RegExp(
-  '^https://(www.facebook.com|m.me|www.messenger.com|chat.whatsapp.com)/',
+  /^(https?:\/\/)?(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com)/,
   'i'
 )
 
