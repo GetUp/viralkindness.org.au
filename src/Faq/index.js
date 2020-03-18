@@ -23,7 +23,9 @@ export default () => (
     </PageHeader>
     <ContentWithSidebar reverse style={{ marginTop: '24px' }}>
       <FaqNav />
-      <div>{faq.data.map(Item)}</div>
+      <div style={{ maxWidth: '750px', marginLeft: 'auto' }}>
+        {faq.data.map(Item)}
+      </div>
     </ContentWithSidebar>
     <Footer />
   </>
