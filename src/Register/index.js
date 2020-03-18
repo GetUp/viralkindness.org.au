@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Link } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { omit } from 'lodash'
 import { useHistory } from 'react-router-dom'
@@ -7,7 +8,14 @@ import Geosuggest from 'react-geosuggest'
 import postJson from '../postJson'
 import s from './index.module.scss'
 import ContentWithSidebar from '../components/ContentWithSidebar'
-import { Private, Public } from '../components/Icons'
+import {
+  Private,
+  Public,
+  Messenger,
+  WhatsApp,
+  Facebook,
+  Search
+} from '../components/Icons'
 import InputWithIcon from '../components/InputWithIcon'
 import '../geosuggest.css'
 
@@ -115,7 +123,7 @@ export default () => {
             <Form className={s.addForm}>
               <fieldset>
                 <label>
-                  Email
+                  Your email
                   <InputWithIcon className={s.inputWrapper}>
                     <Private />
                     <Field
@@ -135,7 +143,7 @@ export default () => {
                   </span>
                 </label>
                 <label>
-                  Phone
+                  Your phone
                   <InputWithIcon className={s.inputWrapper}>
                     <Private />
                     <Field type='tel' name='phone' placeholder='Phone' />
@@ -144,15 +152,9 @@ export default () => {
                     Your phone number won't be publicly visible.
                   </span>
                 </label>
-              </fieldset>
-
-              <fieldset>
-                {/* <span>
-                  <legend>This will be shown on the site</legend>
-                </span> */}
 
                 <label>
-                  Group Name
+                  Name of the group
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
@@ -194,7 +196,12 @@ export default () => {
                 />
 
                 <label>
-                  Group link (Facebook, Messenger, WhatsApp)
+                  Link
+                  <span className={s.socialIcons}>
+                    <WhatsApp />
+                    <Messenger />
+                    <Facebook />
+                  </span>
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
@@ -223,8 +230,21 @@ export default () => {
             </Form>
           )}
         </Formik>
-        <div>
-          <h1>hello</h1>
+        <div className={s.sidebarContainer}>
+          <Link to='/' className={s.sidebarLink}>
+            <div className={s.sidebarLinkHeader}>
+              <Search />
+              Find a group{' '}
+            </div>
+            <span className={s.sidebarLinkSubtitle}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
+          </Link>
+          <br />
+          <Link to='/howto' className={s.sidebarLink}>
+            <Search color='#999' />
+            How to
+          </Link>
         </div>
       </ContentWithSidebar>
     </div>
