@@ -275,7 +275,7 @@ export default () => {
           )}
         </Formik>
         <div className={s.sidebarContainer}>
-          <Link to='/' className={s.sidebarLink}>
+          <Link to='/#groupSearch' className={s.sidebarLink}>
             <div className={s.sidebarLinkHeader}>Find a group</div>
             <div className={s.sidebarLinkSubtitle}>
               Find a community care group near you.

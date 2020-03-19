@@ -55,8 +55,9 @@ export default () => {
                 }}
               >
                 {/* eslint-enable react/jsx-no-target-blank */}
-                <div
+                <span
                   style={{
+                    display: 'block',
                     padding: '16px',
                     borderRadius: '4px',
                     maxWidth: '300px',
@@ -70,7 +71,7 @@ export default () => {
                       width: '100%'
                     }}
                   />
-                </div>
+                </span>
                 Download the postcards to print at home
               </a>
             </p>
