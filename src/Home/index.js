@@ -25,10 +25,10 @@ export default () => {
           <h2>We’re all in this together</h2>
           <p>
             #ViralKindness is a hub for the community care groups springing up
-            across the country to support people in self-isolation during the
-            coronavirus (COVID-19) crisis. Whether it’s shopping for food,
+            across the country to support people in need or in self-isolation
+            during the coronavirus crisis. Whether it’s shopping for food,
             picking up medicine or a regular check in call – there are lots of
-            ways we can all work together, even when we’re apart!
+            ways we can stay together, even when we’re apart!
           </p>
           <div className={s.links}>
             <Link to='/register' className={s.link}>
