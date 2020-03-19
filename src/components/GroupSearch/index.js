@@ -182,9 +182,11 @@ export default () => {
           <p>
             These are community groups established to help people with everyday
             needs, such as shopping or a check-in call. <br />
-            <Link to='/faq#help'>
-              Click here if you need urgent help or medical assistance.
+            You can find{' '}
+            <Link smooth to='/faq#help'>
+              more information on urgent help and medical assistance here
             </Link>
+            .
           </p>
         </div>
       )}
