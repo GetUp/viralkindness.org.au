@@ -154,7 +154,7 @@ export default () => {
             <Form className={s.addForm}>
               <fieldset>
                 <label>
-                  Your email
+                  Your email*
                   <InputWithIcon className={s.inputWrapper}>
                     <Private />
                     <Field
@@ -185,7 +185,7 @@ export default () => {
                 </label>
 
                 <label>
-                  Name of the group
+                  Name of the group*
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
@@ -203,7 +203,7 @@ export default () => {
                 </label>
 
                 <label>
-                  Location
+                  Location*
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Geosuggest
@@ -227,7 +227,7 @@ export default () => {
                 />
 
                 <label>
-                  Link
+                  Link*
                   <span className={s.socialIcons}>
                     <WhatsApp />
                     <Messenger />
