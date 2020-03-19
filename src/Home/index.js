@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga'
 import s from './index.module.scss'
 import { HashLink as Link } from 'react-router-hash-link'
 import { RightArrow, Search, Add } from '../components/Icons'
@@ -15,68 +16,75 @@ const scrollFocus = el => {
   el.focus({ preventScroll: true })
 }
 
-export default () => (
-  <>
-    <div className={s.headerContainer}>
-      <div className={s.header}>
-        <h1>#ViralKindness</h1>
-        <h2>We’re all in this together</h2>
-        <p>
-          #ViralKindness is a hub for the community care groups springing up
-          across the country to support people in self-isolation during the
-          coronavirus (COVID-19) crisis. Whether it’s shopping for food, picking
-          up medicine or a regular check in call – there are lots of ways we can
-          all work together, even when we’re apart!
-        </p>
-        <div className={s.links}>
-          <Link to='/register' className={s.link}>
-            <RightArrow />
-            <div>
-              <div className={s.linkText}>Add a group</div>
-              <div className={s.linkSubtext}>Add your local group</div>
-            </div>
-          </Link>
-          <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
-            <Search color='white' />
-            <div>
-              <div className={s.linkText}>Find a group</div>
-              <div className={s.linkSubtext}>Search by your location</div>
-            </div>
-          </Link>
-          <Link to='/faq' className={s.link}>
-            <RightArrow />
-            <div>
-              <div className={s.linkText}>{faq.title}</div>
-              <div className={s.linkSubtext}>{faq.subtitle}</div>
-            </div>
-          </Link>
+export default () => {
+  useEffect(
+    () => ReactGA.pageview(window.location.pathname + window.location.search),
+    []
+  )
+
+  return (
+    <>
+      <div className={s.headerContainer}>
+        <div className={s.header}>
+          <h1>#ViralKindness</h1>
+          <h2>We’re all in this together</h2>
+          <p>
+            #ViralKindness is a hub for the community care groups springing up
+            across the country to support people in self-isolation during the
+            coronavirus (COVID-19) crisis. Whether it’s shopping for food,
+            picking up medicine or a regular check in call – there are lots of
+            ways we can all work together, even when we’re apart!
+          </p>
+          <div className={s.links}>
+            <Link to='/register' className={s.link}>
+              <RightArrow />
+              <div>
+                <div className={s.linkText}>Add a group</div>
+                <div className={s.linkSubtext}>Add your local group</div>
+              </div>
+            </Link>
+            <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
+              <Search color='white' />
+              <div>
+                <div className={s.linkText}>Find a group</div>
+                <div className={s.linkSubtext}>Search by your location</div>
+              </div>
+            </Link>
+            <Link to='/faq' className={s.link}>
+              <RightArrow />
+              <div>
+                <div className={s.linkText}>{faq.title}</div>
+                <div className={s.linkSubtext}>{faq.subtitle}</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className={s.illustrationWrapper}>
+          <img
+            src={illustration}
+            alt='Raised hands holding objects, offering help'
+          />
         </div>
       </div>
-      <div className={s.illustrationWrapper}>
-        <img
-          src={illustration}
-          alt='Raised hands holding objects, offering help'
-        />
-      </div>
-    </div>
-    <ContentWithSidebar>
-      <GroupSearch />
-      <div>
-        <div className={s.sidebarContainer}>
-          <Link to='/register' className={s.sidebarLink}>
-            <div className={s.sidebarLinkHeader}>
-              <Add />
-              Add
-            </div>
-            <div className={s.sidebarLinkSubtitle}>
-              Adding a community care group in your local area is easy!
-            </div>
-          </Link>
-          <ResourcesLink s={s} />
+      <ContentWithSidebar>
+        <GroupSearch />
+        <div>
+          <div className={s.sidebarContainer}>
+            <Link to='/register' className={s.sidebarLink}>
+              <div className={s.sidebarLinkHeader}>
+                <Add />
+                Add
+              </div>
+              <div className={s.sidebarLinkSubtitle}>
+                Adding a community care group in your local area is easy!
+              </div>
+            </Link>
+            <ResourcesLink s={s} />
+          </div>
+          <FaqNav />
         </div>
-        <FaqNav />
-      </div>
-    </ContentWithSidebar>
-    <Footer />
-  </>
-)
+      </ContentWithSidebar>
+      <Footer />
+    </>
+  )
+}
