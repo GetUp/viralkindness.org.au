@@ -19,9 +19,9 @@ export default () => (
         #ViralKindness, we would like you to be safe so please take reasonable
         steps like: not sharing personal information you don’t feel comfortable
         sharing, not putting yourself in financial difficulty and keeping
-        yourself physically safe. If you have any concerns, please{' '}
+        yourself physically safe. If you have any concerns, please send them to{' '}
         <a href='mailto:viralkindness@getup.org.au'>
-          send them to viralkindness@getup.org.au
+          viralkindness@getup.org.au
         </a>
         .
       </p>
