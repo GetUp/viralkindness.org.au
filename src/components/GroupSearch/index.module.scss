@@ -120,134 +120,102 @@
   }
 }
 
-.groupsTable {
-  width: 100%;
-  border-spacing: 0px;
-  margin-top: 32px;
-  color: $textColor;
+.groupDivChild {
+  padding: 28px 16px;
+  border-bottom: 1px solid rgba($textColor, 0.1);
 
-  thead {
-    text-align: left;
-    color: $textColorLight;
-    th {
-      font-weight: 600;
-      border-bottom: 1px solid #ddd;
+  .groupDivInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .groupDivName {
+    font-size: 1.15rem;
+    color: $textColor;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+
+  .groupDivLoc {
+    color: $textColor;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+
+    svg {
+      margin-right: 8px;
+      height: 14px;
+      margin-top: 5px;
     }
   }
 
-  tr {
-    min-height: 40px;
-    margin-bottom: 4px;
+  .groupDivBtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    width: max-content;
+    text-decoration: none;
+
+    svg {
+      height: 20px;
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    &.fb {
+      background: rgba(#1777f2, 0.07);
+      color: #1777f2;
+      box-shadow: 0px 1px 2px rgba(#1777f2, 0.2);
+      &:hover {
+        border: 1px solid #1777f2;
+      }
+    }
+
+    &.wa {
+      background: rgba(#2bd349, 0.07);
+      color: #02a720;
+      box-shadow: 0px 1px 2px rgba(#02a720, 0.2);
+      &:hover {
+        border: 1px solid #02a720;
+      }
+    }
+
+    &.ms {
+      background: rgba(#1da1f2, 0.07);
+      color: #019fff;
+      box-shadow: 0px 1px 2px rgba(#019fff, 0.2);
+      &:hover {
+        border: 1px solid #019fff;
+      }
+    }
   }
 
-  td {
-    padding: 16px 0;
+  .groupDivBlurb {
+    padding-top: 16px;
+    color: $textColor;
     line-height: 1.5;
   }
 
-  tbody tr:nth-of-type(even) {
-    background: rgba($textColor, 0.04);
-    border-radius: 4px;
-  }
-
-  tbody tr:hover {
-    background: rgba($secondary, 0.08);
-  }
-
-  th,
-  td {
-    vertical-align: top;
-    padding: 0;
-    padding: 16px 0;
-    font-size: 0.9rem;
-  }
-
-  .groupIconWrapper {
-    height: 100%;
-    vertical-align: top;
-    padding-top: 19px;
-    text-align: center;
-    svg {
-      height: 16px;
-      width: 16px;
+  @media screen and (max-width: 600px) {
+    padding: 28px 0px;
+    .groupDivInfo {
+      // flex-wrap: wrap;
+      & > div:nth-child(1) {
+        width: 100%;
+      }
     }
-  }
-}
 
-.groupRow td:nth-child(1),
-thead th:nth-child(1) {
-  padding-left: 8px;
-  padding-right: 16px;
-}
-
-@media screen and (max-width: 600px) {
-  .groupsTable,
-  .groupRow {
-    display: none;
-  }
-}
-
-.groupsTableSml {
-  width: 100%;
-  tbody tr:nth-of-type(even) {
-    background: #f4f4f4;
-    border-radius: 4px;
-  }
-}
-
-.groupRowSml {
-  color: $textColor;
-  td {
-    padding: 16px 8px;
-  }
-  .groupNameSml {
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-  .groupAddSml {
-    margin-bottom: 8px;
-    opacity: 0.8;
-  }
-  .groupBtn {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    svg {
-      margin-right: 8px;
-      height: 16px;
-      width: 16px;
+    .groupDivLoc {
+      margin-top: 8px;
     }
-    a > svg {
-      display: none;
+
+    .groupDivBtn {
+      // margin-top: 12px;
     }
-  }
-}
-
-.groupRowSml,
-.groupsTableSml {
-  @media screen and (min-width: 600px) {
-    display: none;
-  }
-}
-
-.joinGroupBtn {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: $secondary !important;
-  display: flex;
-  align-items: center;
-
-  svg {
-    height: 18px;
-    width: 18px;
-    margin-left: 4px;
-    * {
-      fill: $secondary;
-    }
-  }
-  &:hover {
-    text-decoration: underline;
   }
 }

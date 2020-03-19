@@ -2,7 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
-import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
+import {
+  Search,
+  Facebook,
+  WhatsApp,
+  Messenger,
+  ExternalLink,
+  Location
+} from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
 import '../../geosuggest.css'
@@ -19,7 +26,7 @@ const GroupLink = ({ href, text }) => (
     href={href}
     target='_blank'
     rel='noopener noreferrer'
-    className={s.joinGroupBtn}
+    className={`${s.groupDivBtn} ${groupClass(href, s)}`}
     onClick={() =>
       ReactGA.event({
         category: 'Actions',
@@ -27,7 +34,8 @@ const GroupLink = ({ href, text }) => (
       })
     }
   >
-    {text} <ExternalLink />
+    <GroupIcon url={href} />
+    {text}
   </a>
 )
 
@@ -38,58 +46,36 @@ const GroupIcon = ({ url }) => {
   return null
 }
 
+const groupClass = (url, s) => {
+  console.log(url)
+  if (/facebook.com|fb.com/i.test(url)) return s.fb
+  if (/messenger.com|m.me/i.test(url)) return s.ms
+  if (/whatsapp.com/i.test(url)) return s.wa
+  return null
+}
+
 const locationDisplay = props =>
   (props && props.label.replace(', Australia', '')) || ''
 
 const Group = ({ doc }, i) => (
-  <tr key={i} className={s.groupRow}>
-    <td>{doc.groupName}</td>
-    <td>{locationDisplay(doc.properties)}</td>
-    <td className={s.groupIconWrapper}>
-      <GroupIcon url={doc.groupLink} />
-    </td>
-    <td>
-      <GroupLink href={doc.groupLink} text='Join group' />
-    </td>
-  </tr>
-)
-
-const GroupSml = ({ doc }, i) => (
-  <tr key={i} className={s.groupRowSml}>
-    <td>
-      <div className={s.groupNameSml}>{doc.groupName}</div>
-      <div className={s.groupAddSml}>{locationDisplay(doc.properties)}</div>
-      <div className={`${s.groupBtn}`}>
-        <GroupIcon url={doc.groupLink} />
-        <GroupLink href={doc.groupLink} text='Join group' />
+  <div key={i} className={s.groupDivChild}>
+    <div className={s.groupDivInfo}>
+      <div>
+        <div className={s.groupDivName}>{doc.groupName}</div>
+        <div className={s.groupDivLoc}>
+          {doc.properties && (
+            <>
+              <Location /> {locationDisplay(doc.properties)}
+            </>
+          )}
+        </div>
       </div>
-    </td>
-  </tr>
-)
-
-const GroupTable = ({ children }) => (
-  <table className={s.groupsTable}>
-    <thead>
-      <tr>
-        <th width='40%'>Name</th>
-        <th>Location</th>
-        <th width='32'></th>
-        <th width='108'></th>
-      </tr>
-    </thead>
-    <tbody>{children}</tbody>
-  </table>
-)
-
-const GroupTableSml = ({ children }) => (
-  <table className={s.groupsTableSml}>
-    <thead>
-      <tr>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>{children}</tbody>
-  </table>
+      <div>
+        <GroupLink href={doc.groupLink} text='Join group'></GroupLink>
+      </div>
+    </div>
+    <div className={s.groupDivBlurb} style={{ display: 'none' }}></div>
+  </div>
 )
 
 const groupsForState = (groups, state) =>
@@ -215,8 +201,7 @@ export default () => {
       )}
       {groups && groups.length > 0 && (
         <>
-          <GroupTableSml>{groups.map(GroupSml)}</GroupTableSml>
-          <GroupTable>{groups.map(Group)}</GroupTable>
+          <div>{groups.map(Group)}</div>
         </>
       )}
     </div>
