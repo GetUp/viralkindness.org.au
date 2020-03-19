@@ -44,8 +44,8 @@ export default {
       body: `
         <p>Here are some helpful resources on how to have a conversation with kids about coronavirus:</p>
         <ul>
-          <li><a href="https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19">How to talk to your child about coronavirus disease</a></li>
-          <li><a href="https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus">Stop a worry becoming catastrophic: how to talk to your kids about the coronavirus</a></li>
+          <li><a href="https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19" target="_blank" rel="noopener noreferrer">How to talk to your child about coronavirus disease</a></li>
+          <li><a href="https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus" target="_blank" rel="noopener noreferrer">Stop a worry becoming catastrophic: how to talk to your kids about the coronavirus</a></li>
         </ul>
       `
     },
@@ -62,7 +62,7 @@ export default {
       title: 'Why is my group listed / not listed on the site?',
       body: `
         <p>We tried to include as many of the existing community care groups as possible, but we may have missed some! <a href="/register">If you’d like to add your group, please do so here!</a></p>
-        <p>If your group is listed on the hub and you’d like it removed, please contact <a href="mailto:viralkindness@getup.org.au">viralkindness@getup.org.au</a> and we will remove it immediately.</p>
+        <p>If your group is listed on the hub and you’d like it removed, please contact <a href="mailto:viralkindness@getup.org.au" target="_blank" rel="noopener noreferrer">viralkindness@getup.org.au</a> and we will remove it immediately.</p>
       `
     },
     {
@@ -70,7 +70,7 @@ export default {
       title: 'I need more help / medical help / urgent help',
       body: `
         <p>In an emergency, call 000 immediately.</p>
-        <p><a href="http://www.getup.org.au/covid19">Access up-to-date information and other services here.</a></p>
+        <p><a href="http://www.getup.org.au/covid19" target="_blank">Access up-to-date information and other services here.</a></p>
       `
     }
   ]
