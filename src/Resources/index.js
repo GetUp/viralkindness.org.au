@@ -42,7 +42,8 @@ export default () => {
               immune system is compromised.
             </p>
             <p>
-              <a href='https://www.getup.org.au/postcards'>
+              {/* eslint-disable-next-line */}
+              <a href='https://www.getup.org.au/postcards' target='_blank'>
                 Download the postcards to print at home here.
               </a>
             </p>
