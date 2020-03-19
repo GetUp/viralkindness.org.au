@@ -203,19 +203,33 @@
 
   @media screen and (max-width: 600px) {
     padding: 28px 0px;
+    .groupDivName {
+      text-align: center;
+    }
     .groupDivInfo {
-      // flex-wrap: wrap;
+      text-align: center;
+      flex-wrap: wrap;
       & > div:nth-child(1) {
         width: 100%;
       }
     }
 
     .groupDivLoc {
-      margin-top: 8px;
+      // margin-top: 8px;
+      text-align: center;
+      justify-content: center;
+      margin-left: -8px;
+    }
+
+    .groupLinkWrapper {
+      width: 100%;
     }
 
     .groupDivBtn {
-      // margin-top: 12px;
+      margin-top: 12px;
+      width: auto;
+      justify-content: center;
+      margin-left: -8px;
     }
   }
 }
