@@ -209,7 +209,7 @@ export default () => {
                     <Geosuggest
                       placeholder='Enter your street or suburb'
                       country='AU'
-                      placeDetailFields={[]}
+                      placeDetailFields={['address_components']}
                       minLength={4}
                       onSuggestSelect={setLocation}
                     />

@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
+import stateGroups from '../../data/stateGroups'
 import s from './index.module.scss'
 import '../../geosuggest.css'
 
@@ -40,7 +41,7 @@ const GroupIcon = ({ url }) => {
 const Group = ({ doc }, i) => (
   <tr key={i} className={s.groupRow}>
     <td>{doc.groupName}</td>
-    <td>{doc.properties.label}</td>
+    <td>{(doc.properties && doc.properties.label) || ''}</td>
     <td className={s.groupIconWrapper}>
       <GroupIcon url={doc.groupLink} />
     </td>
@@ -54,7 +55,9 @@ const GroupSml = ({ doc }, i) => (
   <tr key={i} className={s.groupRowSml}>
     <td>
       <div className={s.groupNameSml}>{doc.groupName}</div>
-      <div className={s.groupAddSml}>{doc.properties.label}</div>
+      <div className={s.groupAddSml}>
+        {(doc.properties && doc.properties.label) || ''}
+      </div>
       <div className={`${s.groupBtn}`}>
         <GroupIcon url={doc.groupLink} />
         <GroupLink href={doc.groupLink} text='Join group' />
@@ -95,9 +98,25 @@ export default () => {
 
   useEffect(() => {
     if (location && location.location) {
+      const state = location.gmaps.address_components
+        .filter(c => c.types[0] === 'administrative_area_level_1')
+        .map(c => c.short_name)
+      const allGroups = (localGroups = []) => {
+        if (
+          state &&
+          state[0] &&
+          state[0].length > 0 &&
+          stateGroups[state[0]] &&
+          stateGroups[state[0]].length > 0
+        ) {
+          return localGroups.concat(stateGroups[state[0]])
+        } else {
+          return localGroups
+        }
+      }
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
-        .then(json => setGroups(json.rows))
+        .then(json => setGroups(allGroups(json.rows)))
         .catch(e => {
           setErrored(true)
           throw e
@@ -128,7 +147,7 @@ export default () => {
             aria-label={helpText}
             placeholder={helpText}
             country='AU'
-            placeDetailFields={[]}
+            placeDetailFields={['address_components']}
             minLength={3}
             onSuggestSelect={s => {
               setErrored(false)
