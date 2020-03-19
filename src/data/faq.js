@@ -6,10 +6,10 @@ export default {
       hash: 'check-in',
       title: 'How to check in with others?',
       body: `
-        <p>There are lots of ways to check in with those we know while maintaining safe social distancing -- from a quick call, to a WhatsApp message.</p>
+        <p>There are lots of ways to check in with those we know while maintaining safe social distancing — from a quick call, to a WhatsApp message.</p>
         <p>But for people who are more isolated, or who we don’t know as well, we need to think outside the box.</p>
         <p>Across the UK and Australia, people are putting notes, letters and postcards in their neighbours’ letterboxes to offer assistance with everyday things such as picking up groceries, getting medication or even walking the dog.</p>
-        <p>By helping out, we can support people most at risk while they self-isolate or choose to keep a safe social distance -- older people, those with underlying health conditions and people whose immune system is compromised.</p>
+        <p>By helping out, we can support people most at risk while they self-isolate or choose to keep a safe social distance — older people, those with underlying health conditions and people whose immune system is compromised.</p>
         <p><a href="/resources#postcard">A downloadable postcard, and more information about how to use them in your local area, is available here.</a></p>
       `
     },
@@ -17,7 +17,7 @@ export default {
       hash: 'food-and-supplies',
       title: 'How to deliver food and supplies?',
       body: `
-        <p>If you are helping others in the community by delivering supplies like groceries or medication -- here’s how to do it safely.</p>
+        <p>If you are helping others in the community by delivering supplies like groceries or medication — here’s how to do it safely.</p>
 
         <p>To deliver food and supplies:</p>
         <ul>

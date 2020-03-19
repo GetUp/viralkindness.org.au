@@ -15,7 +15,7 @@ export default () => (
           <h2>Community Care Postcards</h2>
           <p>
             There are lots of ways to check in with people we know while
-            maintaining safe social distancing -- from a quick call, to a
+            maintaining safe social distancing — from a quick call, to a
             WhatsApp message.
           </p>
           <p>
@@ -30,7 +30,7 @@ export default () => (
           </p>
           <p>
             By helping out, we can support people most at risk while they
-            self-isolate or choose to keep a safe social distance -- older
+            self-isolate or choose to keep a safe social distance — older
             people, those with underlying health conditions and people whose
             immune system is compromised.
           </p>
