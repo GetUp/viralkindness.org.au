@@ -27,7 +27,7 @@ export default ({ className }) => (
           </span>
           <a
             className='share-btn active'
-            href='https://www.facebook.com/dialog/share?app_id=138155566223&amp;display=page&amp;href=http://getup.to/zPFxFli2&amp;redirect_uri=https%3A%2F%2Fwww.getup.org.au&amp;quote=Thank+you+for+blah'
+            href='https://www.facebook.com/dialog/share?app_id=138155566223&display=page&href=https%3A%2F%2Fviralkindness.org.au&redirect_uri=https%3A%2F%2Fviralkindness.org.au%2Fthanks&quote=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!&hashtag=%23ViralKindness'
             id='fb'
             role='button'
           >
@@ -70,7 +70,14 @@ export default ({ className }) => (
               ></path>
             </svg>
           </span>
-          <a className='share-btn' href='mailto:' id='em' role='button'>
+          <a
+            className='share-btn'
+            href='mailto:?subject=#ViralKindness&amp;body=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
+            id='em'
+            role='button'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <svg
               className='icon'
               width='12'
@@ -119,7 +126,14 @@ export default ({ className }) => (
               ></path>
             </svg>
           </span>
-          <a className='share-btn' href='#' id='tw' role='button'>
+          <a
+            className='share-btn'
+            href='https://twitter.com/intent/tweet?text=There%E2%80%99s+lots+of+ways+we+can+stick+together+when+we+are+apart!+%23ViralKindness+https%3A%2F%2Fviralkindness.org.au+via+%40GetUp'
+            id='tw'
+            role='button'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <svg
               className='icon'
               width='12'
@@ -159,9 +173,9 @@ export default ({ className }) => (
           </span>
           <a
             className='share-btn'
-            href='https://wa.me/?text=http://getup.to/zPFxFli2'
+            href='https://wa.me/?text=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
             id='wa'
-            rel='noopener'
+            rel='noopener noreferrer'
             role='button'
             target='_blank'
           >
@@ -218,7 +232,7 @@ export default ({ className }) => (
           </span>
           <a
             className='share-btn'
-            href='sms:?&amp;body=http://getup.to/zPFxFli2'
+            href='sms:?&body=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
             id='sms'
             role='button'
           >
@@ -254,7 +268,7 @@ export default ({ className }) => (
           </a>
         </div>
       </div>
-      <hr />
+      {/* <hr />
       <div className='share-link'>
         <button className='tiny-btn' id='copy-link'>
           <svg
@@ -278,7 +292,7 @@ export default ({ className }) => (
         <div className='privacy_policy_disclaimer'>
           In taking action, I agree to GetUp's Privacy Policy.
         </div>
-      </div>
+      </div> */}
     </div>
   </div>
 )
