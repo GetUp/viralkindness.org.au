@@ -88,33 +88,9 @@ const GroupTableSml = ({ children }) => (
   </table>
 )
 
-const defaultGroups = [
-  {
-    doc: {
-      groupName: 'default group 1',
-      groupLink: 'https://fb.com/groups/12345',
-      properties: { label: 'default address 1' }
-    }
-  },
-  {
-    doc: {
-      groupName: 'default group 2',
-      groupLink: 'https://m.me/viralkindnessgroup',
-      properties: { label: 'default location 2' }
-    }
-  },
-  {
-    doc: {
-      groupName: 'default group 3',
-      groupLink: 'http://chat.whatsapp.com/qwe123',
-      properties: { label: 'default area 3' }
-    }
-  }
-]
-
 export default () => {
   const [location, setLocation] = useState([])
-  const [groups, setGroups] = useState(defaultGroups)
+  const [groups, setGroups] = useState([])
 
   useEffect(() => {
     if (location && location.location) {
@@ -155,8 +131,22 @@ export default () => {
           />
         </div>
       </label>
-      <GroupTableSml>{groups.map(GroupSml)}</GroupTableSml>
-      <GroupTable>{groups.map(Group)}</GroupTable>
+      {groups.length === 0 && (
+        <div className={s.importantWrapper}>
+          <div>Important</div>
+          <p>
+            These are community groups established to help people with everyday
+            needs, such as shopping or a check-in call. If you need urgent help
+            or medical assistance, <Link to='/faq#help'>head here</Link>.
+          </p>
+        </div>
+      )}
+      {groups.length > 0 && (
+        <>
+          <GroupTableSml>{groups.map(GroupSml)}</GroupTableSml>
+          <GroupTable>{groups.map(Group)}</GroupTable>
+        </>
+      )}
     </div>
   )
 }
