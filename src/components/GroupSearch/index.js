@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
-import stateGroups from '../../data/stateGroups'
+import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
 import '../../geosuggest.css'
 
@@ -91,6 +91,30 @@ const GroupTableSml = ({ children }) => (
   </table>
 )
 
+const groupsForState = (groups, state) =>
+  groups.filter(
+    r =>
+      /(NSW|VIC|QLD|SA|NT|WA|TAS)/.exec(r.doc.properties.label) &&
+      /(NSW|VIC|QLD|SA|NT|WA|TAS)/.exec(r.doc.properties.label)[0] === state
+  )
+
+const allGroups = (fetchedGroups = [], state) => {
+  if (!(state && state[0] && state[0].length > 0)) {
+    // no filtering at all
+    return fetchedGroups
+  }
+
+  const localGroups = groupsForState(fetchedGroups, state[0])
+
+  if (!(defaultGroups[state[0]] && defaultGroups[state[0]].length > 0)) {
+    // no default state groups to append
+    return localGroups
+  }
+
+  // state-filtered local groups + default state groups
+  return localGroups.concat(defaultGroups[state[0]])
+}
+
 export default () => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
@@ -101,22 +125,10 @@ export default () => {
       const state = location.gmaps.address_components
         .filter(c => c.types[0] === 'administrative_area_level_1')
         .map(c => c.short_name)
-      const allGroups = (localGroups = []) => {
-        if (
-          state &&
-          state[0] &&
-          state[0].length > 0 &&
-          stateGroups[state[0]] &&
-          stateGroups[state[0]].length > 0
-        ) {
-          return localGroups.concat(stateGroups[state[0]])
-        } else {
-          return localGroups
-        }
-      }
+
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
-        .then(json => setGroups(allGroups(json.rows)))
+        .then(json => setGroups(allGroups(json.rows, state)))
         .catch(e => {
           setErrored(true)
           throw e
