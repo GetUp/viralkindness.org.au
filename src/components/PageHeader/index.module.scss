@@ -1,12 +1,39 @@
+$background: #faf2f1;
+$textColor: #004472;
+
 .headerContainer {
-  background: #ff671f;
+  background: $background;
   padding: 32px 8px;
   .contentWrapper {
     max-width: 1200px;
     margin: 0 auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    div,
+    span,
+    li,
+    a {
+      color: $textColor;
+    }
+
+    p,
+    ul,
+    div,
+    span,
+    li,
+    a {
+      line-height: 1.5;
+    }
+
     h1 {
       margin: 0;
-      color: white;
       margin-bottom: 8px;
     }
 
@@ -17,10 +44,6 @@
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
-    }
-
-    a {
-      color: white;
     }
   }
 }
