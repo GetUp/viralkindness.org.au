@@ -39,11 +39,11 @@ const GroupIcon = ({ url }) => {
 
 const Group = ({ doc }, i) => (
   <tr key={i} className={s.groupRow}>
+    <td>{doc.groupName}</td>
+    <td>{doc.properties.label}</td>
     <td className={s.groupIconWrapper}>
       <GroupIcon url={doc.groupLink} />
     </td>
-    <td>{doc.groupName}</td>
-    <td>{doc.properties.label}</td>
     <td>
       <GroupLink href={doc.groupLink} text='Join group' />
     </td>
@@ -67,9 +67,9 @@ const GroupTable = ({ children }) => (
   <table className={s.groupsTable}>
     <thead>
       <tr>
-        <th width='32'></th>
         <th width='30%'>Name</th>
         <th>Location</th>
+        <th width='32'></th>
         <th width='108'></th>
       </tr>
     </thead>

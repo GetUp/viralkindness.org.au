@@ -107,7 +107,7 @@
   }
 
   td {
-    padding: 8px 0;
+    padding: 12px 0;
     line-height: 1.5;
   }
 
@@ -124,20 +124,24 @@
   td {
     vertical-align: top;
     padding: 0;
-    padding: 8px 0;
+    padding: 12px 0;
     font-size: 0.9rem;
   }
 
   .groupIconWrapper {
     height: 100%;
     vertical-align: top;
-    padding-top: 10px;
+    padding-top: 15px;
     text-align: center;
     svg {
       height: 16px;
       width: 16px;
     }
   }
+}
+
+.groupRow td:nth-child(1) {
+  padding-left: 8px;
 }
 
 @media screen and (max-width: 600px) {
