@@ -4,6 +4,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
+import thumbnail from '../assets/images/download-preview.jpg'
 
 export default () => {
   useEffect(
@@ -43,8 +44,32 @@ export default () => {
             </p>
             <p>
               {/* eslint-disable-next-line */}
-              <a href='https://www.getup.org.au/postcards' target='_blank'>
-                Download the postcards to print at home here.
+              <a
+                href='https://www.getup.org.au/postcards'
+                target='_blank'
+                style={{
+                  width: '100%',
+                  textAlign: 'center',
+                  display: 'block',
+                  pointerEvents: 'cursor'
+                }}
+              >
+                <div
+                  style={{
+                    padding: '16px',
+                    borderRadius: '4px',
+                    maxWidth: '300px',
+                    margin: '0 auto'
+                  }}
+                >
+                  <img
+                    src={thumbnail}
+                    style={{
+                      width: '100%'
+                    }}
+                  />
+                </div>
+                Download the postcards to print at home
               </a>
             </p>
 
