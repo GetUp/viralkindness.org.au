@@ -9,9 +9,16 @@ export default () => (
     <Link to='/' className={s.logoWrapper}>
       <VKLogo />
     </Link>
-    <div className={s.poweredBy}>
-      <div className={s.poweredByText}>Powered By</div>
-      <img src={GetUp} alt='GetUp logo' />
-    </div>
+    <a
+      href='https://getup.org.au'
+      target='_blank'
+      rel='noopener noreferrer'
+      style={{ textDecoration: 'none' }}
+    >
+      <div className={s.poweredBy}>
+        <div className={s.poweredByText}>Powered By</div>
+        <img src={GetUp} alt='GetUp logo' />
+      </div>
+    </a>
   </nav>
 )
