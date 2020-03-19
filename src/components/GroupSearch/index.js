@@ -19,7 +19,7 @@ const apiHost =
 const helpText = 'Search by street or suburb'
 
 const groupSearchUrl = ({ lng, lat }) =>
-  `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?g=point(${lng}%20${lat})&limit=10&nearest=true&include_docs=true`
+  `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=20000&include_docs=true`
 
 const GroupLink = ({ href, text }) => (
   <a
