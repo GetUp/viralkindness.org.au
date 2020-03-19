@@ -47,7 +47,6 @@ const GroupIcon = ({ url }) => {
 }
 
 const groupClass = (url, s) => {
-  console.log(url)
   if (/facebook.com|fb.com/i.test(url)) return s.fb
   if (/messenger.com|m.me/i.test(url)) return s.ms
   if (/whatsapp.com/i.test(url)) return s.wa
