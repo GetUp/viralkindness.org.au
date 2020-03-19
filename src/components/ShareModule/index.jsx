@@ -128,7 +128,7 @@ export default ({ className }) => (
           </span>
           <a
             className='share-btn'
-            href='https://twitter.com/intent/tweet?text=There%E2%80%99s+lots+of+ways+we+can+stick+together+when+we+are+apart!+%23ViralKindness+https%3A%2F%2Fviralkindness.org.au+via+%40GetUp'
+            href='https://twitter.com/intent/tweet?text=There%E2%80%99s+lots+of+ways+we+can+stick+together+when+we+are+apart!+%23ViralKindness+https%3A%2F%2Fviralkindness.org.au'
             id='tw'
             role='button'
             target='_blank'
