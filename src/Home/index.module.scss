@@ -45,7 +45,7 @@
 
     h1 {
       color: $secondary;
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       margin-bottom: 8px;
       margin-top: 0px;
     }
@@ -63,7 +63,7 @@
 
     @media screen and (max-width: 900px) {
       h1 {
-        font-size: 2.4rem;
+        font-size: 3rem;
         padding: 0 8px;
       }
 
@@ -74,6 +74,12 @@
 
       p {
         padding: 0 8px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
       }
     }
   }
