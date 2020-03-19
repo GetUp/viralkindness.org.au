@@ -1,10 +1,27 @@
+@import '../assets/styles/variables';
+
 .question {
   margin-bottom: 2.5rem;
   .header {
     margin-top: 0;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  div,
+  span,
+  li,
+  a {
+    color: $textColor;
+  }
+
   .body p {
-    color: #333;
     margin-bottom: 0.8em;
   }
 

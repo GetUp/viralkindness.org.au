@@ -154,7 +154,7 @@
 
       .linkText {
         color: $textColor;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 6px;
         letter-spacing: -0.01em;
         span {
@@ -162,6 +162,7 @@
         }
       }
       .linkSubtext {
+        display: none;
         font-size: 0.9rem;
         text-decoration: none;
         letter-spacing: 0.02em;
