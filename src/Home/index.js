@@ -9,6 +9,7 @@ import faq from '../data/faq'
 import illustration from '../assets/images/vk-illustration.svg'
 import Footer from '../components/Footer'
 import ResourcesLink from '../components/ResourcesLink'
+import wave from '../assets/images/wave.svg'
 
 const scrollFocus = el => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -59,6 +60,9 @@ export default () => {
             alt='Raised hands holding objects, offering help'
           />
         </div>
+      </div>
+      <div className={s.waveContainer}>
+        <img src={wave} />
       </div>
       <ContentWithSidebar>
         <GroupSearch />
