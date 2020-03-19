@@ -12,9 +12,9 @@ export default ({ className, style }) => {
       style={style}
     >
       {faqPage() && (
-        <h3>
+        <h4>
           <Link to='/faq'>{faq.title}</Link>
-        </h3>
+        </h4>
       )}
       <ul className={!faqPage() ? s.sticky : ''}>
         {faq.data.map(i => (

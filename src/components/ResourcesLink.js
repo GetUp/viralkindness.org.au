@@ -4,10 +4,7 @@ import { RightArrow } from './Icons'
 
 export default ({ s }) => (
   <Link to='/resources' className={s.sidebarLink}>
-    <div className={s.sidebarLinkHeader}>
-      <RightArrow />
-      Resources
-    </div>
+    <h4 className={s.sidebarLinkHeader}>Resources</h4>
     <div className={s.sidebarLinkSubtitle}>
       Keep up to date - with accurate information
     </div>

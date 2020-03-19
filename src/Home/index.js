@@ -71,10 +71,7 @@ export default () => {
         <div>
           <div className={s.sidebarContainer}>
             <Link to='/register' className={s.sidebarLink}>
-              <div className={s.sidebarLinkHeader}>
-                <Add />
-                Add
-              </div>
+              <h4 className={s.sidebarLinkHeader}>Add</h4>
               <div className={s.sidebarLinkSubtitle}>
                 Adding a community care group in your local area is easy!
               </div>
