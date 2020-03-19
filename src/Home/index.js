@@ -68,7 +68,7 @@ export default () => {
         </div>
       </div>
       <div className={s.waveContainer}>
-        <img src={wave} />
+        <img src={wave} alt='' />
       </div>
       <ContentWithSidebar>
         <GroupSearch />
