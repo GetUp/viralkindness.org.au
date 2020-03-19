@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './index.module.scss'
 import { HashLink as Link } from 'react-router-hash-link'
-import { RightArrow, Search, Add, Faq, Find } from '../components/Icons'
+import { Add, Faq, Find } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import GroupSearch from '../components/GroupSearch'
 import FaqNav from '../components/FaqNav'

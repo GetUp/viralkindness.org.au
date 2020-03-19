@@ -1,6 +1,5 @@
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
-import { RightArrow } from './Icons'
 
 export default ({ s }) => (
   <Link to='/resources' className={s.sidebarLink}>

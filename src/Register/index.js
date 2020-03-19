@@ -14,8 +14,7 @@ import {
   Public,
   Messenger,
   WhatsApp,
-  Facebook,
-  Search
+  Facebook
 } from '../components/Icons'
 import InputWithIcon from '../components/InputWithIcon'
 import '../geosuggest.css'

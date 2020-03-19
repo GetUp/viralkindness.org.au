@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './index.module.scss'
+// import s from './index.module.scss'
 
 export default ({ className }) => (
   <div className={className}>

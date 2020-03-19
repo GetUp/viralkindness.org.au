@@ -11,7 +11,7 @@ export default () => (
     </Link>
     <div className={s.poweredBy}>
       <div className={s.poweredByText}>Powered By</div>
-      <img src={GetUp} />
+      <img src={GetUp} alt='GetUp logo' />
     </div>
   </nav>
 )
