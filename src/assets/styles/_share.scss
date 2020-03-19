@@ -1,0 +1,178 @@
+$color-fb: #1777f2;
+$color-em: #333333;
+$color-tw: #1da1f2;
+$color-wa: #2bd349;
+$color-grey-text: #777;
+
+#super-share-with-progress {
+  @mixin setButtonColors($bgColor, $textColor) {
+    color: $bgColor;
+
+    &:hover {
+      background: rgba($bgColor, 0.08);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    &:hover.active {
+      background: lighten($bgColor, 5);
+    }
+
+    &:focus {
+      -webkit-box-shadow: 0px 0px 0px 2px rgba($bgColor, 0.5);
+      -moz-box-shadow: 0px 0px 0px 2px rgba($bgColor, 0.5);
+      box-shadow: 0px 0px 0px 2px rgba($bgColor, 0.5);
+    }
+
+    &.active,
+    &:active {
+      background: $bgColor;
+      color: $textColor;
+
+      .icon .bg {
+        fill: $textColor;
+      }
+      .icon .fg {
+        fill: darken($bgColor, 5);
+      }
+    }
+
+    // ICON
+    .icon .bg {
+      fill: $bgColor;
+    }
+  }
+
+  .super-share--container hr {
+    margin: 8px 0;
+  }
+
+  .share--btns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .share-btn--wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: row-reverse;
+    }
+
+    .check-icon {
+      display: none;
+      position: relative;
+      height: 24px;
+      width: 24px;
+      &.checked .bg {
+        fill: #3bb54a;
+      }
+    }
+  }
+
+  .share-btn--wrapper:not(:nth-last-child(1)) {
+    .check-icon::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      height: 30px;
+      width: 1px;
+      background: #bbb;
+      left: 11px;
+      z-index: -1;
+    }
+  }
+
+  .share--btns .share-btn {
+    width: 100%;
+    border: none;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-left: 12px;
+    outline: none;
+
+    @media screen and (max-width: 600px) {
+      margin-left: 0px;
+      margin-right: 16px;
+    }
+
+    svg {
+      height: 22px;
+      width: 22px;
+      margin-right: 8px;
+    }
+
+    &#fb {
+      @include setButtonColors($color-fb, white);
+    }
+
+    &#em {
+      @include setButtonColors($color-em, white);
+    }
+
+    &#tw {
+      @include setButtonColors($color-tw, white);
+    }
+
+    &#wa {
+      @include setButtonColors($color-wa, white);
+    }
+
+    &#sms {
+      @include setButtonColors($color-wa, white);
+    }
+  }
+
+  .share-link {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+
+    .share-link--text {
+      margin-left: 8px;
+      font-size: 12px;
+      color: #777;
+    }
+  }
+
+  .tiny-btn {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 4px;
+    font-weight: 600;
+    color: $color-grey-text;
+    line-height: 1;
+    background: white;
+
+    svg {
+      height: 12px;
+      width: 12px;
+      margin-right: 4px;
+    }
+
+    &:hover {
+      background: #eee;
+      color: $color-fb;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .privacy-policy {
+    font-size: 12px;
+    color: $color-grey-text;
+    margin-top: 8px;
+  }
+}

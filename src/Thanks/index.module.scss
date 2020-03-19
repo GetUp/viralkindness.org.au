@@ -1,0 +1,23 @@
+.contentContainer {
+  grid-template-columns: 4fr 2fr;
+  margin-top: 32px;
+  & > div:nth-child(1) {
+    max-width: 600px;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  .shareModule {
+    margin-top: 0;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 32px;
+    }
+  }
+}
