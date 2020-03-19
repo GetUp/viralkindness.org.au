@@ -16,7 +16,8 @@
     }
   }
 
-  input {
+  input,
+  textarea {
     height: 40px;
     border-radius: 4px;
     border: 0px;
@@ -32,5 +33,10 @@
       border: 1px solid #2098f5;
       box-shadow: 0 0 0 3px rgba(#2098f5, 0.2);
     }
+  }
+
+  textarea {
+    padding-top: 16px;
+    height: 80px;
   }
 }

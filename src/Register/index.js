@@ -247,21 +247,20 @@ export default () => {
                     className={s.errorMessage}
                   />
                 </label>
+                <label>
+                  Short introduction or instructions
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Public className={s.textareaIcon} />
+                    <Field
+                      as='textarea'
+                      rows={4}
+                      maxLength={280}
+                      name='groupBlurb'
+                      placeholder='Any special instructions'
+                    />
+                  </InputWithIcon>
+                </label>
               </fieldset>
-
-              <label>
-                Short introduction or instructions
-                <InputWithIcon className={s.inputWrapper}>
-                  <Public />
-                  <Field
-                    as='textarea'
-                    rows={4}
-                    maxLength={280}
-                    name='groupBlurb'
-                    placeholder='Any special instructions'
-                  />
-                </InputWithIcon>
-              </label>
 
               <ErrorMessage name='general' component='div' />
               <button
