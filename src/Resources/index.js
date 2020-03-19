@@ -43,7 +43,7 @@ export default () => {
               immune system is compromised.
             </p>
             <p>
-              {/* eslint-disable-next-line */}
+              {/* eslint-disable react/jsx-no-target-blank */}
               <a
                 href='https://www.getup.org.au/postcards'
                 target='_blank'
@@ -54,6 +54,7 @@ export default () => {
                   pointerEvents: 'cursor'
                 }}
               >
+                {/* eslint-enable react/jsx-no-target-blank */}
                 <div
                   style={{
                     padding: '16px',
@@ -64,6 +65,7 @@ export default () => {
                 >
                   <img
                     src={thumbnail}
+                    alt='A small version of the printable postcards'
                     style={{
                       width: '100%'
                     }}
