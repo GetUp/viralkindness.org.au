@@ -91,12 +91,17 @@ const GroupTableSml = ({ children }) => (
 export default () => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
+  const [errored, setErrored] = useState(false)
 
   useEffect(() => {
     if (location && location.location) {
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
         .then(json => setGroups(json.rows))
+        .catch(e => {
+          setErrored(true)
+          throw e
+        })
     }
   }, [location])
 
@@ -127,10 +132,21 @@ export default () => {
             country='AU'
             placeDetailFields={[]}
             minLength={3}
-            onSuggestSelect={setLocation}
+            onSuggestSelect={s => {
+              setErrored(false)
+              setLocation(s)
+            }}
           />
         </div>
       </label>
+      {errored && (
+        <div className={s.errorMessage}>
+          Uh oh! Something didn't work out, sorry. :(
+          <br />
+          <br />
+          We’ve been notified of the issue. Please try again later.
+        </div>
+      )}
       {groups.length === 0 && (
         <div className={s.importantWrapper}>
           <div>Important</div>
