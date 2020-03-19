@@ -68,16 +68,14 @@ export default () => {
       </div>
       <ContentWithSidebar>
         <GroupSearch />
-        <div>
-          <div className={s.sidebarContainer}>
-            <Link to='/register' className={s.sidebarLink}>
-              <h4 className={s.sidebarLinkHeader}>Add</h4>
-              <div className={s.sidebarLinkSubtitle}>
-                Adding a community care group in your local area is easy!
-              </div>
-            </Link>
-            <ResourcesLink s={s} />
-          </div>
+        <div className={s.sidebarContainer}>
+          <Link to='/register' className={s.sidebarLink}>
+            <h4 className={s.sidebarLinkHeader}>Add</h4>
+            <div className={s.sidebarLinkSubtitle}>
+              Adding a community care group in your local area is easy!
+            </div>
+          </Link>
+          <ResourcesLink s={s} />
           <FaqNav />
         </div>
       </ContentWithSidebar>

@@ -67,7 +67,7 @@ const GroupTable = ({ children }) => (
   <table className={s.groupsTable}>
     <thead>
       <tr>
-        <th width='30%'>Name</th>
+        <th width='40%'>Name</th>
         <th>Location</th>
         <th width='32'></th>
         <th width='108'></th>
