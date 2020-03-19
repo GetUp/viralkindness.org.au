@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import ReactGA from 'react-ga'
+import React from 'react'
 import s from './index.module.scss'
 import { HashLink as Link } from 'react-router-hash-link'
 import { RightArrow, Search, Add, Faq, Find } from '../components/Icons'
@@ -17,11 +16,6 @@ const scrollFocus = el => {
 }
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
-
   return (
     <>
       <div className={s.headerContainer}>

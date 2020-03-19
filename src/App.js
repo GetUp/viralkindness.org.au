@@ -16,6 +16,7 @@ import Resources from './Resources'
 function App() {
   useEffect(() => {
     ReactGA.initialize('UA-2555375-39')
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
 
   return (
