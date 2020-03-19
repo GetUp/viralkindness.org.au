@@ -119,6 +119,7 @@ export default () => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
   const [errored, setErrored] = useState(false)
+  const [searched, setSearched] = useState(false)
 
   useEffect(() => {
     if (location && location.location) {
@@ -128,7 +129,10 @@ export default () => {
 
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
-        .then(json => setGroups(allGroups(json.rows, state)))
+        .then(json => {
+          setGroups(allGroups(json.rows, state))
+          setSearched(true)
+        })
         .catch(e => {
           setErrored(true)
           throw e
@@ -162,6 +166,7 @@ export default () => {
             placeDetailFields={['address_components']}
             minLength={3}
             onSuggestSelect={s => {
+              setSearched(false)
               setErrored(false)
               setLocation(s)
             }}
@@ -176,7 +181,24 @@ export default () => {
           We’ve been notified of the issue. Please try again later.
         </div>
       )}
-      {groups.length === 0 && (
+      {searched && groups.length === 0 && (
+        <div className={s.importantWrapper}>
+          <div>No results</div>
+          <p>
+            Unfortunately there are no community groups established in your
+            area. There is{' '}
+            <Link smooth to='/resources#start-a-group'>
+              more information on how to setup a group.
+            </Link>{' '}
+            Once you're setup{' '}
+            <Link smooth to='/register'>
+              please register the group
+            </Link>{' '}
+            so others can find it and help out.
+          </p>
+        </div>
+      )}
+      {!searched && groups.length === 0 && (
         <div className={s.importantWrapper}>
           <div>Important</div>
           <p>
