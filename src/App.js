@@ -14,7 +14,9 @@ import Contact from './Contact'
 import Resources from './Resources'
 
 function App() {
-  useEffect(() => ReactGA.initialize('UA-2555375-39'), [])
+  useEffect(() => {
+    ReactGA.initialize('UA-2555375-39')
+  }, [])
 
   return (
     <div>
