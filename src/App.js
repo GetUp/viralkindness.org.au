@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import './app.scss'
@@ -12,6 +13,14 @@ import Contact from './Contact'
 import Resources from './Resources'
 
 function App() {
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      ReactGA.initialize('UA-2555375-39')
+      ReactGA.pageview(window.location.pathname + window.location.search)
+      window.GA_INITIALIZED = true
+    }
+  }, [])
+
   return (
     <div>
       <Router>
