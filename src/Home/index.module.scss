@@ -242,3 +242,20 @@
     }
   }
 }
+
+.waveContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  img {
+    width: 60vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    transform: translateY(-98%);
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
