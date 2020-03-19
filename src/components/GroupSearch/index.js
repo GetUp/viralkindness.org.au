@@ -85,7 +85,7 @@ const defaultGroups = [
   {
     doc: {
       groupName: 'default group 1',
-      groupLink: 'fb.com/groups/12345',
+      groupLink: 'https://fb.com/groups/12345',
       properties: { label: 'default address 1' }
     }
   },
