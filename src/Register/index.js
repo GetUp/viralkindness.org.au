@@ -37,10 +37,7 @@ const initialValues = {
   general: ''
 }
 
-const groupLinkPattern = new RegExp(
-  /^https?:\/\/(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com)/,
-  'i'
-)
+const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com)/i
 
 const geoJson = loc => ({
   geometry: {
