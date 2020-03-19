@@ -129,7 +129,7 @@ export default () => {
       <p>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
-        <Link smooth to='#disclaimer'>
+        <Link smooth to='#disclaimer' style={{ textDecoration: 'none' }}>
           *
         </Link>
       </p>
