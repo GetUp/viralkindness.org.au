@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
+import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, Messenger, ExternalLink } from '../Icons'
 import s from './index.module.scss'
@@ -18,6 +19,12 @@ const GroupLink = ({ href, text }) => (
     target='_blank'
     rel='noopener noreferrer'
     className={s.joinGroupBtn}
+    onClick={() =>
+      ReactGA.event({
+        category: 'Actions',
+        action: 'Group Link Click'
+      })
+    }
   >
     {text} <ExternalLink />
   </a>

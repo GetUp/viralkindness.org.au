@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import ReactGA from 'react-ga'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { HashLink as Link } from 'react-router-hash-link'
 import { v4 as uuidv4 } from 'uuid'
@@ -54,6 +55,11 @@ const geoJson = loc => ({
 export default () => {
   const history = useHistory()
   const [location, setLocation] = useState({})
+
+  useEffect(
+    () => ReactGA.pageview(window.location.pathname + window.location.search),
+    []
+  )
 
   const validate = values => {
     const errors = {}

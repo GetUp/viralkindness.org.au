@@ -1,5 +1,5 @@
-import React from 'react'
-// import { HashLink as Link } from 'react-router-hash-link'
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
@@ -16,24 +16,31 @@ const Item = i => (
   </div>
 )
 
-export default () => (
-  <>
-    <PageHeader>
-      <h1>{faq.title}</h1>
-      <p>
-        As more groups offer advice on what has worked well for them, we will
-        update this FAQ page.
-      </p>
-    </PageHeader>
-    <ContentWithSidebar reverse className={s.contentWrapper}>
-      <FaqNav className={s.faqWrapper} />
-      <div
-        style={{ maxWidth: '750px', marginLeft: 'auto' }}
-        className={s.content}
-      >
-        {faq.data.map(Item)}
-      </div>
-    </ContentWithSidebar>
-    <Footer />
-  </>
-)
+export default () => {
+  useEffect(
+    () => ReactGA.pageview(window.location.pathname + window.location.search),
+    []
+  )
+
+  return (
+    <>
+      <PageHeader>
+        <h1>{faq.title}</h1>
+        <p>
+          As more groups offer advice on what has worked well for them, we will
+          update this FAQ page.
+        </p>
+      </PageHeader>
+      <ContentWithSidebar reverse className={s.contentWrapper}>
+        <FaqNav className={s.faqWrapper} />
+        <div
+          style={{ maxWidth: '750px', marginLeft: 'auto' }}
+          className={s.content}
+        >
+          {faq.data.map(Item)}
+        </div>
+      </ContentWithSidebar>
+      <Footer />
+    </>
+  )
+}

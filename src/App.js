@@ -13,13 +13,7 @@ import Contact from './Contact'
 import Resources from './Resources'
 
 function App() {
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      ReactGA.initialize('UA-2555375-39')
-      ReactGA.pageview(window.location.pathname + window.location.search)
-      window.GA_INITIALIZED = true
-    }
-  }, [])
+  useEffect(() => ReactGA.initialize('UA-2555375-39'), [])
 
   return (
     <div>
