@@ -3,7 +3,9 @@ import { HashLink as Link } from 'react-router-hash-link'
 
 export default ({ s }) => (
   <Link to='/resources' className={s.sidebarLink}>
-    <h4 className={s.sidebarLinkHeader}>Resources</h4>
+    <h4 className={s.sidebarLinkHeader}>
+      <span>Resources</span>
+    </h4>
     <div className={s.sidebarLinkSubtitle}>
       Keep up to date - with accurate information
     </div>

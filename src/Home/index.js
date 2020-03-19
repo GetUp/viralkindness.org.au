@@ -74,7 +74,9 @@ export default () => {
         <GroupSearch />
         <div className={s.sidebarContainer}>
           <Link to='/register' className={s.sidebarLink}>
-            <h4 className={s.sidebarLinkHeader}>Add</h4>
+            <h4 className={s.sidebarLinkHeader}>
+              <span>Add</span>
+            </h4>
             <div className={s.sidebarLinkSubtitle}>
               Adding a community care group in your local area is easy!
             </div>

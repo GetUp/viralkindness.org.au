@@ -150,7 +150,7 @@
         margin-bottom: 6px;
         letter-spacing: -0.01em;
         span {
-          border-bottom: 1px solid rgba($secondary, 0.7);
+          border-bottom: 1px solid $underline;
         }
       }
       .linkSubtext {
@@ -201,6 +201,10 @@
     border-radius: 4px;
     color: $textColorLight;
 
+    span {
+      border-bottom: 1px solid $underline;
+    }
+
     .sidebarLinkHeader {
       margin-top: 0px;
       margin-bottom: 8px;
@@ -228,6 +232,9 @@
     &:hover {
       background: $textColor;
       color: white;
+      span {
+        border-bottom: 1px solid rgba(white, 0.5);
+      }
       svg * {
         fill: white;
       }

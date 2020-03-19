@@ -20,16 +20,11 @@ export default ({ className, style }) => {
         {faq.data.map(i => (
           <li key={i.title}>
             <Link smooth to={`/faq#${i.hash}`}>
-              {i.title}
+              <span>{i.title}</span>
             </Link>
           </li>
         ))}
       </ul>
-      {faqPage() && (
-        <Link to='/faq' className={s.moreButton}>
-          MORE
-        </Link>
-      )}
     </div>
   )
 }

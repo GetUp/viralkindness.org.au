@@ -33,12 +33,19 @@
       font-weight: 400;
       font-size: 0.9rem;
       opacity: 0.9;
+
+      span {
+        border-bottom: 1px solid $underline;
+      }
     }
 
     &:hover {
       background: $textColor;
       a {
         color: white;
+        span {
+          border-bottom: 1px solid rgba(white, 0.5);
+        }
       }
     }
   }
