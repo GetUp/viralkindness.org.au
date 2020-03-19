@@ -15,7 +15,7 @@ export default () => (
           everyday people across the country are establishing groups to help
           people in need.
         </p>
-        <p>The purposes of the #ViralKindess Community is to provide:</p>
+        <p>The purposes of the #ViralKindness Community is to provide:</p>
         <ol>
           <li>
             <strong>Hub.</strong> A community hub where people can find or set
