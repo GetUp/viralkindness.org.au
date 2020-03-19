@@ -20,7 +20,7 @@ export default () => {
         </PageHeader>
         <ContentWithSidebar>
           <div>
-            <h2>Community Care Postcards</h2>
+            <h2 id='postcards'>Community Care Postcards</h2>
             <p>
               There are lots of ways to check in with people we know while
               maintaining safe social distancing — from a quick call, to a
@@ -140,7 +140,9 @@ export default () => {
               period.
             </p>
 
-            <h2>Setting up a community care group: What you need to know!</h2>
+            <h2 id='start-a-group'>
+              Setting up a community care group: What you need to know!
+            </h2>
             <p>
               Adding a community care group in your local area is easy! Here are
               a few tips, tricks and things to think about when starting your
