@@ -3,6 +3,7 @@ import ReactGA from 'react-ga'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import './app.scss'
+import ScrollTop from './components/ScrollTop'
 import Header from './Header'
 import Home from './Home'
 import Register from './Register'
@@ -18,30 +19,32 @@ function App() {
   return (
     <div>
       <Router>
-        <Header />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/register'>
-            <Register />
-          </Route>
-          <Route path='/thanks'>
-            <Thanks />
-          </Route>
-          <Route path='/faq'>
-            <Faq />
-          </Route>
-          <Route path='/about'>
-            <About />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
-          <Route path='/resources'>
-            <Resources />
-          </Route>
-        </Switch>
+        <ScrollTop>
+          <Header />
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/register'>
+              <Register />
+            </Route>
+            <Route path='/thanks'>
+              <Thanks />
+            </Route>
+            <Route path='/faq'>
+              <Faq />
+            </Route>
+            <Route path='/about'>
+              <About />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            <Route path='/resources'>
+              <Resources />
+            </Route>
+          </Switch>
+        </ScrollTop>
       </Router>
     </div>
   )
