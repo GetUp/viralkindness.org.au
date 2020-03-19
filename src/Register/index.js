@@ -38,7 +38,7 @@ const initialValues = {
 }
 
 const groupLinkPattern = new RegExp(
-  /^(https?:\/\/)?(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com)/,
+  /^https?:\/\/(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com)/,
   'i'
 )
 
@@ -76,7 +76,7 @@ export default () => {
       errors.groupLink = 'This field is required'
     } else if (!groupLinkPattern.test(values.groupLink)) {
       errors.groupLink =
-        'The link should be to a Facebook group or group chat on FB Messenger or WhatsApp'
+        'The link should be to a Facebook group or group chat on FB Messenger or WhatsApp and must begin with a protocol (e.g. "https://")'
     }
 
     return errors
@@ -230,7 +230,7 @@ export default () => {
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
-                      type='text'
+                      type='url'
                       name='groupLink'
                       placeholder='https://www.facebook.com/groups/123...'
                     />
