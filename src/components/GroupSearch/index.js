@@ -38,10 +38,13 @@ const GroupIcon = ({ url }) => {
   return null
 }
 
+const locationDisplay = props =>
+  (props && props.label.replace(', Australia', '')) || ''
+
 const Group = ({ doc }, i) => (
   <tr key={i} className={s.groupRow}>
     <td>{doc.groupName}</td>
-    <td>{(doc.properties && doc.properties.label) || ''}</td>
+    <td>{locationDisplay(doc.properties)}</td>
     <td className={s.groupIconWrapper}>
       <GroupIcon url={doc.groupLink} />
     </td>
@@ -55,9 +58,7 @@ const GroupSml = ({ doc }, i) => (
   <tr key={i} className={s.groupRowSml}>
     <td>
       <div className={s.groupNameSml}>{doc.groupName}</div>
-      <div className={s.groupAddSml}>
-        {(doc.properties && doc.properties.label) || ''}
-      </div>
+      <div className={s.groupAddSml}>{locationDisplay(doc.properties)}</div>
       <div className={`${s.groupBtn}`}>
         <GroupIcon url={doc.groupLink} />
         <GroupLink href={doc.groupLink} text='Join group' />
