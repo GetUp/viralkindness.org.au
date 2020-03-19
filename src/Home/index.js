@@ -34,21 +34,27 @@ export default () => {
             <Link to='/register' className={s.link}>
               <Add />
               <div>
-                <div className={s.linkText}>Add a group</div>
+                <div className={s.linkText}>
+                  <span>Add a group</span>
+                </div>
                 <div className={s.linkSubtext}>Add your local group</div>
               </div>
             </Link>
             <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
               <Find />
               <div>
-                <div className={s.linkText}>Find a group</div>
+                <div className={s.linkText}>
+                  <span>Find a group</span>
+                </div>
                 <div className={s.linkSubtext}>Search by your location</div>
               </div>
             </Link>
             <Link to='/faq' className={s.link}>
               <Faq />
               <div>
-                <div className={s.linkText}>{faq.title}</div>
+                <div className={s.linkText}>
+                  <span>{faq.title}</span>
+                </div>
                 <div className={s.linkSubtext}>{faq.subtitle}</div>
               </div>
             </Link>

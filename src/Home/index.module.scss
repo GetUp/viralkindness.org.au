@@ -140,15 +140,18 @@
         width: 1.2rem;
         margin-top: 1px;
         * {
-          fill: $textColor;
+          fill: $textColorLight;
         }
       }
 
       .linkText {
         color: $textColor;
         font-weight: 700;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         letter-spacing: -0.01em;
+        span {
+          border-bottom: 1px solid rgba($secondary, 0.7);
+        }
       }
       .linkSubtext {
         font-size: 0.9rem;
