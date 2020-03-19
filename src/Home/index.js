@@ -44,7 +44,7 @@ export default () => {
               </div>
             </Link>
             <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
-              <Search color='white' />
+              <RightArrow />
               <div>
                 <div className={s.linkText}>Find a group</div>
                 <div className={s.linkSubtext}>Search by your location</div>

@@ -1,5 +1,5 @@
 export default {
-  title: 'FAQ',
+  title: 'FAQs',
   subtitle: 'How to share #ViralKindness',
   data: [
     {
