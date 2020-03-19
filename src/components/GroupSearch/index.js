@@ -182,7 +182,7 @@ export default () => {
           We’ve been notified of the issue. Please try again later.
         </div>
       )}
-      {searched && groups.length === 0 && (
+      {searched && groups && groups.length === 0 && (
         <div className={s.importantWrapper}>
           <div>No results</div>
           <p>
@@ -199,7 +199,7 @@ export default () => {
           </p>
         </div>
       )}
-      {!searched && groups.length === 0 && (
+      {!searched && groups && groups.length === 0 && (
         <div className={s.importantWrapper}>
           <div>Important</div>
           <p>
@@ -213,7 +213,7 @@ export default () => {
           </p>
         </div>
       )}
-      {groups.length > 0 && (
+      {groups && groups.length > 0 && (
         <>
           <GroupTableSml>{groups.map(GroupSml)}</GroupTableSml>
           <GroupTable>{groups.map(Group)}</GroupTable>
