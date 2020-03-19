@@ -108,13 +108,11 @@ export default () => {
   return (
     <div className={s.mainContent}>
       <h2>Find a group</h2>
-      <p>
-        <b>
-          Looking for help? Or keen to lend a hand? Enter your suburb below to
-          find a community care group near you.
-        </b>
+      <p className={s.mainSubtext}>
+        Looking for help? Or keen to lend a hand? Enter your suburb below to
+        find a community care group near you.
       </p>
-      <p>
+      <p className={s.mainSubSubtext}>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
         <Link smooth to='#disclaimer' style={{ textDecoration: 'none' }}>
@@ -152,8 +150,10 @@ export default () => {
           <div>Important</div>
           <p>
             These are community groups established to help people with everyday
-            needs, such as shopping or a check-in call. If you need urgent help
-            or medical assistance, <Link to='/faq#help'>head here</Link>.
+            needs, such as shopping or a check-in call. <br />
+            <Link to='/faq#help'>
+              Click here if you need urgent help or medical assistance.
+            </Link>
           </p>
         </div>
       )}

@@ -128,9 +128,10 @@
 
   @media screen and (max-width: 600px) {
     margin-top: 32px;
+    padding-top: 0;
     .sidebarLink {
       padding: 16px 8px;
-      border-bottom: 1px solid rgba($textColor, 0.1);
+      border-bottom: 8px solid white;
       .sidebarLinkSubtitle {
         margin-left: 0;
       }
