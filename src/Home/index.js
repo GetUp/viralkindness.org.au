@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ReactGA from 'react-ga'
 import s from './index.module.scss'
 import { HashLink as Link } from 'react-router-hash-link'
-import { RightArrow, Search, Add, Faq } from '../components/Icons'
+import { RightArrow, Search, Add, Faq, Find } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import GroupSearch from '../components/GroupSearch'
 import FaqNav from '../components/FaqNav'
@@ -44,7 +44,7 @@ export default () => {
               </div>
             </Link>
             <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
-              <Search />
+              <Find />
               <div>
                 <div className={s.linkText}>Find a group</div>
                 <div className={s.linkSubtext}>Search by your location</div>
