@@ -1,17 +1,15 @@
-$background: #333;
-$textColor: white;
-// $background: #ffdd50;
-// textColor: darken(#ff671f, 20);
+@import '../../assets/styles/variables';
 
 .messageContainer {
-  background: $background;
+  background: darken($textColor, 10);
   height: 40px;
   padding: 0 8px;
 
   &:hover {
-    background: lighten($background, 8);
+    background: $textColor;
     .link {
       text-decoration: underline;
+      opacity: 0.9;
     }
   }
 }
@@ -24,7 +22,7 @@ $textColor: white;
 }
 
 .link {
-  color: $textColor;
+  color: $primary;
   font-weight: 700;
   text-decoration: none;
   width: 100%;
@@ -33,4 +31,5 @@ $textColor: white;
   display: flex;
   height: 100%;
   font-size: 0.85rem;
+  opacity: 0.6;
 }
