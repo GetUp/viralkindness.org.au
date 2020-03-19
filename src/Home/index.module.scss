@@ -1,5 +1,6 @@
-$primary: #ff671f;
+$primary: #faf2f1;
 $secondary: #2098f5;
+$textColor: #004472;
 
 .headerContainer {
   display: grid;
@@ -46,16 +47,20 @@ $secondary: #2098f5;
 
     h1 {
       font-size: 2.8rem;
-      color: white;
+      color: $textColor;
       margin-bottom: 8px;
       margin-top: 0px;
     }
 
     h2 {
-      color: white;
+      color: $textColor;
       font-weight: 400;
       margin-top: 0px;
       margin-bottom: 30px;
+    }
+
+    p {
+      color: $textColor;
     }
 
     @media screen and (max-width: 900px) {
@@ -104,7 +109,7 @@ $secondary: #2098f5;
     }
 
     .link {
-      color: white;
+      color: $textColor;
       text-decoration: none;
       display: flex;
       padding: 16px;
@@ -130,12 +135,12 @@ $secondary: #2098f5;
         width: 1.5rem;
         margin-right: 8px;
         * {
-          fill: white;
+          fill: $textColor;
         }
       }
 
       .linkText {
-        color: white;
+        color: $textColor;
         font-weight: 700;
         text-decoration: underline;
         margin-bottom: 8px;
