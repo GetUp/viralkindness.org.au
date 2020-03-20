@@ -7,7 +7,7 @@ export default ({ s }) => (
       <span>Resources</span>
     </h4>
     <div className={s.sidebarLinkSubtitle}>
-      Keep up to date - with accurate information
+      Need Postcards? Interested in starting a group? This is for you!
     </div>
   </Link>
 )
