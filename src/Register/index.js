@@ -137,7 +137,8 @@ export default () => {
         </ul>
         <p style={{ fontSize: '0.9rem' }}>
           <Link
-            to='/resources'
+            smooth
+            to='/resources#start-a-group'
             style={{
               borderBottom: '1px solid rgba(0, 68, 114, 0.3)',
               textDecoration: 'none'
