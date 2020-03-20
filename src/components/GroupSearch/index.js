@@ -73,7 +73,7 @@ const Group = ({ doc }, i) => (
         <GroupLink href={doc.groupLink} text='Join group'></GroupLink>
       </div>
     </div>
-    <div className={s.groupDivBlurb} style={{ display: 'none' }}></div>
+    {doc.groupBlurb && <div className={s.groupDivBlurb}>{doc.groupBlurb}</div>}
   </div>
 )
 
