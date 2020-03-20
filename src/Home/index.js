@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './index.module.scss'
 import { HashLink as Link } from 'react-router-hash-link'
-import { Add, Faq, Find } from '../components/Icons'
+import { Add, Create, Find } from '../components/Icons'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import GroupSearch from '../components/GroupSearch'
 import FaqNav from '../components/FaqNav'
@@ -37,7 +37,6 @@ export default () => {
                 <div className={s.linkText}>
                   <span>Add a group</span>
                 </div>
-                <div className={s.linkSubtext}>Add your local group</div>
               </div>
             </Link>
             <Link to='#groupSearch' scroll={scrollFocus} className={s.link}>
@@ -46,16 +45,14 @@ export default () => {
                 <div className={s.linkText}>
                   <span>Find a group</span>
                 </div>
-                <div className={s.linkSubtext}>Search by your location</div>
               </div>
             </Link>
-            <Link to='/faq' className={s.link}>
-              <Faq />
+            <Link to='/resources#start-a-group' className={s.link}>
+              <Create />
               <div>
                 <div className={s.linkText}>
-                  <span>{faq.title}</span>
+                  <span>Create a group</span>
                 </div>
-                <div className={s.linkSubtext}>{faq.subtitle}</div>
               </div>
             </Link>
           </div>
