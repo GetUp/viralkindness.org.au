@@ -7,7 +7,7 @@ import {
   Facebook,
   WhatsApp,
   Messenger,
-  ExternalLink,
+  NextDoor,
   Location
 } from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
@@ -40,16 +40,18 @@ const GroupLink = ({ href, text }) => (
 )
 
 const GroupIcon = ({ url }) => {
-  if (/facebook.com|fb.com/i.test(url)) return <Facebook />
-  if (/messenger.com|m.me/i.test(url)) return <Messenger />
-  if (/whatsapp.com/i.test(url)) return <WhatsApp />
+  if (/facebook\.com|fb\.com/i.test(url)) return <Facebook />
+  if (/messenger\.com|m\.me/i.test(url)) return <Messenger />
+  if (/whatsapp\.com/i.test(url)) return <WhatsApp />
+  if (/au\.nextdoor\.com/i.test(url)) return <NextDoor />
   return null
 }
 
 const groupClass = (url, s) => {
-  if (/facebook.com|fb.com/i.test(url)) return s.fb
-  if (/messenger.com|m.me/i.test(url)) return s.ms
-  if (/whatsapp.com/i.test(url)) return s.wa
+  if (/facebook\.com|fb\.com/i.test(url)) return s.fb
+  if (/messenger\.com|m\.me/i.test(url)) return s.ms
+  if (/whatsapp\.com/i.test(url)) return s.wa
+  if (/au\.nextdoor\.com/i.test(url)) return s.nd
   return null
 }
 

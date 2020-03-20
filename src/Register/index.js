@@ -14,6 +14,7 @@ import {
   Public,
   Messenger,
   WhatsApp,
+  NextDoor,
   Facebook
 } from '../components/Icons'
 import InputWithIcon from '../components/InputWithIcon'
@@ -76,7 +77,7 @@ export default () => {
 
     if (values.groupLink && !groupLinkPattern.test(values.groupLink)) {
       errors.groupLink =
-        'The link should be to a Facebook group or group chat on FB Messenger or WhatsApp and must begin with a protocol (e.g. "https://")'
+        'The link should be to a Facebook or Nextdoor group or group chat on FB Messenger or WhatsApp and must begin with a protocol (e.g. "https://")'
     }
 
     if (!values.groupLink && !values.groupBlurb) {
@@ -120,8 +121,9 @@ export default () => {
         </p>
         <p style={{ fontSize: '1.15rem', marginBottom: '1.2em' }}>
           Fill in the information below - including how the group will organise
-          eg. Facebook group, FB Messenger, or WhatsApp group. Many groups are
-          using Facebook as a digital space to come together and communicate.
+          eg. Facebook group, Nextdoor group, FB Messenger, or WhatsApp group.
+          Many groups are using Facebook as a digital space to come together and
+          communicate.
         </p>
         <p style={{ fontSize: '0.9rem' }}>
           If you’re using a Facebook group, make sure you:
@@ -228,6 +230,7 @@ export default () => {
                 <label>
                   Link
                   <span className={s.socialIcons}>
+                    <NextDoor />
                     <WhatsApp />
                     <Messenger />
                     <Facebook />
