@@ -274,6 +274,7 @@ export default () => {
               </fieldset>
 
               <ErrorMessage name='general' component='div' />
+
               <button
                 type='submit'
                 disabled={isSubmitting}
@@ -282,6 +283,9 @@ export default () => {
               >
                 Register your group
               </button>
+              <div className={s.disclaimer}>
+                Your information is collected under GetUp’s Privacy Policy
+              </div>
             </Form>
           )}
         </Formik>

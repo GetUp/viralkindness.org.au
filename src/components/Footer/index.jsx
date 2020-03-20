@@ -12,6 +12,16 @@ export default () => (
         <li>
           <Link to='/contact'>Contact Us</Link>
         </li>
+        <li>
+          {/* eslint-enable react/jsx-no-target-blank */}
+          <a
+            href='https://www.getup.org.au/about/privacy-policy'
+            target='_blank'
+            rel='noopener'
+          >
+            Privacy Policy
+          </a>
+        </li>
       </ul>
       <div style={{ opacity: '0.5' }}>
         <p id='disclaimer'>
