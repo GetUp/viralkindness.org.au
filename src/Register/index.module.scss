@@ -80,6 +80,10 @@
 .sidebarContainer {
   padding-top: 16px;
 
+  ul {
+    padding-left: 8px;
+  }
+
   @media screen and (max-width: 600px) {
     margin-top: 16px;
     background: rgba($textColor, 0.07);
@@ -92,6 +96,7 @@
     padding: 12px 8px;
     border-radius: 4px;
     color: $textColorLight;
+    border-bottom: 0px;
 
     .sidebarLinkHeader {
       margin-top: 0px;
