@@ -36,7 +36,7 @@ export default () => {
             </p>
             <img
               src={main}
-              alt='A small version of the printable postcards'
+              alt='A person dropping postcards in letterboxes'
               className={s.mainImage}
             />
             <p>
@@ -82,7 +82,7 @@ export default () => {
               <a href='https://www.getup.org.au/postcards' target='_blank'>
                 <img
                   src={thumbnail}
-                  alt='A small version of the printable postcards'
+                  alt='A person writing their details on the printable postcards'
                   className={s.image}
                 />
               </a>
