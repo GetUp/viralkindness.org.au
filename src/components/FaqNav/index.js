@@ -4,19 +4,26 @@ import faq from '../../data/faq'
 import s from './index.module.scss'
 
 export default ({ className, style }) => {
-  const faqPage = () => window.location.pathname !== '/faq'
+  const notFaqPage = () => window.location.pathname !== '/faq'
 
   return (
     <div
       className={`${s.howToModule} ${className ? className : ''}`}
       style={style}
     >
-      {faqPage() && (
+      {!notFaqPage() && (
+        <p className={s.contentHeader}>
+          <b>Content</b>
+        </p>
+      )}
+      {notFaqPage() && (
         <h4>
-          <Link to='/faq'>{faq.title}</Link>
+          <Link to='/faq' style={{ borderBottom: '0px' }}>
+            {faq.title}
+          </Link>
         </h4>
       )}
-      <ul className={!faqPage() ? s.sticky : ''}>
+      <ul className={!notFaqPage() ? s.sticky : ''}>
         {faq.data.map(i => (
           <li key={i.title}>
             <Link smooth to={`/faq#${i.hash}`}>

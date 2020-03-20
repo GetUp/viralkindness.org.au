@@ -1,5 +1,12 @@
 @import '../assets/styles/variables';
 
+.pageHeader {
+  font-size: 4rem !important;
+  @media screen and (max-width: 900px) {
+    font-size: 2rem !important;
+  }
+}
+
 .question {
   margin-bottom: 2.5rem;
   .header {
@@ -31,10 +38,6 @@
       margin-bottom: 0.2em;
     }
   }
-
-  a {
-    color: #2098f5;
-  }
 }
 
 .contentWrapper {
@@ -52,6 +55,5 @@
 
   .faqWrapper {
     padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
   }
 }

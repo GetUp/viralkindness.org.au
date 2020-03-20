@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
+import s from './index.module.scss'
 import ReactGA from 'react-ga'
 import { HashLink as Link } from 'react-router-hash-link'
 import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
-import thumbnail from '../assets/images/download-preview.jpg'
+import thumbnail from '../assets/images/viralkindness-1.jpg'
+import main from '../assets/images/viralkindness-4.jpg'
+import { Download } from '../components/Icons'
 
 export default () => {
   useEffect(
@@ -16,20 +19,26 @@ export default () => {
     <>
       <div>
         <PageHeader>
-          <h1>Resources</h1>
+          <h1 className={s.pageHeader}>Resources</h1>
         </PageHeader>
-        <ContentWithSidebar>
-          <div>
+        <ContentWithSidebar reverse>
+          <div style={{ maxWidth: '700px' }}>
             <h2 id='postcards'>Community Care Postcards</h2>
-            <p>
+
+            <p className={s.subtitle}>
               There are lots of ways to check in with people we know while
               maintaining safe social distancing — from a quick call, to a
               WhatsApp message.
             </p>
-            <p>
+            <p className={s.subtitle}>
               But for people who are more isolated, or who we don’t know as
               well, we need to think outside the box.
             </p>
+            <img
+              src={main}
+              alt='A small version of the printable postcards'
+              className={s.mainImage}
+            />
             <p>
               Across the UK and Australia, people are putting notes, letters and
               postcards in their neighbours’ letterboxes to offer assistance
@@ -42,117 +51,113 @@ export default () => {
               people, those with underlying health conditions and people whose
               immune system is compromised.
             </p>
-            <p>
-              {/* eslint-disable react/jsx-no-target-blank */}
+            <div className={s.breakoutContainer}>
+              <h3>Postcards</h3>
+
+              <h4 id='how-to-use-postcards'>How to use the postcards</h4>
+              <ol>
+                <li>
+                  Print off postcards from the link above - follow the
+                  instructions in the document above. Remember to wash your
+                  hands.
+                </li>
+                <li>
+                  Add in your name, street address or suburb, and contact
+                  number.
+                </li>
+                <li>
+                  Select from the list of options how you are able to help your
+                  community.
+                </li>
+                <li>
+                  After waiting 24 hours (
+                  <Link smooth to='#note'>
+                    see note
+                  </Link>
+                  ), wash hands or wear gloves to drop postcards in letterboxes
+                  around your neighbourhood.
+                </li>
+              </ol>
+
+              <a href='https://www.getup.org.au/postcards' target='_blank'>
+                <img
+                  src={thumbnail}
+                  alt='A small version of the printable postcards'
+                  className={s.image}
+                />
+              </a>
+
+              <h4 id='tips'>Tips</h4>
+              <ul>
+                <li>
+                  <strong>Availability.</strong> Feel free to include details of
+                  when it is best to call or text on the card, especially if you
+                  are working or have other commitments.
+                </li>
+                <li>
+                  <strong>Start small.</strong> Whether you’re working with a
+                  large group, or helping on your own, hand out a small amount
+                  of postcards to begin with and increase over time. That way if
+                  multiple people in your neighbourhood need help, you won’t be
+                  overwhelmed.
+                </li>
+                <li>
+                  <strong>Connect with others!</strong>{' '}
+                  <Link smooth to='/#groupSearch'>
+                    Check the #ViralKindness hub
+                  </Link>{' '}
+                  for others helping in similar ways in your area. Not only will
+                  it avoid double up, you could team up to help more people!
+                </li>
+              </ul>
+
+              <hr className={s.hr} />
+
+              <h4 id='note'>Note</h4>
+              <p>
+                Coronavirus is spread person to person - but can be spread by
+                touching surfaces.{' '}
+                {/* eslint-enable react/jsx-no-target-blank */}
+                <a
+                  href='https://www.sbs.com.au/news/the-coronavirus-can-persist-in-air-for-hours-and-on-surfaces-for-days-a-new-study-shows'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <strong>
+                    New research shows the virus can survive on cardboard for up
+                    to 24 hours.
+                  </strong>
+                </a>{' '}
+                If you feel unwell, or have had contact with someone who has
+                tested positive for COVID-19, please <strong>do not</strong>{' '}
+                deliver postcards until you have cleared the 14 day
+                self-isolation period.
+              </p>
+
+              <hr className={s.hr} />
+              {/* eslint-enable react/jsx-no-target-blank */}
               <a
                 href='https://www.getup.org.au/postcards'
+                className={s.downloadPostcard}
                 target='_blank'
-                style={{
-                  width: '100%',
-                  textAlign: 'center',
-                  display: 'block',
-                  pointerEvents: 'cursor'
-                }}
               >
-                {/* eslint-enable react/jsx-no-target-blank */}
-                <span
-                  style={{
-                    display: 'block',
-                    padding: '16px',
-                    borderRadius: '4px',
-                    maxWidth: '300px',
-                    margin: '0 auto'
-                  }}
-                >
-                  <img
-                    src={thumbnail}
-                    alt='A small version of the printable postcards'
-                    style={{
-                      width: '100%'
-                    }}
-                  />
-                </span>
-                Download the postcards to print at home
+                <Download />
+                Download Postcards
               </a>
-            </p>
+            </div>
 
-            <h3>How to use the postcards:</h3>
-            <ol>
-              <li>
-                Print off postcards from the link above - follow the
-                instructions in the document above. Remember to wash your hands.
-              </li>
-              <li>
-                Add in your name, street address or suburb, and contact number.
-              </li>
-              <li>
-                Select from the list of options how you are able to help your
-                community.
-              </li>
-              <li>
-                After waiting 24 hours (
-                <Link smooth to='#note'>
-                  see note
-                </Link>
-                ), wash hands or wear gloves to drop postcards in letterboxes
-                around your neighbourhood.
-              </li>
-            </ol>
+            <br />
 
-            <h3>Tips:</h3>
-            <ul>
-              <li>
-                <strong>Availability.</strong> Feel free to include details of
-                when it is best to call or text on the card, especially if you
-                are working or have other commitments.
-              </li>
-              <li>
-                <strong>Start small.</strong> Whether you’re working with a
-                large group, or helping on your own, hand out a small amount of
-                postcards to begin with and increase over time. That way if
-                multiple people in your neighbourhood need help, you won’t be
-                overwhelmed.
-              </li>
-              <li>
-                <strong>Connect with others!</strong>{' '}
-                <Link smooth to='/#groupSearch'>
-                  Check the #ViralKindness hub
-                </Link>{' '}
-                for others helping in similar ways in your area. Not only will
-                it avoid double up, you could team up to help more people!
-              </li>
-            </ul>
-
-            <h3 id='note'>Note:</h3>
-            <p>
-              Coronavirus is spread person to person - but can be spread by
-              touching surfaces.{' '}
-              <a
-                href='https://www.sbs.com.au/news/the-coronavirus-can-persist-in-air-for-hours-and-on-surfaces-for-days-a-new-study-shows'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <strong>
-                  New research shows the virus can survive on cardboard for up
-                  to 24 hours.
-                </strong>
-              </a>{' '}
-              If you feel unwell, or have had contact with someone who has
-              tested positive for COVID-19, please <strong>do not</strong>{' '}
-              deliver postcards until you have cleared the 14 day self-isolation
-              period.
-            </p>
-
-            <h2 id='start-a-group'>
-              Setting up a community care group: What you need to know!
-            </h2>
-            <p>
+            <h2 id='start-a-group'>Setting up a community care group</h2>
+            <p className={s.subtitle}>
               Adding a community care group in your local area is easy! Here are
               a few tips, tricks and things to think about when starting your
               group:
             </p>
 
-            <h3>Where will you organise and communicate?</h3>
+            <h3 className={s.heading3} id='organise'>
+              Where will you organise and communicate?
+            </h3>
             <p>
               Facebook groups are an easy way to connect lots of people,
               alternatively Facebook Messenger or WhatsApp groups work too.
@@ -168,7 +173,9 @@ export default () => {
               community join.
             </p>
 
-            <h3>Sharing the Load</h3>
+            <h3 className={s.heading3} id='sharing-the-load'>
+              Sharing the Load
+            </h3>
             <p>
               If you’re part of a larger group, think about giving people
               different roles and ways to help share the work. That means more
@@ -187,7 +194,9 @@ export default () => {
               .
             </p>
 
-            <h3>Rules and Guidelines</h3>
+            <h3 className={s.heading3} id='rules'>
+              Rules and Guidelines
+            </h3>
             <p>
               You may want to set rules and guidelines for your group to follow.
               This can help you to define your purpose and create a safe and
@@ -195,7 +204,7 @@ export default () => {
               thanks to the Northern Beaches - Coronavirus Community Support
               Group).
             </p>
-            <ol>
+            <ol className={s.rulesGuidelines}>
               <li>
                 <h4>Be Kind and Courteous</h4>
                 <p>
@@ -257,6 +266,64 @@ export default () => {
                 </p>
               </li>
             </ol>
+          </div>
+          <div>
+            <p style={{ marginTop: '32px' }}>
+              <b>Content</b>
+            </p>
+            <ul className={s.sideNav}>
+              <li>
+                <Link smooth to='/resources#postcards'>
+                  <span className={s.sideNavHeader}>
+                    Community Care Postcards
+                  </span>
+                </Link>
+                <ul className={s.subSideNav}>
+                  <li>
+                    <Link smooth to='/resources#how-to-use-postcards'>
+                      How to use the postcards
+                    </Link>
+                  </li>
+                  <li>
+                    <Link smooth to='/resources#tips'>
+                      Tips
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href='https://www.getup.org.au/postcards'
+                      target='_blank'
+                    >
+                      Download Postcards
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <Link smooth to='/resources#start-a-group'>
+                  <span className={s.sideNavHeader}>
+                    Setting up a community care group
+                  </span>
+                </Link>
+                <ul className={s.subSideNav}>
+                  <li>
+                    <Link smooth to='/resources#organise'>
+                      Where will you organise and communicate?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link smooth to='/resources#sharing-the-load'>
+                      Sharing the Load
+                    </Link>
+                  </li>
+                  <li>
+                    <Link smooth to='/resources#rules'>
+                      Rules and Guidelines
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </ContentWithSidebar>
       </div>
