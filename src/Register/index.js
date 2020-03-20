@@ -52,6 +52,8 @@ const geoJson = loc => ({
 export default () => {
   const history = useHistory()
   const [location, setLocation] = useState({})
+  const [blurbLength, setBlurbLength] = useState(0)
+  const blurbMaxLength = 280
 
   useEffect(
     () => ReactGA.pageview(window.location.pathname + window.location.search),
@@ -250,15 +252,17 @@ export default () => {
                   />
                 </label>
                 <label>
-                  Short introduction or instructions
+                  Short introduction or instructions (
+                  {`${blurbLength}/${blurbMaxLength}`})
                   <InputWithIcon className={s.inputWrapper}>
                     <Public className={s.textareaIcon} />
                     <Field
                       as='textarea'
                       rows={4}
-                      maxLength={280}
+                      maxLength={blurbMaxLength}
                       name='groupBlurb'
                       placeholder='Any special instructions'
+                      onKeyUp={e => setBlurbLength(e.target.value.length)}
                     />
                   </InputWithIcon>
                   <ErrorMessage
