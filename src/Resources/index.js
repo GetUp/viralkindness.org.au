@@ -79,6 +79,7 @@ export default () => {
                 </li>
               </ol>
 
+              {/* eslint-disable-next-line */}
               <a href='https://www.getup.org.au/postcards' target='_blank'>
                 <img
                   src={thumbnail}
@@ -117,7 +118,6 @@ export default () => {
               <p>
                 Coronavirus is spread person to person - but can be spread by
                 touching surfaces.{' '}
-                {/* eslint-enable react/jsx-no-target-blank */}
                 <a
                   href='https://www.sbs.com.au/news/the-coronavirus-can-persist-in-air-for-hours-and-on-surfaces-for-days-a-new-study-shows'
                   target='_blank'
@@ -135,12 +135,13 @@ export default () => {
               </p>
 
               <hr className={s.hr} />
-              {/* eslint-enable react/jsx-no-target-blank */}
+              {/* eslint-disable react/jsx-no-target-blank */}
               <a
                 href='https://www.getup.org.au/postcards'
                 className={s.downloadPostcard}
                 target='_blank'
               >
+                {/* eslint-enable react/jsx-no-target-blank */}
                 <Download />
                 Download Postcards
               </a>
@@ -290,10 +291,12 @@ export default () => {
                     </Link>
                   </li>
                   <li>
+                    {/* eslint-disable react/jsx-no-target-blank */}
                     <a
                       href='https://www.getup.org.au/postcards'
                       target='_blank'
                     >
+                      {/* eslint-enable react/jsx-no-target-blank */}
                       Download Postcards
                     </a>
                   </li>

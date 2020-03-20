@@ -13,12 +13,13 @@ export default () => (
           <Link to='/contact'>Contact Us</Link>
         </li>
         <li>
-          {/* eslint-enable react/jsx-no-target-blank */}
+          {/* eslint-disable react/jsx-no-target-blank */}
           <a
             href='https://www.getup.org.au/about/privacy-policy'
             target='_blank'
             rel='noopener'
           >
+            {/* eslint-enable react/jsx-no-target-blank */}
             Privacy Policy
           </a>
         </li>

@@ -33,7 +33,11 @@ export default () => {
               Can you share your group with family, friends and neighbours and
               encourage them to join you?
             </p>
-            <img src={main} className={s.image} />
+            <img
+              src={main}
+              className={s.image}
+              alt='A person dropping postcards in letterboxes'
+            />
           </div>
 
           <ShareModule className={s.shareModule} />
