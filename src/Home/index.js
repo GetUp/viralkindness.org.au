@@ -79,7 +79,15 @@ export default () => {
             </div>
           </Link>
           <ResourcesLink s={s} />
-          <FaqNav />
+          <Link to='/faq' className={s.sidebarLink}>
+            <h4 className={s.sidebarLinkHeader}>
+              <span>FAQs</span>
+            </h4>
+            <div className={s.sidebarLinkSubtitle}>
+              We will continue to update this page as more groups offer advice
+              on what has worked well for them.
+            </div>
+          </Link>
         </div>
       </ContentWithSidebar>
       <Footer />
