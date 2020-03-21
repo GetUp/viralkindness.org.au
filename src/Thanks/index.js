@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import ShareModule from '../components/ShareModule'
+import main from '../assets/images/viralkindness-4.jpg'
 
 export default () => {
   useEffect(
@@ -25,16 +26,14 @@ export default () => {
             </p>
             <p>
               Without question, the way we pull through coronavirus is together
-              and by caring for those around us.
-              <strong>
-                To do that, we’re going to need everyone who can, to do a little
-                more to help.
-              </strong>
+              and by caring for those around us. To do that, we’re going to need
+              everyone who can, to do a little more to help.
             </p>
-            <p>
+            <p style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
               Can you share your group with family, friends and neighbours and
               encourage them to join you?
             </p>
+            <img src={main} className={s.image} />
           </div>
 
           <ShareModule className={s.shareModule} />
