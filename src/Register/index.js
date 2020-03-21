@@ -125,10 +125,10 @@ export default () => {
         <div className={s.headerContainer}>
           <h1 className={s.pageHeader}>Add a group</h1>
           <p className={s.subtitle}>
-            Adding a community care group in your local area is easy!
-          </p>
-          <p className={s.subtitle}>
-            <b>Here's how to set it up:</b>
+            <strong>
+              Adding a community care group in your local area is easy!
+              <br /> Here's how to set it up:
+            </strong>
           </p>
           <ol className={s.list}>
             <li>
@@ -148,13 +148,13 @@ export default () => {
               assistance.
             </li>
           </ol>
-
+          <hr className={s.hr} />
           <p style={{ fontSize: '0.9rem' }}>
             <Link smooth to='/resources#start-a-group' className={s.link}>
               More information about starting a group is available here.
             </Link>
           </p>
-          <hr className={s.hr} style={{ marginBottom: '8px' }} />
+          {/*
           <Accordion>
             <AccordionTitle>
               <p style={{ fontSize: '0.9rem' }}>
@@ -174,7 +174,7 @@ export default () => {
                 </li>
               </ul>
             </AccordionBody>
-          </Accordion>
+          </Accordion> */}
         </div>
       </PageHeader>
       <ContentWithSidebar>
