@@ -186,6 +186,12 @@ export default () => {
           {({ isSubmitting }) => (
             <Form className={s.addForm}>
               <fieldset>
+                <p className={s.formHeader}>
+                  <b>Personal details</b>
+                  <div className={s.inputMessage}>
+                    Your personal information won't be publicly visible.
+                  </div>
+                </p>
                 <label>
                   Your email*
                   <InputWithIcon className={s.inputWrapper}>
@@ -202,9 +208,6 @@ export default () => {
                     component='div'
                     className={s.errorMessage}
                   />
-                  <span className={s.inputMessage}>
-                    Your email won't be publicly visible.
-                  </span>
                 </label>
                 <label>
                   Your phone
@@ -212,13 +215,14 @@ export default () => {
                     <Private />
                     <Field type='tel' name='phone' placeholder='Phone' />
                   </InputWithIcon>
-                  <span className={s.inputMessage}>
-                    Your phone number won't be publicly visible.
-                  </span>
                 </label>
+                <hr className={s.hr} />
+                <p className={s.formHeader}>
+                  <b>Group details</b>
+                </p>
 
                 <label>
-                  Name of the group*
+                  Name*
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
@@ -276,6 +280,39 @@ export default () => {
                     className={s.errorMessage}
                   />
                 </label>
+                <Accordion className={s.accordion}>
+                  <AccordionTitle className={s.title}>
+                    Supported platforms
+                  </AccordionTitle>
+                  <AccordionBody className={s.body}>
+                    <ul>
+                      <li>
+                        <span>
+                          <Facebook />
+                          Facebook
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          <WhatsApp />
+                          WhatsApp
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          <Messenger />
+                          Messenger
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          <NextDoor />
+                          NextDoor
+                        </span>
+                      </li>
+                    </ul>
+                  </AccordionBody>
+                </Accordion>
                 <label>
                   Short introduction or instructions (
                   {`${blurbLength}/${blurbMaxLength}`})
@@ -296,6 +333,9 @@ export default () => {
                     className={s.errorMessage}
                   />
                 </label>
+                <div className={s.disclaimer}>
+                  Your information is collected under GetUp’s Privacy Policy
+                </div>
               </fieldset>
 
               <ErrorMessage name='general' component='div' />
@@ -308,9 +348,6 @@ export default () => {
               >
                 Register your group
               </button>
-              <div className={s.disclaimer}>
-                Your information is collected under GetUp’s Privacy Policy
-              </div>
             </Form>
           )}
         </Formik>

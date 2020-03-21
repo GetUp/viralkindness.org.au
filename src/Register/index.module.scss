@@ -51,11 +51,12 @@
   label {
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.9rem;
-    margin-bottom: 24px;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
     font-weight: 600;
-    color: #333;
+    color: $textColor;
     width: 100%;
+    // padding-left: 16px;
   }
 
   .inputWrapper {
@@ -67,10 +68,17 @@
     }
   }
 
-  .inputMessage {
-    color: #666;
-    margin-top: 8px;
+  .formHeader {
+    font-size: 1.2rem;
     font-weight: 400;
+    color: $secondary;
+  }
+
+  .inputMessage {
+    color: rgba($secondary, 0.7);
+    // margin-top: 8px;
+    font-weight: 400;
+    font-size: 1rem;
   }
 
   .errorMessage {
@@ -88,14 +96,14 @@
   .socialIcons {
     display: flex;
     margin-left: auto;
-    margin-top: -2px;
+    margin-top: 1px;
     // height: 32px;
     // width: 100%;
 
     svg {
-      height: 20px;
-      width: 20px;
-      margin-right: 8px;
+      height: 14px;
+      width: 14px;
+      margin-right: 12px;
     }
 
     @media screen and (min-width: 600px) {
@@ -178,7 +186,39 @@
 }
 
 .disclaimer {
-  margin-top: 16px;
-  font-size: 0.9rem;
-  color: rgba($textColorLight, 0.7);
+  margin-top: -12px;
+  font-size: 0.8rem;
+  color: $textColor;
+  opacity: 0.6;
+}
+
+.hr {
+  border-color: rgba($textColor, 0.06);
+  margin: 24px 0;
+}
+
+.accordion {
+  margin-bottom: 16px;
+
+  .title {
+    margin-top: -24px;
+    color: $textColor;
+    font-size: 0.8rem;
+  }
+
+  .body {
+    ul {
+      font-size: 0.8rem;
+      margin-top: 0;
+      padding-left: 1.2em;
+
+      li span {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
 }
