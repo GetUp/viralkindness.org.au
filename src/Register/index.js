@@ -23,6 +23,11 @@ import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
 import FaqNav from '../components/FaqNav'
 import ResourcesLink from '../components/ResourcesLink'
+import {
+  Accordion,
+  AccordionTitle,
+  AccordionBody
+} from '../components/Accordion'
 
 const apiHost =
   'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
@@ -117,40 +122,60 @@ export default () => {
   return (
     <div>
       <PageHeader>
-        <h1 style={{ marginBottom: '1rem' }}>Add a group</h1>
-        <p className={s.subtitle} style={{ fontSize: '1.15rem' }}>
-          Adding a community care group in your local area is easy!
-        </p>
-        <p style={{ fontSize: '1.15rem', marginBottom: '1.2em' }}>
-          Fill in the information below - including how the group will organise
-          eg. Facebook group, Nextdoor group, FB Messenger, or WhatsApp group.
-          Many groups are using Facebook as a digital space to come together and
-          communicate.
-        </p>
-        <p style={{ fontSize: '0.9rem' }}>
-          If you’re using a Facebook group, make sure you:
-        </p>
-        <ul style={{ marginTop: 0, fontSize: '0.9rem' }}>
-          <li>
-            Add a clear group description to the ‘About’ section of your page.
-          </li>
-          <li>
-            Make the group ‘private’ <strong>not</strong> ‘secret’ or ‘public’.
-            That way you can make sure only members of your community join.
-          </li>
-        </ul>
-        <p style={{ fontSize: '0.9rem' }}>
-          <Link
-            smooth
-            to='/resources#start-a-group'
-            style={{
-              borderBottom: '1px solid rgba(0, 68, 114, 0.3)',
-              textDecoration: 'none'
-            }}
-          >
-            More information about starting a group is available here.
-          </Link>
-        </p>
+        <div className={s.headerContainer}>
+          <h1 className={s.pageHeader}>Add a group</h1>
+          <p className={s.subtitle}>
+            Adding a community care group in your local area is easy!
+          </p>
+          <p className={s.subtitle}>
+            <b>Here's how to set it up:</b>
+          </p>
+          <ol className={s.list}>
+            <li>
+              Create a group up via Facebook, Facebook Messenger, WhatsApp or
+              NextDoor.
+            </li>
+            <li>
+              Once your group is set up, fill in the information below to add
+              your group on the #viralkindness website
+            </li>
+            <li>
+              After you've added your group, people will be able to{' '}
+              <Link to='/#groupSearch' className={s.link}>
+                find it on this site by searching for their suburb
+              </Link>
+              . They’ll be able to volunteer to lend a hand, or request
+              assistance.
+            </li>
+          </ol>
+
+          <p style={{ fontSize: '0.9rem' }}>
+            <Link smooth to='/resources#start-a-group' className={s.link}>
+              More information about starting a group is available here.
+            </Link>
+          </p>
+          <hr className={s.hr} style={{ marginBottom: '8px' }} />
+          <Accordion>
+            <AccordionTitle>
+              <p style={{ fontSize: '0.9rem' }}>
+                Some tips if if you’re using a Facebook group
+              </p>
+            </AccordionTitle>
+            <AccordionBody>
+              <ul style={{ marginTop: 0, fontSize: '0.9rem' }}>
+                <li>
+                  Add a clear group description to the ‘About’ section of your
+                  page.
+                </li>
+                <li>
+                  Make the group ‘private’ <strong>not</strong> ‘secret’ or
+                  ‘public’. That way you can make sure only members of your
+                  community join.
+                </li>
+              </ul>
+            </AccordionBody>
+          </Accordion>
+        </div>
       </PageHeader>
       <ContentWithSidebar>
         <Formik

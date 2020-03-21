@@ -1,5 +1,38 @@
 @import '../assets/styles/variables';
 
+.headerContainer {
+  max-width: 900px;
+
+  ol,
+  ul {
+    padding-left: 1.2em;
+    margin-top: 0;
+
+    li {
+      padding-left: 0.5em;
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+.link {
+  border-bottom: 1px solid rgba(0, 68, 114, 0.3);
+  text-decoration: none;
+}
+
+.hr {
+  border-color: rgba($textColor, 0.06);
+  margin: 24px 0;
+}
+
+.pageHeader {
+  margin-bottom: 1rem !important;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+}
+
 .addForm {
   fieldset {
     display: flex;
