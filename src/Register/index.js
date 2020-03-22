@@ -39,7 +39,7 @@ const initialValues = {
   groupLink: '',
   groupBlurb: '',
   location: '',
-  contactInfo: '',
+  links: '',
   general: ''
 }
 
@@ -84,14 +84,11 @@ export default () => {
       errors.location = 'A location is needed so people can find the group'
     }
 
-    if (values.groupLink && !groupLinkPattern.test(values.groupLink)) {
+    if (!values.groupLink) {
+      errors.groupLink = 'This field is required'
+    } else if (!groupLinkPattern.test(values.groupLink)) {
       errors.groupLink =
         'The link should be to a Facebook or Nextdoor group or group chat on FB Messenger or WhatsApp and must begin with a protocol (e.g. "https://")'
-    }
-
-    if (!values.groupLink && !values.groupBlurb) {
-      errors.contactInfo =
-        'Please provide a way for others to contact your group: either a Link to the group or public contact details in the instructions field'
     }
 
     return errors
@@ -252,16 +249,21 @@ export default () => {
                       minLength={4}
                       onSuggestSelect={setLocation}
                     />
+                    <ErrorMessage
+                      name='location'
+                      component='div'
+                      className={s.errorMessage}
+                    />
                   </InputWithIcon>
-                  <ErrorMessage
-                    name='location'
-                    component='div'
-                    className={s.errorMessage}
-                  />
                 </label>
+                <ErrorMessage
+                  name='location'
+                  component='div'
+                  className={s.errorMessage}
+                />
 
                 <label>
-                  Link
+                  Link*
                   <span className={s.socialIcons}>
                     <span
                       style={{
@@ -353,11 +355,6 @@ export default () => {
                       onKeyUp={e => setBlurbLength(e.target.value.length)}
                     />
                   </InputWithIcon>
-                  <ErrorMessage
-                    name='contactInfo'
-                    component='div'
-                    className={s.errorMessage}
-                  />
                 </label>
                 <div className={s.disclaimer}>
                   Your information is collected under GetUp’s Privacy Policy
