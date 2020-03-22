@@ -80,28 +80,19 @@ const Group = ({ doc }, i) => (
   </div>
 )
 
-const groupsForState = (groups, state) =>
-  groups.filter(
-    r =>
-      /(NSW|VIC|QLD|SA|NT|WA|TAS|ACT)/.exec(r.doc.properties.label) &&
-      /(NSW|VIC|QLD|SA|NT|WA|TAS|ACT)/.exec(r.doc.properties.label)[0] === state
-  )
-
 const allGroups = (fetchedGroups = [], state) => {
   if (!(state && state[0] && state[0].length > 0)) {
     // no filtering at all
     return fetchedGroups
   }
 
-  const localGroups = groupsForState(fetchedGroups, state[0])
-
   if (!(defaultGroups[state[0]] && defaultGroups[state[0]].length > 0)) {
     // no default state groups to append
-    return localGroups
+    return fetchedGroups
   }
 
   // state-filtered local groups + default state groups
-  return localGroups.concat(defaultGroups[state[0]])
+  return fetchedGroups.concat(defaultGroups[state[0]])
 }
 
 export default ({ className = '' }) => {
