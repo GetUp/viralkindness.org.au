@@ -83,8 +83,8 @@ const Group = ({ doc }, i) => (
 const groupsForState = (groups, state) =>
   groups.filter(
     r =>
-      /(NSW|VIC|QLD|SA|NT|WA|TAS)/.exec(r.doc.properties.label) &&
-      /(NSW|VIC|QLD|SA|NT|WA|TAS)/.exec(r.doc.properties.label)[0] === state
+      /(NSW|VIC|QLD|SA|NT|WA|TAS|ACT)/.exec(r.doc.properties.label) &&
+      /(NSW|VIC|QLD|SA|NT|WA|TAS|ACT)/.exec(r.doc.properties.label)[0] === state
   )
 
 const allGroups = (fetchedGroups = [], state) => {
