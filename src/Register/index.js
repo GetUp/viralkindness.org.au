@@ -221,13 +221,13 @@ export default () => {
                 </p>
 
                 <label>
-                  Name*
+                  Group Name*
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
                     <Field
                       type='text'
                       name='groupName'
-                      placeholder='Group name'
+                      placeholder='e.g. George St Mutual Aid'
                       required
                     />
                   </InputWithIcon>
