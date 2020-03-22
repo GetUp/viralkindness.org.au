@@ -8,7 +8,8 @@ import {
   WhatsApp,
   Messenger,
   NextDoor,
-  Location
+  Location,
+  Find
 } from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
@@ -103,7 +104,7 @@ const allGroups = (fetchedGroups = [], state) => {
   return localGroups.concat(defaultGroups[state[0]])
 }
 
-export default () => {
+export default ({ className = '' }) => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
   const [errored, setErrored] = useState(false)
@@ -129,7 +130,7 @@ export default () => {
   }, [location])
 
   return (
-    <div className={s.mainContent}>
+    <div className={`${s.mainContent} ${className}`}>
       <h2>Find a group</h2>
       <p className={s.mainSubtext}>
         Looking for help? Or keen to lend a hand? Enter your suburb below to

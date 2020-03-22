@@ -65,29 +65,32 @@ export default () => {
       <div className={s.waveContainer}>
         <img src={wave} alt='' />
       </div>
-      <ContentWithSidebar>
-        <GroupSearch />
-        <div className={s.sidebarContainer}>
-          <Link to='/register' className={s.sidebarLink}>
-            <h4 className={s.sidebarLinkHeader}>
-              <span>Add</span>
-            </h4>
-            <div className={s.sidebarLinkSubtitle}>
-              Adding a community care group in your local area is easy!
-            </div>
-          </Link>
-          <ResourcesLink s={s} />
-          <Link to='/faq' className={s.sidebarLink}>
-            <h4 className={s.sidebarLinkHeader}>
-              <span>FAQs</span>
-            </h4>
-            <div className={s.sidebarLinkSubtitle}>
-              We will continue to update this page as more groups offer advice
-              on what has worked well for them.
-            </div>
-          </Link>
-        </div>
-      </ContentWithSidebar>
+      <div className={s.contentWithSidebar}>
+        <ContentWithSidebar>
+          <GroupSearch className={s.groupSearch} />
+          <div className={s.sidebarContainer}>
+            <Link to='/register' className={s.sidebarLink}>
+              <h4 className={s.sidebarLinkHeader}>
+                <span>Add</span>
+              </h4>
+              <div className={s.sidebarLinkSubtitle}>
+                Adding a community care group in your local area is easy!
+              </div>
+            </Link>
+            <ResourcesLink s={s} />
+            <Link to='/faq' className={s.sidebarLink}>
+              <h4 className={s.sidebarLinkHeader}>
+                <span>FAQs</span>
+              </h4>
+              <div className={s.sidebarLinkSubtitle}>
+                We will continue to update this page as more groups offer advice
+                on what has worked well for them.
+              </div>
+            </Link>
+          </div>
+        </ContentWithSidebar>
+      </div>
+
       <Footer />
     </>
   )
