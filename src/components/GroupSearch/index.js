@@ -72,7 +72,9 @@ const Group = ({ doc }, i) => (
         </div>
       </div>
       <div className={s.groupLinkWrapper}>
-        <GroupLink href={doc.groupLink} text='Join group'></GroupLink>
+        {doc.groupLink && (
+          <GroupLink href={doc.groupLink} text='Join group'></GroupLink>
+        )}
       </div>
     </div>
     {doc.groupBlurb && <div className={s.groupDivBlurb}>{doc.groupBlurb}</div>}
