@@ -8,8 +8,7 @@ import {
   WhatsApp,
   Messenger,
   NextDoor,
-  Location,
-  Find
+  Location
 } from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
