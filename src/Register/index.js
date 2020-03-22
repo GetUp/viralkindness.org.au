@@ -54,6 +54,8 @@ const geoJson = loc => ({
   type: 'Feature'
 })
 
+const active = (pattern, groupLink) => (pattern.test(groupLink) ? 1 : 0.5)
+
 export default () => {
   const history = useHistory()
   const [location, setLocation] = useState({})
@@ -183,7 +185,7 @@ export default () => {
           validate={validate}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, values: { groupLink } }) => (
             <Form className={s.addForm}>
               <fieldset>
                 <p className={s.formHeader}>
@@ -261,10 +263,34 @@ export default () => {
                 <label>
                   Link
                   <span className={s.socialIcons}>
-                    <NextDoor />
-                    <WhatsApp />
-                    <Messenger />
-                    <Facebook />
+                    <span
+                      style={{
+                        opacity: active(/au\.nextdoor\.com/, groupLink)
+                      }}
+                    >
+                      <NextDoor />
+                    </span>
+                    <span
+                      style={{
+                        opacity: active(/chat\.whatsapp\.com/, groupLink)
+                      }}
+                    >
+                      <WhatsApp />
+                    </span>
+                    <span
+                      style={{
+                        opacity: active(/(m\.me|messenger\.com)/, groupLink)
+                      }}
+                    >
+                      <Messenger />
+                    </span>
+                    <span
+                      style={{
+                        opacity: active(/(fb\.com|facebook\.com)/, groupLink)
+                      }}
+                    >
+                      <Facebook />
+                    </span>
                   </span>
                   <InputWithIcon className={s.inputWrapper}>
                     <Public />
