@@ -43,7 +43,7 @@ const initialValues = {
   general: ''
 }
 
-const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com|au\.nextdoor\.com|nextdoor\.com)/i
+const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|m\.facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com|au\.nextdoor\.com|nextdoor\.com)/i
 
 const geoJson = loc => ({
   geometry: {
