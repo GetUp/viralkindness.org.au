@@ -15,7 +15,7 @@ import Resources from './Resources'
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
+    ReactGA.initialize('UA-2555375-39')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
 

@@ -29,9 +29,8 @@ import {
   AccordionBody
 } from '../components/Accordion'
 
-const apiHost = process.env.REACT_APP_API_HOST
-const publicDb = process.env.REACT_APP_PUBLIC_DATABASE
-const privateDb = process.env.REACT_APP_PRIVATE_DATABASE
+const apiHost =
+  'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
 
 const initialValues = {
   email: '',
@@ -97,9 +96,9 @@ export default () => {
 
   const onSubmit = (values, { setSubmitting, setFieldError }) => {
     const payload = { _id: uuidv4(), ...values, ...geoJson(location) }
-    const privateSubmission = postJson(`${apiHost}/${privateDb}/`, payload)
+    const privateSubmission = postJson(`${apiHost}/viral-kindness/`, payload)
     const publicSubmission = postJson(
-      `${apiHost}/${publicDb}/`,
+      `${apiHost}/viral-kindness-public/`,
       omit(payload, ['email', 'phone'])
     )
     Promise.all([privateSubmission, publicSubmission])
