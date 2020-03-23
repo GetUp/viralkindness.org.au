@@ -131,8 +131,43 @@ export default () => {
           </p>
           <ol className={s.list}>
             <li>
-              Create a group up via Facebook, Facebook Messenger, WhatsApp or
-              NextDoor.
+              Create a group up via{' '}
+              <a
+                href='https://www.facebook.com/help/167970719931213'
+                target='_blank'
+                className={s.link}
+                rel='noopener noreferrer'
+              >
+                Facebook
+              </a>
+              ,{' '}
+              <a
+                href='https://www.facebook.com/help/messenger-app/iphone/1428015930791367'
+                target='_blank'
+                className={s.link}
+                rel='noopener noreferrer'
+              >
+                Facebook Messenger
+              </a>
+              ,{' '}
+              <a
+                href='https://faq.whatsapp.com/en/android/26000123/'
+                target='_blank'
+                className={s.link}
+                rel='noopener noreferrer'
+              >
+                WhatsApp
+              </a>{' '}
+              or{' '}
+              <a
+                href='https://help.nextdoor.com/s/article/How-to-create-a-group?language=en_AU'
+                target='_blank'
+                className={s.link}
+                rel='noopener noreferrer'
+              >
+                NextDoor
+              </a>
+              .
             </li>
             <li>
               Once your group is set up, fill in the information below to add
@@ -151,7 +186,12 @@ export default () => {
           <p style={{ fontSize: '0.9rem' }}>
             <Link smooth to='/resources#start-a-group' className={s.link}>
               More information about starting a group is available here.
-            </Link>
+            </Link>{' '}
+            If you need to make any changes, update or remove your group from
+            the hub, please email{' '}
+            <a href='mailto:viralkindness@getup.org.au.' className={s.link}>
+              viralkindness@getup.org.au
+            </a>
           </p>
           {/*
           <Accordion>

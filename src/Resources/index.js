@@ -161,11 +161,63 @@ export default () => {
             </h3>
             <p>
               Facebook groups are an easy way to connect lots of people,
-              alternatively Facebook Messenger or WhatsApp groups work too.
+              alternatively Facebook Messenger, WhatsApp groups or NextDoor work
+              too.
             </p>
             <p>
+              For more information on starting a Facebook group, adding people
+              to a Messenger thread, using WhatsApp or NextDoor, head here:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href='https://www.facebook.com/help/167970719931213'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>Facebook:</b> Start a Facebook Group
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.facebook.com/help/messenger-app/iphone/1428015930791367?helpref=uf_permalink'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>Messenger:</b> How to start a conversation
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.facebook.com/help/messenger-app/iphone/144189916183309?helpref=uf_permalink'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>Messenger:</b> How to invite someone to a group
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://faq.whatsapp.com/en/android/26000123/?category=5245251'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>WhatsApp:</b> How to create and invite people to a group
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://help.nextdoor.com/s/article/How-to-create-a-group?language=en_AU'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>NextDoor:</b> How to use NextDoor
+                </a>
+              </li>
+            </ul>
+            <p>
               If you choose to use Facebook, add a clear group description to
-              the ‘About’ section of your page to help people decide if it's the
+              the ‘About’ section of your page to help people decide if it’s the
               group for them!
             </p>
             <p>
