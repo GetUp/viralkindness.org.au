@@ -175,7 +175,7 @@ export default () => {
             </li>
             <li>
               After you've added your group, people will be able to{' '}
-              <Link to='/#groupSearch' className={s.link}>
+              <Link smooth to='/#groupSearch' className={s.link}>
                 find it on this site by searching for their suburb
               </Link>
               . They’ll be able to volunteer to lend a hand, or request
@@ -415,7 +415,7 @@ export default () => {
           )}
         </Formik>
         <div className={s.sidebarContainer}>
-          <Link to='/#groupSearch' className={s.sidebarLink}>
+          <Link smooth to='/#groupSearch' className={s.sidebarLink}>
             <div className={s.sidebarLinkHeader}>Find a group</div>
             <div className={s.sidebarLinkSubtitle}>
               Find a community care group near you.
