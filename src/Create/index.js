@@ -2,11 +2,15 @@ import React from 'react'
 import s from './index.module.scss'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
-import color from '../assets/images/color.png'
+import color from '../assets/images/color.jpg'
+import bw from '../assets/images/bw.jpg'
 import htmltoimage from 'html-to-image'
 import ScaleText from 'react-scale-text'
+import { Download } from '../components/Icons'
+import Footer from '../components/Footer'
 
 export default () => {
+  const [isColor, setIsColor] = React.useState(true)
   const placeholder = {
     name: 'Chandi',
     loc: 'Forest Lodge',
@@ -54,61 +58,15 @@ export default () => {
 
   return (
     <>
+      <PageHeader>
+        <h1>Make your postcard</h1>
+      </PageHeader>
+      <ContentWithSidebar className={`${s.contentWithSidebar} ${s.headers}`}>
+        <div></div>
+        <div className={s.preview}>PREVIEW</div>
+      </ContentWithSidebar>
       <ContentWithSidebar className={s.contentWithSidebar}>
-        <div id='node'>
-          <div className={s.imagePreviewContainer}>
-            <img src={color} className={s.imagePreview} />
-            <div className={s.imagePreviewData}>
-              <div className={`${s.name} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>
-                    {data.name === '' ? placeholder.name : data.name}
-                  </div>
-                </ScaleText>
-              </div>
-              <div className={`${s.location} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>
-                    {data.loc === '' ? placeholder.loc : data.loc}
-                  </div>
-                </ScaleText>
-              </div>
-              <div className={`${s.phone} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>
-                    {data.phone === '' ? placeholder.phone : data.phone}
-                  </div>
-                </ScaleText>
-              </div>
-              <div className={`${s.helpShopping} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>{data.help.shopping && '✓'}</div>
-                </ScaleText>
-              </div>
-              <div className={`${s.helpPhone} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>{data.help.phone && '✓'}</div>
-                </ScaleText>
-              </div>
-              <div className={`${s.helpSupplies} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>{data.help.supplies && '✓'}</div>
-                </ScaleText>
-              </div>
-              <div className={`${s.helpOther} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>{data.other !== '' && '✓'}</div>
-                </ScaleText>
-              </div>
-              <div className={`${s.helpOtherText} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
-                  <div className={s.text}>{data.other}</div>
-                </ScaleText>
-              </div>
-            </div>
-          </div>
-        </div>
-        <form className={s.form}>
+        <div className={s.form}>
           <label htmlFor='name'>My name is:</label>
           <input
             type='text'
@@ -175,9 +133,95 @@ export default () => {
             name='other'
             onChange={handleChange}
           />
-        </form>
+
+          <hr className={s.hr} />
+
+          <div className={s.bottomBar}>
+            <Tabs {...{ isColor, setIsColor, s, handlePngDownload }} />
+          </div>
+        </div>
+        <div id='node'>
+          <div className={s.imagePreviewContainer}>
+            {isColor ? (
+              <img src={color} className={s.imagePreview} />
+            ) : (
+              <img src={bw} className={s.imagePreview} />
+            )}
+            <div className={s.imagePreviewData}>
+              <div className={`${s.name} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>
+                    {data.name === '' ? placeholder.name : data.name}
+                  </div>
+                </ScaleText>
+              </div>
+              <div className={`${s.location} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>
+                    {data.loc === '' ? placeholder.loc : data.loc}
+                  </div>
+                </ScaleText>
+              </div>
+              <div className={`${s.phone} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>
+                    {data.phone === '' ? placeholder.phone : data.phone}
+                  </div>
+                </ScaleText>
+              </div>
+              <div className={`${s.helpShopping} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>{data.help.shopping && '✓'}</div>
+                </ScaleText>
+              </div>
+              <div className={`${s.helpPhone} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>{data.help.phone && '✓'}</div>
+                </ScaleText>
+              </div>
+              <div className={`${s.helpSupplies} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>{data.help.supplies && '✓'}</div>
+                </ScaleText>
+              </div>
+              <div className={`${s.helpOther} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>{data.other !== '' && '✓'}</div>
+                </ScaleText>
+              </div>
+              <div className={`${s.helpOtherText} ${s.dataContainer}`}>
+                <ScaleText maxFontSize='52'>
+                  <div className={s.text}>{data.other}</div>
+                </ScaleText>
+              </div>
+            </div>
+          </div>
+        </div>
       </ContentWithSidebar>
-      <div onClick={handlePngDownload}>Download</div>
+      <Footer />
     </>
   )
 }
+
+const Tabs = ({ isColor, setIsColor, s, handlePngDownload }) => (
+  <>
+    <div className={s.tabs}>
+      <div
+        className={`${s.tab} ${isColor && s.active}`}
+        onClick={() => setIsColor(true)}
+      >
+        Color
+      </div>
+      <div
+        className={`${s.tab} ${!isColor && s.active}`}
+        onClick={() => setIsColor(false)}
+      >
+        Black & White
+      </div>
+    </div>
+    <div className={s.downloadPostcard} onClick={handlePngDownload}>
+      <Download />
+      Download
+    </div>
+  </>
+)

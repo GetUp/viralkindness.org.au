@@ -12,13 +12,95 @@
     U+FEFF, U+FFFD;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+.hr {
+  border-color: rgba($textColor, 0.06);
+  margin: 32px 0;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs {
+  display: flex;
+  background: rgba($textColor, 0.07);
+  border-radius: 6px;
+  width: fit-content;
+  color: $textColor;
+  font-weight: 600;
+  margin-bottom: 32px;
+  box-shadow: 0 0 0px 2px rgba($textColor, 0.1);
+  cursor: pointer;
+  .tab {
+    padding: 8px;
+    border-radius: 6px;
+
+    &.active {
+      background: white;
+      box-shadow: 0 2px 2px 2px rgba($textColor, 0.1);
+    }
+  }
+}
+
+.downloadPostcard {
+  color: white !important;
+  font-weight: 600;
+  background: $textColor;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  height: 100%;
+  border-radius: 6px;
+  font-size: 1em;
+  line-height: 1;
+  width: max-content;
+  border: 1px solid transparent !important;
+  cursor: pointer;
+  svg {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 4px;
+    * {
+      fill: white;
+    }
+  }
+
+  &:hover {
+    background: lighten($textColor, 10);
+  }
+}
+
 .contentWithSidebar {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: 128px;
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
+  &.headers {
+    margin-top: 32px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .preview {
+      color: $textColor;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+#node {
+  box-shadow: 0 0 0 2px black;
 }
 
 .imagePreviewContainer {
@@ -28,7 +110,6 @@
     font-family: 'Kalam', sans-serif !important;
   }
   .imagePreview {
-    // position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -119,6 +200,7 @@
 }
 
 .form {
+  max-width: 600px;
   input[type='text'] {
     height: 40px;
     border-radius: 4px;
