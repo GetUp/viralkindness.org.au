@@ -1,0 +1,175 @@
+@import '../assets/styles/variables';
+
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/kalam/v10/YA9dr0Wd4kDdMthROCfhsCkA.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.contentWithSidebar {
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.imagePreviewContainer {
+  position: relative;
+  overflow: hidden;
+  * {
+    font-family: 'Kalam', sans-serif !important;
+  }
+  .imagePreview {
+    // position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .imagePreviewData {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .dataContainer {
+    position: absolute;
+
+    height: auto;
+    transform: scale(0.4);
+    transform-origin: top left;
+    .text {
+      overflow: hidden;
+    }
+    &.name {
+      left: 25%;
+      top: 17.9%;
+      width: 170%;
+    }
+
+    &.location {
+      left: 28%;
+      top: 21.9%;
+      width: 165%;
+    }
+
+    &.phone {
+      left: 37%;
+      top: 25.9%;
+      width: 140%;
+    }
+    &.helpShopping {
+      left: 7%;
+      top: 34.9%;
+      width: 100%;
+    }
+    &.helpPhone {
+      left: 7%;
+      top: 38.9%;
+      width: 100%;
+    }
+    &.helpSupplies {
+      left: 7%;
+      top: 42.9%;
+      width: 100%;
+    }
+    &.helpOther {
+      left: 45%;
+      top: 34.9%;
+      width: 100%;
+    }
+    &.helpOtherText {
+      left: 45%;
+      top: 38.9%;
+      width: 120%;
+    }
+
+    @media screen and (max-width: 600px) {
+      &.name {
+        top: 17%;
+      }
+      &.location {
+        top: 21%;
+      }
+
+      &.phone {
+        top: 25%;
+      }
+      &.helpShopping {
+        top: 34%;
+      }
+      &.helpPhone {
+        top: 38%;
+      }
+      &.helpSupplies {
+        top: 42%;
+      }
+    }
+  }
+}
+
+.form {
+  input[type='text'] {
+    height: 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: rgba($textColor, 0.07);
+    border: 1px solid rgba(white, 0);
+    width: calc(100% - 8px);
+    padding-left: 8px;
+    outline: none;
+    margin: 8px 0 24px 0;
+    display: block;
+    color: $textColor;
+
+    &::placeholder {
+      color: $textColor;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      background: none;
+      border: 1px solid #2098f5;
+      box-shadow: 0 0 0 3px rgba(#2098f5, 0.2);
+    }
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $textColor;
+    width: 100%;
+    // padding-left: 16px;
+  }
+
+  .checkboxContainer {
+    margin-bottom: 24px;
+    p {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    input {
+      margin-right: 8px;
+    }
+  }
+}

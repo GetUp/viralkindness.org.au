@@ -12,8 +12,9 @@ import Faq from './Faq'
 import About from './About'
 import Contact from './Contact'
 import Resources from './Resources'
+import Create from './Create'
 
-function App() {
+function App () {
   useEffect(() => {
     ReactGA.initialize('UA-2555375-39')
     ReactGA.pageview(window.location.pathname + window.location.search)
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route path='/resources'>
               <Resources />
+            </Route>
+            <Route path='/create'>
+              <Create />
             </Route>
           </Switch>
         </ScrollTop>
