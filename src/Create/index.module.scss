@@ -79,7 +79,7 @@
 
 .contentWithSidebar {
   grid-template-columns: 3fr 2fr;
-  margin-bottom: 128px;
+  // margin-bottom: 128px;
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
@@ -99,8 +99,9 @@
   }
 }
 
-#node {
-  box-shadow: 0 0 0 2px black;
+.node {
+  height: max-content;
+  width: 100%;
 }
 
 .imagePreviewContainer {

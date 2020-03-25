@@ -140,7 +140,7 @@ export default () => {
             <Tabs {...{ isColor, setIsColor, s, handlePngDownload }} />
           </div>
         </div>
-        <div id='node'>
+        <div id='node' className={s.node}>
           <div className={s.imagePreviewContainer}>
             {isColor ? (
               <img src={color} className={s.imagePreview} />
