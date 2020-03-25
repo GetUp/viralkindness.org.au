@@ -2,7 +2,7 @@ import React from 'react'
 import s from './index.module.scss'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
-import color from '../assets/images/color.jpg'
+import { Color, BlackWhite } from './Images'
 import bw from '../assets/images/bw.jpg'
 import htmltoimage from 'html-to-image'
 import ScaleText from 'react-scale-text'
@@ -43,16 +43,23 @@ export default () => {
 
   const handlePngDownload = e => {
     e.preventDefault()
+    htmltoimage.toPng(document.getElementById('node'), {
+      scale: 3,
+      quality: 1
+    })
+
     htmltoimage
       .toPng(document.getElementById('node'), {
-        scale: 2,
+        scale: 3,
         quality: 1
       })
       .then(function (dataUrl) {
         var link = document.createElement('a')
         link.download = 'image.png'
         link.href = dataUrl
-        link.click()
+        setTimeout(() => {
+          link.click()
+        }, 1000)
       })
   }
 
@@ -63,7 +70,6 @@ export default () => {
       </PageHeader>
       <ContentWithSidebar className={`${s.contentWithSidebar} ${s.headers}`}>
         <div></div>
-        <div className={s.preview}>PREVIEW</div>
       </ContentWithSidebar>
       <ContentWithSidebar className={s.contentWithSidebar}>
         <div className={s.form}>
@@ -140,57 +146,58 @@ export default () => {
             <Tabs {...{ isColor, setIsColor, s, handlePngDownload }} />
           </div>
         </div>
-        <div id='node' className={s.node}>
-          <div className={s.imagePreviewContainer}>
-            {isColor ? (
-              <img src={color} className={s.imagePreview} />
-            ) : (
-              <img src={bw} className={s.imagePreview} />
-            )}
-            <div className={s.imagePreviewData}>
+        <div>
+          <div className={s.preview}>PREVIEW</div>
+          <div id='node' className={s.node}>
+            <div className={s.imagePreviewContainer}>
+              {isColor ? (
+                <Color className={s.imagePreview} />
+              ) : (
+                <BlackWhite className={s.imagePreview} />
+              )}
               <div className={`${s.name} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>
                     {data.name === '' ? placeholder.name : data.name}
                   </div>
                 </ScaleText>
               </div>
               <div className={`${s.location} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>
                     {data.loc === '' ? placeholder.loc : data.loc}
                   </div>
                 </ScaleText>
               </div>
               <div className={`${s.phone} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>
                     {data.phone === '' ? placeholder.phone : data.phone}
                   </div>
                 </ScaleText>
               </div>
               <div className={`${s.helpShopping} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.help.shopping && '✓'}</div>
                 </ScaleText>
               </div>
               <div className={`${s.helpPhone} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.help.phone && '✓'}</div>
                 </ScaleText>
               </div>
               <div className={`${s.helpSupplies} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.help.supplies && '✓'}</div>
                 </ScaleText>
               </div>
               <div className={`${s.helpOther} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.other !== '' && '✓'}</div>
                 </ScaleText>
               </div>
               <div className={`${s.helpOtherText} ${s.dataContainer}`}>
-                <ScaleText maxFontSize='52'>
+                <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.other}</div>
                 </ScaleText>
               </div>

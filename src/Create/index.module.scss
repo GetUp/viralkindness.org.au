@@ -78,24 +78,33 @@
 }
 
 .contentWithSidebar {
-  grid-template-columns: 3fr 2fr;
-  // margin-bottom: 128px;
+  grid-template-columns: 4fr 2fr;
+  margin-bottom: 128px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
   }
 
   &.headers {
     margin-top: 32px;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+}
 
-    .preview {
-      color: $textColor;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
+.preview {
+  color: $textColor;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 24px;
+    text-align: center;
   }
 }
 
@@ -127,76 +136,57 @@
 
   .dataContainer {
     position: absolute;
-
-    height: auto;
-    transform: scale(0.4);
-    transform-origin: top left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    // transform-origin: 0% 0%;
+    // transform: scale(0.4);
     .text {
       overflow: hidden;
+      height: 32px;
     }
     &.name {
       left: 25%;
-      top: 17.9%;
+      top: 17.4%;
       width: 170%;
     }
 
     &.location {
       left: 28%;
-      top: 21.9%;
+      top: 21.4%;
       width: 165%;
     }
 
     &.phone {
       left: 37%;
-      top: 25.9%;
+      top: 25.4%;
       width: 140%;
     }
     &.helpShopping {
       left: 7%;
-      top: 34.9%;
+      top: 34.4%;
       width: 100%;
     }
     &.helpPhone {
       left: 7%;
-      top: 38.9%;
+      top: 38.4%;
       width: 100%;
     }
     &.helpSupplies {
       left: 7%;
-      top: 42.9%;
+      top: 42.4%;
       width: 100%;
     }
     &.helpOther {
       left: 45%;
-      top: 34.9%;
+      top: 34.4%;
       width: 100%;
     }
     &.helpOtherText {
       left: 45%;
-      top: 38.9%;
+      top: 38.4%;
       width: 120%;
-    }
-
-    @media screen and (max-width: 600px) {
-      &.name {
-        top: 17%;
-      }
-      &.location {
-        top: 21%;
-      }
-
-      &.phone {
-        top: 25%;
-      }
-      &.helpShopping {
-        top: 34%;
-      }
-      &.helpPhone {
-        top: 38%;
-      }
-      &.helpSupplies {
-        top: 42%;
-      }
     }
   }
 }
