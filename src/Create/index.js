@@ -3,7 +3,6 @@ import s from './index.module.scss'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import { Color, BlackWhite } from './Images'
-import bw from '../assets/images/bw.jpg'
 import htmltoimage from 'html-to-image'
 import ScaleText from 'react-scale-text'
 import { Download } from '../components/Icons'
@@ -61,7 +60,7 @@ export default () => {
         scale: 3,
         quality: 1
       })
-      .then(function (dataUrl) {
+      .then(function(dataUrl) {
         var link = document.createElement('a')
         link.download = 'image.png'
         link.href = dataUrl

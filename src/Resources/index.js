@@ -60,7 +60,7 @@ export default () => {
                   <Link to='/create'>
                     Head here to fill in your postcards with details
                   </Link>{' '}
-                  <b>or</b>{' '}
+                  <b>or</b> {/* eslint-disable-next-line */}
                   <a href='https://www.getup.org.au/postcards' target='_blank'>
                     print the postcards
                   </a>{' '}
