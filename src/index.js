@@ -10,7 +10,7 @@ import smoothscroll from 'smoothscroll-polyfill'
 smoothscroll.polyfill()
 
 const mapParams = {
-  key: 'AIzaSyDSqqjcb_6Xfrdj75v0a9wT-EGBTBhgxow',
+  key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   libraries: 'places'
 }
 

@@ -16,7 +16,7 @@ import Create from './Create'
 
 function App () {
   useEffect(() => {
-    ReactGA.initialize('UA-2555375-39')
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
 

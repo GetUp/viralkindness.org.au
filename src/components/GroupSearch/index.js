@@ -14,12 +14,14 @@ import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
 import '../../geosuggest.css'
 
-const apiHost =
-  'https://68545911-1f96-432f-809a-c20fb3cf240b-bluemix.cloudant.com'
+const apiHost = process.env.REACT_APP_API_HOST
+const publicDb = process.env.REACT_APP_PUBLIC_DATABASE
+const radius = process.env.REACT_APP_RADIUS_IN_METERS
+
 const helpText = 'Search by street or suburb'
 
 const groupSearchUrl = ({ lng, lat }) =>
-  `${apiHost}/viral-kindness-public/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=20000&include_docs=true`
+  `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=${radius}&include_docs=true`
 
 const GroupLink = ({ href, text }) => (
   <a
