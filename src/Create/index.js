@@ -8,6 +8,12 @@ import htmltoimage from 'html-to-image'
 import ScaleText from 'react-scale-text'
 import { Download } from '../components/Icons'
 import Footer from '../components/Footer'
+import {
+  Accordion,
+  AccordionTitle,
+  AccordionBody
+} from '../components/Accordion'
+import { HashLink as Link } from 'react-router-hash-link'
 
 export default () => {
   const [isColor, setIsColor] = React.useState(true)
@@ -67,12 +73,51 @@ export default () => {
     <>
       <PageHeader>
         <h1>Make your postcard</h1>
+        <p>
+          Keen to hand out community care postcards in your local area? Enter
+          your details and how you can help below!
+        </p>
+        <p>
+          This form will automatically fill out the postcard for you to make it
+          easier and minimise handling before you deliver them.
+        </p>
+        <Accordion className={s.accordion}>
+          <AccordionTitle className={s.accordionTitle}>
+            How to make the postcard:
+          </AccordionTitle>
+          <AccordionBody className={s.accordionBody}>
+            <ol>
+              <li>
+                Fill in your details below, including how you can best help.
+              </li>
+              <li>
+                If you’re part of an online community care group (ie a Facebook
+                group or WhatsApp thread), include the link or name on the
+                postcard so others in your area can join.
+              </li>
+              <li>
+                In the bottom left hand corner, choose between a black and
+                white, or colour version of the postcard to print at home.
+              </li>
+              <li>
+                Hit the download button. The filled in postcard will be
+                available on your computer or device to print.
+              </li>
+              <li>
+                <Link to='/resources#how-to-use-postcards'>
+                  Read more about how to deliver the postcards safely here.
+                </Link>
+              </li>
+            </ol>
+          </AccordionBody>
+        </Accordion>
       </PageHeader>
-      <ContentWithSidebar className={`${s.contentWithSidebar} ${s.headers}`}>
-        <div></div>
-      </ContentWithSidebar>
       <ContentWithSidebar className={s.contentWithSidebar}>
         <div className={s.form}>
+          <p className={s.formDisclaimer}>
+            No information entered in this form will be collected or retained by
+            GetUp or the #ViralKindness hub.
+          </p>
           <label htmlFor='name'>My name is:</label>
           <input
             type='text'

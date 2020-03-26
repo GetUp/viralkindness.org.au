@@ -12,6 +12,25 @@
     U+FEFF, U+FFFD;
 }
 
+.accordion {
+  max-width: 800px;
+
+  .accordionTitle {
+    font-weight: 600;
+    margin-top: 16px;
+  }
+
+  .accordionBody {
+    margin-left: 0;
+    ol {
+      padding-left: 1.3em;
+      li {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
 .container {
   max-width: 1200px;
   padding: 0 8px;
@@ -79,6 +98,7 @@
 
 .contentWithSidebar {
   grid-template-columns: 4fr 2fr;
+  margin-top: 40px;
   margin-bottom: 128px;
 
   @media screen and (max-width: 1200px) {
@@ -246,4 +266,10 @@
       margin-right: 8px;
     }
   }
+}
+
+.formDisclaimer {
+  font-size: 0.9rem !important;
+  opacity: 0.8;
+  margin-bottom: 32px !important;
 }
