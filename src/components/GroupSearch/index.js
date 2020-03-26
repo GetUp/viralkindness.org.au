@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
-import { Search, Facebook, WhatsApp, NextDoor, Location } from '../Icons'
+import GoogleMapReact from 'google-map-react'
+import {
+  Search,
+  Facebook,
+  WhatsApp,
+  NextDoor,
+  Location,
+  MapMarker
+} from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
 import nationalGroups from '../../data/nationalGroups'
 import s from './index.module.scss'
@@ -14,8 +22,11 @@ const radius = process.env.REACT_APP_RADIUS_IN_METERS
 
 const helpText = 'Search by street or suburb'
 
+const allGroupsUrl = `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?bbox=-180%2C-90%2C180%2C90&limit=200&relation=contains&include_docs=true`
 const groupSearchUrl = ({ lng, lat }) =>
   `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=${radius}&include_docs=true`
+
+const Marker = () => <MapMarker />
 
 const GroupLink = ({ href, text }) => (
   <a
@@ -75,8 +86,10 @@ const Group = ({ doc }, i) => (
   </div>
 )
 
+const linkFilter = gs => gs.filter(g => g && g.doc && g.doc.groupLink)
+
 const allGroups = (fetchedGroups = [], state) => {
-  const localGroups = fetchedGroups.filter(g => g && g.doc && g.doc.groupLink)
+  const localGroups = linkFilter(fetchedGroups)
   if (!(state && state[0] && state[0].length > 0)) {
     // no filtering at all
     return localGroups
@@ -91,12 +104,61 @@ const allGroups = (fetchedGroups = [], state) => {
   return localGroups.concat(defaultGroups[state[0]])
 }
 
+// fallback points to ensure map stays over AU
+const backupPoints = [
+  { geometry: { coordinates: [120, -20] } },
+  { geometry: { coordinates: [150, -37] } }
+]
+
+// Return map bounds based on list of places
+const getMapBounds = (map, maps, gs) => {
+  const bounds = new maps.LatLngBounds()
+  const groups = gs.length > 0 ? gs : backupPoints
+  groups.forEach(group => {
+    group.geometry &&
+      bounds.extend(
+        new maps.LatLng(
+          group.geometry.coordinates[1],
+          group.geometry.coordinates[0]
+        )
+      )
+  })
+  return bounds
+}
+
+// Re-center map when resizing the window
+const bindResizeListener = (map, maps, bounds) => {
+  maps.event.addDomListenerOnce(map, 'idle', () => {
+    maps.event.addDomListener(window, 'resize', () => {
+      map.fitBounds(bounds)
+    })
+  })
+}
+const positionMap = (map, maps, groups) => {
+  const bounds = getMapBounds(
+    map,
+    maps,
+    groups.filter(g => g.geometry)
+  )
+  map.fitBounds(bounds)
+  bindResizeListener(map, maps, bounds)
+}
+
 export default ({ className = '' }) => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
   const [errored, setErrored] = useState(false)
   const [searched, setSearched] = useState(false)
+  const [mapRefs, setMapRefs] = useState({})
 
+  // fetch all groups on first load, once only
+  useEffect(() => {
+    fetch(allGroupsUrl)
+      .then(r => r.json())
+      .then(json => setGroups(linkFilter(json.rows)))
+  }, [])
+
+  // fetch groups for entered address, when location changes
   useEffect(() => {
     if (location && location.location) {
       const state = location.gmaps.address_components
@@ -115,6 +177,14 @@ export default ({ className = '' }) => {
         })
     }
   }, [location])
+
+  // set appropriate map zoom whenever `groups` changes
+  useEffect(() => {
+    if (mapRefs.map) {
+      const { map, maps } = mapRefs
+      positionMap(map, maps, groups)
+    }
+  }, [mapRefs, groups])
 
   return (
     <div className={`${s.mainContent} ${className}`}>
@@ -149,6 +219,27 @@ export default ({ className = '' }) => {
           />
         </div>
       </label>
+      <div className={s.mapContainer}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+          defaultCenter={{ lat: -29, lng: 134 }}
+          defaultZoom={4}
+          yesIWantToUseGoogleMapApiInternals
+          onGoogleApiLoaded={setMapRefs}
+        >
+          {groups &&
+            groups.map(
+              g =>
+                g.geometry && (
+                  <Marker
+                    key={g.id}
+                    lat={g.geometry.coordinates[1]}
+                    lng={g.geometry.coordinates[0]}
+                  />
+                )
+            )}
+        </GoogleMapReact>
+      </div>
       {errored && (
         <div className={s.errorMessage}>
           Uh oh! Something didn't work out, sorry. :(
