@@ -85,6 +85,17 @@
   margin: 24px 0;
 }
 
+.downloadBtnContainers {
+  display: flex;
+  flex-wrap: wrap;
+  :nth-child(1) {
+    margin-right: 8px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
 .downloadPostcard {
   color: $textColor !important;
   font-weight: 600;

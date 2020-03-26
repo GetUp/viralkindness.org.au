@@ -7,7 +7,7 @@ import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import thumbnail from '../assets/images/viralkindness-1.jpg'
 import main from '../assets/images/viralkindness-4.jpg'
-import { Download } from '../components/Icons'
+import { Download, Add } from '../components/Icons'
 
 export default () => {
   useEffect(
@@ -57,9 +57,14 @@ export default () => {
               <h4 id='how-to-use-postcards'>How to use the postcards</h4>
               <ol>
                 <li>
-                  Print off postcards from the link above - follow the
-                  instructions in the document above. Remember to wash your
-                  hands.
+                  <Link to='/create'>
+                    Head here to fill in your postcards with details
+                  </Link>{' '}
+                  <b>or</b>{' '}
+                  <a href='https://www.getup.org.au/postcards' target='_blank'>
+                    print the postcards
+                  </a>{' '}
+                  and write how you can help. Remember to wash your hands first.
                 </li>
                 <li>
                   Add in your name, street address or suburb, and contact
@@ -78,6 +83,24 @@ export default () => {
                   around your neighbourhood.
                 </li>
               </ol>
+
+              <hr className={s.hr} />
+              <div className={s.downloadBtnContainers}>
+                <Link to='/create' className={s.downloadPostcard}>
+                  <Add />
+                  Make your Postcard
+                </Link>
+                {/* eslint-disable react/jsx-no-target-blank */}
+                <a
+                  href='https://www.getup.org.au/postcards'
+                  className={s.downloadPostcard}
+                  target='_blank'
+                >
+                  {/* eslint-enable react/jsx-no-target-blank */}
+                  <Download />
+                  Download Postcards
+                </a>
+              </div>
 
               {/* eslint-disable-next-line */}
               <a href='https://www.getup.org.au/postcards' target='_blank'>
@@ -133,18 +156,6 @@ export default () => {
                 deliver postcards until you have cleared the 14 day
                 self-isolation period.
               </p>
-
-              <hr className={s.hr} />
-              {/* eslint-disable react/jsx-no-target-blank */}
-              <a
-                href='https://www.getup.org.au/postcards'
-                className={s.downloadPostcard}
-                target='_blank'
-              >
-                {/* eslint-enable react/jsx-no-target-blank */}
-                <Download />
-                Download Postcards
-              </a>
             </div>
 
             <br />
@@ -351,6 +362,9 @@ export default () => {
                       {/* eslint-enable react/jsx-no-target-blank */}
                       Download Postcards
                     </a>
+                  </li>
+                  <li>
+                    <Link to='/create'>Make your Postcard</Link>
                   </li>
                 </ul>
               </li>
