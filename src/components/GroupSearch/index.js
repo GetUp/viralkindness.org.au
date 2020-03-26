@@ -84,18 +84,19 @@ const Group = ({ doc }, i) => (
 )
 
 const allGroups = (fetchedGroups = [], state) => {
+  const localGroups = fetchedGroups.filter(g => g && g.doc && g.doc.groupLink)
   if (!(state && state[0] && state[0].length > 0)) {
     // no filtering at all
-    return fetchedGroups
+    return localGroups
   }
 
   if (!(defaultGroups[state[0]] && defaultGroups[state[0]].length > 0)) {
     // no default state groups to append
-    return fetchedGroups
+    return localGroups
   }
 
   // state-filtered local groups + default state groups
-  return fetchedGroups.concat(defaultGroups[state[0]])
+  return localGroups.concat(defaultGroups[state[0]])
 }
 
 export default ({ className = '' }) => {
