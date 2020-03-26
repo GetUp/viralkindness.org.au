@@ -172,12 +172,11 @@ export default () => {
             </h3>
             <p>
               Facebook groups are an easy way to connect lots of people,
-              alternatively Facebook Messenger, WhatsApp groups or NextDoor work
-              too.
+              alternatively WhatsApp groups or NextDoor work too.
             </p>
             <p>
               For more information on starting a Facebook group, adding people
-              to a Messenger thread, using WhatsApp or NextDoor, head here:
+              to a WhatsApp group or using NextDoor, head here:
             </p>
             <ul>
               <li>
@@ -187,24 +186,6 @@ export default () => {
                   rel='noopener noreferrer'
                 >
                   <b>Facebook:</b> Start a Facebook Group
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://www.facebook.com/help/messenger-app/iphone/1428015930791367?helpref=uf_permalink'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <b>Messenger:</b> How to start a conversation
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://www.facebook.com/help/messenger-app/iphone/144189916183309?helpref=uf_permalink'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <b>Messenger:</b> How to invite someone to a group
                 </a>
               </li>
               <li>

@@ -2,14 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
-import {
-  Search,
-  Facebook,
-  WhatsApp,
-  Messenger,
-  NextDoor,
-  Location
-} from '../Icons'
+import { Search, Facebook, WhatsApp, NextDoor, Location } from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
 import s from './index.module.scss'
 import '../../geosuggest.css'
@@ -43,7 +36,6 @@ const GroupLink = ({ href, text }) => (
 
 const GroupIcon = ({ url }) => {
   if (/facebook\.com|fb\.com/i.test(url)) return <Facebook />
-  if (/messenger\.com|m\.me/i.test(url)) return <Messenger />
   if (/whatsapp\.com/i.test(url)) return <WhatsApp />
   if (/au\.nextdoor\.com/i.test(url)) return <NextDoor />
   return null
@@ -51,7 +43,6 @@ const GroupIcon = ({ url }) => {
 
 const groupClass = (url, s) => {
   if (/facebook\.com|fb\.com/i.test(url)) return s.fb
-  if (/messenger\.com|m\.me/i.test(url)) return s.ms
   if (/whatsapp\.com/i.test(url)) return s.wa
   if (/au\.nextdoor\.com/i.test(url)) return s.nd
   return null

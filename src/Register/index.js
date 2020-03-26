@@ -12,7 +12,6 @@ import ContentWithSidebar from '../components/ContentWithSidebar'
 import {
   Private,
   Public,
-  Messenger,
   WhatsApp,
   NextDoor,
   Facebook
@@ -44,7 +43,7 @@ const initialValues = {
   general: ''
 }
 
-const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|m\.facebook\.com|fb\.com|messenger\.com|m\.me|chat\.whatsapp\.com|au\.nextdoor\.com|nextdoor\.com)/i
+const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|m\.facebook\.com|fb\.com|chat\.whatsapp\.com|au\.nextdoor\.com|nextdoor\.com)/i
 
 const geoJson = loc => ({
   geometry: {
@@ -89,7 +88,7 @@ export default () => {
       errors.groupLink = 'This field is required'
     } else if (!groupLinkPattern.test(values.groupLink)) {
       errors.groupLink =
-        'The link should be to a Facebook or Nextdoor group or group chat on FB Messenger or WhatsApp and must begin with a protocol (e.g. "https://")'
+        'The link should be to a Facebook or Nextdoor group or group chat on WhatsApp and must begin with a protocol (e.g. "https://")'
     }
 
     return errors
@@ -140,15 +139,6 @@ export default () => {
                 rel='noopener noreferrer'
               >
                 Facebook
-              </a>
-              ,{' '}
-              <a
-                href='https://www.facebook.com/help/messenger-app/iphone/1428015930791367'
-                target='_blank'
-                className={s.link}
-                rel='noopener noreferrer'
-              >
-                Facebook Messenger
               </a>
               ,{' '}
               <a
@@ -322,13 +312,6 @@ export default () => {
                     </span>
                     <span
                       style={{
-                        opacity: active(/(m\.me|messenger\.com)/, groupLink)
-                      }}
-                    >
-                      <Messenger />
-                    </span>
-                    <span
-                      style={{
                         opacity: active(/(fb\.com|facebook\.com)/, groupLink)
                       }}
                     >
@@ -365,12 +348,6 @@ export default () => {
                         <span>
                           <WhatsApp />
                           WhatsApp
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <Messenger />
-                          Messenger
                         </span>
                       </li>
                       <li>
