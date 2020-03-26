@@ -200,13 +200,17 @@
     }
     &.helpOther {
       left: 45%;
-      top: 34.4%;
+      top: 34.8%;
       width: 100%;
     }
     &.helpOtherText {
       left: 45%;
       top: 38.4%;
-      width: 120%;
+      width: 48%;
+      height: 48px;
+      .text {
+        height: 48px;
+      }
     }
     &.link {
       left: 8%;

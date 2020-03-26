@@ -252,7 +252,7 @@ export default () => {
                 </ScaleText>
               </div>
               <div className={`${s.helpOtherText} ${s.dataContainer}`}>
-                <ScaleText maxFontSize={21}>
+                <ScaleText maxFontSize={16}>
                   <div className={s.text}>{data.other}</div>
                 </ScaleText>
               </div>
