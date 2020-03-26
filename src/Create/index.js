@@ -21,7 +21,8 @@ export default () => {
     name: 'Chandi',
     loc: 'Forest Lodge',
     phone: '499 999 999',
-    other: ''
+    other: '',
+    link: 'facebook.com/groups/...'
   }
 
   const [data, setData] = React.useState({
@@ -33,7 +34,8 @@ export default () => {
       phone: false,
       supplies: false
     },
-    other: ''
+    other: '',
+    link: ''
   })
 
   const handleChange = e => {
@@ -184,6 +186,15 @@ export default () => {
             name='other'
             onChange={handleChange}
           />
+          <label htmlFor='link'>Link</label>
+          <input
+            type='text'
+            id='link'
+            placeholder={placeholder.link}
+            value={data.link}
+            name='link'
+            onChange={handleChange}
+          />
 
           <hr className={s.hr} />
 
@@ -244,6 +255,13 @@ export default () => {
               <div className={`${s.helpOtherText} ${s.dataContainer}`}>
                 <ScaleText maxFontSize={21}>
                   <div className={s.text}>{data.other}</div>
+                </ScaleText>
+              </div>
+              <div className={`${s.link} ${s.dataContainer}`}>
+                <ScaleText maxFontSize={16}>
+                  <div className={s.text}>
+                    {data.link === '' ? placeholder.link : data.link}
+                  </div>
                 </ScaleText>
               </div>
             </div>
