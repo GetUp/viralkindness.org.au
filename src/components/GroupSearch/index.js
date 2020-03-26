@@ -4,6 +4,7 @@ import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
 import { Search, Facebook, WhatsApp, NextDoor, Location } from '../Icons'
 import defaultGroups from '../../data/defaultGroupsByState'
+import nationalGroups from '../../data/nationalGroups'
 import s from './index.module.scss'
 import '../../geosuggest.css'
 
@@ -105,7 +106,7 @@ export default ({ className = '' }) => {
       fetch(groupSearchUrl(location.location))
         .then(r => r.json())
         .then(json => {
-          setGroups(allGroups(json.rows, state))
+          setGroups(allGroups(json.rows, state).concat(nationalGroups))
           setSearched(true)
         })
         .catch(e => {
