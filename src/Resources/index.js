@@ -194,7 +194,18 @@ export default () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <b>WhatsApp:</b> How to create and invite people to a group
+                  <b>WhatsApp:</b> (Android) How to create and invite people to
+                  a group
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://faq.whatsapp.com/en/iphone/26000115/?category=5245251'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <b>WhatsApp:</b> (iPhone) How to create and invite people to a
+                  group
                 </a>
               </li>
               <li>
