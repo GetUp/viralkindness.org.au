@@ -31,6 +31,10 @@
     width: calc(100% - 8px);
     border-radius: 4px;
     overflow: hidden;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0px;
+    }
   }
 
   .mainSubtext {
