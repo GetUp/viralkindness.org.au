@@ -81,20 +81,23 @@ export default () => {
         </div>
         <ul className={`${s.navItems} ${open ? '' : s.hide}`}>
           {nav.map((i, index) => (
-            <li className={s.navItem} key={index}>
-              <NavLink
-                exact
-                to={i.href}
-                className={s.navItemLink}
-                activeClassName={!i.items ? s.active : ''}
-              >
+            <li
+              className={s.navItem}
+              key={index}
+              onClick={() => setOpen(false)}
+            >
+              <NavLink to={i.href} className={s.navItemLink}>
                 {i.title}
                 {i.items && <ChevronDown />}
               </NavLink>
               {i.items && (
                 <ul className={s.subNavItems}>
                   {i.items.map((sub, subIndex) => (
-                    <li className={s.subNavItem} key={subIndex}>
+                    <li
+                      className={s.subNavItem}
+                      key={subIndex}
+                      onClick={() => setOpen(false)}
+                    >
                       <Link to={sub.href} className={s.subNavItemLink}>
                         {sub.title}
                       </Link>
