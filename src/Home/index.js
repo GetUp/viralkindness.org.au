@@ -87,6 +87,14 @@ export default () => {
                 on what has worked well for them.
               </div>
             </Link>
+            <Link to='/forum' className={s.sidebarLink}>
+              <h4 className={s.sidebarLinkHeader}>
+                <span>Forum</span>
+              </h4>
+              <div className={s.sidebarLinkSubtitle}>
+                Connect with other groups to share resources & tactics.
+              </div>
+            </Link>
           </div>
         </ContentWithSidebar>
       </div>

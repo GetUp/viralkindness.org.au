@@ -13,6 +13,7 @@ import About from './About'
 import Contact from './Contact'
 import Resources from './Resources'
 import Create from './Create'
+import Forum from './Forum'
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path='/faq'>
               <Faq />
+            </Route>
+            <Route path='/forum'>
+              <Forum />
             </Route>
             <Route path='/about'>
               <About />
