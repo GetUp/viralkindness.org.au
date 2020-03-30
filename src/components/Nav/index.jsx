@@ -86,7 +86,7 @@ export default () => {
                 exact
                 to={i.href}
                 className={s.navItemLink}
-                activeClassName={!i.items && s.active}
+                activeClassName={!i.items ? s.active : ''}
               >
                 {i.title}
                 {i.items && <ChevronDown />}
