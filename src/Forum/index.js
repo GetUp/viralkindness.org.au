@@ -18,7 +18,7 @@ export default () => {
       const script = document.createElement('script')
       script.async = true
       script.defer = true
-      script.src = 'http://code.jquery.com/jquery.min.js'
+      script.src = 'https://code.jquery.com/jquery.min.js'
       script.onload = loadMuutForum
       document.body.appendChild(script)
     }
