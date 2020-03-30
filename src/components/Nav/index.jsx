@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import s from './index.module.scss'
 import { VKLogo, ChevronDown } from '../Icons'
 import GetUp from '../../assets/images/getup-logo.svg'
+import { NavLink } from 'react-router-dom'
 
 const nav = [
   {
@@ -28,11 +29,11 @@ const nav = [
     href: '/resources#how-to-use-postcards',
     items: [
       {
-        title: 'Make a postcard',
+        title: 'Make your own postcard',
         href: '/create'
       },
       {
-        title: 'Download a postcard',
+        title: 'Download a PDF',
         href: '/resources#how-to-use-postcards'
       }
     ]
@@ -81,10 +82,15 @@ export default () => {
         <ul className={`${s.navItems} ${open ? '' : s.hide}`}>
           {nav.map(i => (
             <li className={s.navItem}>
-              <Link to={i.href} className={s.navItemLink}>
+              <NavLink
+                exact
+                to={i.href}
+                className={s.navItemLink}
+                activeClassName={!i.items && s.active}
+              >
                 {i.title}
                 {i.items && <ChevronDown />}
-              </Link>
+              </NavLink>
               {i.items && (
                 <ul className={s.subNavItems}>
                   {i.items.map(sub => (
