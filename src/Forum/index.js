@@ -14,6 +14,17 @@ export default () => {
   }, [])
 
   useEffect(() => {
+    if (!window.jQuery) {
+      const script = document.createElement('script')
+      script.async = true
+      script.defer = true
+      script.src = 'https://code.jquery.com/jquery.min.js'
+      script.onload = loadMuutForum
+      document.body.appendChild(script)
+    }
+  }, [])
+
+  useEffect(() => {
     if (!window.muut) {
       const script = document.createElement('script')
       script.async = true
