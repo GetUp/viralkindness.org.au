@@ -218,9 +218,9 @@ export default () => {
               <fieldset>
                 <p className={s.formHeader}>
                   <b>Personal details</b>
-                  <div className={s.inputMessage}>
+                  <span className={s.inputMessage}>
                     Your personal information won't be publicly visible.
-                  </div>
+                  </span>
                 </p>
                 <label>
                   Your email*

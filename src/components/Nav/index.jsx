@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 const nav = [
   {
     title: 'Groups',
-    href: 'getup.org.au',
+    href: '#',
     items: [
       {
         title: 'Add a group',
@@ -80,8 +80,8 @@ export default () => {
           <div />
         </div>
         <ul className={`${s.navItems} ${open ? '' : s.hide}`}>
-          {nav.map(i => (
-            <li className={s.navItem}>
+          {nav.map((i, index) => (
+            <li className={s.navItem} key={index}>
               <NavLink
                 exact
                 to={i.href}
@@ -93,8 +93,8 @@ export default () => {
               </NavLink>
               {i.items && (
                 <ul className={s.subNavItems}>
-                  {i.items.map(sub => (
-                    <li className={s.subNavItem}>
+                  {i.items.map((sub, subIndex) => (
+                    <li className={s.subNavItem} key={subIndex}>
                       <Link to={sub.href} className={s.subNavItemLink}>
                         {sub.title}
                       </Link>
