@@ -70,14 +70,14 @@ export default () => {
           <GroupSearch className={s.groupSearch} />
           <div className={s.sidebarContainer}>
             <ResourcesLink s={s} />
-            <Link to='/forum' className={s.sidebarLink}>
+            {/* <Link to='/forum' className={s.sidebarLink}>
               <h4 className={s.sidebarLinkHeader}>
                 <span>Forum</span>
               </h4>
               <div className={s.sidebarLinkSubtitle}>
                 Connect with other groups to share resources & tactics.
               </div>
-            </Link>
+            </Link> */}
             <Link to='/faq' className={s.sidebarLink}>
               <h4 className={s.sidebarLinkHeader}>
                 <span>FAQs</span>

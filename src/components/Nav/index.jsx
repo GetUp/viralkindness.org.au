@@ -41,10 +41,10 @@ const nav = [
   {
     title: 'Resources',
     href: '/resources'
-  },
-  {
-    title: 'Forum',
-    href: '/forum'
+    // },
+    // {
+    //   title: 'Forum',
+    //   href: '/forum'
   }
 ]
 
