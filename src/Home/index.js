@@ -69,15 +69,15 @@ export default () => {
         <ContentWithSidebar>
           <GroupSearch className={s.groupSearch} />
           <div className={s.sidebarContainer}>
-            <Link to='/register' className={s.sidebarLink}>
+            <ResourcesLink s={s} />
+            <Link to='/forum' className={s.sidebarLink}>
               <h4 className={s.sidebarLinkHeader}>
-                <span>Add</span>
+                <span>Forum</span>
               </h4>
               <div className={s.sidebarLinkSubtitle}>
-                Adding a community care group in your local area is easy!
+                Connect with other groups to share resources & tactics.
               </div>
             </Link>
-            <ResourcesLink s={s} />
             <Link to='/faq' className={s.sidebarLink}>
               <h4 className={s.sidebarLinkHeader}>
                 <span>FAQs</span>
@@ -85,14 +85,6 @@ export default () => {
               <div className={s.sidebarLinkSubtitle}>
                 We will continue to update this page as more groups offer advice
                 on what has worked well for them.
-              </div>
-            </Link>
-            <Link to='/forum' className={s.sidebarLink}>
-              <h4 className={s.sidebarLinkHeader}>
-                <span>Forum</span>
-              </h4>
-              <div className={s.sidebarLinkSubtitle}>
-                Connect with other groups to share resources & tactics.
               </div>
             </Link>
           </div>
