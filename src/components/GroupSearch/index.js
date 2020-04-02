@@ -24,7 +24,7 @@ const helpText = 'Search by street or suburb'
 
 const allGroupsUrl = `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?bbox=-180%2C-90%2C180%2C90&limit=200&relation=contains&include_docs=true`
 const groupSearchUrl = ({ lng, lat }) =>
-  `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=${radius}&include_docs=true`
+  `${apiHost}/${publicDb}/_design/geoid/_geo/geoidx?lat=${lat}&lon=${lng}&radius=${radius}&relation=contains&nearest=true&include_docs=true`
 
 const Marker = () => <MapMarker />
 
