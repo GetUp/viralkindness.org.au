@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import s from './index.module.scss'
 import ReactGA from 'react-ga'
 import Footer from '../components/Footer'
@@ -93,7 +94,7 @@ export default () => {
           <ul>
             <li>
               Wherever possible reach out to people in your community online or
-              on the - phone
+              on the phone
             </li>
             <li>
               Use your exercise walk to distribute community care postcards
@@ -116,9 +117,11 @@ export default () => {
             <li>Walking the dog</li>
           </ul>
           <p>
-            Read our tips for safely preparing and delivering community care
-            postcards and providing essential care to your friends and
-            neighbours.
+            <Link to='/resources#how-to-use-postcards'>
+              Read our tips for safely preparing and delivering community care
+              postcards and providing essential care to your friends and
+              neighbours.
+            </Link>
           </p>
           <p>We can stay together, even when we’re apart.</p>
         </div>
