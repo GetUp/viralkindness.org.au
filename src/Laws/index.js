@@ -52,11 +52,13 @@ export default () => {
   return (
     <>
       <PageHeader>
-        <h1 className={s.pageHeader}>Laws and Safety</h1>
+        <h1 className={s.pageHeader}>Following the rules</h1>
+        <p>Advice on latest rules and health guidelines</p>
       </PageHeader>
       <ContentWithSidebar>
         <div>
-          <h2>Following the latest rules and health guidelines</h2>
+          <br />
+          <br />
           <p>
             It’s vital that we continue to safely reach out to our friends and
             neighbours to provide essential care during the coronavirus crisis.
