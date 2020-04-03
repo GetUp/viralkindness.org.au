@@ -52,6 +52,9 @@
 .closeButton {
   display: flex;
   justify-content: flex-end;
+  span {
+    cursor: pointer;
+  }
   svg {
     transform: rotate(45deg);
     * {
