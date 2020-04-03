@@ -14,8 +14,9 @@ import Contact from './Contact'
 import Resources from './Resources'
 import Create from './Create'
 import Forum from './Forum'
+import Banner from './components/Banner'
 
-function App() {
+function App () {
   useEffect(() => {
     ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
     ReactGA.pageview(window.location.pathname + window.location.search)
@@ -55,6 +56,7 @@ function App() {
               <Create />
             </Route>
           </Switch>
+          <Banner />
         </ScrollTop>
       </Router>
     </div>
