@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './index.module.scss'
 import { Add, ChevronDown } from '../Icons'
+import { Link } from 'react-router-dom'
 
 export default ({ className = '', children, ...props }) => {
   const [show, setShow] = React.useState(true)
@@ -18,9 +19,13 @@ export default ({ className = '', children, ...props }) => {
             physical distancing rules. Before you begin, check the latest rules
             in your state.
             <br />
-            <a className={s.button}>
+            <Link
+              to='/lawsandsafety'
+              className={s.button}
+              onClick={() => setShow(false)}
+            >
               Check the rules <ChevronDown />
-            </a>
+            </Link>
           </div>
         </div>
       )}

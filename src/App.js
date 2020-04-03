@@ -15,6 +15,7 @@ import Resources from './Resources'
 import Create from './Create'
 import Forum from './Forum'
 import Banner from './components/Banner'
+import Laws from './Laws'
 
 function App () {
   useEffect(() => {
@@ -54,6 +55,9 @@ function App () {
             </Route>
             <Route path='/create'>
               <Create />
+            </Route>
+            <Route path='/lawsandsafety'>
+              <Laws />
             </Route>
           </Switch>
           <Banner />

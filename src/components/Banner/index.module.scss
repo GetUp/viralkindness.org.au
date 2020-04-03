@@ -3,14 +3,17 @@
 @keyframes delayTrigger {
   0% {
     transform: translateY(150%);
+    opacity: 0;
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 
 .bannerContainer {
   position: sticky;
+  opacity: 0;
   bottom: 8px;
   padding: 8px;
   line-height: 1.5;
@@ -41,6 +44,9 @@
   color: $textColor;
   font-size: 0.9em;
   margin-bottom: 12px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .closeButton {
