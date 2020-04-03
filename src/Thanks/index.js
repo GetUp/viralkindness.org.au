@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import ReactGA from 'react-ga'
+import React from 'react'
 import s from './index.module.scss'
 import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
@@ -8,11 +7,6 @@ import ShareModule from '../components/ShareModule'
 import main from '../assets/images/viralkindness-4.jpg'
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
-
   return (
     <>
       <div>

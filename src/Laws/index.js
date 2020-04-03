@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './index.module.scss'
-import ReactGA from 'react-ga'
 import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
-
   const states = [
     {
       name: 'New South Wales',

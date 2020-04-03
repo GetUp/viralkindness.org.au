@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import s from './index.module.scss'
-import ReactGA from 'react-ga'
 import { HashLink as Link } from 'react-router-hash-link'
 import Footer from '../components/Footer'
 import PageHeader from '../components/PageHeader'
@@ -10,11 +9,6 @@ import main from '../assets/images/viralkindness-4.jpg'
 import { Download, Add } from '../components/Icons'
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
-
   return (
     <>
       <div>

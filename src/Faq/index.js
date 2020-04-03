@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import ReactGA from 'react-ga'
+import React from 'react'
 import ContentWithSidebar from '../components/ContentWithSidebar'
 import FaqNav from '../components/FaqNav'
 import faq from '../data/faq'
@@ -17,11 +16,6 @@ const Item = i => (
 )
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
-
   return (
     <>
       <PageHeader>

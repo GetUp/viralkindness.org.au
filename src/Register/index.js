@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import ReactGA from 'react-ga'
+import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { HashLink as Link } from 'react-router-hash-link'
 import { v4 as uuidv4 } from 'uuid'
@@ -61,11 +60,6 @@ export default () => {
   const [location, setLocation] = useState({})
   const [blurbLength, setBlurbLength] = useState(0)
   const blurbMaxLength = 280
-
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
 
   const validate = values => {
     const errors = {}
