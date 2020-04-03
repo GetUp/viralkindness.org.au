@@ -3,26 +3,30 @@ import s from './index.module.scss'
 import { Add, ChevronDown } from '../Icons'
 
 export default ({ className = '', children, ...props }) => {
-  const [show, setShow] = React.useState(true)
-
+  const suppressBanner =
+    window.location.pathname === '/lawsandsafety' ||
+    (localStorage && localStorage.getItem('bannerSeen'))
+  const [show, setShow] = React.useState(!suppressBanner)
+  const hideBanner = () => {
+    setShow(false)
+    localStorage && localStorage.setItem('bannerSeen', true)
+  }
   return (
     <>
       {show && (
         <div className={`${s.bannerContainer} ${className}`} {...props}>
           <div className={`${s.content}`}>
-            <div onClick={() => setShow(false)} className={s.closeButton}>
-              <Add />
+            <div className={s.closeButton}>
+              <span onClick={hideBanner}>
+                <Add />
+              </span>
             </div>
             We can still meet the essential needs of isolated or vulnerable
             people in our community whilst following the health guidelines and
             physical distancing rules. Before you begin, check the latest rules
             in your state.
             <br />
-            <Link
-              to='/lawsandsafety'
-              className={s.button}
-              onClick={() => setShow(false)}
-            >
+            <Link to='/lawsandsafety' className={s.button} onClick={hideBanner}>
               Check the rules <ChevronDown />
             </Link>
           </div>
