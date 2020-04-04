@@ -8,7 +8,7 @@ ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
 const page = (location = window.location) => location.pathname + location.search
 
 const recordPageView = page => {
-  if (!/localhost/.test(window.location.host)) {
+  if (window.location.host === 'viralkindness.org.au') {
     ReactGA.set({ page: page })
     ReactGA.pageview(page)
   }
