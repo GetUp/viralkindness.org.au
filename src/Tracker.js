@@ -21,7 +21,7 @@ export default ({ children }) => {
     if (location.pathname !== prevLocation.pathname) {
       recordPageView(page(location))
     }
-    // [location, prevLocation.pathname]able-next-line react-hooks/exhaustive-deps
-  }, [location, prevLocation.pathname])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location])
   return <>{children}</>
 }
