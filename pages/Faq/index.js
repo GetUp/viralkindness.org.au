@@ -37,7 +37,6 @@ export default () => {
         </div>
         <FaqNav className={s.faqWrapper} />
       </ContentWithSidebar>
-      <Footer />
     </>
   )
 }

@@ -58,7 +58,7 @@ export default () => {
               <ol>
                 <li>
                   <Link href='/create'>
-                    Head here to fill in your postcards with details
+                    <a>Head here to fill in your postcards with details</a>
                   </Link>{' '}
                   <b>or</b> {/* eslint-disable-next-line */}
                   <a href='https://www.getup.org.au/postcards' target='_blank'>
@@ -76,8 +76,8 @@ export default () => {
                 </li>
                 <li>
                   After waiting 24 hours (
-                  <Link smooth href='#note'>
-                    see note
+                  <Link href='#note'>
+                    <a>see note</a>
                   </Link>
                   ), wash hands or wear gloves to drop postcards in letterboxes
                   around your neighbourhood.
@@ -86,9 +86,11 @@ export default () => {
 
               <hr className={s.hr} />
               <div className={s.downloadBtnContainers}>
-                <Link href='/create' className={s.downloadPostcard}>
-                  <Add />
-                  Make your Postcard
+                <Link href='/create'>
+                  <a className={s.downloadPostcard}>
+                    <Add />
+                    Make your Postcard
+                  </a>
                 </Link>
                 {/* eslint-disable react/jsx-no-target-blank */}
                 <a
@@ -128,7 +130,7 @@ export default () => {
                 <li>
                   <strong>Connect with others!</strong>{' '}
                   <Link smooth href='/#groupSearch'>
-                    Check the #ViralKindness hub
+                    <a>Check the #ViralKindness hub</a>
                   </Link>{' '}
                   for others helping in similar ways in your area. Not only will
                   it avoid double up, you could team up to help more people!
@@ -330,19 +332,21 @@ export default () => {
             <ul className={s.sideNav}>
               <li>
                 <Link smooth href='/resources#postcards'>
-                  <span className={s.sideNavHeader}>
-                    Community Care Postcards
-                  </span>
+                  <a>
+                    <span className={s.sideNavHeader}>
+                      Community Care Postcards
+                    </span>
+                  </a>
                 </Link>
                 <ul className={s.subSideNav}>
                   <li>
-                    <Link smooth href='/resources#how-to-use-postcards'>
-                      How to use the postcards
+                    <Link href='/resources#how-to-use-postcards'>
+                      <a>How to use the postcards</a>
                     </Link>
                   </li>
                   <li>
-                    <Link smooth href='/resources#tips'>
-                      Tips
+                    <Link href='/resources#tips'>
+                      <a>Tips</a>
                     </Link>
                   </li>
                   <li>
@@ -356,30 +360,32 @@ export default () => {
                     </a>
                   </li>
                   <li>
-                    <Link href='/create'>Make your Postcard</Link>
+                    <Link href='/create'>
+                      <a>Make your Postcard</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link smooth href='/resources#start-a-group'>
+                <Link href='/resources#start-a-group'>
                   <span className={s.sideNavHeader}>
-                    Setting up a community care group
+                    <a>Setting up a community care group</a>
                   </span>
                 </Link>
                 <ul className={s.subSideNav}>
                   <li>
-                    <Link smooth href='/resources#organise'>
-                      Where will you organise and communicate?
+                    <Link href='/resources#organise'>
+                      <a>Where will you organise and communicate?</a>
                     </Link>
                   </li>
                   <li>
-                    <Link smooth href='/resources#sharing-the-load'>
-                      Sharing the Load
+                    <Link href='/resources#sharing-the-load'>
+                      <a>Sharing the Load</a>
                     </Link>
                   </li>
                   <li>
-                    <Link smooth href='/resources#rules'>
-                      Rules and Guidelines
+                    <Link href='/resources#rules'>
+                      <a>Rules and Guidelines</a>
                     </Link>
                   </li>
                 </ul>
@@ -388,8 +394,6 @@ export default () => {
           </div>
         </ContentWithSidebar>
       </div>
-
-      <Footer />
     </>
   )
 }

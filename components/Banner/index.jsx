@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './index.module.scss'
 import { Add, ChevronDown } from '../Icons'
-import { Link } from 'react-router-dom'
 
 export default ({ className = '', children, ...props }) => {
   const [show, setShow] = React.useState(true)

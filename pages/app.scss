@@ -1,7 +1,8 @@
-// @import './normalize.scss';
+@import '../assets/styles/normalize';
 @import '../assets/styles/settings';
 @import '../assets/styles/button';
 @import '../assets/styles/share';
+@import '../assets/styles/geosuggest';
 
 * {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,

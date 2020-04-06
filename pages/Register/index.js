@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import ReactGA from 'react-ga'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-// import { HashLink as Link } from 'react-router-hash-link'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { v4 as uuidv4 } from 'uuid'
 import { omit } from 'lodash'
-import { useHistory } from 'react-router-dom'
 import Geosuggest from 'react-geosuggest'
-// import postJson from '../postJson'
+import postJson from '../../components/postJson'
 import s from './index.module.scss'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import {
@@ -18,7 +17,6 @@ import {
   Facebook
 } from '../../components/Icons'
 import InputWithIcon from '../../components/InputWithIcon'
-// import '../geosuggest.css'
 import PageHeader from '../../components/PageHeader'
 import Footer from '../../components/Footer'
 import FaqNav from '../../components/FaqNav'
@@ -58,7 +56,7 @@ const geoJson = loc => ({
 const active = (pattern, groupLink) => (pattern.test(groupLink) ? 1 : 0.5)
 
 export default () => {
-  const history = useHistory()
+  const router = useRouter()
   const [location, setLocation] = useState({})
   const [blurbLength, setBlurbLength] = useState(0)
   const blurbMaxLength = 280
@@ -105,7 +103,7 @@ export default () => {
     Promise.all([privateSubmission, publicSubmission])
       .then(data => {
         setSubmitting(false)
-        history.push('/thanks')
+        router.push('/thanks')
       })
       .catch(error => {
         setFieldError(
@@ -167,8 +165,10 @@ export default () => {
             </li>
             <li>
               After you've added your group, people will be able to{' '}
-              <Link smooth to='/#groupSearch' className={s.link}>
-                find it on this site by searching for their suburb
+              <Link href='/#groupSearch'>
+                <a className={s.link}>
+                  find it on this site by searching for their suburb
+                </a>
               </Link>
               . They’ll be able to volunteer to lend a hand, or request
               assistance.
@@ -176,8 +176,10 @@ export default () => {
           </ol>
           <hr className={s.hr} />
           <p style={{ fontSize: '0.9rem' }}>
-            <Link smooth to='/resources#start-a-group' className={s.link}>
-              More information about starting a group is available here.
+            <Link href='/resources#start-a-group'>
+              <a className={s.link}>
+                More information about starting a group is available here.
+              </a>
             </Link>{' '}
             If you need to make any changes, update or remove your group from
             the hub, please email{' '}
@@ -185,27 +187,6 @@ export default () => {
               viralkindness@getup.org.au
             </a>
           </p>
-          {/*
-          <Accordion>
-            <AccordionTitle>
-              <p style={{ fontSize: '0.9rem' }}>
-                Some tips if if you’re using a Facebook group
-              </p>
-            </AccordionTitle>
-            <AccordionBody>
-              <ul style={{ marginTop: 0, fontSize: '0.9rem' }}>
-                <li>
-                  Add a clear group description to the ‘About’ section of your
-                  page.
-                </li>
-                <li>
-                  Make the group ‘private’ <strong>not</strong> ‘secret’ or
-                  ‘public’. That way you can make sure only members of your
-                  community join.
-                </li>
-              </ul>
-            </AccordionBody>
-          </Accordion> */}
         </div>
       </PageHeader>
       <ContentWithSidebar>
@@ -394,17 +375,18 @@ export default () => {
           )}
         </Formik>
         <div className={s.sidebarContainer}>
-          <Link smooth to='/#groupSearch' className={s.sidebarLink}>
-            <div className={s.sidebarLinkHeader}>Find a group</div>
-            <div className={s.sidebarLinkSubtitle}>
-              Find a community care group near you.
-            </div>
+          <Link href='/#groupSearch'>
+            <a className={s.sidebarLink}>
+              <div className={s.sidebarLinkHeader}>Find a group</div>
+              <div className={s.sidebarLinkSubtitle}>
+                Find a community care group near you.
+              </div>
+            </a>
           </Link>
           <ResourcesLink s={s} />
           <FaqNav />
         </div>
       </ContentWithSidebar>
-      <Footer />
     </div>
   )
 }

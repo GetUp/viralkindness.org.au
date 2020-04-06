@@ -6,7 +6,7 @@ import ContentWithSidebar from '../../components/ContentWithSidebar'
 import GroupSearch from '../../components/GroupSearch'
 import illustration from '../../assets/images/vk-illustration.svg'
 import Footer from '../../components/Footer'
-// import ResourcesLink from '../../components/ResourcesLink'
+import ResourcesLink from '../../components/ResourcesLink'
 import wave from '../../assets/images/wave.svg'
 
 const scrollFocus = el => {
@@ -74,9 +74,9 @@ export default () => {
       </div>
       <div className={s.contentWithSidebar}>
         <ContentWithSidebar>
-          {/* <GroupSearch className={s.groupSearch} /> */}
+          <GroupSearch className={s.groupSearch} />
           <div className={s.sidebarContainer}>
-            {/* <ResourcesLink s={s} /> */}
+            <ResourcesLink s={s} />
             <Link href='/forum'>
               <a className={s.sidebarLink}>
                 <h4 className={s.sidebarLinkHeader}>
@@ -101,8 +101,6 @@ export default () => {
           </div>
         </ContentWithSidebar>
       </div>
-
-      <Footer />
     </>
   )
 }

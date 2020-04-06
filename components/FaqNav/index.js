@@ -1,11 +1,11 @@
 import React from 'react'
-// import { HashLink as Link } from 'react-router-hash-link'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import faq from '../../data/faq'
 import s from './index.module.scss'
 
 export default ({ className, style }) => {
-  const notFaqPage = () => window.location.pathname !== '/faq'
+  const notFaqPage = () => useRouter().pathname !== '/faq'
 
   return (
     <div
@@ -19,16 +19,18 @@ export default ({ className, style }) => {
       )}
       {notFaqPage() && (
         <h4>
-          <Link href='/faq' style={{ borderBottom: '0px' }}>
-            {faq.title}
+          <Link href='/faq'>
+            <a style={{ borderBottom: '0px' }}>{faq.title}</a>
           </Link>
         </h4>
       )}
       <ul className={!notFaqPage() ? s.sticky : ''}>
         {faq.data.map(i => (
           <li key={i.title}>
-            <Link smooth to={`/faq#${i.hash}`}>
-              <span>{i.title}</span>
+            <Link href={`/faq#${i.hash}`}>
+              <a>
+                <span>{i.title}</span>
+              </a>
             </Link>
           </li>
         ))}

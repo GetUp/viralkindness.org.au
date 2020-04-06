@@ -121,7 +121,6 @@ export default () => {
           <p>We can stay together, even when we’re apart.</p>
         </div>
       </ContentWithSidebar>
-      <Footer />
     </>
   )
 }

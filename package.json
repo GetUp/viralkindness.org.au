@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "formik": "^2.1.4",
     "google-map-react": "^1.1.7",
     "html-to-image": "^0.1.1",
@@ -19,8 +20,6 @@
     "react-ga": "^2.7.0",
     "react-geosuggest": "^2.12.1",
     "react-google-maps-loader": "^4.2.6",
-    "react-router-dom": "^5.1.2",
-    "react-router-hash-link": "^1.2.2",
     "react-scale-text": "^1.2.2",
     "react-scripts": "3.4.1",
     "sass": "^1.26.3",

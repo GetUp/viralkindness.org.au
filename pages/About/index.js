@@ -63,7 +63,5 @@ export default () => (
         </p>
       </div>
     </ContentWithSidebar>
-
-    <Footer />
   </>
 )

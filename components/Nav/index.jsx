@@ -1,10 +1,8 @@
 import React from 'react'
-// import { HashLink as Link } from 'react-router-hash-link'
 import Link from 'next/link'
 import s from './index.module.scss'
 import { VKLogo, ChevronDown } from '../Icons'
 import GetUp from '../../assets/images/getup-logo.svg'
-import { NavLink } from 'react-router-dom'
 
 const nav = [
   {
@@ -55,8 +53,10 @@ export default () => {
   return (
     <nav className={s.navContainer}>
       <div className={s.leftContainer}>
-        <Link to='/' className={s.logoWrapper}>
-          <VKLogo />
+        <Link href='/'>
+          <a className={s.logoWrapper}>
+            <VKLogo />
+          </a>
         </Link>
         <a
           href='https://getup.org.au'
@@ -87,10 +87,12 @@ export default () => {
               key={index}
               onClick={() => setOpen(false)}
             >
-              <NavLink to={i.href} className={s.navItemLink}>
-                {i.title}
-                {i.items && <ChevronDown />}
-              </NavLink>
+              <Link href={i.href}>
+                <a className={s.navItemLink}>
+                  {i.title}
+                  {i.items && <ChevronDown />}
+                </a>
+              </Link>
               {i.items && (
                 <ul className={s.subNavItems}>
                   {i.items.map((sub, subIndex) => (
@@ -99,8 +101,8 @@ export default () => {
                       key={subIndex}
                       onClick={() => setOpen(false)}
                     >
-                      <Link to={sub.href} className={s.subNavItemLink}>
-                        {sub.title}
+                      <Link href={sub.href}>
+                        <a className={s.subNavItemLink}>{sub.title}</a>
                       </Link>
                     </li>
                   ))}

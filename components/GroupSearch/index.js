@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import { HashLink as Link } from 'react-router-hash-link'
 import Link from 'next/link'
 import ReactGA from 'react-ga'
 import Geosuggest from 'react-geosuggest'
@@ -15,7 +14,6 @@ import {
 import defaultGroups from '../../data/defaultGroupsByState'
 import nationalGroups from '../../data/nationalGroups'
 import s from './index.module.scss'
-// import '../geosuggest.css'
 
 const apiHost = process.env.REACT_APP_API_HOST
 const publicDb = process.env.REACT_APP_PUBLIC_DATABASE
@@ -197,8 +195,9 @@ export default ({ className = '' }) => {
       <p className={s.mainSubSubtext}>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
-        <Link smooth to='#disclaimer' style={{ textDecoration: 'none' }}>
-          *
+        <Link href='#disclaimer'>
+          {/* <Link smooth to='#disclaimer' style={{ textDecoration: 'none' }}> */}
+          <a style={{ textDecoration: 'none' }}>*</a>
         </Link>
       </p>
       <br />
@@ -254,13 +253,13 @@ export default ({ className = '' }) => {
           <div>No results</div>
           <p>
             Unfortunately there are no community groups established in your
-            area. There is{' '}
-            <Link smooth to='/resources#start-a-group'>
-              more information on how to setup a group.
+            area. There is {/* <Link smooth to='/resources#start-a-group'> */}
+            <Link href='/resources#start-a-group'>
+              <a>more information on how to setup a group.</a>
             </Link>{' '}
-            Once you're setup{' '}
-            <Link smooth to='/register'>
-              please register the group
+            Once you're setup {/* <Link smooth to='/register'> */}
+            <Link href='/register'>
+              <a>please register the group</a>
             </Link>{' '}
             so others can find it and help out.
           </p>
@@ -272,9 +271,9 @@ export default ({ className = '' }) => {
           <p>
             These are community groups established to help people with everyday
             needs, such as shopping or a check-in call. <br />
-            You can find{' '}
-            <Link smooth to='/faq#help'>
-              more information on urgent help and medical assistance here
+            You can find {/* <Link smooth to='/faq#help'> */}
+            <Link href='/faq#help'>
+              <a>more information on urgent help and medical assistance here</a>
             </Link>
             .
           </p>

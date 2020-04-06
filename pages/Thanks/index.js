@@ -43,7 +43,6 @@ export default () => {
           <ShareModule className={s.shareModule} />
         </ContentWithSidebar>
       </div>
-      <Footer />
     </>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default ({ className }) => (
   <div className={className}>
-    <div id='super-share-with-progress'>
+    <div id='super-share-withProgress'>
       <div className='share--btns'>
         <div className='share-btn--wrapper'>
           <span className='check-icon fb checked'>
@@ -41,8 +41,8 @@ export default ({ className }) => (
             >
               <path
                 className='bg'
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M10.5339 0C11.3431 0 12 0.656953 12 1.46611V10.5339C12 11.343 11.343 12 10.5339 12H8.03855V7.47855H9.59948L9.89648 5.54213H8.03855V4.28548C8.03855 3.75572 8.29807 3.23932 9.13027 3.23932H9.975V1.59073C9.975 1.59073 9.20836 1.4599 8.47542 1.4599C6.94523 1.4599 5.94511 2.3873 5.94511 4.06624V5.54213H4.24418V7.47855H5.94511V12H1.46611C0.656953 12 0 11.343 0 10.5339V1.46611C0 0.656953 0.65693 0 1.46611 0H10.5339V0Z'
                 fill='#1777F2'
               ></path>
@@ -189,20 +189,20 @@ export default ({ className }) => (
             >
               <path
                 className='bg'
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M0.958737 9.25326C0.352421 8.316 0 7.19874 0 6C0 2.68863 2.68863 0 6 0C9.31137 0 12 2.68863 12 6C12 9.31137 9.31137 12 6 12C4.87768 12 3.82737 11.6912 2.92863 11.1543L0 12.1301L0.958737 9.25326V9.25326Z'
                 fill='#F3F3F3'
               ></path>
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M2.08105 8.78337C1.52147 7.99768 1.19242 7.03705 1.19242 6C1.19242 3.34674 3.34674 1.19242 6 1.19242C8.65326 1.19242 10.8076 3.34674 10.8076 6C10.8076 8.65326 8.65326 10.8069 6 10.8069C4.99579 10.8069 4.06358 10.4987 3.29179 9.97137L1.48421 10.5739L2.08105 8.78337V8.78337Z'
                 fill='#2BD349'
               ></path>
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M4.55622 7.24805C3.84633 6.38026 3.37264 5.31794 3.22422 4.16594C3.18443 3.8451 3.29117 3.52299 3.51538 3.28994C3.73959 3.05689 4.05727 2.93752 4.37938 2.96468L4.41033 2.96784C4.41033 2.96784 4.76464 3.06257 4.95854 3.11499C5.03559 3.13584 5.09685 3.19331 5.12275 3.26847C5.20991 3.52741 5.4158 4.13563 5.51306 4.42173C5.54464 4.51457 5.51559 4.61752 5.44106 4.68068C5.29391 4.80447 5.05075 5.0091 4.89917 5.13731C4.81769 5.20615 4.7918 5.32047 4.83601 5.4171C5.01222 5.8011 5.23706 6.15984 5.50359 6.48447C5.77769 6.80152 6.09285 7.08384 6.44148 7.32257C6.52991 7.38257 6.64675 7.37626 6.72822 7.30741C6.88043 7.17984 7.12359 6.9752 7.27012 6.85141C7.34527 6.78826 7.45138 6.77752 7.53791 6.82426C7.80317 6.96826 8.3678 7.27394 8.6078 7.40405C8.67791 7.44194 8.72464 7.51268 8.73159 7.59163C8.74991 7.79184 8.78401 8.15689 8.78401 8.15689L8.78148 8.18784C8.75369 8.50994 8.58254 8.80299 8.31475 8.98426C8.04696 9.16615 7.71159 9.21668 7.40212 9.1232C6.28296 8.77899 5.3097 8.12468 4.57327 7.26826L4.55622 7.24805Z'
                 fill='#FFFFFF'
               ></path>
@@ -243,7 +243,7 @@ export default ({ className }) => (
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
             >
-              <g clip-path='url(#clip0)'>
+              <g clipPath='url(#clip0)'>
                 <path
                   d='M9.35714 0H2.64286C1.18325 0 0 1.18325 0 2.64286V9.35714C0 10.8168 1.18325 12 2.64286 12H9.35714C10.8168 12 12 10.8168 12 9.35714V2.64286C12 1.18325 10.8168 0 9.35714 0Z'
                   fill='url(#paint0_linear)'
@@ -262,8 +262,8 @@ export default ({ className }) => (
                   y2='1.48926'
                   gradientUnits='userSpaceOnUse'
                 >
-                  <stop stop-color='#0CBD2A' />
-                  <stop offset='1' stop-color='#5BF675' />
+                  <stop stopColor='#0CBD2A' />
+                  <stop offset='1' stopColor='#5BF675' />
                 </linearGradient>
                 <clipPath id='clip0'>
                   <rect width='12' height='12' fill='white' />
@@ -294,7 +294,7 @@ export default ({ className }) => (
         </button>
         <div className='share-link--text'>http://getup.to/zPFxFli2</div>
       </div>
-      <div className='privacy-policy'>
+      <div className='privacyPolicy'>
         <div className='privacy_policy_disclaimer'>
           In taking action, I agree to GetUp's Privacy Policy.
         </div>

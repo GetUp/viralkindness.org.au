@@ -1,10 +1,9 @@
 import React from 'react'
-// import { HashLink as Link } from 'react-router-hash-link'
 import Link from 'next/link'
 import s from './index.module.scss'
 
 export default () => (
-  <footer>
+  <footer className={s.footer}>
     <div className={s.content}>
       <ul className={s.linkContainer}>
         <li>

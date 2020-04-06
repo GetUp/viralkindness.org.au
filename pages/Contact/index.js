@@ -32,7 +32,6 @@ export default () => {
           </div>
         </ContentWithSidebar>
       </div>
-      <Footer />
     </>
   )
 }

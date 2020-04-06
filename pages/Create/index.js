@@ -12,7 +12,6 @@ import {
   AccordionTitle,
   AccordionBody
 } from '../../components/Accordion'
-// import { HashLink as Link } from 'react-router-hash-link'
 import Link from 'next/link'
 
 export default () => {
@@ -268,7 +267,6 @@ export default () => {
           </div>
         </div>
       </ContentWithSidebar>
-      <Footer />
     </>
   )
 }

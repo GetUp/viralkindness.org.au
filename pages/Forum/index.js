@@ -44,7 +44,6 @@ export default () => {
           #ViralKindness
         </a>
       </div>
-      <Footer />
     </>
   )
 }
