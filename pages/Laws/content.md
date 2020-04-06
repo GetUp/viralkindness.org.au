@@ -38,6 +38,6 @@ Essential activities include:
 - Getting a prescription filled at the pharmacy
 - Walking the dog
 
-Read our tips for safely preparing and delivering community care postcards and providing essential care to your friends and neighbours.
+[Read our tips for safely preparing and delivering community care postcards and providing essential care to your friends and neighbours.](/resources#how-to-use-postcards)
 
 We can stay together, even when we’re apart.
