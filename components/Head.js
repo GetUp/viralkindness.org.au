@@ -32,6 +32,8 @@ export default () => {
         content='#ViralKindness – We’re all in this together'
       />
       <title>#ViralKindness – We’re all in this together</title>
+      <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+
       {/* <script dangerouslySetInnerHTML={{ __html: `
         if (!/^localhost/.test(window.location.host)) {
           var _rollbarConfig = {
