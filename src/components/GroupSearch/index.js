@@ -33,7 +33,7 @@ const GroupLink = ({ href, text }) => (
     href={href}
     target='_blank'
     rel='noopener noreferrer'
-    className={`${s.groupDivBtn} ${groupClass(href, s)}`}
+    className={`${s.groupDivBtn} ${groupClass(href)}`}
     onClick={() =>
       ReactGA.event({
         category: 'Actions',
@@ -53,11 +53,11 @@ const GroupIcon = ({ url }) => {
   return null
 }
 
-const groupClass = (url, s) => {
+const groupClass = (url) => {
   if (/facebook\.com|fb\.com/i.test(url)) return s.fb
   if (/whatsapp\.com/i.test(url)) return s.wa
   if (/au\.nextdoor\.com/i.test(url)) return s.nd
-  return null
+  return s.ge
 }
 
 const locationDisplay = props =>
