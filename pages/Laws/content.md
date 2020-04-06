@@ -1,4 +1,7 @@
-## Following the latest rules and health guidelines
+---
+header: Following the rules
+subheader: Advice on latest rules and health guidelines
+---
 
 It’s vital that we continue to safely reach out to our friends and neighbours to provide essential care during the coronavirus crisis.
 

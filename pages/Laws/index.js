@@ -14,7 +14,8 @@ export default () => {
   return (
     <>
       <PageHeader>
-        <h1 className={s.pageHeader}>Laws and Safety</h1>
+        <h1 className={s.pageHeader}>{attributes.header}</h1>
+        <p>{attributes.subheader}</p>
       </PageHeader>
       <ContentWithSidebar>
         <Content />
