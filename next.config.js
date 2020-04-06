@@ -10,5 +10,13 @@ module.exports = withImages({
     REACT_APP_PRIVATE_DATABASE: process.env.REACT_APP_PRIVATE_DATABASE,
     REACT_APP_RADIUS_IN_METERS: process.env.REACT_APP_RADIUS_IN_METERS,
     REACT_APP_FORUM_NAME: process.env.REACT_APP_FORUM_NAME
+  },
+  webpack: cfg => {
+    cfg.module.rules.push({
+      test: /\.md$/,
+      loader: 'frontmatter-markdown-loader',
+      options: { mode: ['react-component'] }
+    })
+    return cfg
   }
 })
