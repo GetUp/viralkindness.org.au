@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../../components/Footer'
 import PageHeader from '../../components/PageHeader'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 

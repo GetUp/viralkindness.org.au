@@ -18,7 +18,6 @@ import {
 } from '../../components/Icons'
 import InputWithIcon from '../../components/InputWithIcon'
 import PageHeader from '../../components/PageHeader'
-import Footer from '../../components/Footer'
 import FaqNav from '../../components/FaqNav'
 import ResourcesLink from '../../components/ResourcesLink'
 import {

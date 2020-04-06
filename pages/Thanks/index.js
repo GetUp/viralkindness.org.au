@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import ReactGA from 'react-ga'
 import s from './index.module.scss'
-import Footer from '../../components/Footer'
 import PageHeader from '../../components/PageHeader'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import ShareModule from '../../components/ShareModule'

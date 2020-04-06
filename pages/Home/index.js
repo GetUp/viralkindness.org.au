@@ -5,7 +5,6 @@ import { Add, Create, Find } from '../../components/Icons'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import GroupSearch from '../../components/GroupSearch'
 import illustration from '../../assets/images/vk-illustration.svg'
-import Footer from '../../components/Footer'
 import ResourcesLink from '../../components/ResourcesLink'
 import wave from '../../assets/images/wave.svg'
 

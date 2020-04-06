@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import ReactGA from 'react-ga'
 // import './index.scss'
-import Footer from '../../components/Footer'
 
 const forumName = process.env.REACT_APP_FORUM_NAME
 

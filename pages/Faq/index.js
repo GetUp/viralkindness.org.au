@@ -5,7 +5,6 @@ import FaqNav from '../../components/FaqNav'
 import faq from '../../components/data/faq'
 import PageHeader from '../../components/PageHeader'
 import s from './index.module.scss'
-import Footer from '../../components/Footer'
 
 const Item = i => (
   <div key={i.title} className={s.question}>

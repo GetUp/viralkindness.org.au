@@ -6,7 +6,6 @@ import { Color, BlackWhite } from './Images'
 import htmltoimage from 'html-to-image'
 import ScaleText from 'react-scale-text'
 import { Download } from '../../components/Icons'
-import Footer from '../../components/Footer'
 import {
   Accordion,
   AccordionTitle,
