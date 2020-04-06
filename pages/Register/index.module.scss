@@ -1,0 +1,225 @@
+@import '../../assets/styles/variables';
+
+.headerContainer {
+  max-width: 900px;
+
+  ol,
+  ul {
+    padding-left: 1.2em;
+    margin-top: 0;
+
+    li {
+      padding-left: 0.5em;
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+.link {
+  border-bottom: 1px solid rgba(0, 68, 114, 0.3);
+  text-decoration: none;
+}
+
+.hr {
+  border-color: rgba($textColor, 0.06);
+  margin: 24px 0;
+}
+
+.pageHeader {
+  margin-bottom: 1rem !important;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+}
+
+.addForm {
+  fieldset {
+    display: flex;
+    border: none;
+    // background: #f3f3f3;
+    padding: 16px 0;
+    border-radius: 4px;
+    max-width: 700px;
+    flex-wrap: wrap;
+
+    legend {
+      margin-bottom: 32px;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    font-weight: 600;
+    color: $textColor;
+    width: 100%;
+    // padding-left: 16px;
+  }
+
+  .inputWrapper {
+    margin-top: 8px;
+
+    .textareaIcon {
+      transform: none;
+      top: 17px;
+    }
+  }
+
+  .formHeader {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  .inputMessage {
+    display: block;
+    color: rgba($secondary, 0.7);
+    // margin-top: 8px;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .errorMessage {
+    // padding: 8px;
+    // background: rgba(red, 0.1);
+    color: red;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 4px;
+    // border: 1px solid rgba(red, 0.2);
+    font-size: 0.9rem;
+  }
+
+  .socialIcons {
+    display: flex;
+    margin-left: auto;
+    margin-top: 1px;
+    // height: 32px;
+    // width: 100%;
+
+    svg {
+      height: 14px;
+      width: 14px;
+      margin-right: 12px;
+    }
+
+    @media screen and (min-width: 600px) {
+      margin-left: 16px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    fieldset label:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.sidebarContainer {
+  padding-top: 16px;
+
+  ul {
+    padding-left: 8px;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 16px;
+    background: rgba($textColor, 0.07);
+    padding-bottom: 32px;
+  }
+
+  .sidebarLink {
+    text-decoration: none;
+    display: block;
+    padding: 12px 8px;
+    border-radius: 4px;
+    color: $textColorLight;
+    border-bottom: 0px;
+
+    .sidebarLinkHeader {
+      margin-top: 0px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      svg {
+        margin-right: 8px;
+        height: 16px;
+        width: 16px;
+        * {
+          fill: #777;
+        }
+      }
+    }
+
+    .sidebarLinkSubtitle {
+      line-height: 1.5;
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+
+    &:hover {
+      background: $textColor;
+      color: white;
+      svg * {
+        fill: white;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 32px;
+    padding-top: 0;
+    .sidebarLink {
+      padding: 16px 8px;
+      border-bottom: 8px solid white;
+      .sidebarLinkSubtitle {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.disclaimer {
+  margin-top: -12px;
+  font-size: 0.8rem;
+  color: $textColor;
+  opacity: 0.6;
+}
+
+.hr {
+  border-color: rgba($textColor, 0.06);
+  margin: 24px 0;
+}
+
+.accordion {
+  margin-bottom: 16px;
+
+  .title {
+    margin-top: -24px;
+    color: $textColor;
+    font-size: 0.8rem;
+  }
+
+  .body {
+    ul {
+      font-size: 0.8rem;
+      margin-top: 0;
+      padding-left: 1.2em;
+
+      li span {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
