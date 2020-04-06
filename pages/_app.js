@@ -1,6 +1,7 @@
 import ReactGoogleMapLoader from 'react-google-maps-loader'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import Head from '../components/Head'
 import './app.scss'
 
 const mapParams = {
@@ -10,17 +11,20 @@ const mapParams = {
 
 export default function MyApp ({ Component, pageProps }) {
   return (
-    <ReactGoogleMapLoader
-      params={mapParams}
-      render={mapLoaded =>
-        mapLoaded && (
-          <>
-            <Nav />
-            <Component {...pageProps} />
-            <Footer />
-          </>
-        )
-      }
-    />
+    <>
+      <Head />
+      <ReactGoogleMapLoader
+        params={mapParams}
+        render={mapLoaded =>
+          mapLoaded && (
+            <>
+              <Nav />
+              <Component {...pageProps} />
+              <Footer />
+            </>
+          )
+        }
+      />
+    </>
   )
 }
