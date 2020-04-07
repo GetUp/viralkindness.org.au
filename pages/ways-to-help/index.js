@@ -11,7 +11,7 @@ const Item = i => (
     <h3 id={i.hash} className={s.header}>
       {i.title}
     </h3>
-    <div dangerouslySetInnerHTML={{ __html: i.body }} className={s.body} />
+    <div dangerouslySetInnerHTML={{ __html: i.answer }} className={s.body} />
   </div>
 )
 

@@ -26,7 +26,7 @@ collections:
             fields:
               - { label: 'hash', name: 'hash', widget: 'string' }
               - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - { label: 'Answer', name: 'answer', widget: 'markdown' }
       - label: 'Add a group'
         name: 'add-a-group'
         file: 'content/register.md'
@@ -39,3 +39,9 @@ collections:
             fields:
               - { label: 'step', name: 'step', widget: 'string' }
           - { label: 'Disclaimer', name: 'disclaimer', widget: 'markdown' }
+      - label: 'About'
+        name: 'about'
+        file: 'content/about.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
