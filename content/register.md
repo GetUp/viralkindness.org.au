@@ -1,33 +1,18 @@
 ---
-title: Add a grouop
-subtitle: Adding a community care group in your local area is easy! Here's how to set it up
+title: Add a group
+subtitle: >-
+  Starting a community care group gives neighbours a friendly space to connect, request and offer help. You don’t need any special skills or experience to start a group, in fact you can find all the info you need to get started here. 
 steps:
   - step: >-
-      Create a group up via
-        <a
-          href='https://www.facebook.com/help/167970719931213'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Facebook</a>,
-        <a
-          href='https://faq.whatsapp.com/en/android/26000123/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          WhatsApp</a>
-        or
-        <a
-          href='https://help.nextdoor.com/s/article/How-to-create-a-group?language=en_AU'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          NextDoor.
-        </a>
+      Read the “Starting a group” page for guidance here
   - step: >-
-      Once your group is set up, fill in the information below to add your group on the #viralkindness website
+      Create a group on Facebook or your preferred online platform
   - step: >-
-      After you've added your group, people will be able to <a href="/#groupSearch">find it on this site by searching for their suburb. </a>They’ll be able to volunteer to lend a hand, or request assistance.
+      Fill in the form below to add your group to the #ViralKindness hub
+  - step: >-
+      Your neighbours can then find your group by searching their suburb
+  - step: >-
+      If you need to make any changes, update or remove your group from the hub, email viralkindness@getup.org.au
 disclaimer: >-
   <a href="/resources#start-a-group">More information about starting a group is available here.</a> If you need to make any changes, update or remove your group from the hub, please email <a href='mailto:viralkindness@getup.org.au.'>viralkindness@getup.org.au</a>
 ---

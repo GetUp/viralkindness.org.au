@@ -27,3 +27,15 @@ collections:
               - { label: 'hash', name: 'hash', widget: 'string' }
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Add a group'
+        name: 'add-a-group'
+        file: 'content/register.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'steps'
+            name: 'steps',
+            widget: 'list'
+            fields:
+              - { label: 'step', name: 'step', widget: 'string' }
+          - { label: 'Disclaimer', name: 'disclaimer', widget: 'markdown' }
