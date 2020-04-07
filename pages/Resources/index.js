@@ -22,10 +22,10 @@ export default () => {
       <h3>{title}</h3>
       {sections &&
         sections.map(i => (
-          <>
+          <React.Fragment key={i.title}>
             <h4 id={getId(i.title)}>{i.title}</h4>
             <div dangerouslySetInnerHTML={{ __html: i.body }} />
-          </>
+          </React.Fragment>
         ))}
     </div>
   )
@@ -40,10 +40,10 @@ export default () => {
       <p dangerouslySetInnerHTML={{ __html: body }} />
       {sections &&
         sections.map(i => (
-          <>
+          <React.Fragment key={i.title}>
             <h3 id={getId(i.title)}>{i.title}</h3>
             <div dangerouslySetInnerHTML={{ __html: i.body }} />
-          </>
+          </React.Fragment>
         ))}
     </>
   )
@@ -55,7 +55,7 @@ export default () => {
       </p>
       <ul className={s.sideNav}>
         {content.map(c => (
-          <li>
+          <li key={c.title}>
             <Link href={'#' + getId(c.title)}>
               <span className={s.sideNavHeader}>
                 <a>{c.title}</a>
@@ -64,7 +64,7 @@ export default () => {
             {c.sections && (
               <ul className={s.subSideNav}>
                 {c.sections.map(s => (
-                  <li>
+                  <li key={s.title}>
                     <Link href={'#' + getId(s.title)}>
                       <a>{s.title}</a>
                     </Link>
