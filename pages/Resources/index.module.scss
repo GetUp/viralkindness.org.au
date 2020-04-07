@@ -6,7 +6,8 @@
     font-size: 2rem !important;
   }
 }
-.subtitle {
+.subtitle,
+.subtitle p {
   font-size: 1.4rem !important;
   @media screen and (max-width: 900px) {
     font-size: 1.2rem !important;

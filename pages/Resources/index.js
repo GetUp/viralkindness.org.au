@@ -7,6 +7,9 @@ import ContentWithSidebar from '../../components/ContentWithSidebar'
 import thumbnail from '../../assets/images/viralkindness-1.jpg'
 import main from '../../assets/images/viralkindness-4.jpg'
 import { Download, Add } from '../../components/Icons'
+import { attributes, react as Content } from '../../content/resources.md'
+
+const getId = title => title.toLowerCase().replace(/ /g, '-')
 
 export default () => {
   useEffect(
@@ -14,9 +17,104 @@ export default () => {
     []
   )
 
+  const insertBreakout = ({ title, sections, ...props }) => (
+    <div className={s.breakoutContainer}>
+      <h3>{title}</h3>
+      {sections &&
+        sections.map(i => (
+          <>
+            <h4 id={getId(i.title)}>{i.title}</h4>
+            <div dangerouslySetInnerHTML={{ __html: i.body }} />
+          </>
+        ))}
+    </div>
+  )
+
+  const insertSection = ({ title, subtitle, body, sections }) => (
+    <>
+      <h2 id={getId(title)}>{title}</h2>
+      <div
+        className={s.subtitle}
+        dangerouslySetInnerHTML={{ __html: subtitle }}
+      />
+      <p dangerouslySetInnerHTML={{ __html: body }} />
+      {sections &&
+        sections.map(i => (
+          <>
+            <h3 id={getId(i.title)}>{i.title}</h3>
+            <div dangerouslySetInnerHTML={{ __html: i.body }} />
+          </>
+        ))}
+    </>
+  )
+
+  const insertSideNav = content => (
+    <div>
+      <p style={{ marginTop: '32px' }}>
+        <b>Content</b>
+      </p>
+      <ul className={s.sideNav}>
+        {content.map(c => (
+          <li>
+            <Link href={'#' + getId(c.title)}>
+              <span className={s.sideNavHeader}>
+                <a>{c.title}</a>
+              </span>
+            </Link>
+            {c.sections && (
+              <ul className={s.subSideNav}>
+                {c.sections.map(s => (
+                  <li>
+                    <Link href={'#' + getId(s.title)}>
+                      <a>{s.title}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+        <hr style={{ marginBottom: '16px', opacity: 0.4 }} />
+        <li>
+          {/* eslint-disable react/jsx-no-target-blank */}
+          <a href='https://www.getup.org.au/postcards' target='_blank'>
+            {/* eslint-enable react/jsx-no-target-blank */}
+            Download Postcards
+          </a>
+        </li>
+        <li>
+          <Link href='/create'>
+            <a>Make your Postcard</a>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  )
+
   return (
     <>
       <div>
+        <PageHeader>
+          <h1 className={s.pageHeader}>{attributes.title}</h1>
+        </PageHeader>
+        <ContentWithSidebar reverse>
+          <div style={{ maxWidth: '700px' }}>
+            {attributes.body.map(i => (
+              <React.Fragment key={i.title}>
+                {i.type !== 'breakout' ? insertSection(i) : insertBreakout(i)}
+              </React.Fragment>
+            ))}
+          </div>
+          {insertSideNav(attributes.body)}
+        </ContentWithSidebar>
+      </div>
+    </>
+  )
+
+  return (
+    <>
+      <div>
+        {console.log(attributes)}
         <PageHeader>
           <h1 className={s.pageHeader}>Resources</h1>
         </PageHeader>
