@@ -25,6 +25,7 @@ import {
   AccordionTitle,
   AccordionBody
 } from '../../components/Accordion'
+import { attributes as content } from '../../content/register.md'
 
 const apiHost = process.env.REACT_APP_API_HOST
 const publicDb = process.env.REACT_APP_PUBLIC_DATABASE
@@ -120,72 +121,22 @@ export default () => {
     <div>
       <PageHeader>
         <div className={s.headerContainer}>
-          <h1 className={s.pageHeader}>Add a group</h1>
+          <h1 className={s.pageHeader}>{content.title}</h1>
           <p className={s.subtitle}>
-            <strong>
-              Adding a community care group in your local area is easy!
-              <br /> Here's how to set it up:
-            </strong>
+            <strong>{content.subtitle}</strong>
           </p>
           <ol className={s.list}>
-            <li>
-              Create a group up via{' '}
-              <a
-                href='https://www.facebook.com/help/167970719931213'
-                target='_blank'
-                className={s.link}
-                rel='noopener noreferrer'
-              >
-                Facebook
-              </a>
-              ,{' '}
-              <a
-                href='https://faq.whatsapp.com/en/android/26000123/'
-                target='_blank'
-                className={s.link}
-                rel='noopener noreferrer'
-              >
-                WhatsApp
-              </a>{' '}
-              or{' '}
-              <a
-                href='https://help.nextdoor.com/s/article/How-to-create-a-group?language=en_AU'
-                target='_blank'
-                className={s.link}
-                rel='noopener noreferrer'
-              >
-                NextDoor
-              </a>
-              .
-            </li>
-            <li>
-              Once your group is set up, fill in the information below to add
-              your group on the #viralkindness website
-            </li>
-            <li>
-              After you've added your group, people will be able to{' '}
-              <Link href='/#groupSearch'>
-                <a className={s.link}>
-                  find it on this site by searching for their suburb
-                </a>
-              </Link>
-              . They’ll be able to volunteer to lend a hand, or request
-              assistance.
-            </li>
+            {content.steps.map((s, i) => (
+              <li key={i}>
+                <div dangerouslySetInnerHTML={{ __html: s.step }} />
+              </li>
+            ))}
           </ol>
           <hr className={s.hr} />
-          <p style={{ fontSize: '0.9rem' }}>
-            <Link href='/resources#start-a-group'>
-              <a className={s.link}>
-                More information about starting a group is available here.
-              </a>
-            </Link>{' '}
-            If you need to make any changes, update or remove your group from
-            the hub, please email{' '}
-            <a href='mailto:viralkindness@getup.org.au.' className={s.link}>
-              viralkindness@getup.org.au
-            </a>
-          </p>
+          <div
+            style={{ fontSize: '0.9rem' }}
+            dangerouslySetInnerHTML={{ __html: content.disclaimer }}
+          />
         </div>
       </PageHeader>
       <ContentWithSidebar>
