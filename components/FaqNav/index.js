@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import faq from '../../data/faq'
+import { attributes as faq } from '../../content/faq.md'
 import s from './index.module.scss'
 
 export default ({ className, style }) => {
@@ -25,7 +25,7 @@ export default ({ className, style }) => {
         </h4>
       )}
       <ul className={!notFaqPage() ? s.sticky : ''}>
-        {faq.data.map(i => (
+        {faq.questions.map(i => (
           <li key={i.title}>
             <Link href={`/faq#${i.hash}`}>
               <a>
