@@ -5,6 +5,7 @@ import PageHeader from '../../components/PageHeader'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import ShareModule from '../../components/ShareModule'
 import main from '../../assets/images/viralkindness-4.jpg'
+import { attributes, react as Content } from '../../content/thanks.md'
 
 export default () => {
   useEffect(
@@ -16,22 +17,11 @@ export default () => {
     <>
       <div>
         <PageHeader>
-          <h1>Thanks for registering your group!</h1>
+          <h1>{attributes.title}</h1>
         </PageHeader>
         <ContentWithSidebar className={s.contentContainer}>
           <div>
-            <p>
-              Thanks for starting a community care group in your local area.
-            </p>
-            <p>
-              Without question, the way we pull through coronavirus is together
-              and by caring for those around us. To do that, we’re going to need
-              everyone who can, to do a little more to help.
-            </p>
-            <p style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
-              Can you share your group with family, friends and neighbours and
-              encourage them to join you?
-            </p>
+            <Content />
             <img
               src={main}
               className={s.image}
