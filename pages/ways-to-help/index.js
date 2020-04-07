@@ -4,7 +4,7 @@ import ContentWithSidebar from '../../components/ContentWithSidebar'
 import FaqNav from '../../components/FaqNav'
 import PageHeader from '../../components/PageHeader'
 import s from './index.module.scss'
-import { attributes as faq } from '../../content/faq.md'
+import { attributes as c } from '../../content/ways-to-help.md'
 
 const Item = i => (
   <div key={i.title} className={s.question}>
@@ -24,12 +24,12 @@ export default () => {
   return (
     <>
       <PageHeader>
-        <h1 className={s.pageHeader}>{faq.title}</h1>
-        <p>{faq.subtitle}</p>
+        <h1 className={s.pageHeader}>{c.title}</h1>
+        <p>{c.subtitle}</p>
       </PageHeader>
       <ContentWithSidebar reverse className={s.contentWrapper}>
         <div style={{ maxWidth: '750px' }} className={s.content}>
-          {faq.questions.map(Item)}
+          {c.questions.map(Item)}
         </div>
         <FaqNav className={s.faqWrapper} />
       </ContentWithSidebar>

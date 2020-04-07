@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { attributes as faq } from '../../content/faq.md'
+import { attributes as faq } from '../../content/ways-to-help.md'
 import s from './index.module.scss'
 
 export default ({ className, style }) => {

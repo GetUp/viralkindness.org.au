@@ -1,6 +1,6 @@
 ---
-title: FAQs
-subtitle: As more groups offer advice on what has worked well for them, we will update this FAQ page.
+title: Ways to help
+subtitle: There are so many ways you can help out your neighbours. Here are some ideas and information to get you started.
 questions:
   - hash: check-in
     title: How to check in with others?
