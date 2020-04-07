@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import ReactGA from 'react-ga'
 import PageHeader from '../../components/PageHeader'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
+import { attributes, react as Content } from '../../content/contact.md'
 
 export default () => {
   useEffect(
@@ -13,21 +14,11 @@ export default () => {
     <>
       <div>
         <PageHeader>
-          <h1>Contact Us</h1>
+          <h1>{attributes.title}</h1>
         </PageHeader>
         <ContentWithSidebar>
           <div>
-            <p>
-              Having trouble joining a group? Spotted something that we could
-              make better? Let us know!
-            </p>
-
-            <p>
-              <a href='mailto:viralkindness@getup.org.au'>
-                Email us at viralkindness@getup.org.au
-              </a>{' '}
-              and we’ll get back to you shortly.
-            </p>
+            <Content />
           </div>
         </ContentWithSidebar>
       </div>
