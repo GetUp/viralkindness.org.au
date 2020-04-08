@@ -21,7 +21,7 @@ collections:
           - { label: 'title', name: 'title', widget: 'string' }
           - { label: 'subtitle', name: 'subtitle', widget: 'string' }
           - label: 'questions'
-            name: 'questions',
+            name: 'questions'
             widget: 'list'
             fields:
               - { label: 'hash', name: 'hash', widget: 'string' }
@@ -34,7 +34,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
           - label: 'steps'
-            name: 'steps',
+            name: 'steps'
             widget: 'list'
             fields:
               - { label: 'step', name: 'step', widget: 'string' }
@@ -67,5 +67,5 @@ collections:
             name: 'howtopostcard'
             widget: 'object'
             fields:
-            - { label: 'Title', name: 'title', widget: 'string' }
-            - { label: 'Text', name: 'text', widget: 'markdown' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'markdown' }
