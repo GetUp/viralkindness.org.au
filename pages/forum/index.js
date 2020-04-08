@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import ReactGA from 'react-ga'
-// import './index.scss'
+import React from 'react'
 
 const forumName = process.env.REACT_APP_FORUM_NAME
 
@@ -8,10 +6,6 @@ const loadMuutForum = () =>
   window.jQuery && window.muut && window.$('#forum').muut()
 
 export default () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
-
   useEffect(() => {
     if (!window.jQuery) {
       const script = document.createElement('script')

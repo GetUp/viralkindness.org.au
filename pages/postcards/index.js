@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import s from './index.module.scss'
-import ReactGA from 'react-ga'
 import Link from 'next/link'
 import PageHeader from '../../components/PageHeader'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
@@ -11,10 +10,6 @@ import { attributes, react as Content } from '../../content/postcards.md'
 import Create from '../../components/Create'
 
 export default () => {
-  useEffect(
-    () => ReactGA.pageview(window.location.pathname + window.location.search),
-    []
-  )
   const [isCustomizeActive, setCustomizeActive] = useState(true)
 
   return (
