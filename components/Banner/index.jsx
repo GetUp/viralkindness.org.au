@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './index.module.scss'
+import Link from 'next/link'
 import { Add, ChevronDown } from '../Icons'
 
 export default ({ className = '', children, ...props }) => {
@@ -26,8 +27,10 @@ export default ({ className = '', children, ...props }) => {
             physical distancing rules. Before you begin, check the latest rules
             in your state.
             <br />
-            <Link to='/lawsandsafety' className={s.button} onClick={hideBanner}>
-              Check the rules <ChevronDown />
+            <Link href='/lawsandsafety'>
+              <a className={s.button} onClick={hideBanner}>
+                Check the rules <ChevronDown />
+              </a>
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Head from '../components/Head'
 import Tracker from '../components/Tracker'
 import './app.scss'
+import Banner from '../components/Banner'
 
 const mapParams = {
   key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -23,6 +24,7 @@ export default function MyApp ({ Component, pageProps }) {
                 <Nav />
                 <Component {...pageProps} />
                 <Footer />
+                <Banner />
               </>
             )
           }
