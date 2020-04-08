@@ -57,3 +57,15 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Postcards'
+        name: 'postcards'
+        file: 'content/postcards.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'How to postcard'
+            name: 'howtopostcard'
+            widget: 'object'
+            fields:
+            - { label: 'Title', name: 'title', widget: 'string' }
+            - { label: 'Text', name: 'text', widget: 'markdown' }
