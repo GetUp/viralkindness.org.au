@@ -5,10 +5,10 @@ import { usePrevious } from './usePrevious'
 
 ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
 
-const page = (location = window.location) => location.pathname + location.search
-
-const recordPageView = page => {
-  if (window.location.host === 'viralkindness.org.au') {
+const recordPageView = () => {
+  const location = window.location
+  const page = location.pathname + location.search
+  if (location.host === 'viralkindness.org.au') {
     ReactGA.set({ page: page })
     ReactGA.pageview(page)
   }
@@ -19,7 +19,7 @@ export default ({ children }) => {
   const prevLocation = usePrevious(location) || { pathname: '' }
   useEffect(() => {
     if (location.pathname !== prevLocation.pathname) {
-      recordPageView(page(location))
+      recordPageView()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location])
