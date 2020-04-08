@@ -69,3 +69,16 @@ collections:
             fields:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Text', name: 'text', widget: 'markdown' }
+      - label: 'Starting a group'
+        name: 'starting-a-group'
+        file: 'content/starting-a-group.md'
+        fields:
+          - { label: 'title', name: 'title', widget: 'string' }
+          - { label: 'subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'steps'
+            name: 'steps'
+            widget: 'list'
+            fields:
+              - { label: 'Hash', name: 'hash', widget: 'string' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'markdown' }
