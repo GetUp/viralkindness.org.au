@@ -7,9 +7,9 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - label: 'Laws'
-        name: 'laws'
-        file: 'content/laws.md'
+      - label: 'Laws and Safety'
+        name: 'lawsandsafety'
+        file: 'content/lawsandsafety.md'
         fields:
           - { label: 'Header', name: 'header', widget: 'string' }
           - { label: 'Sub header', name: 'subheader', widget: 'string' }

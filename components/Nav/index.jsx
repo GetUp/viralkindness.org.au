@@ -10,40 +10,34 @@ const nav = [
     href: '#',
     items: [
       {
-        title: 'Add a group',
+        title: 'Add group',
         href: '/register'
       },
       {
-        title: 'Find a group',
+        title: 'Join group',
         href: '/#groupSearch'
       },
       {
-        title: 'Create a group',
-        href: '/resources#start-a-group'
+        title: 'Start group',
+        href: '/starting-a-group'
       }
     ]
+  },
+  {
+    title: 'Starting a group',
+    href: '/starting-a-group'
+  },
+  {
+    title: 'Ways to help',
+    href: '/ways-to-help'
   },
   {
     title: 'Postcards',
-    href: '/resources#how-to-use-postcards',
-    items: [
-      {
-        title: 'Make your own postcard',
-        href: '/create'
-      },
-      {
-        title: 'Download a PDF',
-        href: '/resources#how-to-use-postcards'
-      }
-    ]
+    href: '/postcards'
   },
   {
-    title: 'Resources',
-    href: '/resources'
-    // },
-    // {
-    //   title: 'Forum',
-    //   href: '/forum'
+    title: 'Laws and Safety',
+    href: '/lawsandsafety'
   }
 ]
 
