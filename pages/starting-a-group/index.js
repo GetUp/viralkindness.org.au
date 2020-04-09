@@ -1,4 +1,5 @@
 import React from 'react'
+import Markdown from 'markdown-to-jsx'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import FaqNav from '../../components/FaqNav'
 import PageHeader from '../../components/PageHeader'
@@ -10,7 +11,7 @@ const Item = i => (
     <h2 id={i.hash} className={s.header}>
       {i.title}
     </h2>
-    <div dangerouslySetInnerHTML={{ __html: i.text }} className={s.body} />
+    <Markdown>{i.text}</Markdown>
   </div>
 )
 
@@ -19,7 +20,7 @@ export default () => {
     <>
       <PageHeader>
         <h1 className={s.pageHeader}>{c.title}</h1>
-        <p>{c.subtitle}</p>
+        <Markdown>{c.subtitle}</Markdown>
       </PageHeader>
       <ContentWithSidebar reverse className={s.contentWrapper}>
         <div style={{ maxWidth: '750px' }} className={s.content}>

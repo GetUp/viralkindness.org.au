@@ -1,4 +1,5 @@
 import React from 'react'
+import Markdown from 'markdown-to-jsx'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import FaqNav from '../../components/FaqNav'
 import PageHeader from '../../components/PageHeader'
@@ -10,7 +11,7 @@ const Item = i => (
     <h3 id={i.hash} className={s.header}>
       {i.title}
     </h3>
-    <div dangerouslySetInnerHTML={{ __html: i.answer }} className={s.body} />
+    <Markdown>{i.answer}</Markdown>
   </div>
 )
 

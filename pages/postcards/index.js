@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Markdown from 'markdown-to-jsx'
 import s from './index.module.scss'
 import Link from 'next/link'
 import PageHeader from '../../components/PageHeader'
@@ -45,7 +46,7 @@ const HowToPostcard = ({ data, setCustomizeActive }) => (
   <ContentWithSidebar reverse style={{ marginTop: 0 }}>
     <div>
       <h1>{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.text }}></div>
+      <Markdown>{data.text}</Markdown>
       <div className={s.downloadBtnContainers}>
         <div
           className={s.downloadPostcard}

@@ -81,4 +81,4 @@ collections:
             fields:
               - { label: 'Hash', name: 'hash', widget: 'string' }
               - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Answer', name: 'answer', widget: 'markdown' }
+              - { label: 'Text', name: 'text', widget: 'markdown' }
