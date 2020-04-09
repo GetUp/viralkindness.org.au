@@ -5,7 +5,6 @@ import { Add, Create, Find } from '../../components/Icons'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import GroupSearch from '../../components/GroupSearch'
 import illustration from '../../assets/images/vk-illustration.svg'
-import ResourcesLink from '../../components/ResourcesLink'
 import wave from '../../assets/images/wave.svg'
 
 const scrollFocus = el => {
@@ -49,7 +48,7 @@ export default () => {
                 </div>
               </a>
             </Link>
-            <Link href='/resources#start-a-group'>
+            <Link href='/starting-a-group'>
               <a className={s.link}>
                 <Create />
                 <div>

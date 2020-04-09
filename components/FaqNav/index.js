@@ -5,7 +5,7 @@ import { attributes as faq } from '../../content/ways-to-help.md'
 import s from './index.module.scss'
 
 export default ({ className, style }) => {
-  const notFaqPage = () => useRouter().pathname !== '/faq'
+  const notFaqPage = () => useRouter().pathname !== '/ways-to-help'
 
   return (
     <div
@@ -19,7 +19,7 @@ export default ({ className, style }) => {
       )}
       {notFaqPage() && (
         <h4>
-          <Link href='/faq'>
+          <Link href='/ways-to-help'>
             <a style={{ borderBottom: '0px' }}>{faq.title}</a>
           </Link>
         </h4>

@@ -18,7 +18,6 @@ import {
 import InputWithIcon from '../../components/InputWithIcon'
 import PageHeader from '../../components/PageHeader'
 import FaqNav from '../../components/FaqNav'
-import ResourcesLink from '../../components/ResourcesLink'
 import {
   Accordion,
   AccordionTitle,

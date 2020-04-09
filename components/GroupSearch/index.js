@@ -253,11 +253,11 @@ export default ({ className = '' }) => {
           <div>No results</div>
           <p>
             Unfortunately there are no community groups established in your
-            area. There is {/* <Link smooth to='/resources#start-a-group'> */}
-            <Link href='/resources#start-a-group'>
+            area. There is
+            <Link href='/starting-a-group'>
               <a>more information on how to setup a group.</a>
             </Link>{' '}
-            Once you're setup {/* <Link smooth to='/register'> */}
+            Once you're setup
             <Link href='/register'>
               <a>please register the group</a>
             </Link>{' '}
@@ -271,8 +271,8 @@ export default ({ className = '' }) => {
           <p>
             These are community groups established to help people with everyday
             needs, such as shopping or a check-in call. <br />
-            You can find {/* <Link smooth to='/faq#help'> */}
-            <Link href='/faq#help'>
+            You can find
+            <Link href='/ways-to-help'>
               <a>more information on urgent help and medical assistance here</a>
             </Link>
             .
