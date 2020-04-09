@@ -27,7 +27,7 @@ Wherever possible, reach out to people in your community online or on the phone.
 
 **Keep your distance**
 
-Avoid physical contact as much as possible, keep 1.5 metres distance from others, and use tap and pay instead of cash where possible. If you are feeling unwell, have symptoms, or been around someone who may have coronavirus, do notNOT provide support or care to others. 
+Avoid physical contact as much as possible, keep 1.5 metres distance from others, and use tap and pay instead of cash where possible. If you are feeling unwell, have symptoms, or been around someone who may have coronavirus, do not provide support or care to others. 
 
 **Wash your hands**
 
