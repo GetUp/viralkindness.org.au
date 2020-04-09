@@ -1,5 +1,5 @@
 import React from 'react'
-import Markdown from 'markdown-to-jsx'
+import Markdown from '../../components/Markdown'
 import ContentWithSidebar from '../../components/ContentWithSidebar'
 import FaqNav from '../../components/FaqNav'
 import PageHeader from '../../components/PageHeader'

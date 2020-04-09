@@ -27,7 +27,7 @@ export default ({ className, style }) => {
       <ul className={!notFaqPage() ? s.sticky : ''}>
         {faq.questions.map(i => (
           <li key={i.title}>
-            <Link href={`/faq#${i.hash}`}>
+            <Link href={`/ways-to-help#${i.hash}`}>
               <a>
                 <span>{i.title}</span>
               </a>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Markdown from 'markdown-to-jsx'
+import Markdown from '../../components/Markdown'
 import s from './index.module.scss'
 import Link from 'next/link'
 import PageHeader from '../../components/PageHeader'
