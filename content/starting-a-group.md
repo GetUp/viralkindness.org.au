@@ -6,7 +6,8 @@ subtitle: >-
   friendly online space for neighbours to request and offer help. You don’t need
   any special experience or skills to start a group — just some spare time and
   passion. Below are some tips to help you start your group. If you’d like any
-  extra advice, you’re welcome to email viralkindness@getup.org.au.
+  extra advice, you’re welcome to email <a
+  href="mailto:viralkindness@getup.org.au">viralkindness@getup.org.au.</a>
 steps:
   - hash: select-platform
     text: >-
