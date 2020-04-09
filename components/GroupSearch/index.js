@@ -52,7 +52,7 @@ const GroupIcon = ({ url }) => {
   return null
 }
 
-const groupClass = (url) => {
+const groupClass = url => {
   if (/facebook\.com|fb\.com/i.test(url)) return s.fb
   if (/whatsapp\.com/i.test(url)) return s.wa
   if (/au\.nextdoor\.com/i.test(url)) return s.nd
@@ -187,7 +187,7 @@ export default ({ className = '' }) => {
 
   return (
     <div className={`${s.mainContent} ${className}`}>
-      <h2>Find a group</h2>
+      <h2>Join group</h2>
       <p className={s.mainSubtext}>
         Looking for help? Or keen to lend a hand? Enter your suburb below to
         find a community care group near you.

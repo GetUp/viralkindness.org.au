@@ -321,14 +321,21 @@ export default () => {
         <div className={s.sidebarContainer}>
           <Link href='/#groupSearch'>
             <a className={s.sidebarLink}>
-              <div className={s.sidebarLinkHeader}>Find a group</div>
+              <div className={s.sidebarLinkHeader}>Find group</div>
               <div className={s.sidebarLinkSubtitle}>
                 Find a community care group near you.
               </div>
             </a>
           </Link>
-          <ResourcesLink s={s} />
-          <FaqNav />
+          <Link href='/postcards'>
+            <a className={s.sidebarLink}>
+              <div className={s.sidebarLinkHeader}>Postcards</div>
+              <div className={s.sidebarLinkSubtitle}>
+                Sending your neighbours a postcard connects with people most at
+                risk. Customise your postcard or download one!
+              </div>
+            </a>
+          </Link>
         </div>
       </ContentWithSidebar>
     </div>

@@ -33,7 +33,7 @@ export default () => {
                 <Add />
                 <div>
                   <div className={s.linkText}>
-                    <span>Add a group</span>
+                    <span>Add group</span>
                   </div>
                 </div>
               </a>
@@ -44,7 +44,7 @@ export default () => {
                 <Find />
                 <div>
                   <div className={s.linkText}>
-                    <span>Find a group</span>
+                    <span>Join group</span>
                   </div>
                 </div>
               </a>
@@ -54,7 +54,7 @@ export default () => {
                 <Create />
                 <div>
                   <div className={s.linkText}>
-                    <span>Create a group</span>
+                    <span>Start group</span>
                   </div>
                 </div>
               </a>
@@ -75,25 +75,25 @@ export default () => {
         <ContentWithSidebar>
           <GroupSearch className={s.groupSearch} />
           <div className={s.sidebarContainer}>
-            <ResourcesLink s={s} />
-            <Link href='/forum'>
+            <Link href='/postcards'>
               <a className={s.sidebarLink}>
                 <h4 className={s.sidebarLinkHeader}>
-                  <span>Forum</span>
+                  <span>Postcards</span>
                 </h4>
                 <div className={s.sidebarLinkSubtitle}>
-                  Connect with other groups to share resources & tactics.
+                  Sending your neighbours a postcard connects with people most
+                  at risk. Customise your postcard or download one!
                 </div>
               </a>
             </Link>
-            <Link href='/faq'>
+            <Link href='/ways-to-help'>
               <a className={s.sidebarLink}>
                 <h4 className={s.sidebarLinkHeader}>
-                  <span>FAQs</span>
+                  <span>Ways to Help</span>
                 </h4>
                 <div className={s.sidebarLinkSubtitle}>
-                  We will continue to update this page as more groups offer
-                  advice on what has worked well for them.
+                  This page will be updated regularly with ideas and advice for
+                  the many ways we can help our neighbours.
                 </div>
               </a>
             </Link>
