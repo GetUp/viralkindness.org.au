@@ -116,7 +116,7 @@ export default () => {
         <div className={s.headerContainer}>
           <h1 className={s.pageHeader}>{content.title}</h1>
           <p className={s.subtitle}>
-            <strong>{content.subtitle}</strong>
+            <strong dangerouslySetInnerHTML={{ __html: content.subtitle }} />
           </p>
           <ol className={s.list}>
             {content.steps.map((s, i) => (
