@@ -1,54 +1,265 @@
 ---
 title: Ways to help
-subtitle: There are so many ways you can help out your neighbours. Here are some ideas and information to get you started.
+subtitle: >-
+  This page will be updated regularly with ideas and advice for the many ways we
+  can help our neighbours. If you’ve helped your neighbours in a way not listed
+  here, please let us know at viralkindness@getup.org.au so we can add it to
+  this page. 
 questions:
-  - hash: check-in
-    title: How to check in with others?
-    answer: >-
-      <p>There are lots of ways to check in with those we know while maintaining safe social distancing — from a quick call, to a WhatsApp message.</p>
-      <p>But for people who are more isolated, or who we don’t know as well, we need to think outside the box.</p>
-      <p>Across the UK and Australia, people are putting notes, letters and postcards in their neighbours’ letterboxes to offer assistance with everyday things such as picking up groceries, getting medication or even walking the dog.</p>
-      <p>By helping out, we can support people most at risk while they self-isolate or choose to keep a safe social distance — older people, those with underlying health conditions and people whose immune system is compromised.</p>
-      <p><a href="/resources#postcard">A downloadable postcard, and more information about how to use them in your local area, is available here.</a></p>
-  - hash: food-and-supplies
-    title: How to deliver food and supplies?
-    answer: >-
-      <p>If you are helping others in the community by delivering supplies like groceries or medication — here’s how to do it safely.</p>
-      <p>To deliver food and supplies:</p>
-      <ul>
-        <li>Leave all deliveries in an agreed location, ie. at the front door, in the driveway, under an awning out of the weather</li>
-        <li>Maintain a safe distance <em>at all times</em> (minimum 2 metres)</li>
-        <li>No physical contact</li>
-        <li>Practice good hygiene, including wash your hands before and after dropping off supplies</li>
-      </ul>
-  - hash: payments
-    title: How to pay for things like groceries?
-    answer: >-
-      <p>You will have to agree in advance how you will pay for shopping, medication or other necessities.  Make sure whatever you agree on, you get a receipt when you do the shopping!</p>
-      <p>Shopping for people will work best when those people know each other, live in a similar community e.g a school, or live near each other.</p>
-      <p>Payment apps such as <a href="https://www.beemit.com.au/" target="_blank" rel="noopener noreferrer">Beem</a>, or methods such as PayID are great for people who already use them, or who are comfortable using phones.  Once you’ve set it up, payment will be easy. Otherwise, use regular banking methods.</p>
-      <p><em>*Note: Some stores are not using cash at the moment to help minimise the spread. If in doubt, call ahead and ask or use electronic payment methods.</em></p>
-  - hash: talk-to-children
+  - answer: >-
+      Across Australia (and even the UK!), people are putting postcards in their
+      neighbours’ letterboxes to offer assistance with everyday tasks like
+      picking up groceries and medication, and even walking the dog. Reaching
+      out to your neighbours via postcard is a great first step to letting them
+      know about your local group (if you’ve started one) and introducing
+      yourself and the help you can provide. But you don’t have to make the
+      postcards yourself! [Click here to download a beautiful postcard template
+      and learn more about using postcards safely and effectively.](/postcards)
+    hash: reach-out
+    title: Reach out to your neighbours with a postcard
+  - answer: >-
+      Physical distancing can be a very isolating experience – especially for
+      those without strong social support networks or access to technology. Once
+      you’ve introduced yourself, setting up a regular time for a phone or video
+      call can be a simple but powerful way of looking after your neighbours and
+      getting to know them better, too.
+    hash: check-in
+    title: Check in with vulnerable and lonely neighbours
+  - answer: >-
+      Many people don’t have much time to get to know their neighbours in our
+      busy lives – but right now is a great opportunity to connect. You can
+      start by organising an online meet-up over Skype, Zoom or other video call
+      programs. Why not run a skills-share, or start a book club, trade
+      gardening tips, or just catch up for a drink or cup of tea online!
+    hash: organise
+    title: Organise an online meet-up or skills share
+  - answer: >-
+      Vulnerable people, or those in mandatory self-isolation, may not be able
+      to go grocery shopping or pick up other items for their household.
+      Delivering food and other supplies to vulnerable people is allowed under
+      the new laws, but just be sure to do it safely.
+
+
+      To drop off goods:
+
+
+      * Leave all deliveries in an agreed location, like at the front door, in
+      the driveway, or under an awning out of the weather
+
+      * Maintain a safe distance at all times (minimum 1.5 metres)
+
+      * Practise good hygiene, including washing your hands before and after
+      buying and dropping off supplies 
+
+      * Remember the virus can survive for up to 24 hours on cardboard and even
+      longer on surfaces like plastic! 
+
+
+      **Can I fill a neighbour’s prescription?**
+
+
+      Sure! Just make sure you take along their: 
+
+
+      1. Medicare card details
+
+      2. Concession and/or Department of Veteran’s Affairs health card details
+      (if they have one)
+
+      3. PBS Safety Net entitlement or concession card (if they have one)
+
+
+      You may also have to sign a document at the pharmacy to say you are
+      collecting the medicine on their behalf. 
+
+
+      **How should I pay for it?**
+
+
+      You will have to agree in advance how you will pay for shopping,
+      medication or other necessities. Make sure whatever you agree on, you get
+      a receipt when you do the shopping!
+
+
+      Shopping for people will work best when those people know each other, live
+      in a similar community e.g a school, or live near each other.
+
+
+      Payment apps such as [Beem It](https://www.beemit.com.au/), or methods
+      such as PayID are great for people who already use them, or who are
+      comfortable using phones. Once you’ve set it up, payment will be easy.
+      Otherwise, use regular banking methods.
+
+
+      \*Note: Some stores are not using cash at the moment to help minimise the
+      spread. If in doubt, call ahead and ask or use electronic payment methods.
+
+
+      **Is it safe to drop off home cooked meals?**
+
+
+      A home cooked meal is a wonderful thing and sharing freshly made food with
+      your neighbours is a great way to limit waste and help out someone in
+      need. But before you start, make sure you’re following the right steps to
+      make and deliver food safely.
+
+
+      Here are some things to keep in mind:
+
+
+      1. Make sure you’ve discussed any food allergies or intolerances with your
+      neighbour and let them know what you’ll be cooking.
+
+      2. Practise good food safety, like preparing raw meat and seafood first
+      and cleaning down your utensils and work surfaces afterwards, avoiding
+      cross-contamination of potential allergens like nuts, and keeping food
+      refrigerated wherever possible.
+
+      3. Wash your hands before cooking, and at regular intervals while
+      preparing food.
+
+      4. Ensure a contactless delivery by leaving food at your neighbours door
+      when they are home and are able to collect the food quickly and safely.
+
+      5. Wash any serving dishes, containers and cutlery after they have been
+      returned to you.
+    hash: deliveries
+    title: 'Deliver food, medicine and other supplies'
+  - answer: >-
+      If your neighbour is self-isolating or doesn’t feel comfortable going
+      outside, they might appreciate your help walking their dog. This is a
+      great way to help out and also stay active.
+    hash: walk-dog
+    title: Walk a neighbour’s dog
+  - answer: >-
+      For a lot of people, using the internet and other technologies can be
+      confusing – but these technologies are more important than ever. When
+      checking in with neighbours, particularly the elderly, it’s a great idea
+      to offer help with things like accessing the internet, ordering goods and
+      services and or downloading apps. 
+
+
+      While it may be a little tricky at times, you can provide a lot of help
+      over the phone or on a video call. A little patience can make a world of
+      good – ensuring people have the independence to order groceries or the
+      ability to see their loved ones on the screen.
+    hash: provide-assistance
+    title: Provide internet and technical assistance
+  - answer: >-
+      Navigating rental law during coronavirus can be confusing for renters and
+      landlords alike. Many tenants, possibly even your neighbours, may find
+      themselves struggling to pay rent as they lose shifts or even their jobs. 
+
+
+      The Prime Minister has announced a temporary ban on evictions, but this
+      has not yet come into force in all states and territories and the details
+      are complicated. You can find out more information about tenancy laws
+      during coronavirus here as well as find local tenancy services in your
+      state and territory for up to date advice. 
+
+
+      Most rental details have been left to individual landlords and tenants to
+      negotiate depending on their circumstances. You can help out your
+      neighbours by referring them to local tenancy services, or giving them a
+      hand written letter for their landlord or agent. 
+
+
+      If you’re worried about your legal rights or the rights of your neighbour,
+      it’s important to contact a community legal centre or tenancy service for
+      advice.
+    hash: rental
+    title: 'Support your neighbours to navigate rental advice [mortgage repayments]'
+  - answer: >-
+      During this time, people may not have access to the help they normally
+      receive around the house. Small things like a blown light bulb or an
+      overgrown lawn are simply fixed for some, but may be impossible for
+      others. 
+
+
+      If you plan to help a neighbour with repairs in their house, it’s very
+      important to maintain careful hygiene, clean doorknobs and light switches
+      after use, and touch as little in the house as possible. It is especially
+      important to maintain a 1.5m distance between yourself and your neighbours
+      while indoors – preferably remaining in different rooms if you are
+      comfortable to do so. 
+
+
+      For yard work like watering plants or lawn mowing, make sure to wash your
+      hands before touching any tools and disinfect any handles or surfaces you
+      have touched. 
+
+
+      Importantly, do not offer to help out on a neighbour’s property if you
+      feel at all unwell.
+    hash: household-tasks
+    title: Help with household tasks
+  - answer: >-
+      Helping out a neighbour can be as simple as taking out the trash. Why not
+      offer to take the neighbours bins out to the curb each week? Just be sure
+      to wash your hands thoroughly before and after, and don’t forget to return
+      them again!
+    hash: take-the-bins-out
+    title: Take the bins out
+  - answer: >-
+      We’re using the postal system more than ever, and your neighbours may have
+      parcels they are unable to collect from the post office. This is a great
+      way of helping out, but be sure to take
+      [this](https://auspost.com.au/content/dam/auspost_corp/media/documents/Collection-Authorisation-form.pdf)
+      completed form with you to ensure a smooth pick up. As you’ll need your
+      neighbour’s signature, remember that paper can carry the virus for up to
+      24 hours and wash your hands before and after handling it. 
+
+
+      If you’re making a trip to the post office, why not offer to take along
+      any mail your neighbour might want to send out?
+    hash: post-collect-mail
+    title: Post or collect mail
+  - answer: >-
+      On that note, now’s a great time to keep in touch with a friend (old or
+      new!) by writing them a letter. A handwritten letter can really make
+      someone’s day – and can be a particular source of comfort for older people
+      who may be isolated from their family at home or in a care facility.
+      Elderly people are less likely to have access to, or familiarity with,
+      digital communication and a letter can go a long way.
+    hash: become-penpal
+    title: Become a penpal
+  - answer: >-
+      With a lot less going out and a lot more staying in, we’re all going to
+      need a few good books. Setting up a street library can be a great way to
+      trade books while also maintaining a safe distance! There’s a great guide
+      on how to make your own [here](https://streetlibrary.org.au/build/). 
+
+
+      To keep each other safe, you should include a sign in your library
+      reminding people that the virus can survive on paper and cardboard for up
+      to 24 hours. Books should be handled carefully, and left in a safe place
+      for a day or so before you get stuck into reading them. Be sure to wash
+      your hands!
+    hash: street-library
+    title: 'Set up a street library [or pantry]'
+  - answer: >-
+      During these difficult times, people around the country (and the world!)
+      have come up with creative ways of brightening up their streets and
+      suburbs. Like, the [teddy bear
+      hunt](https://www.abc.net.au/news/2020-03-25/coronavirus-bear-hunts-around-the-world-including-melbourne/12085168)
+      or the [Big New Zealand Easter Egg
+      Hunt](https://www.beehive.govt.nz/sites/default/files/2020-04/nzegghunt-A4b.pdf).
+      With many kids home from school, this can also be a great way of
+      encouraging creativity and providing kids with something fun to look out
+      for while out for a walk. We’ve come up with a couple of ideas of our own.
+    hash: brighten-up-your-street
+    title: Brighten up your street
+  - answer: >-
+      Here are some helpful resources on how to have a conversation with kids
+      about coronavirus:
+
+
+      * [How to talk to your child about coronavirus
+      disease](https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19)
+
+      * [Stop a worry becoming catastrophic: how to talk to your kids about the
+      coronavirus](https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus)
+    hash: conversations-with-kids
     title: How to have conversations with kids?
-    answer: >-
-      <p>Here are some helpful resources on how to have a conversation with kids about coronavirus:</p>
-      <ul>
-        <li><a href="https://www.unicef.org/coronavirus/how-talk-your-child-about-coronavirus-covid-19" target="_blank" rel="noopener noreferrer">How to talk to your child about coronavirus disease</a></li>
-        <li><a href="https://www.theguardian.com/commentisfree/2020/mar/02/stop-a-worry-becoming-catastrophic-how-to-talk-to-your-kids-about-the-coronavirus" target="_blank" rel="noopener noreferrer">Stop a worry becoming catastrophic: how to talk to your kids about the coronavirus</a></li>
-      </ul>
-  - hash: already-groups
-    title: There’s already a few groups in my local area
-    answer: >-
-      <p>The more the merrier! Maybe your group can look after just a few streets, or you can team up with another group to help even more people. There are lots of ways to work together.</p>
-      <p>If you think two groups may overlap you can reach out to the other group organisers via the link provided in the hub.</p>
-  - hash: group-issue
-    title: Why is my group listed / not listed on the site?
-    answer: >-
-      <p>We tried to include as many of the existing community care groups as possible, but we may have missed some! <a href="/register">If you’d like to add your group, please do so here!</a></p>
-      <p>If your group is listed on the hub and you’d like it removed, please contact <a href="mailto:viralkindness@getup.org.au" target="_blank" rel="noopener noreferrer">viralkindness@getup.org.au</a> and we will remove it immediately.</p>
-  - hash: help
-    title: I need more help / medical help / urgent help
-    answer: >-
-      <p>In an emergency, call 000 immediately.</p>
-      <p><a href="http://www.getup.org.au/covid19" target="_blank">Access up-to-date information and other services here.</a></p>
 ---
+
