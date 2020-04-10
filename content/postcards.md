@@ -25,10 +25,10 @@ howtopostcard:
     neighbourhood.
 
     5. Use one hand for handling postcards, and use the other hand for opening
-    letter boxes and touching other surfaces. Use hand sanitiser frequently. 
+    letter boxes and touching other surfaces. Use hand sanitiser frequently.
 
     6. When you finish, use hand sanitiser and wash your hands as soon as
-    possible. 
+    possible.
 
 
 
@@ -42,4 +42,3 @@ howtopostcard:
     anything.
   title: How to use the postcards
 ---
-

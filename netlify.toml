@@ -1,0 +1,12 @@
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
+
+[[redirects]]
+  from = "/faq"
+  to = "/ways-to-help"
+  status = 301
+
+[[redirects]]
+  from = "/create"
+  to = "/postcards"
+  status = 301

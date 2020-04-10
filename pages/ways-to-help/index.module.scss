@@ -1,0 +1,64 @@
+@import '../../assets/styles/variables';
+
+.pageHeader {
+  font-size: 4rem !important;
+  @media screen and (max-width: 900px) {
+    font-size: 2rem !important;
+  }
+}
+
+.question {
+  margin-bottom: 2.5rem;
+  .header {
+    margin-top: 0;
+  }
+
+  span {
+    line-height: 1.5;
+    font-size: 1.1em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  div,
+  span,
+  li,
+  a {
+    color: $textColor;
+  }
+
+  .body p {
+    margin-bottom: 0.8em;
+  }
+
+  ul {
+    line-height: 1.5;
+    li {
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
+.contentWrapper {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin-top: 32px;
+  }
+
+  .contentWrapper {
+    margin-top: 0px;
+  }
+
+  .faqWrapper {
+    padding-bottom: 20px;
+  }
+}

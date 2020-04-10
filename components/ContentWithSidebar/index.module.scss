@@ -1,0 +1,71 @@
+@import '../../assets/styles/variables';
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 8px;
+
+  p {
+    color: $textColor;
+    font-size: 1.1rem;
+  }
+
+  ol,
+  ul {
+    line-height: 1.5;
+    color: $textColor;
+    font-size: 1.1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+    color: $textColor;
+  }
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+    border-bottom: 1px solid $underline;
+  }
+
+  h2 {
+    font-size: 2rem;
+    // color: #2098f5;
+    line-height: 1.2;
+    margin-bottom: 1em;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 8px;
+    grid-template-columns: 5fr 2fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  &.reverse {
+    grid-template-columns: 3fr 1fr;
+
+    @media screen and (max-width: 900px) {
+      padding: 8px;
+      grid-template-columns: 5fr 2fr;
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+
+      & > div:nth-child(1) {
+        grid-row-start: 2;
+      }
+    }
+  }
+}

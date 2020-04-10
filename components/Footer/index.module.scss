@@ -1,0 +1,44 @@
+@import '../../assets/styles/variables';
+
+.footer {
+  background: rgba($textColor, 0.06);
+  padding: 32px 8px;
+  padding-top: 64px;
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .content p {
+    color: $textColorDark;
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: $textColorDark;
+  }
+
+  .linkContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 16px;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: rgba($textColorDark, 0.7);
+      font-weight: 400;
+      font-size: 0.9rem;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

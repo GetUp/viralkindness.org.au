@@ -18,8 +18,7 @@ The hub will continue to improve and grow over time. If you have feedback or sug
 ## #ViralKindness Powered by GetUp
 
 GetUp is a community of more than one million members across Australia striving for a more fair, flourishing and just Australia.
-        
+
 GetUp has 15 years experience in mobilising everyday people to have an extraordinary impact on politics and society.
-        
+
 The GetUp team is proud to support the tens of thousands of people across the country supporting each other at our greatest time of need.
-        

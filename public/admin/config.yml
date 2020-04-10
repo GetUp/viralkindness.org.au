@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: production
+media_folder: public/img
+public_folder: img
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Laws and Safety'
+        name: 'lawsandsafety'
+        file: 'content/lawsandsafety.md'
+        fields:
+          - { label: 'Header', name: 'header', widget: 'string' }
+          - { label: 'Sub header', name: 'subheader', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Ways to help'
+        name: 'ways-to-help'
+        file: 'content/ways-to-help.md'
+        fields:
+          - { label: 'title', name: 'title', widget: 'string' }
+          - { label: 'subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'questions'
+            name: 'questions'
+            widget: 'list'
+            fields:
+              - { label: 'hash', name: 'hash', widget: 'string' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'markdown' }
+      - label: 'Add a group'
+        name: 'add-a-group'
+        file: 'content/register.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'steps'
+            name: 'steps'
+            widget: 'list'
+            fields:
+              - { label: 'step', name: 'step', widget: 'string' }
+          - { label: 'Disclaimer', name: 'disclaimer', widget: 'markdown' }
+      - label: 'About'
+        name: 'about'
+        file: 'content/about.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Contact'
+        name: 'contact'
+        file: 'content/contact.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Thanks'
+        name: 'thanks'
+        file: 'content/thanks.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Postcards'
+        name: 'postcards'
+        file: 'content/postcards.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'How to postcard'
+            name: 'howtopostcard'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'markdown' }
+      - label: 'Starting a group'
+        name: 'starting-a-group'
+        file: 'content/starting-a-group.md'
+        fields:
+          - { label: 'title', name: 'title', widget: 'string' }
+          - { label: 'subtitle', name: 'subtitle', widget: 'string' }
+          - label: 'steps'
+            name: 'steps'
+            widget: 'list'
+            fields:
+              - { label: 'Hash', name: 'hash', widget: 'string' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'markdown' }

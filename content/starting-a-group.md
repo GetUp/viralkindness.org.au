@@ -164,4 +164,3 @@ steps:
       * Writing pen pal letters
     title: Step 6. Neighbours’ needs are taken care of
 ---
-
