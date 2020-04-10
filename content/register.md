@@ -19,5 +19,5 @@ disclaimer: >-
   <a href="/starting-a-group">More information about starting a group is
   available here.</a> If you need to make any changes, update or remove your
   group from the hub, please email <a
-  href='mailto:viralkindness@getup.org.au.'>viralkindness@getup.org.au</a>
+  href='mailto:viralkindness@getup.org.au'>viralkindness@getup.org.au</a>.
 ---
