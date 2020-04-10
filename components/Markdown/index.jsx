@@ -9,7 +9,7 @@ const NextLink = ({ children, className = '', href, ...props }) => {
   return (
     <>
       {mailto.test(href) ? (
-        <a href={href} target={http.test(href) && '_blank'} {...props}>
+        <a href={href} target={http.test(href) ? '_blank' : '_self'} {...props}>
           {children}
         </a>
       ) : (
