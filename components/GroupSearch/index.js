@@ -254,11 +254,11 @@ export default ({ className = '' }) => {
           <p>
             Unfortunately there are no community groups established in your
             area. There is
-            <Link href='/starting-a-group'>
+            <Link href='/start-a-group'>
               <a>more information on how to setup a group.</a>
             </Link>{' '}
             Once you're setup
-            <Link href='/register'>
+            <Link href='/add-a-group'>
               <a>please register the group</a>
             </Link>{' '}
             so others can find it and help out.

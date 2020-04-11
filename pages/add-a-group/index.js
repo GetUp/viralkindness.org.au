@@ -23,7 +23,7 @@ import {
   AccordionTitle,
   AccordionBody,
 } from '../../components/Accordion'
-import { attributes as content } from '../../content/register.md'
+import { attributes as content } from '../../content/add-a-group.md'
 
 const apiHost = process.env.REACT_APP_API_HOST
 const publicDb = process.env.REACT_APP_PUBLIC_DATABASE

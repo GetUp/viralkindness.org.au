@@ -27,7 +27,7 @@ export default () => {
             ways we can stay together, even when we’re apart!
           </p>
           <div className={s.links}>
-            <Link href='/register'>
+            <Link href='/add-a-group'>
               <a className={s.link}>
                 <Add />
                 <div>
@@ -48,7 +48,7 @@ export default () => {
                 </div>
               </a>
             </Link>
-            <Link href='/starting-a-group'>
+            <Link href='/start-a-group'>
               <a className={s.link}>
                 <Create />
                 <div>

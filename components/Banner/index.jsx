@@ -5,7 +5,7 @@ import { Add, ChevronDown } from '../Icons'
 
 export default ({ className = '', children, ...props }) => {
   const suppressBanner =
-    window.location.pathname === '/lawsandsafety' ||
+    window.location.pathname === '/laws-and-safety' ||
     (localStorage && localStorage.getItem('bannerSeen'))
   const [show, setShow] = React.useState(!suppressBanner)
   const hideBanner = () => {
@@ -27,7 +27,7 @@ export default ({ className = '', children, ...props }) => {
             physical distancing rules. Before you begin, check the latest rules
             in your state.
             <br />
-            <Link href='/lawsandsafety'>
+            <Link href='/laws-and-safety'>
               <a className={s.button} onClick={hideBanner}>
                 Check the rules <ChevronDown />
               </a>

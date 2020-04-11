@@ -11,7 +11,7 @@ const nav = [
     items: [
       {
         title: 'Add group',
-        href: '/register',
+        href: '/add-a-group',
       },
       {
         title: 'Join group',
@@ -19,13 +19,13 @@ const nav = [
       },
       {
         title: 'Start group',
-        href: '/starting-a-group',
+        href: '/start-a-group',
       },
     ],
   },
   {
     title: 'Starting a group',
-    href: '/starting-a-group',
+    href: '/start-a-group',
   },
   {
     title: 'Ways to help',
@@ -37,7 +37,7 @@ const nav = [
   },
   {
     title: 'Laws and Safety',
-    href: '/lawsandsafety',
+    href: '/laws-and-safety',
   },
 ]
 

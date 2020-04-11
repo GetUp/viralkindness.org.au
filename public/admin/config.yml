@@ -8,8 +8,8 @@ collections:
     label: 'Pages'
     files:
       - label: 'Laws and Safety'
-        name: 'lawsandsafety'
-        file: 'content/lawsandsafety.md'
+        name: 'laws-and-safety'
+        file: 'content/laws-and-safety.md'
         fields:
           - { label: 'Header', name: 'header', widget: 'string' }
           - { label: 'Sub header', name: 'subheader', widget: 'string' }
@@ -29,7 +29,7 @@ collections:
               - { label: 'Answer', name: 'answer', widget: 'markdown' }
       - label: 'Add a group'
         name: 'add-a-group'
-        file: 'content/register.md'
+        file: 'content/add-a-group.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
@@ -71,7 +71,7 @@ collections:
               - { label: 'Text', name: 'text', widget: 'markdown' }
       - label: 'Starting a group'
         name: 'starting-a-group'
-        file: 'content/starting-a-group.md'
+        file: 'content/start-a-group.md'
         fields:
           - { label: 'title', name: 'title', widget: 'string' }
           - { label: 'subtitle', name: 'subtitle', widget: 'string' }

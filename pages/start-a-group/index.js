@@ -4,7 +4,7 @@ import ContentWithSidebar from '../../components/ContentWithSidebar'
 import FaqNav from '../../components/FaqNav'
 import PageHeader from '../../components/PageHeader'
 import s from './index.module.scss'
-import { attributes as c } from '../../content/starting-a-group.md'
+import { attributes as c } from '../../content/start-a-group.md'
 
 const Item = (i) => (
   <div key={i.title} className={s.question}>

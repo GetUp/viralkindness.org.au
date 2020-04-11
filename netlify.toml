@@ -10,3 +10,13 @@
   from = "/create"
   to = "/postcards"
   status = 301
+
+[[redirects]]
+  from = "/lawsandsafety"
+  to = "/laws-and-safety"
+  status = 301
+
+[[redirects]]
+  from = "/register"
+  to = "/add-a-group"
+  status = 301

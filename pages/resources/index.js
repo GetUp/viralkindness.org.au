@@ -5,7 +5,7 @@ export default () => {
   const { asPath } = useRouter()
 
   if (/start-a-group|organise|sharing-the-load|rules/.test(asPath)) {
-    Router.replace('/starting-a-group')
+    Router.replace('/start-a-group')
   } else {
     Router.replace('/postcards')
   }
