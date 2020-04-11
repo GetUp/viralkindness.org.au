@@ -12,7 +12,7 @@ subtitle: >-
 howtopostcard:
   text: >-
     1. [Click here to TYPE in your details into the postcard
-    template](https://viralkindness.org.au/postcards) OR [here to print the
+    template](/postcards) OR [here to print the
     postcard template and then HANDWRITE your details.
     ](https://www.getup.org.au/postcards)
 
