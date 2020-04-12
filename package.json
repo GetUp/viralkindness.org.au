@@ -24,7 +24,6 @@
     "react-geosuggest": "^2.12.1",
     "react-google-maps-loader": "^4.2.6",
     "react-scale-text": "^1.2.2",
-    "react-scripts": "3.4.1",
     "sass": "^1.26.3",
     "smoothscroll-polyfill": "^0.4.4"
   },
