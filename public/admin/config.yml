@@ -70,7 +70,7 @@ collections:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Text', name: 'text', widget: 'markdown' }
       - label: 'Starting a group'
-        name: 'starting-a-group'
+        name: 'start-a-group'
         file: 'content/start-a-group.md'
         fields:
           - { label: 'title', name: 'title', widget: 'string' }
