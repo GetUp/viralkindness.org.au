@@ -14,7 +14,7 @@ steps:
   - step: Your neighbours can then find your group by searching their suburb
   - step: >-
       If you need to make any changes, update or remove your group from the hub,
-      email viralkindness@getup.org.au
+      email <a href='mailto:viralkindness@getup.org.au'>viralkindness@getup.org.au</a>
 disclaimer: >-
   <a href="/start-a-group">More information about starting a group is
   available here.</a> If you need to make any changes, update or remove your
