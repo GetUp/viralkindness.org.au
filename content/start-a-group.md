@@ -268,11 +268,13 @@ faqs:
       If your neighbours have smartphones and spare data, then you can start a
       WhatsApp group to connect.
 
+
       * [WhatsApp: (Android) How to create and invite people to a
       group](https://faq.whatsapp.com/en/android/26000123/?category=5245251)
 
       * [WhatsApp: (iPhone) How to create and invite people to a
       group](https://faq.whatsapp.com/en/iphone/26000115/?category=5245251)
+
 
       If some neighbours only have home phones, you could organise in your
       WhatsApp or Facebook group for a few people to call those people regularly
