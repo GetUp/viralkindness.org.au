@@ -77,7 +77,7 @@ const Tabs = ({ isCustomizeActive, setCustomizeActive }) => (
       className={`${s.tab} ${isCustomizeActive && s.active}`}
       onClick={() => setCustomizeActive(true)}
     >
-      Customize your postcard
+      Customise your postcard
     </div>
     <div
       className={`${s.tab} ${!isCustomizeActive && s.active}`}

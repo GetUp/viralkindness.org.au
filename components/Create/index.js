@@ -73,8 +73,10 @@ export default () => {
       >
         <div className={s.form}>
           <p className={s.formDisclaimer}>
-            No information entered in this form will be collected or retained by
-            GetUp or the #ViralKindness hub.
+            Enter your details in the form below and it will auto-fill your
+            postcard. Then hit the download button and your postcard will be
+            available to print. Please note that no information entered in this
+            form will be collected or retained by #ViralKindness or GetUp.
           </p>
           <label htmlFor='name'>My name is:</label>
           <input
@@ -142,7 +144,9 @@ export default () => {
             name='other'
             onChange={handleChange}
           />
-          <label htmlFor='link'>Link</label>
+          <label htmlFor='link'>
+            Link to your online community care group:
+          </label>
           <input
             type='text'
             id='link'
