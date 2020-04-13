@@ -25,7 +25,8 @@
     "react-google-maps-loader": "^4.2.6",
     "react-scale-text": "^1.2.2",
     "sass": "^1.26.3",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "uuid": "^7.0.3"
   },
   "prettier": {
     "semi": false,
