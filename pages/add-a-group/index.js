@@ -294,7 +294,7 @@ export default () => {
                       rows={4}
                       maxLength={blurbMaxLength}
                       name='groupBlurb'
-                      placeholder='Any special instructions'
+                      placeholder='Short introduction or instructions you’d like your neighbours to read'
                       onKeyUp={(e) => setBlurbLength(e.target.value.length)}
                     />
                   </InputWithIcon>

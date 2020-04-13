@@ -1,10 +1,11 @@
 ---
 title: Add a group
 subtitle: >-
-  Starting a community care group gives neighbours a friendly online space to
+  <p>Starting a community care group gives neighbours a friendly online space to
   connect, request and offer help. You don’t need any special skills or
   experience to start a group, in fact <a href="/start-a-group">you can find
-  all the info you need to get started here</a>.
+  all the info you need to get started here</a>.</p>
+  <p><strong>To add your group:</strong></p>
 steps:
   - step: >-
       <a href="/start-a-group">Read the “Starting a group” page for
