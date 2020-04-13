@@ -4,7 +4,7 @@ subtitle: >-
   This page will be updated regularly with ideas and advice for the many ways we
   can help our neighbours. If you’ve helped your neighbours in a way not listed
   here, please let us know at viralkindness@getup.org.au so we can add it to
-  this page. 
+  this page.
 questions:
   - answer: >-
       Across Australia (and even the UK!), people are putting postcards in their
@@ -49,16 +49,16 @@ questions:
       * Maintain a safe distance at all times (minimum 1.5 metres)
 
       * Practise good hygiene, including washing your hands before and after
-      buying and dropping off supplies 
+      buying and dropping off supplies
 
       * Remember the virus can survive for up to 24 hours on cardboard and even
-      longer on surfaces like plastic! 
+      longer on surfaces like plastic!
 
 
       **Can I fill a neighbour’s prescription?**
 
 
-      Sure! Just make sure you take along their: 
+      Sure! Just make sure you take along their:
 
 
       1. Medicare card details
@@ -70,7 +70,7 @@ questions:
 
 
       You may also have to sign a document at the pharmacy to say you are
-      collecting the medicine on their behalf. 
+      collecting the medicine on their behalf.
 
 
       **How should I pay for it?**
@@ -136,7 +136,7 @@ questions:
       confusing – but these technologies are more important than ever. When
       checking in with neighbours, particularly the elderly, it’s a great idea
       to offer help with things like accessing the internet, ordering goods and
-      services and or downloading apps. 
+      services and or downloading apps.
 
 
       While it may be a little tricky at times, you can provide a lot of help
@@ -148,20 +148,20 @@ questions:
   - answer: >-
       Navigating rental law during coronavirus can be confusing for renters and
       landlords alike. Many tenants, possibly even your neighbours, may find
-      themselves struggling to pay rent as they lose shifts or even their jobs. 
+      themselves struggling to pay rent as they lose shifts or even their jobs.
 
 
       The Prime Minister has announced a temporary ban on evictions, but this
       has not yet come into force in all states and territories and the details
       are complicated. You can find out more information about tenancy laws
       during coronavirus here as well as find local tenancy services in your
-      state and territory for up to date advice. 
+      state and territory for up to date advice.
 
 
       Most rental details have been left to individual landlords and tenants to
       negotiate depending on their circumstances. You can help out your
       neighbours by referring them to local tenancy services, or giving them a
-      hand written letter for their landlord or agent. 
+      hand written letter for their landlord or agent.
 
 
       If you’re worried about your legal rights or the rights of your neighbour,
@@ -173,7 +173,7 @@ questions:
       During this time, people may not have access to the help they normally
       receive around the house. Small things like a blown light bulb or an
       overgrown lawn are simply fixed for some, but may be impossible for
-      others. 
+      others.
 
 
       If you plan to help a neighbour with repairs in their house, it’s very
@@ -181,12 +181,12 @@ questions:
       after use, and touch as little in the house as possible. It is especially
       important to maintain a 1.5m distance between yourself and your neighbours
       while indoors – preferably remaining in different rooms if you are
-      comfortable to do so. 
+      comfortable to do so.
 
 
       For yard work like watering plants or lawn mowing, make sure to wash your
       hands before touching any tools and disinfect any handles or surfaces you
-      have touched. 
+      have touched.
 
 
       Importantly, do not offer to help out on a neighbour’s property if you
@@ -207,7 +207,7 @@ questions:
       [this](https://auspost.com.au/content/dam/auspost_corp/media/documents/Collection-Authorisation-form.pdf)
       completed form with you to ensure a smooth pick up. As you’ll need your
       neighbour’s signature, remember that paper can carry the virus for up to
-      24 hours and wash your hands before and after handling it. 
+      24 hours and wash your hands before and after handling it.
 
 
       If you’re making a trip to the post office, why not offer to take along
@@ -227,7 +227,7 @@ questions:
       With a lot less going out and a lot more staying in, we’re all going to
       need a few good books. Setting up a street library can be a great way to
       trade books while also maintaining a safe distance! There’s a great guide
-      on how to make your own [here](https://streetlibrary.org.au/build/). 
+      on how to make your own [here](https://streetlibrary.org.au/build/).
 
 
       To keep each other safe, you should include a sign in your library
@@ -262,4 +262,3 @@ questions:
     hash: conversations-with-kids
     title: How to have conversations with kids?
 ---
-

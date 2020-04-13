@@ -7,7 +7,7 @@ subtitle: >-
   any special experience or skills to start a group — just some spare time and
   passion. Below are some tips to help you start your group. If you’d like any
   extra advice, you’re welcome to email <a
-  href="mailto:viralkindness@getup.org.au">viralkindness@getup.org.au.</a>
+  href="mailto:viralkindness@getup.org.au">viralkindness@getup.org.au</a>.
 steps:
   - hash: select-platform
     text: >-
@@ -18,7 +18,7 @@ steps:
 
 
       Once you’ve created your group, [click here to add your group to the
-      ViralKindness website](/register) so that other people can search for and
+      ViralKindness website](/add-a-group) so that other people can search for and
       join your group.
 
 
@@ -80,7 +80,7 @@ steps:
       of multiple groups where they exist.
 
       * **DIRECTORY:** [Click here to add your group to the
-      ViralKindness](/register) hub so that other people can search for and join
+      ViralKindness](/add-a-group) hub so that other people can search for and join
       your group.
     title: Step 3. Invite your neighbours to join
   - hash: ask-others
@@ -164,4 +164,3 @@ steps:
       * Writing pen pal letters
     title: Step 6. Neighbours’ needs are taken care of
 ---
-

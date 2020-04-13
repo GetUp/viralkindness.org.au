@@ -12,7 +12,7 @@ subtitle: >-
 howtopostcard:
   text: >-
     1. [Click here to TYPE in your details into the postcard
-    template](https://viralkindness.org.au/postcards) OR [here to print the
+    template](/postcards) OR [here to print the
     postcard template and then HANDWRITE your details.
     ](https://www.getup.org.au/postcards)
 
@@ -25,10 +25,10 @@ howtopostcard:
     neighbourhood.
 
     5. Use one hand for handling postcards, and use the other hand for opening
-    letter boxes and touching other surfaces. Use hand sanitiser frequently. 
+    letter boxes and touching other surfaces. Use hand sanitiser frequently.
 
     6. When you finish, use hand sanitiser and wash your hands as soon as
-    possible. 
+    possible.
 
 
 
@@ -42,4 +42,3 @@ howtopostcard:
     anything.
   title: How to use the postcards
 ---
-
