@@ -3,7 +3,7 @@ title: Ways to help
 subtitle: >-
   This page will be updated regularly with ideas and advice for the many ways we
   can help our neighbours. If you’ve helped your neighbours in a way not listed
-  here, please let us know at viralkindness@getup.org.au so we can add it to
+  here, please let us know at <a href='mailto:viralkindness@getup.org.au'>viralkindness@getup.org.au</a> so we can add it to
   this page.
 questions:
   - answer: >-
@@ -19,18 +19,14 @@ questions:
     title: Reach out to your neighbours with a postcard
   - answer: >-
       Physical distancing can be a very isolating experience – especially for
-      those without strong social support networks or access to technology. Once
-      you’ve introduced yourself, setting up a regular time for a phone or video
-      call can be a simple but powerful way of looking after your neighbours and
-      getting to know them better, too.
+      those without strong social support networks or access to technology. A first step to identifying people in need in your area is to [print and letterbox postcards using this handy tool](/postcards).  Once
+      you’ve connected, set up a regular time for a phone or video
+      call. A check-in can be a simple but powerful way of looking after your neighbours and
+      getting to know them better. You could also try teaching someone over the phone how to sign up to your online group if you have one.
     hash: check-in
     title: Check in with vulnerable and lonely neighbours
   - answer: >-
-      Many people don’t have much time to get to know their neighbours in our
-      busy lives – but right now is a great opportunity to connect. You can
-      start by organising an online meet-up over Skype, Zoom or other video call
-      programs. Why not run a skills-share, or start a book club, trade
-      gardening tips, or just catch up for a drink or cup of tea online!
+      Usually, most people don’t have much time to get to know their neighbours. But right now is a great opportunity to connect. You can start by inviting your group to join an online meet-up over Skype, Zoom or other video call programs. You could run a skill-share, training, or start a book club, or trade gardening tips. Or just catch up for a drink or cup of tea online!
     hash: organise
     title: Organise an online meet-up or skills share
   - answer: >-
@@ -52,7 +48,7 @@ questions:
       buying and dropping off supplies
 
       * Remember the virus can survive for up to 24 hours on cardboard and even
-      longer on surfaces like plastic!
+      longer on surfaces like plastic
 
 
       **Can I fill a neighbour’s prescription?**
@@ -66,7 +62,7 @@ questions:
       2. Concession and/or Department of Veteran’s Affairs health card details
       (if they have one)
 
-      3. PBS Safety Net entitlement or concession card (if they have one)
+      1. PBS Safety Net entitlement or concession card (if they have one)
 
 
       You may also have to sign a document at the pharmacy to say you are
@@ -110,18 +106,18 @@ questions:
       1. Make sure you’ve discussed any food allergies or intolerances with your
       neighbour and let them know what you’ll be cooking.
 
-      2. Practise good food safety, like preparing raw meat and seafood first
+      1. Practise good food safety, like preparing raw meat and seafood first
       and cleaning down your utensils and work surfaces afterwards, avoiding
       cross-contamination of potential allergens like nuts, and keeping food
       refrigerated wherever possible.
 
-      3. Wash your hands before cooking, and at regular intervals while
+      1. Wash your hands before cooking, and at regular intervals while
       preparing food.
 
-      4. Ensure a contactless delivery by leaving food at your neighbours door
+      1. Ensure a contactless delivery by leaving food at your neighbours door
       when they are home and are able to collect the food quickly and safely.
 
-      5. Wash any serving dishes, containers and cutlery after they have been
+      1. Wash any serving dishes, containers and cutlery after they have been
       returned to you.
     hash: deliveries
     title: 'Deliver food, medicine and other supplies'
