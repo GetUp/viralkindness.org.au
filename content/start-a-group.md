@@ -169,4 +169,107 @@ steps:
 
       - Brighten up your street
     title: Step 6. Neighbours’ needs are taken care of
+faqTitle: Group FAQs
+faqs:
+  - hash: setup-facebook-group
+    title: What’s the best way to set up a Facebook group?
+    text: >-
+      1. Log into Facebook or create an account
+
+      2. Click on the “Create” button in the top bar, then “Group”
+
+      3. Add your group details:
+
+        a. **Group name:** Ideally something that signifies that it’s very local, eg. the street name, area of the suburb or local landmark, followed by “Viral Kindness”
+
+        b. **Add people:** Invite other members of your household or neighbours who you might already know on Facebook, and ask them to share with others
+
+        c. **Select privacy:** “Private” is recommended so that people can find your group, but need to join before seeing the conversations and other members. The privacy settings help people feel comfortable asking for and receiving help.
+
+        d. **Select visibility:** “Visible” (instead of “Hide”) is recommended so that people can search for and find your group by it’s name and request to join.
+
+        e. **About:** Add a friendly, clear group description in to the “About” section of your page to help people understand what your group is about.
+
+      4. Make an easy link to share with neighbours:
+
+        A. In your group’s new Facebook page, click on the url and copy it
+
+        B. Go to [https://tinyurl.com/](https://tinyurl.com/)
+
+        C. Paste the url into the window & click the “Make TinyURL!” button
+
+        D. Share the link on postcards and signs
+
+  - hash: rules-and-guidelines
+    title: What rules and guidelines should I give my group?
+    text: >-
+      <p>It’s a good idea to set rules and guidelines for your group to follow. This can help you define your purpose and create a safe and caring community. You might like to adapt the following rules, courtesy of “Northern Beaches - Coronavirus Community Support Group”.</p>
+      <ol>
+        <li>
+          <h4>Be Kind and Courteous</h4>
+          <p>We're all in this together to create a supportive environment. Let's treat everyone with respect. Healthy debates are natural, but kindness is required.</p>
+        </li>
+        <li>
+          <h4>No Hate Speech or Bullying</h4>
+          <p>Bullying of any kind isn't allowed. We will not tolerate degrading comments about things like appearance, race, religion, culture, sexual orientation, disability, gender or identity.</p>
+        </li>
+        <li>
+          <h4>No Promotions or Spam</h4>
+          <p>Please no advertising of group events at this time. Offering or advertising of free services is accepted however Self-promotion, spam and irrelevant links aren't allowed.</p>
+        </li>
+        <li>
+          <h4>Respect Everyone’s Privacy</h4>
+          <p>Being part of this group requires mutual trust as there may be personal information shared of a sensitive and private nature. Any personal info shared in the group should stay in the group.</p>
+        </li>
+        <li>
+          <h4>No False or Misleading Posts</h4>
+          <p>Please no posts that may cause panic or have not been verified by a reputable source. There is enough anxiety and uncertainty in the media and this group is about uplifting the community.</p>
+        </li>
+        <li>
+          <h4>No coronavirus memes</h4>
+          <p>There are other places for these posts and whilst we all have a sense of humor, this is not the platform for these types of jokes.</p>
+        </li>
+        <li>
+          <h4>Please do not offer any members medical advice</h4>
+          <p>Please do not post home remedies or medical advice. Should a member have symptoms, please share the following resources: https://www.getup.org.au/covid19</p>
+        </li>
+      </ol>
+
+  - hash: special-interest-group
+    title: Could I create a special interest group, eg. for local parents?
+    text: >-
+      Yes! Cutting your group by demographic or interest is a way to provide targeted assistance to vulnerable or stressed people during this time. Keep in mind, it will still often make sense to base your group around a geographical area, for example “[Suburb] parents helping parents” group.
+
+  - hash: already-a-group
+    title: What if there’s already a few groups in my local area?
+    text: >-
+      In many cases, there’s room for more than one group in an area. For instance, if you can see there’s already a group for your suburb, you could focus your group on your street and surroundings. Alternatively, you could reach out to another group organiser and offer to collaborate. The more help the better!
+
+  - hash: connect-with-other-leaders
+    title: How can I connect with other group leaders?
+    text: >-
+      A national online network is in the works where group leaders can connect and learn from one another. [Adding your group to the ViralKindess site](/add-a-group) will allow us to let you know about it when it’s up and running.
+
+  - hash: group-too-big
+    title: What can I do if my group becomes too big?
+    text: >-
+      If your group has grown too large to function effectively, then it’s time for your group to split into two or more. For example, if your group currently cares for the whole suburb, split the suburb into two or more groups and ask for someone to put up their hand to lead that. People can then stay in your group or leave and join the new one that covers them.
+
+  - hash: no-computer
+    title: What if my neighbours don’t have a computer with the internet?
+    text: >-
+      If your neighbours have smartphones and spare data, then you can start a WhatsApp group to connect.
+
+      * [WhatsApp: (Android) How to create and invite people to a
+      group](https://faq.whatsapp.com/en/android/26000123/?category=5245251)
+
+      * [WhatsApp: (iPhone) How to create and invite people to a
+      group](https://faq.whatsapp.com/en/iphone/26000115/?category=5245251)
+
+      If some neighbours only have home phones, you could organise in your WhatsApp or Facebook group for a few people to call those people regularly with information and questions.
+
+  - hash: urgent-help
+    title: What if my neighbour requests medical or urgent help?
+    text: >-
+      In an emergency, call 000 immediately, otherwise assist your neighbour to contact their doctor for advice. [Click here to access up-to-date information and other services](https://www.getup.org.au/covid19).
 ---

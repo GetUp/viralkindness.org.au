@@ -25,6 +25,9 @@ export default () => {
       <ContentWithSidebar reverse className={s.contentWrapper}>
         <div style={{ maxWidth: '750px' }} className={s.content}>
           {c.steps.map(Item)}
+          <hr />
+          <h1 className={s.pageHeader}>{c.faqTitle}</h1>
+          {c.faqs.map(Item)}
         </div>
       </ContentWithSidebar>
     </>
