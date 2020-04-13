@@ -82,3 +82,39 @@ collections:
               - { label: 'Hash', name: 'hash', widget: 'string' }
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Text', name: 'text', widget: 'markdown' }
+      - label: 'Home'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Blurb', name: 'blurb', widget: 'markdown' }
+          - label: 'Group Search'
+            name: 'groupsearch'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Blurb', name: 'blurb', widget: 'string' }
+          - { label: 'Add group link', name: 'addagroupLink', widget: 'string' }
+          - {
+              label: 'Find group link',
+              name: 'findagroupLink',
+              widget: 'string',
+            }
+          - {
+              label: 'Start group link',
+              name: 'startagroupLink',
+              widget: 'string',
+            }
+          - label: 'Postcards Link'
+            name: 'postcardsLink'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Blurb', name: 'blurb', widget: 'string' }
+          - label: 'Ways to help Link'
+            name: 'waystohelpLink'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Blurb', name: 'blurb', widget: 'string' }

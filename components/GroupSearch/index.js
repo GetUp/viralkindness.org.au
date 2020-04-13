@@ -143,7 +143,7 @@ const positionMap = (map, maps, groups) => {
   bindResizeListener(map, maps, bounds)
 }
 
-export default ({ className = '' }) => {
+export default ({ content, className = '' }) => {
   const [location, setLocation] = useState([])
   const [groups, setGroups] = useState([])
   const [errored, setErrored] = useState(false)
@@ -187,19 +187,15 @@ export default ({ className = '' }) => {
 
   return (
     <div className={`${s.mainContent} ${className}`}>
-      <h2>Join group</h2>
-      <p className={s.mainSubtext}>
-        Looking for help? Or keen to lend a hand? Enter your suburb below to
-        find a community care group near you.
-      </p>
-      <p className={s.mainSubSubtext}>
+      <h2>{content.title}</h2>
+      <p className={s.mainSubtext}>{content.blurb}</p>
+      {/* <p className={s.mainSubSubtext}>
         Every group is a little different. Read each group’s instructions about
         how to join or get involved.
         <Link href='#disclaimer'>
-          {/* <Link smooth to='#disclaimer' style={{ textDecoration: 'none' }}> */}
           <a style={{ textDecoration: 'none' }}>*</a>
         </Link>
-      </p>
+      </p> */}
       <br />
       <label>
         <div className={s.inputContainer}>

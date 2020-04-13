@@ -6,6 +6,8 @@ import ContentWithSidebar from '../../components/ContentWithSidebar'
 import GroupSearch from '../../components/GroupSearch'
 import illustration from '../../assets/images/vk-illustration.svg'
 import wave from '../../assets/images/wave.svg'
+import { attributes } from '../../content/home.md'
+import Markdown from '../../components/Markdown'
 
 const scrollFocus = (el) => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -17,22 +19,16 @@ export default () => {
     <>
       <div className={s.headerContainer}>
         <div className={s.header}>
-          <h1>#Viral Kindness</h1>
-          <h2>We’re all in this together</h2>
-          <p>
-            #ViralKindness is a hub for the community care groups springing up
-            across the country to support people in need or in self-isolation
-            during the coronavirus crisis. Whether it’s shopping for food,
-            picking up medicine or a regular check in call – there are lots of
-            ways we can stay together, even when we’re apart!
-          </p>
+          <h1>{attributes.title}</h1>
+          <h2>{attributes.subtitle}</h2>
+          <Markdown>{attributes.blurb}</Markdown>
           <div className={s.links}>
             <Link href='/add-a-group'>
               <a className={s.link}>
                 <Add />
                 <div>
                   <div className={s.linkText}>
-                    <span>Add group</span>
+                    <span>{attributes.addagroupLink}</span>
                   </div>
                 </div>
               </a>
@@ -43,7 +39,7 @@ export default () => {
                 <Find />
                 <div>
                   <div className={s.linkText}>
-                    <span>Join group</span>
+                    <span>{attributes.findagroupLink}</span>
                   </div>
                 </div>
               </a>
@@ -53,7 +49,7 @@ export default () => {
                 <Create />
                 <div>
                   <div className={s.linkText}>
-                    <span>Start group</span>
+                    <span>{attributes.startagroupLink}</span>
                   </div>
                 </div>
               </a>
@@ -72,27 +68,28 @@ export default () => {
       </div>
       <div className={s.contentWithSidebar}>
         <ContentWithSidebar>
-          <GroupSearch className={s.groupSearch} />
+          <GroupSearch
+            content={attributes.groupSearch}
+            className={s.groupSearch}
+          />
           <div className={s.sidebarContainer}>
             <Link href='/postcards'>
               <a className={s.sidebarLink}>
                 <h4 className={s.sidebarLinkHeader}>
-                  <span>Postcards</span>
+                  <span>{attributes.postcardsLink.title}</span>
                 </h4>
                 <div className={s.sidebarLinkSubtitle}>
-                  Sending your neighbours a postcard connects with people most
-                  at risk. Customise your postcard or download one!
+                  {attributes.postcardsLink.blurb}
                 </div>
               </a>
             </Link>
             <Link href='/ways-to-help'>
               <a className={s.sidebarLink}>
                 <h4 className={s.sidebarLinkHeader}>
-                  <span>Ways to Help</span>
+                  <span>{attributes.waystohelpLink.title}</span>
                 </h4>
                 <div className={s.sidebarLinkSubtitle}>
-                  This page will be updated regularly with ideas and advice for
-                  the many ways we can help our neighbours.
+                  {attributes.waystohelpLink.blurb}
                 </div>
               </a>
             </Link>
