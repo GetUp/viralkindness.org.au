@@ -18,8 +18,8 @@ steps:
 
 
       Once you’ve created your group, [click here to add your group to the
-      ViralKindness website](/add-a-group) so that other people can search for and
-      join your group.
+      ViralKindness website](/add-a-group) so that other people can search for
+      and join your group.
 
 
       Click on the links below for more info about how to start one:
@@ -80,8 +80,8 @@ steps:
       of multiple groups where they exist.
 
       * **DIRECTORY:** [Click here to add your group to the
-      ViralKindness](/add-a-group) hub so that other people can search for and join
-      your group.
+      ViralKindness](/add-a-group) hub so that other people can search for and
+      join your group.
     title: Step 3. Invite your neighbours to join
   - hash: ask-others
     text: >-
@@ -172,12 +172,9 @@ steps:
 faqTitle: Group FAQs
 faqs:
   - hash: setup-facebook-group
-    title: What’s the best way to set up a Facebook group?
-    text: >-
+    text: |-
       1. Log into Facebook or create an account
-
       2. Click on the “Create” button in the top bar, then “Group”
-
       3. Add your group details:
 
         a. **Group name:** Ideally something that signifies that it’s very local, eg. the street name, area of the suburb or local landmark, followed by “Viral Kindness”
@@ -199,12 +196,13 @@ faqs:
         C. Paste the url into the window & click the “Make TinyURL!” button
 
         D. Share the link on postcards and signs
-
+    title: What’s the best way to set up a Facebook group?
   - hash: rules-and-guidelines
-    title: What rules and guidelines should I give my group?
     text: >-
-      <p>It’s a good idea to set rules and guidelines for your group to follow. This can help you define your purpose and create a safe and caring community. You might like to adapt the following rules, courtesy of “Northern Beaches - Coronavirus Community Support Group”.</p>
-      <ol>
+      <p>It’s a good idea to set rules and guidelines for your group to follow.
+      This can help you define your purpose and create a safe and caring
+      community. You might like to adapt the following rules, courtesy of
+      “Northern Beaches - Coronavirus Community Support Group”.</p> <ol>
         <li>
           <h4>Be Kind and Courteous</h4>
           <p>We're all in this together to create a supportive environment. Let's treat everyone with respect. Healthy debates are natural, but kindness is required.</p>
@@ -234,31 +232,42 @@ faqs:
           <p>Please do not post home remedies or medical advice. Should a member have symptoms, please share the following resources: https://www.getup.org.au/covid19</p>
         </li>
       </ol>
-
+    title: What rules and guidelines should I give my group?
   - hash: special-interest-group
-    title: Could I create a special interest group, eg. for local parents?
     text: >-
-      Yes! Cutting your group by demographic or interest is a way to provide targeted assistance to vulnerable or stressed people during this time. Keep in mind, it will still often make sense to base your group around a geographical area, for example “[Suburb] parents helping parents” group.
-
+      Yes! Cutting your group by demographic or interest is a way to provide
+      targeted assistance to vulnerable or stressed people during this time.
+      Keep in mind, it will still often make sense to base your group around a
+      geographical area, for example “\[Suburb] parents helping parents” group.
+    title: 'Could I create a special interest group, eg. for local parents?'
   - hash: already-a-group
+    text: >-
+      In many cases, there’s room for more than one group in an area. For
+      instance, if you can see there’s already a group for your suburb, you
+      could focus your group on your street and surroundings. Alternatively, you
+      could reach out to another group organiser and offer to collaborate. The
+      more help the better!
     title: What if there’s already a few groups in my local area?
-    text: >-
-      In many cases, there’s room for more than one group in an area. For instance, if you can see there’s already a group for your suburb, you could focus your group on your street and surroundings. Alternatively, you could reach out to another group organiser and offer to collaborate. The more help the better!
-
   - hash: connect-with-other-leaders
+    text: >-
+      A national online network is in the works where group leaders can connect
+      and learn from one another. [Adding your group to the ViralKindess
+      site](/add-a-group) will allow us to let you know about it when it’s up
+      and running.
     title: How can I connect with other group leaders?
-    text: >-
-      A national online network is in the works where group leaders can connect and learn from one another. [Adding your group to the ViralKindess site](/add-a-group) will allow us to let you know about it when it’s up and running.
-
   - hash: group-too-big
+    text: >-
+      If your group has grown too large to function effectively, then it’s time
+      for your group to split into two or more. For example, if your group
+      currently cares for the whole suburb, split the suburb into two or more
+      groups and ask for someone to put up their hand to lead that. People can
+      then stay in your group or leave and join the new one that covers them.
     title: What can I do if my group becomes too big?
-    text: >-
-      If your group has grown too large to function effectively, then it’s time for your group to split into two or more. For example, if your group currently cares for the whole suburb, split the suburb into two or more groups and ask for someone to put up their hand to lead that. People can then stay in your group or leave and join the new one that covers them.
-
   - hash: no-computer
-    title: What if my neighbours don’t have a computer with the internet?
     text: >-
-      If your neighbours have smartphones and spare data, then you can start a WhatsApp group to connect.
+      If your neighbours have smartphones and spare data, then you can start a
+      WhatsApp group to connect.
+
 
       * [WhatsApp: (Android) How to create and invite people to a
       group](https://faq.whatsapp.com/en/android/26000123/?category=5245251)
@@ -266,10 +275,16 @@ faqs:
       * [WhatsApp: (iPhone) How to create and invite people to a
       group](https://faq.whatsapp.com/en/iphone/26000115/?category=5245251)
 
-      If some neighbours only have home phones, you could organise in your WhatsApp or Facebook group for a few people to call those people regularly with information and questions.
 
+      If some neighbours only have home phones, you could organise in your
+      WhatsApp or Facebook group for a few people to call those people regularly
+      with information and questions.
+    title: What if my neighbours don’t have a computer with the internet?
   - hash: urgent-help
-    title: What if my neighbour requests medical or urgent help?
     text: >-
-      In an emergency, call 000 immediately, otherwise assist your neighbour to contact their doctor for advice. [Click here to access up-to-date information and other services](https://www.getup.org.au/covid19).
+      In an emergency, call 000 immediately, otherwise assist your neighbour to
+      contact their doctor for advice. [Click here to access up-to-date
+      information and other services](https://www.getup.org.au/covid19).
+    title: What if my neighbour requests medical or urgent help?
 ---
+
