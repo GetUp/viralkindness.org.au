@@ -135,32 +135,38 @@ steps:
       doing them safely and effectively.
 
 
-      * Checking in regularly with vulnerable and lonely neighbours
+      - Reach out to neighbours with a postcard
 
-      * Shopping for and delivering groceries and other essentials
+      - Check in with vulnerable and lonely neighbours
 
-      * Getting a prescription filled at the pharmacy
+      - Organise an online meet-up or skills share
 
-      * Delivering home cooked meals
+      - Delivering food, medicine and other supplies
 
-      * Walking the dog
+      - Fill a neighbour’s prescription
 
-      * Help navigating Social Services applications, like JobSeeker or
-      financial assistance
+      - How can I pay for neighbours’ groceries?
 
-      * Basic internet assistance, helping people order goods online, and tech
-      advice
+      - Drop off a home-cooked meal
 
-      * Helping with urgent household tasks, like changing a light bulb
+      - Walk a neighbour’s dog
 
-      * Taking the bins to the curb and back on rubbish days
+      - Support your neighbours to navigate rental advice
 
-      * Posting mail and picking up packages from the post office
+      - Provide internet and technical assistance
 
-      * Setting up a street library where people can lend and borrow books
+      - Help a neighbour access government services and financial assistance
 
-      * Organise an online social meet-up
+      - Help with household tasks
 
-      * Writing pen pal letters
+      - Take the bins out
+
+      - Post or collect mail
+
+      - Become a penpal
+
+      - Set up a street library or pantry
+
+      - Brighten up your street
     title: Step 6. Neighbours’ needs are taken care of
 ---
