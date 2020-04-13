@@ -30,6 +30,7 @@ const publicDb = process.env.REACT_APP_PUBLIC_DATABASE
 const privateDb = process.env.REACT_APP_PRIVATE_DATABASE
 
 const initialValues = {
+  name: '',
   email: '',
   phone: '',
   groupName: '',
@@ -91,7 +92,7 @@ export default () => {
     const privateSubmission = postJson(`${apiHost}/${privateDb}/`, payload)
     const publicSubmission = postJson(
       `${apiHost}/${publicDb}/`,
-      omit(payload, ['email', 'phone'])
+      omit(payload, ['name', 'email', 'phone'])
     )
     Promise.all([privateSubmission, publicSubmission])
       .then((data) => {
@@ -147,6 +148,13 @@ export default () => {
                     Your personal information won't be publicly visible.
                   </span>
                 </p>
+                <label>
+                  Your first name
+                  <InputWithIcon className={s.inputWrapper}>
+                    <Private />
+                    <Field type='text' name='name' placeholder='First name' />
+                  </InputWithIcon>
+                </label>
                 <label>
                   Your email*
                   <InputWithIcon className={s.inputWrapper}>
