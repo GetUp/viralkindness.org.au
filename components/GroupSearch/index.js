@@ -85,7 +85,8 @@ const Group = ({ doc }, i) => (
   </div>
 )
 
-const linkFilter = (gs) => gs.filter((g) => g && g.doc && g.doc.groupLink)
+const linkFilter = (gs) =>
+  (gs || []).filter((g) => g && g.doc && g.doc.groupLink)
 
 const allGroups = (fetchedGroups = [], state) => {
   const localGroups = linkFilter(fetchedGroups)
