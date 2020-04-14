@@ -130,44 +130,44 @@ steps:
   - hash: neighbours-needs
     text: >-
       There are many basic needs your neighbours might need help with. Below is
-      a list of some of the ways your group could support its neighbours. Head
-      to the [“Ways to help”](/ways-to-help) page to  how-to information about
-      doing them safely and effectively.
+      a list of some of the ways your group could support neighbours. Head to
+      the [“Ways to help”](/ways-to-help) page for more info about doing them
+      safely and effectively.
 
 
-      - Reach out to neighbours with a postcard
+      * Reach out to neighbours with a postcard
 
-      - Check in with vulnerable and lonely neighbours
+      * Check in with vulnerable and lonely neighbours
 
-      - Organise an online meet-up or skills share
+      * Organise an online meet-up or skills share
 
-      - Delivering food, medicine and other supplies
+      * Delivering food, medicine and other supplies
 
-      - Fill a neighbour’s prescription
+      * Fill a neighbour’s prescription
 
-      - How can I pay for neighbours’ groceries?
+      * How can I pay for neighbours’ groceries?
 
-      - Drop off a home-cooked meal
+      * Drop off a home-cooked meal
 
-      - Walk a neighbour’s dog
+      * Walk a neighbour’s dog
 
-      - Support your neighbours to navigate rental advice
+      * Support your neighbours to navigate rental advice
 
-      - Provide internet and technical assistance
+      * Provide internet and technical assistance
 
-      - Help a neighbour access government services and financial assistance
+      * Help a neighbour access government services and financial assistance
 
-      - Help with household tasks
+      * Help with household tasks
 
-      - Take the bins out
+      * Take the bins out
 
-      - Post or collect mail
+      * Post or collect mail
 
-      - Become a penpal
+      * Become a penpal
 
-      - Set up a street library or pantry
+      * Set up a street library or pantry
 
-      - Brighten up your street
+      * Brighten up your street
     title: Step 6. Neighbours’ needs are taken care of
 faqTitle: Group FAQs
 faqs:
