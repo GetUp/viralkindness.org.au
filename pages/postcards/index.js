@@ -11,7 +11,7 @@ import { attributes, react as Content } from '../../content/postcards.md'
 import Create from '../../components/Create'
 
 export default () => {
-  const [isCustomizeActive, setCustomizeActive] = useState(true)
+  const [isCustomizeActive, setCustomizeActive] = useState(false)
 
   return (
     <>
@@ -74,16 +74,16 @@ const HowToPostcard = ({ data, setCustomizeActive }) => (
 const Tabs = ({ isCustomizeActive, setCustomizeActive }) => (
   <div className={s.tabs}>
     <div
-      className={`${s.tab} ${isCustomizeActive && s.active}`}
-      onClick={() => setCustomizeActive(true)}
-    >
-      Customise your postcard
-    </div>
-    <div
       className={`${s.tab} ${!isCustomizeActive && s.active}`}
       onClick={() => setCustomizeActive(false)}
     >
       How to postcard
+    </div>
+    <div
+      className={`${s.tab} ${isCustomizeActive && s.active}`}
+      onClick={() => setCustomizeActive(true)}
+    >
+      Customise your postcard
     </div>
   </div>
 )
