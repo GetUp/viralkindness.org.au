@@ -15,6 +15,5 @@ steps:
       If you need to make any changes, update or remove your group from the hub,
       email <a
       href='mailto:viralkindness@getup.org.au'>viralkindness@getup.org.au</a>
-disclaimer: NIREN PLS DELETE THIS
 ---
 

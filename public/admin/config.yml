@@ -38,7 +38,6 @@ collections:
             widget: 'list'
             fields:
               - { label: 'step', name: 'step', widget: 'string' }
-          - { label: 'Disclaimer', name: 'disclaimer', widget: 'markdown' }
       - label: 'About'
         name: 'about'
         file: 'content/about.md'

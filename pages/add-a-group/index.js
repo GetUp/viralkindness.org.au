@@ -13,7 +13,7 @@ import {
   Public,
   WhatsApp,
   NextDoor,
-  Facebook,
+  Facebook
 } from '../../components/Icons'
 import InputWithIcon from '../../components/InputWithIcon'
 import PageHeader from '../../components/PageHeader'
@@ -21,7 +21,7 @@ import FaqNav from '../../components/FaqNav'
 import {
   Accordion,
   AccordionTitle,
-  AccordionBody,
+  AccordionBody
 } from '../../components/Accordion'
 import { attributes as content } from '../../content/add-a-group.md'
 
@@ -38,18 +38,18 @@ const initialValues = {
   groupBlurb: '',
   location: '',
   links: '',
-  general: '',
+  general: ''
 }
 
 const groupLinkPattern = /^https?:\/\/(www\.)?(facebook\.com|m\.facebook\.com|fb\.com|chat\.whatsapp\.com|au\.nextdoor\.com|nextdoor\.com)/i
 
-const geoJson = (loc) => ({
+const geoJson = loc => ({
   geometry: {
     coordinates: [loc.location.lng, loc.location.lat],
-    type: 'Point',
+    type: 'Point'
   },
   properties: loc,
-  type: 'Feature',
+  type: 'Feature'
 })
 
 const active = (pattern, groupLink) => (pattern.test(groupLink) ? 1 : 0.5)
@@ -60,7 +60,7 @@ export default () => {
   const [blurbLength, setBlurbLength] = useState(0)
   const blurbMaxLength = 280
 
-  const validate = (values) => {
+  const validate = values => {
     const errors = {}
 
     if (!values.email) {
@@ -95,11 +95,11 @@ export default () => {
       omit(payload, ['name', 'email', 'phone'])
     )
     Promise.all([privateSubmission, publicSubmission])
-      .then((data) => {
+      .then(data => {
         setSubmitting(false)
         router.push('/thanks')
       })
-      .catch((error) => {
+      .catch(error => {
         setFieldError(
           'general',
           `An error occurred: "${error.message}".  Please try again shortly.`
@@ -126,11 +126,6 @@ export default () => {
               </li>
             ))}
           </ol>
-          <hr className={s.hr} />
-          <div
-            style={{ fontSize: '0.9rem' }}
-            dangerouslySetInnerHTML={{ __html: content.disclaimer }}
-          />
         </div>
       </PageHeader>
       <ContentWithSidebar>
@@ -231,21 +226,21 @@ export default () => {
                   <span className={s.socialIcons}>
                     <span
                       style={{
-                        opacity: active(/au\.nextdoor\.com/, groupLink),
+                        opacity: active(/au\.nextdoor\.com/, groupLink)
                       }}
                     >
                       <NextDoor />
                     </span>
                     <span
                       style={{
-                        opacity: active(/chat\.whatsapp\.com/, groupLink),
+                        opacity: active(/chat\.whatsapp\.com/, groupLink)
                       }}
                     >
                       <WhatsApp />
                     </span>
                     <span
                       style={{
-                        opacity: active(/(fb\.com|facebook\.com)/, groupLink),
+                        opacity: active(/(fb\.com|facebook\.com)/, groupLink)
                       }}
                     >
                       <Facebook />
@@ -303,7 +298,7 @@ export default () => {
                       maxLength={blurbMaxLength}
                       name='groupBlurb'
                       placeholder='Short introduction or instructions you’d like your neighbours to read'
-                      onKeyUp={(e) => setBlurbLength(e.target.value.length)}
+                      onKeyUp={e => setBlurbLength(e.target.value.length)}
                     />
                   </InputWithIcon>
                 </label>
