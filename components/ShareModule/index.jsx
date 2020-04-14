@@ -1,12 +1,12 @@
 import React from 'react'
-// import s from './index.module.scss'
+import s from './index.module.scss'
 
 export default ({ className }) => (
   <div className={className}>
-    <div id='super-share-withProgress'>
-      <div className='share--btns'>
-        <div className='share-btn--wrapper'>
-          <span className='check-icon fb checked'>
+    <div>
+      <div className={s.shareBtns}>
+        <div className={s.shareBtnWrapper}>
+          <span className={`${s.checkIcon} ${s.fb} ${s.checked}`}>
             <svg
               width='24'
               height='24'
@@ -15,7 +15,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M12 4.8939e-05C18.6274 4.8939e-05 24 5.37264 24 12C24 18.6274 18.6274 24 12 24C5.37264 24 4.97744e-05 18.6274 4.97744e-05 12C-0.0188081 5.39143 5.32318 0.0189068 11.9317 4.8939e-05C11.9545 -1.6313e-05 11.9773 -1.6313e-05 12 4.8939e-05Z'
                 fill='#E2E3E3'
               ></path>
@@ -26,13 +26,13 @@ export default ({ className }) => (
             </svg>
           </span>
           <a
-            className='share-btn active'
+            className={`${s.shareBtn} ${s.active}`}
             href='https://www.facebook.com/dialog/share?app_id=138155566223&display=page&href=https%3A%2F%2Fviralkindness.org.au&redirect_uri=https%3A%2F%2Fviralkindness.org.au%2Fthanks&quote=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!&hashtag=%23ViralKindness'
-            id='fb'
+            id={s.fb}
             role='button'
           >
             <svg
-              className='icon'
+              className={s.icon}
               width='12'
               height='12'
               viewBox='0 0 12 12'
@@ -40,7 +40,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 fillRule='evenodd'
                 clipRule='evenodd'
                 d='M10.5339 0C11.3431 0 12 0.656953 12 1.46611V10.5339C12 11.343 11.343 12 10.5339 12H8.03855V7.47855H9.59948L9.89648 5.54213H8.03855V4.28548C8.03855 3.75572 8.29807 3.23932 9.13027 3.23932H9.975V1.59073C9.975 1.59073 9.20836 1.4599 8.47542 1.4599C6.94523 1.4599 5.94511 2.3873 5.94511 4.06624V5.54213H4.24418V7.47855H5.94511V12H1.46611C0.656953 12 0 11.343 0 10.5339V1.46611C0 0.656953 0.65693 0 1.46611 0H10.5339V0Z'
@@ -50,8 +50,8 @@ export default ({ className }) => (
             Share on Facebook
           </a>
         </div>
-        <div className='share-btn--wrapper'>
-          <span className='check-icon em'>
+        <div className={s.shareBtnWrapper}>
+          <span className={`${s.checkIcon} ${s.em}`}>
             <svg
               width='24'
               height='24'
@@ -60,7 +60,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M12 4.8939e-05C18.6274 4.8939e-05 24 5.37264 24 12C24 18.6274 18.6274 24 12 24C5.37264 24 4.97744e-05 18.6274 4.97744e-05 12C-0.0188081 5.39143 5.32318 0.0189068 11.9317 4.8939e-05C11.9545 -1.6313e-05 11.9773 -1.6313e-05 12 4.8939e-05Z'
                 fill='#E2E3E3'
               ></path>
@@ -71,15 +71,15 @@ export default ({ className }) => (
             </svg>
           </span>
           <a
-            className='share-btn'
+            className={s.shareBtn}
             href='mailto:?subject=#ViralKindness&amp;body=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
-            id='em'
+            id={s.em}
             role='button'
             target='_blank'
             rel='noopener noreferrer'
           >
             <svg
-              className='icon'
+              className={s.icon}
               width='12'
               height='12'
               viewBox='0 0 12 12'
@@ -106,8 +106,8 @@ export default ({ className }) => (
             Send an email
           </a>
         </div>
-        <div className='share-btn--wrapper'>
-          <span className='check-icon tw'>
+        <div className={s.shareBtnWrapper}>
+          <span className={`${s.checkIcon} ${s.tw}`}>
             <svg
               width='24'
               height='24'
@@ -116,7 +116,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M12 4.8939e-05C18.6274 4.8939e-05 24 5.37264 24 12C24 18.6274 18.6274 24 12 24C5.37264 24 4.97744e-05 18.6274 4.97744e-05 12C-0.0188081 5.39143 5.32318 0.0189068 11.9317 4.8939e-05C11.9545 -1.6313e-05 11.9773 -1.6313e-05 12 4.8939e-05Z'
                 fill='#E2E3E3'
               ></path>
@@ -127,15 +127,15 @@ export default ({ className }) => (
             </svg>
           </span>
           <a
-            className='share-btn'
+            className={s.shareBtn}
             href='https://twitter.com/intent/tweet?text=There%E2%80%99s+lots+of+ways+we+can+stick+together+when+we+are+apart!+%23ViralKindness+https%3A%2F%2Fviralkindness.org.au'
-            id='tw'
+            id={s.tw}
             role='button'
             target='_blank'
             rel='noopener noreferrer'
           >
             <svg
-              className='icon'
+              className={s.icon}
               width='12'
               height='10'
               viewBox='0 0 12 10'
@@ -143,7 +143,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M3.76951 9.7575C8.29772 9.7575 10.7755 6.0024 10.7755 2.7515C10.7755 2.64586 10.7755 2.54022 10.7707 2.43457C11.2509 2.08884 11.6687 1.65186 12 1.15726C11.5582 1.35414 11.0828 1.48379 10.5834 1.54622C11.0924 1.2437 11.4814 0.758703 11.6687 0.182473C11.1933 0.465786 10.6651 0.667467 10.1032 0.777911C9.65186 0.297719 9.0132 0 8.30732 0C6.94838 0 5.84394 1.10444 5.84394 2.46339C5.84394 2.65546 5.86795 2.84274 5.90636 3.02521C3.86074 2.92437 2.04562 1.93998 0.830732 0.45138C0.619448 0.816326 0.4994 1.2389 0.4994 1.69028C0.4994 2.54502 0.936374 3.29892 1.59424 3.7407C1.19088 3.72629 0.811525 3.61585 0.480192 3.43337V3.46699C0.480192 4.65786 1.33013 5.65666 2.45378 5.88235C2.2473 5.93998 2.03121 5.96879 1.80552 5.96879C1.64706 5.96879 1.4934 5.95438 1.34454 5.92557C1.65666 6.90516 2.56903 7.61585 3.64466 7.63505C2.79952 8.29772 1.7383 8.69148 0.585834 8.69148C0.388956 8.69148 0.192077 8.68187 0 8.65786C1.08523 9.34934 2.38175 9.7575 3.76951 9.7575'
                 fill='#1DA1F2'
               ></path>
@@ -151,8 +151,8 @@ export default ({ className }) => (
             Share on Twitter
           </a>
         </div>
-        <div className='share-btn--wrapper'>
-          <span className='check-icon wa'>
+        <div className={s.shareBtnWrapper}>
+          <span className={`${s.checkIcon} ${s.wa}`}>
             <svg
               width='24'
               height='24'
@@ -161,7 +161,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M12 4.8939e-05C18.6274 4.8939e-05 24 5.37264 24 12C24 18.6274 18.6274 24 12 24C5.37264 24 4.97744e-05 18.6274 4.97744e-05 12C-0.0188081 5.39143 5.32318 0.0189068 11.9317 4.8939e-05C11.9545 -1.6313e-05 11.9773 -1.6313e-05 12 4.8939e-05Z'
                 fill='#E2E3E3'
               ></path>
@@ -172,15 +172,15 @@ export default ({ className }) => (
             </svg>
           </span>
           <a
-            className='share-btn'
+            className={s.shareBtn}
             href='https://wa.me/?text=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
-            id='wa'
+            id={s.wa}
             rel='noopener noreferrer'
             role='button'
             target='_blank'
           >
             <svg
-              className='icon'
+              className={s.icon}
               width='12'
               height='13'
               viewBox='0 0 12 13'
@@ -188,7 +188,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 fillRule='evenodd'
                 clipRule='evenodd'
                 d='M0.958737 9.25326C0.352421 8.316 0 7.19874 0 6C0 2.68863 2.68863 0 6 0C9.31137 0 12 2.68863 12 6C12 9.31137 9.31137 12 6 12C4.87768 12 3.82737 11.6912 2.92863 11.1543L0 12.1301L0.958737 9.25326V9.25326Z'
@@ -210,8 +210,8 @@ export default ({ className }) => (
             Send on WhatsApp
           </a>
         </div>
-        <div className='share-btn--wrapper'>
-          <span className='check-icon sms'>
+        <div className={s.shareBtnWrapper}>
+          <span className={`${s.checkIcon} ${s.sms}`}>
             <svg
               width='24'
               height='24'
@@ -220,7 +220,7 @@ export default ({ className }) => (
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                className='bg'
+                className={s.bg}
                 d='M12 4.8939e-05C18.6274 4.8939e-05 24 5.37264 24 12C24 18.6274 18.6274 24 12 24C5.37264 24 4.97744e-05 18.6274 4.97744e-05 12C-0.0188081 5.39143 5.32318 0.0189068 11.9317 4.8939e-05C11.9545 -1.6313e-05 11.9773 -1.6313e-05 12 4.8939e-05Z'
                 fill='#E2E3E3'
               ></path>
@@ -231,9 +231,9 @@ export default ({ className }) => (
             </svg>
           </span>
           <a
-            className='share-btn'
+            className={s.shareBtn}
             href='sms:?&body=There%E2%80%99s%20lots%20of%20ways%20we%20can%20stick%20together%20when%20we%20are%20apart!%20%23ViralKindness%20https%3A%2F%2Fviralkindness.org.au'
-            id='sms'
+            id={s.sms}
             role='button'
           >
             <svg
@@ -274,9 +274,9 @@ export default ({ className }) => (
           </a>
         </div>
       </div>
-      {/* <hr />
-      <div className='share-link'>
-        <button className='tiny-btn' id='copy-link'>
+      <hr className={s.hr} />
+      {/* <div className={s.shareLink}>
+        <button className={s.tinyBtn} id='copy-link'>
           <svg
             width='10'
             height='10'
@@ -292,13 +292,13 @@ export default ({ className }) => (
 
           <span>Copy link</span>
         </button>
-        <div className='share-link--text'>http://getup.to/zPFxFli2</div>
-      </div>
-      <div className='privacyPolicy'>
+        <div className={s.shareLinkText}>http://getup.to/zPFxFli2</div>
+      </div> */}
+      <div className={s.privacyPolicy}>
         <div className='privacy_policy_disclaimer'>
           In taking action, I agree to GetUp's Privacy Policy.
         </div>
-      </div> */}
+      </div>
     </div>
   </div>
 )
