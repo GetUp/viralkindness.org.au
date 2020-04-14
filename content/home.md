@@ -8,9 +8,9 @@ blurb: >-
   whether it’s shopping for food, picking up medicine, or a regular check-in
   call. Even when we’re apart, there are lots of ways we can help each
   other.</p> <p>Anyone can start a community care group for their apartment
-  block, street or neighbourhood — check out the tips on the \[“Starting a
-  Group” page](/start-a-group) and then \[add your group to this
-  hub](/add-a-group) so others can find it. Otherwise \[search for groups near
+  block, street or neighbourhood — check out the tips on the [“Starting a
+  Group” page](/start-a-group) and then [add your group to this
+  hub](/add-a-group) so others can find it. Otherwise [search for groups near
   your suburb](/#groupSearch) in the search bar below, and groups will be listed
   below the map in closest order to you.</p>
 groupSearch:

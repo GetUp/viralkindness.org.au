@@ -6,7 +6,7 @@ import PageHeader from '../../components/PageHeader'
 import s from './index.module.scss'
 import { attributes as c } from '../../content/ways-to-help.md'
 
-const Item = (i) => (
+const Item = i => (
   <div key={i.title} className={s.question}>
     <h3 id={i.hash} className={s.header}>
       {i.title}
@@ -20,7 +20,7 @@ export default () => {
     <>
       <PageHeader>
         <h1 className={s.pageHeader}>{c.title}</h1>
-        <p>{c.subtitle}</p>
+        <div dangerouslySetInnerHTML={{ __html: c.subtitle }} />
       </PageHeader>
       <ContentWithSidebar reverse className={s.contentWrapper}>
         <div style={{ maxWidth: '750px' }} className={s.content}>
