@@ -24,12 +24,12 @@ startagroupLink: Start a group
 postcardsLink:
   title: Postcards
   blurb: >-
-    Sending your neighbours a postcard connects with people most at risk.
-    Customise your postcard or download one!
+    Send your neighbours a postcard to tell them about your group or to offer
+    help. Customise your postcard or download one.
 waystohelpLink:
   title: Ways to Help
   blurb: >-
-    This page will be updated regularly with ideas and advice for the many ways
-    we can help our neighbours.
+    Find inspiration and advice for the many ways you could help your
+    neighbours.
 ---
 
