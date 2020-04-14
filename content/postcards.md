@@ -12,7 +12,7 @@ subtitle: >-
 howtopostcard:
   text: >-
     1. [Click here to TYPE in your details into the postcard
-    template](/postcards) OR [here to print the
+    template](/postcards#name) OR [here to print the
     postcard template and then HANDWRITE your details.
     ](https://www.getup.org.au/postcards)
 

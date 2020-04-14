@@ -26,17 +26,13 @@ export default () => {
         <ContentWithSidebar reverse>
           <div style={{ maxWidth: '700px' }}>
             <Content />
-            <Tabs {...{ isCustomizeActive, setCustomizeActive }} />
           </div>
         </ContentWithSidebar>
-        {isCustomizeActive ? (
-          <Create />
-        ) : (
-          <HowToPostcard
-            data={attributes.howtopostcard}
-            setCustomizeActive={setCustomizeActive}
-          />
-        )}
+        <HowToPostcard
+          data={attributes.howtopostcard}
+          setCustomizeActive={setCustomizeActive}
+        />
+        <Create />
       </div>
     </>
   )
@@ -47,15 +43,15 @@ const HowToPostcard = ({ data, setCustomizeActive }) => (
     <div>
       <h1>{data.title}</h1>
       <Markdown>{data.text}</Markdown>
+      <p>
+        Add your details into the form below to customise your postcard before
+        printing.{' '}
+        <a href='https://www.getup.org.au/postcards' target='_blank'>
+          Alternatively, you can click here if you’d rather print the template
+          and add these details by hand.{' '}
+        </a>
+      </p>
       <div className={s.downloadBtnContainers}>
-        <div
-          className={s.downloadPostcard}
-          onClick={() => setCustomizeActive(true)}
-        >
-          <Add />
-          Make your Postcard
-        </div>
-
         {/* eslint-disable react/jsx-no-target-blank */}
         <a
           href='https://www.getup.org.au/postcards'

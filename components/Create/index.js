@@ -16,7 +16,7 @@ export default () => {
     loc: 'Forest Lodge',
     phone: '499 999 999',
     other: '',
-    link: 'facebook.com/groups/...',
+    link: 'facebook.com/groups/...'
   }
 
   const [data, setData] = React.useState({
@@ -26,34 +26,34 @@ export default () => {
     help: {
       shopping: true,
       phone: false,
-      supplies: false,
+      supplies: false
     },
     other: '',
-    link: '',
+    link: ''
   })
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     return setData({ ...data, [e.target.name]: e.target.value })
   }
 
-  const handleCheckbox = (e) => {
+  const handleCheckbox = e => {
     return setData({
       ...data,
-      help: { ...data.help, [e.target.name]: e.target.checked },
+      help: { ...data.help, [e.target.name]: e.target.checked }
     })
   }
 
-  const handlePngDownload = (e) => {
+  const handlePngDownload = e => {
     e.preventDefault()
     htmltoimage.toPng(document.getElementById('node'), {
       scale: 3,
-      quality: 1,
+      quality: 1
     })
 
     htmltoimage
       .toPng(document.getElementById('node'), {
         scale: 3,
-        quality: 1,
+        quality: 1
       })
       .then(function (dataUrl) {
         var link = document.createElement('a')
@@ -72,6 +72,7 @@ export default () => {
         style={{ marginTop: 0 }}
       >
         <div className={s.form}>
+          <h2>Customize your Postcards</h2>
           <p className={s.formDisclaimer}>
             Enter your details in the form below and it will auto-fill your
             postcard. Then hit the download button and your postcard will be
