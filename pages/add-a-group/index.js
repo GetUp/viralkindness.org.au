@@ -116,9 +116,10 @@ export default () => {
       <PageHeader>
         <div className={s.headerContainer}>
           <h1 className={s.pageHeader}>{content.title}</h1>
-          <p className={s.subtitle}>
-            <strong dangerouslySetInnerHTML={{ __html: content.subtitle }} />
-          </p>
+          <div
+            dangerouslySetInnerHTML={{ __html: content.subtitle }}
+            style={{ marginBottom: '8px' }}
+          />
           <ol className={s.list}>
             {content.steps.map((s, i) => (
               <li key={i}>
