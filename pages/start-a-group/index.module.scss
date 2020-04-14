@@ -1,0 +1,16 @@
+@import '../../assets/styles/variables';
+
+.header {
+  font-size: 1.4em !important;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff671f !important;
+}
+
+.text {
+  margin-bottom: 64px;
+  color: $textColor;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  display: block;
+}

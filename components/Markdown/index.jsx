@@ -23,15 +23,16 @@ const NextLink = ({ children, className = '', href, ...props }) => {
   )
 }
 
-export default ({ children }) => {
+export default ({ children, ...props }) => {
   return (
     <Markdown
+      {...props}
       options={{
         overrides: {
           a: {
-            component: NextLink,
-          },
-        },
+            component: NextLink
+          }
+        }
       }}
     >
       {children}
