@@ -60,7 +60,7 @@ const HowToPostcard = ({ data, setCustomizeActive }) => (
         >
           {/* eslint-enable react/jsx-no-target-blank */}
           <Download />
-          Download Postcards
+          Download Postcard Template
         </a>
       </div>
     </div>
