@@ -1,5 +1,5 @@
 ---
-title: Ways to help
+title: Ways to Help
 subtitle: >-
   This page will be updated regularly with ideas and advice for the many ways we
   can help our neighbours. If you’ve helped your neighbours in a way not listed
