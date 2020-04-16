@@ -12,9 +12,8 @@ subtitle: >-
 howtopostcard:
   text: >-
     1. [Click here to TYPE in your details into the postcard
-    template](/postcards#name) OR [here to print the
-    postcard template and then HANDWRITE your details.
-    ](https://www.getup.org.au/postcards)
+    template](/postcards#name) OR [here to print the postcard template and then
+    HANDWRITE your details. ](https://www.getup.org.au/postcards)
 
     2. If you’re part of an online community care group, include the link on the
     postcard so others can join
@@ -31,10 +30,9 @@ howtopostcard:
     possible.
 
 
-
     **Note:** Coronavirus is spread person-to-person, but can also be spread by
-    touching surfaces. [New research shows the virus can survive on cardboard
-    for up to 24
+    touching surfaces. [Research shows the virus can survive on cardboard for up
+    to 24
     hours.](https://www.sbs.com.au/news/the-coronavirus-can-persist-in-air-for-hours-and-on-surfaces-for-days-a-new-study-shows)
     If you feel unwell, or have had contact with someone who has tested positive
     for coronavirus please do not deliver postcards until you have cleared the
@@ -42,3 +40,4 @@ howtopostcard:
     anything.
   title: How to use the postcards
 ---
+
