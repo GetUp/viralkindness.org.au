@@ -41,14 +41,20 @@
   }
 
   .header {
-    iframe {
+    .fbVideo {
       display: block;
       margin: 30px auto;
-      height: 300px;
+      min-height: 300px;
       border-radius: 8px;
+      @media screen and (min-width: 426px) {
+        height: 75vw;
+        width: 75vw;
+        max-width: 476px;
+        max-height: 476px;
+      }
       @media screen and (min-width: 901px) {
-        float: right;
-        margin: 30px 16px;
+        width: 476px;
+        height: 476px;
       }
     }
 
@@ -129,7 +135,6 @@
     font-size: 1.2rem;
     margin-top: 1.5em;
     flex-wrap: nowrap;
-    clear: right;
 
     @media screen and (max-width: 600px) {
       flex-wrap: wrap;

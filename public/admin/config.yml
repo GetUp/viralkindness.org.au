@@ -95,7 +95,9 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
-          - { label: 'Blurb', name: 'blurb', widget: 'markdown' }
+          - { label: 'Blurb 1', name: 'blurb1', widget: 'markdown' }
+          - { label: 'FB Video ID', name: 'fbVideoId', widget: 'string' }
+          - { label: 'Blurb 2', name: 'blurb2', widget: 'markdown' }
           - label: 'Group Search'
             name: 'groupSearch'
             widget: 'object'
