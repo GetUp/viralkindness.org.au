@@ -4,7 +4,7 @@ subtitle: We’re all in this together
 blurb1: >-
   <p>\#ViralKindness is a movement of community care groups across Australia
   that support neighbours in need or isolation during the coronavirus crisis.
-  Anyone can start or join a local  group to request or offer help with
+  Anyone can start or join a local  group and request or offer help with
   essential tasks like shopping for food, picking up medicine, or a regular
   check-in call. Because even when we’re apart, there are lots of ways we can
   help each other.</p>
