@@ -41,6 +41,17 @@
   }
 
   .header {
+    iframe {
+      display: block;
+      margin: 30px auto;
+      height: 300px;
+      border-radius: 8px;
+      @media screen and (min-width: 901px) {
+        float: right;
+        margin: 30px 16px;
+      }
+    }
+
     align-self: center;
     @media screen and (min-width: 900px) {
       grid-column: 2/3;
@@ -118,6 +129,7 @@
     font-size: 1.2rem;
     margin-top: 1.5em;
     flex-wrap: nowrap;
+    clear: right;
 
     @media screen and (max-width: 600px) {
       flex-wrap: wrap;

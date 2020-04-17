@@ -7,7 +7,9 @@ blurb: >-
   provide an online space for neighbours to connect, request and offer help —
   whether it’s shopping for food, picking up medicine, or a regular check-in
   call. Even when we’re apart, there are lots of ways we can help each
-  other.</p> <p>Anyone can start a community care group for their apartment
+  other.</p>
+  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FGetUpAustralia%2Fvideos%2F644638552760831%2F&show_text=0" scrolling="no" frameborder="0" allowFullScreen="true"></iframe>
+  <p>Anyone can start a community care group for their apartment
   block, street or neighbourhood — check out the tips on the [“Starting a
   Group” page](/start-a-group) and then [add your group to this
   hub](/add-a-group) so others can find it. Otherwise [search for groups near
