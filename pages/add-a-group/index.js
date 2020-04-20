@@ -88,7 +88,12 @@ export default () => {
   }
 
   const onSubmit = (values, { setSubmitting, setFieldError }) => {
-    const payload = { _id: uuidv4(), ...values, ...geoJson(location) }
+    const payload = {
+      _id: uuidv4(),
+      created_at: Date.now(),
+      ...values,
+      ...geoJson(location),
+    }
     const privateSubmission = postJson(`${apiHost}/${privateDb}/`, payload)
     const publicSubmission = postJson(
       `${apiHost}/${publicDb}/`,
