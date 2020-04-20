@@ -49,7 +49,7 @@ At this point, the system should be working when the frontend is configured & de
 
 ```
 "lists": {
-    "format": "function(head, req) { var row, fields = ['_id','email','phone','groupName','groupLink','groupBlurb','location'];  start({ headers: { 'Content-Type': 'text/csv' } });  send(fields.join(',') + '\\n');  function quote(val) { return '\"' + val.replace(/\"/g,'\"\"') + '\"'; }  while(row = getRow()) { var doc = row.doc; var line = fields.map(function(f) { if (f === 'location') { return quote(doc.properties.label); } else { return quote(doc[f]); } });  send(line + '\\n'); } };"
+    "format": "function(head, req) { var row, fields = ['_id','created_at','email','phone','groupName','groupLink','groupBlurb','location'];  start({ headers: { 'Content-Type': 'text/csv' } });  send(fields.join(',') + '\\n');  function quote(val) { return '\"' + val.replace(/\"/g,'\"\"') + '\"'; }  while(row = getRow()) { var doc = row.doc; var line = fields.map(function(f) { if (f === 'location') { return quote(doc.properties.label); } else { return quote(doc[f]); } });  send(line + '\\n'); } };"
   },
 ```
 
