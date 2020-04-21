@@ -9,12 +9,12 @@ import wave from '../../assets/images/wave.svg'
 import { attributes } from '../../content/home.md'
 import Markdown from '../../components/Markdown'
 
-const scrollFocus = (el) => {
+const scrollFocus = el => {
   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
   el.focus({ preventScroll: true })
 }
 
-const src = (id) =>
+const src = id =>
   `https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FGetUpAustralia%2Fvideos%2F${id}%2F&show_text=0`
 
 export default () => {
@@ -25,15 +25,6 @@ export default () => {
           <h1>{attributes.title}</h1>
           <h2>{attributes.subtitle}</h2>
           <Markdown>{attributes.blurb1}</Markdown>
-          {attributes.fbVideoId && attributes.fbVideoId.length > 0 && (
-            <iframe
-              className={s.fbVideo}
-              src={src(attributes.fbVideoId)}
-              scrolling='no'
-              frameBorder='0'
-              allowFullScreen={true}
-            />
-          )}
           <Markdown>{attributes.blurb2}</Markdown>
           <div className={s.links}>
             <Link href='/add-a-group'>
@@ -79,12 +70,24 @@ export default () => {
       <div className={s.waveContainer}>
         <img src={wave} alt='' />
       </div>
+
       <div className={s.contentWithSidebar}>
         <ContentWithSidebar>
-          <GroupSearch
-            content={attributes.groupSearch}
-            className={s.groupSearch}
-          />
+          <div>
+            {attributes.fbVideoId && attributes.fbVideoId.length > 0 && (
+              <iframe
+                className={s.fbVideo}
+                src={src(attributes.fbVideoId)}
+                scrolling='no'
+                frameBorder='0'
+                allowFullScreen={true}
+              />
+            )}
+            <GroupSearch
+              content={attributes.groupSearch}
+              className={s.groupSearch}
+            />
+          </div>
           <div className={s.sidebarContainer}>
             <Link href='/postcards'>
               <a className={s.sidebarLink}>
