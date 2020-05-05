@@ -64,9 +64,14 @@ steps:
       custom postcards to letterbox your neighbours. ](/postcards)Just make sure
       you read the accompanying legal and safety advice.
 
-      * **SIGNAGE:** Create a sign with the name of your group and its URL, and
-      secure it to a visible place on your fence, in a communal area of your
-      building, or up around the neighbourhood.
+      * **SIGNAGE:** Put up a poster with the name of your group and how to find
+      it, and secure it to a visible place on your fence, in a communal area of
+      your building, or up around the neighbourhood. Supermarket noticeboards
+      and entrances are also a great way to reach  lots of people — [**you can
+      learn more about doing so
+      here!**](https://www.getup.org.au/campaigns/covid-19/viralkindness-pledge-to-poster/share-the-viralkindness-message)
+      [**You can create your own custom group poster to print
+      here**](https://docs.google.com/document/d/1mtbu123A6shgLZbIGCmV-jmSZRWiRXvo4JQ6BV6c7n0/edit?usp=sharing)**.** 
 
       * **SHARING:** Once you have a few people join you, ask them to share the
       invitation with anyone they know in the area.
