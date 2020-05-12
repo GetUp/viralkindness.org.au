@@ -58,8 +58,8 @@ export default () => (
 
         <p>
           © {new Date().getFullYear()} GetUp! All rights reserved. Authorised by
-          Paul Oosting, GetUp Limited, Level 14, 338 Pitt Street, Sydney NSW
-          2000.
+          Paul Oosting, GetUp Limited, Level 1, 64-76 Kippax Street Surry Hills,
+          NSW, 2010.
         </p>
       </div>
     </div>
